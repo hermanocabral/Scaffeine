@@ -1,8 +1,8 @@
-using ThemeSwitcher.Core.Model;
-using ThemeSwitcher.Core.Interfaces.Service;
+using $rootnamespace$.Core.Model;
+using $rootnamespace$.Core.Interfaces.Service;
 using System.Web.Mvc;
 
-namespace ThemeSwitcher.Controllers
+namespace $rootnamespace$.Controllers
 {   
    public partial class RoleController : BaseController<Role>
     {         

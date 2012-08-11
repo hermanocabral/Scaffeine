@@ -18,6 +18,7 @@
     <dependencies>
       <dependency id="T4Scaffolding" version="1.0.4" />      
       <dependency id="WebApi.All" version="0.6.0" />
+      <dependency id="ScaffR" version="1.1.1" />
       <dependency id="ScaffR.Backend" version="1.1.1" />      
       <dependency id="ScaffR.Ninject" version="1.1.1" />
       <dependency id="ScaffR.Bootstrap" version="1.0.0"/>
