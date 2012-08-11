@@ -1,18 +1,17 @@
 ﻿using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ScaffR.Payments")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("ScaffR.Ordering")]
+[assembly: AssemblyDescription("Project template made by ScaffR (http://scaffr.codeplex.com)")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("World-Class Programmers")]
-[assembly: AssemblyProduct("ScaffR.Payments")]
-[assembly: AssemblyCopyright("Copyright ©  2012")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ScaffR.Ordering")]
+[assembly: AssemblyCopyright("Copyright © ScaffR 2012")]
 [assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
+[assembly: AssemblyCulture("en-us")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 

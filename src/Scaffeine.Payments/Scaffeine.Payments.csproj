@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{85738D2E-F06B-4093-B501-8F747139CF7D}</ProjectGuid>
+    <ProjectGuid>{FBA2EB3C-7186-4773-BC77-B645E4BB67CE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ScaffR.Payments.AuthNet</RootNamespace>
-    <AssemblyName>ScaffR.Payments.AuthNet</AssemblyName>
+    <RootNamespace>Scaffeine.Payments</RootNamespace>
+    <AssemblyName>Scaffeine.Payments</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
@@ -54,12 +54,20 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Payments\DummyPaymentProvider.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Payments\GatewayRequest.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Payments\PaymentProvider.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Payments\PaymentProviderCollection.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Payments\PaymentsManager.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Payments\PaymentsSection.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Payments\PostAuthRequest.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Payments\PostAuthResponse.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Payments\PreAuthRequest.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Payments\PreAuthResponse.cs.t4" />
   </ItemGroup>
   <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />
-    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Payments.AuthNet\AuthNetPaymentProvider.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Payments.AuthNet\ScaffR.Payments.AuthNet.ps1" />
+    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Payments\ScaffR.Payments.ps1" />
     <None Include="content\Web.config.transform">
       <SubType>Designer</SubType>
     </None>
@@ -71,6 +79,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="lib\" />
+    <Folder Include="Properties\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

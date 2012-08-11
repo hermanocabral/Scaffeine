@@ -19,6 +19,8 @@ echo.
 echo Updating NuGet...
 cmd /c nuget.exe update -Self
 
+
+
 IF not exist c:\development\localnuget mkdir c:\development\localnuget
 
 echo.

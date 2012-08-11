@@ -8,8 +8,8 @@
     <ProjectGuid>{4394DDA4-EEDB-4300-AD96-F297AC02B231}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ScaffR</RootNamespace>
-    <AssemblyName>ScaffR</AssemblyName>
+    <RootNamespace>Scaffeine</RootNamespace>
+    <AssemblyName>Scaffeine</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
@@ -46,7 +46,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <PlatformTarget>AnyCPU</PlatformTarget>
-    <OutputPath>.\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -96,7 +96,6 @@
     <None Include="content\Models\UserNotification.cs.pp" />
     <None Include="content\Models\NotificationsModel.cs.pp" />
     <None Include="content\Views\Role\Manager.cshtml" />
-    <None Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />
@@ -178,12 +177,10 @@
     <Folder Include="content\CodeTemplates\Scaffolders\ScaffR.Ninject\" />
     <Folder Include="content\Views\Diagnostic\" />
     <Folder Include="lib\net35\" />
+    <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="content\Content\images\facebook_lrg.png" />
