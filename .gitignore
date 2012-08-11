@@ -1,6 +1,14 @@
-# Build Folders (you can keep bin if you'd like, to store dlls and pdbs)
-bin
 obj
-
-# mstest test results
-TestResults
+bin
+*.user
+*.suo
+*.orig
+output
+publish-*
+packages
+_ReSharper.*
+*.Resharper
+*.Cache
+*.cache
+~$*
+*.t4properties
