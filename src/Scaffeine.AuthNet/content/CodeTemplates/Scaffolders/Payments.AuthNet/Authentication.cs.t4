@@ -1,0 +1,10 @@
+﻿<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
+<#@ Output Extension="cs" #>
+namespace <#= Model.Namespace #>.Payments.AuthNet
+{
+    public class Authentication
+    {
+        public string LoginId;
+        public string TransactionKey;
+    }
+}

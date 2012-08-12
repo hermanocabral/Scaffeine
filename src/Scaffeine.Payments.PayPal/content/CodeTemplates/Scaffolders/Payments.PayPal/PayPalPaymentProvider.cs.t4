@@ -3,7 +3,7 @@
 
 namespace <#= Model.Namespace #>.Payments.AuthNet
 {
-    public partial class AuthNetProvider : PaymentProvider
+    public partial class PayPalPaymentProvider : PaymentProvider
     {
         public override PreAuthResponse PreAuth(PreAuthRequest request)
         {

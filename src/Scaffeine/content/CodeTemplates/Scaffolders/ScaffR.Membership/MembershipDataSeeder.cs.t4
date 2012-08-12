@@ -19,7 +19,7 @@ namespace <#= Model.Namespace #>.Data.Seeders
                     new Role()
                         {
                             Id = 1,
-                            RoleName = "SuperAdmin"
+                            RoleName = "Super Admin"
                         }
                 }.ForEach(a => context.Roles.AddOrUpdate(a));
 
@@ -29,10 +29,10 @@ namespace <#= Model.Namespace #>.Data.Seeders
                         {
                             Id = 1,
                             Email = Site.Instance.EmailAddress,
-                            Username = "administrator",
+                            Username = "admin",
                             FirstName = "John",
                             LastName = "Doe",
-                            Password = "1scool!!",
+                            Password = "admin",
                             IsApproved = true
                         }
                 }.ForEach(u => context.Users.AddOrUpdate(u));

@@ -1,0 +1,11 @@
+﻿<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
+<#@ Output Extension="cs" #>
+namespace <#= Model.Namespace #>.Payments.AuthNet
+{
+    public class Card
+    {
+        public string CardNumber;
+        public string Code;
+        public string ExpDate; //order.CreditCard.DisplayExpiryMonth + order.CreditCard.ExpiryYear.ToString(
+    }
+}

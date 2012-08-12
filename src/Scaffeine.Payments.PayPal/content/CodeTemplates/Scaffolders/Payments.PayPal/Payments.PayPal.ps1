@@ -1,4 +1,4 @@
-[T4Scaffolding.Scaffolder(Description = "ScaffR.Payments.AuthNet - Builds the classes for the Authorize.Net payment provider")][CmdletBinding()]
+[T4Scaffolding.Scaffolder(Description = "Scaffeine.Payments.PayPal - Builds the classes for the PayPal payment provider")][CmdletBinding()]
 param(        
     [string]$Project,
 	[string]$CodeLanguage,
@@ -6,7 +6,7 @@ param(
 	[switch]$Force = $false
 )
 
-foreach ($tml in @("AuthNetPaymentProvider")){
+foreach ($tml in @("PayPalPaymentProvider")){
 	$outputPath = $tml
 	add-template $authNetProjectName $outputPath $tml -Force:$force $TemplateFolders
 }

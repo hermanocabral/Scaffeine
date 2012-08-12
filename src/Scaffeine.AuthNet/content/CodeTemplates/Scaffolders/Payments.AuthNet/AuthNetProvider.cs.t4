@@ -1,0 +1,128 @@
+<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
+<#@ Output Extension="cs" #>
+using System;
+using System.Configuration.Provider;
+
+namespace <#= Model.Namespace #>.Payments.AuthNet
+{
+    public partial class AuthNetProvider : PaymentProvider {
+
+        protected string LoginId;
+        protected string TransactionKey;
+        protected string CompanyName;
+        protected AuthorizeNetTestMode TestMode;
+
+        public override void Initialize(string name, System.Collections.Specialized.NameValueCollection config)
+        {
+            if(config==null)
+                throw new ArgumentNullException("config");
+
+            if (string.IsNullOrEmpty(name))
+                name = "AuthNet";
+
+            if (string.IsNullOrWhiteSpace(config["description"])){
+                config.Remove("description");
+                config.Add("description", "Payment provider for Authorize.Net");
+            }
+
+            base.Initialize(name, config);
+
+            LoginId = config["loginId"];
+            if(string.IsNullOrEmpty(LoginId))
+                throw new ProviderException("Empty or missing LoginID");
+            config.Remove("loginId");
+
+            CompanyName = config["companyName"];
+            if (string.IsNullOrEmpty(CompanyName))
+                throw new ProviderException("Empty or missing Company Name");
+            config.Remove("companyName");
+
+            TransactionKey = config["transactionKey"];
+            if(string.IsNullOrEmpty(TransactionKey))
+                throw new ProviderException("Empty or missing Transaction Key");
+            config.Remove("transactionKey");
+
+            TestMode = (AuthorizeNetTestMode) Enum.Parse(typeof(AuthorizeNetTestMode), config["testMode"]);            
+            config.Remove("testMode");
+
+            if (config.Count > 0){
+                string attr = config.GetKey(0);
+                if(!string.IsNullOrWhiteSpace(attr))
+                    throw new ProviderException("Unrecognized attribute: " + attr);
+            }
+        }        
+
+        private AuthorizeNetRequest BuildAuthNetRequest(PreAuthRequest request)
+        {
+            var authRequest = new AuthorizeNetRequest(TestMode)
+            {
+                Authentication = new Authentication
+                {
+                    TransactionKey = TransactionKey,
+                    LoginId = LoginId
+                },
+                Customer = new Customer
+                {
+                    FirstName = request.FirstName,
+                    LastName = request.LastName,
+                    Address = request.AddressLine1,
+                    City = request.City,
+                    State = request.State,
+                    Zip = request.Zip,
+                    Country = request.Country,
+                    Email = request.Email,
+                    CustomerId = request.CustomerId,
+                    EmailCustomer = request.EmailCustomer,
+                    IpAddress = request.IPAddress,
+                    Phone = request.PhoneNumber
+                },
+                Transaction = new Transaction
+                {
+                    Amount = (double)request.Amount,
+                    Recurring = false,
+                    Type = AuthType.AuthOnly
+                },
+                Card = new Card
+                {
+                    CardNumber = request.CcNumber,
+                    Code = request.CcSecurityCode,
+                    ExpDate = request.CcExpMonth + request.CcExpYear
+                },
+                Merchant = new Merchant
+                {
+                    CompanyName = CompanyName,
+                    DuplicateWindow = "FALSE"
+                }
+            };
+            return authRequest;
+        }
+
+        public override PreAuthResponse PreAuth(PreAuthRequest request)
+        {
+            AuthorizeNetRequest authNetRequest = BuildAuthNetRequest(request);
+
+            var authResponse =  (AuthorizeNetResponse)authNetRequest.GetResponse();
+
+            PreAuthResponse response = BuildAuthNetResponse(authResponse);
+
+            return response;
+        }
+
+        private PreAuthResponse BuildAuthNetResponse(AuthorizeNetResponse response)
+        {
+            return new PreAuthResponse{
+                ApprovalCode = response.ApprovalCode,
+                Approved = true
+            };
+        }
+
+        public override PostAuthResponse PostAuth(PostAuthRequest request)
+        {
+            return new PostAuthResponse{
+                Approved = true,
+                ApprovalCode = "asdf"
+            };
+        }
+
+    }
+}

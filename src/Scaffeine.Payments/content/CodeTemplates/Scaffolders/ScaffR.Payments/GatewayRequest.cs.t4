@@ -1,14 +1,14 @@
 <#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
 <#@ Output Extension="cs" #>
+using MvcApplication116.Payments.Web;
 
-namespace <#= Model.Namespace #>.Payments
+namespace MvcApplication116.Payments
 {
-    public partial class GatewayRequest
+    public abstract class GatewayRequest : IRequest
     {
         public string CardNumber { get; set; }
         public int ExpMonth { get; set; }
         public int ExpYear { get; set; }
-
         public string AddressLine1 { get; set; }
         public string AddressLine2 { get; set; }
         public string City { get; set; }
@@ -18,5 +18,7 @@ namespace <#= Model.Namespace #>.Payments
         public string Name { get; set; }
         public string State { get; set; }
         public string Zip { get; set; }
+
+        public abstract IResponse GetResponse();
     }
 }

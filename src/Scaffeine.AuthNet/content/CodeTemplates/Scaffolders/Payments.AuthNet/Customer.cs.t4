@@ -1,0 +1,26 @@
+﻿<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
+<#@ Output Extension="cs" #>
+namespace <#= Model.Namespace #>.Payments.AuthNet
+{
+    public class Customer
+    {
+        public string CustomerId;
+        public string FirstName;
+        public string LastName;
+        public string Address;
+        public string City;
+        public string State;
+        public string Zip;
+        public string Country;
+        public string Email;
+        public bool EmailCustomer;
+        public string IpAddress;
+
+        private string _phone;
+        public string Phone
+        {
+            get { return _phone.StripNonDigits(); }
+            set { _phone = value; }
+        }
+    }
+}

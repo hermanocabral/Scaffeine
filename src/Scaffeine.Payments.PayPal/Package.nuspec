@@ -1,23 +1,23 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>Scaffeine.Promotions</id>
+    <id>Scaffeine.Payments.PayPal</id>
     <version>1.1.1</version>
     <authors>Rod Johnson</authors>
-    <owners>EyeCatch</owners>
-    <projectUrl>https://github.com/wcpro/Scaffeine</projectUrl>
+    <owners>ScaffR</owners>
+    <projectUrl>http://scaffr.codeplex.com</projectUrl>
     <iconUrl>http://www.scaffr.com/favicon.ico</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
-      Promotions
+      PayPal payments provider
     </description>
     <releaseNotes>
     </releaseNotes>
-    <copyright>Copyright Scaffeine 2012</copyright>
+    <copyright>Scaffeine, 2012</copyright>
     <tags></tags>
     <dependencies>
-      <dependency id="ScaffR" version="1.1.1"/>
-      <dependency id="T4Scaffolding" version="1.0.4" />
+      <dependency id="ScaffR" version="1.1.1" />
+      <dependency id="Scaffeine.Payments" version="1.1.1" />      
     </dependencies>
   </metadata>
   <files>

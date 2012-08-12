@@ -1,0 +1,11 @@
+<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
+<#@ Output Extension="cs" #>
+namespace <#= Model.Namespace #>.Payments.AuthNet{
+    public enum AuthorizeNetTestMode
+    {
+        Live,
+        LiveTest,
+        TestAccountLive,
+        TestAccountTest
+    }
+}
