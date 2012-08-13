@@ -2,14 +2,48 @@
 <#@ Output Extension="cs" #>
 namespace <#= Model.Namespace #>.Payments.AuthNet
 {
+    /// <summary>
+    ///   The ship.
+    /// </summary>
     public class Ship
     {
-        public string FirstName;
-        public string LastName;
+        #region Fields
+
+        /// <summary>
+        ///   The address.
+        /// </summary>
         public string Address;
+
+        /// <summary>
+        ///   The city.
+        /// </summary>
         public string City;
-        public string State;
-        public string Zip;
+
+        /// <summary>
+        ///   The country.
+        /// </summary>
         public string Country;
+
+        /// <summary>
+        ///   The first name.
+        /// </summary>
+        public string FirstName;
+
+        /// <summary>
+        ///   The last name.
+        /// </summary>
+        public string LastName;
+
+        /// <summary>
+        ///   The state.
+        /// </summary>
+        public string State;
+
+        /// <summary>
+        ///   The zip.
+        /// </summary>
+        public string Zip;
+
+        #endregion
     }
 }

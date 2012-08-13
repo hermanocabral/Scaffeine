@@ -55,7 +55,9 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />
-    <None Include="content\CodeTemplates\Scaffolders\Payments.AuthNet\AuthNetPaymentProvider.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Payments.AuthNet\AuthNetRequestBuilder.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Payments.AuthNet\AuthNetRequest.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Payments.AuthNet\ResponseCode.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Payments.AuthNet\Payments.AuthNet.ps1" />
     <None Include="content\Web.config.transform">
       <SubType>Designer</SubType>
@@ -79,9 +81,8 @@
   <ItemGroup>
     <None Include="content\CodeTemplates\Scaffolders\Payments.AuthNet\Authentication.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Payments.AuthNet\AuthNetProvider.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Payments.AuthNet\AuthorizeNetRequest.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Payments.AuthNet\AuthorizeNetResponse.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Payments.AuthNet\AuthorizeNetTestMode.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Payments.AuthNet\AuthNetResponse.cs.t4" />
+    <Compile Include="content\CodeTemplates\Scaffolders\Payments.AuthNet\TestMode.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Payments.AuthNet\AuthType.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Payments.AuthNet\Card.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Payments.AuthNet\Customer.cs.t4" />
@@ -89,6 +90,16 @@
     <None Include="content\CodeTemplates\Scaffolders\Payments.AuthNet\Product.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Payments.AuthNet\Ship.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Payments.AuthNet\Transaction.cs.t4" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="content\CodeTemplates\Scaffolders\Payments.AuthNet\Mappers\AuthNetRequestNameValueCollectionMapper.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Payments.AuthNet\Mappers\AuthNetResponseAuthorizationResponseMapper.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Payments.AuthNet\Mappers\AuthNetResponseCaptureResponseMapper.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Payments.AuthNet\Mappers\AuthorizationRequestAuthNetRequestMapper.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Payments.AuthNet\Mappers\CaptureRequestAuthNetRequestMapper.cs.t4" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="content\CodeTemplates\Scaffolders\Payments.AuthNet\AVSResponse.cs.t4" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -6,7 +6,36 @@ param(
 	[switch]$Force = $false
 )
 
-foreach ($tml in @("AuthNetProvider", "Authentication", "AuthorizeNetRequest", "AuthorizeNetResponse", "AuthorizeNetTestMode", "AuthType", "Card", "Customer", "Merchant", "Product", "Ship", "Transaction")){
+ $templates = 
+ 	@("Authentication", `
+		"AuthNetProvider", `
+		"AuthNetRequest", `
+		"AuthNetRequestBuilder", `
+		"AuthNetResponse", `
+		"AuthType", `
+		"AVSResponse", `
+		"Card", `
+		"Customer", `
+		"Merchant", `
+		"Product", `
+		"ResponseCode", `
+		"Ship", `
+		"TestMode", `
+		"Transaction")
+
+foreach ($tml in $templates){
 	$outputPath = $tml
-	add-template $authNetProjectName $outputPath $tml -Force:$force $TemplateFolders
+	add-template $authNetProjectName $outputPath $tml -Force:$Force $TemplateFolders
+}
+
+ $templates = 
+ 	@("AuthNetRequestNameValueCollectionMapper", `
+		"AuthNetResponseAuthorizationResponseMapper", `
+		"AuthNetResponseCaptureResponseMapper", `
+		"AuthorizationRequestAuthNetRequestMapper", `
+		"CaptureRequestAuthNetRequestMapper")
+
+foreach ($tml in $templates){
+	$outputPath = "Mappers\$tml"
+	add-template $authNetProjectName $outputPath $tml -Force:$Force $TemplateFolders
 }

@@ -8,8 +8,7 @@
   
   <$rootnamespace$>
     <$rootnamespace$.Payments>
-      <providers>
-        <add name="DummyProvider" type="$rootnamespace$.Payments.DummyPaymentProvider, $rootnamespace$.Payments"/>
+      <providers>        
       </providers>
     </$rootnamespace$.Payments>      
   </$rootnamespace$>

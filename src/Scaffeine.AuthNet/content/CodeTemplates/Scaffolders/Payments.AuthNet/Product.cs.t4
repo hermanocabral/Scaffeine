@@ -2,8 +2,18 @@
 <#@ Output Extension="cs" #>
 namespace <#= Model.Namespace #>.Payments.AuthNet
 {
+    /// <summary>
+    ///   The product.
+    /// </summary>
     public class Product
     {
+        #region Fields
+
+        /// <summary>
+        ///   The description.
+        /// </summary>
         public string Description;
+
+        #endregion
     }
 }

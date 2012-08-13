@@ -2,25 +2,93 @@
 <#@ Output Extension="cs" #>
 namespace <#= Model.Namespace #>.Payments.AuthNet
 {
+    /// <summary>
+    ///   The customer.
+    /// </summary>
     public class Customer
     {
-        public string CustomerId;
-        public string FirstName;
-        public string LastName;
+        #region Fields
+
+        /// <summary>
+        ///   The address.
+        /// </summary>
         public string Address;
+
+        /// <summary>
+        ///   The city.
+        /// </summary>
         public string City;
-        public string State;
-        public string Zip;
+
+        /// <summary>
+        ///   The country.
+        /// </summary>
         public string Country;
+
+        /// <summary>
+        ///   The customer id.
+        /// </summary>
+        public string CustomerId;
+
+        /// <summary>
+        ///   The email.
+        /// </summary>
         public string Email;
+
+        /// <summary>
+        ///   The email customer.
+        /// </summary>
         public bool EmailCustomer;
+
+        /// <summary>
+        ///   The first name.
+        /// </summary>
+        public string FirstName;
+
+        /// <summary>
+        ///   The ip address.
+        /// </summary>
         public string IpAddress;
 
+        /// <summary>
+        ///   The last name.
+        /// </summary>
+        public string LastName;
+
+        /// <summary>
+        ///   The state.
+        /// </summary>
+        public string State;
+
+        /// <summary>
+        ///   The zip.
+        /// </summary>
+        public string Zip;
+
+        /// <summary>
+        ///   The _phone.
+        /// </summary>
         private string _phone;
+
+        #endregion
+
+        #region Public Properties
+
+        /// <summary>
+        ///   Gets or sets the phone.
+        /// </summary>
         public string Phone
         {
-            get { return _phone.StripNonDigits(); }
-            set { _phone = value; }
+            get
+            {
+                return this._phone;
+            }
+
+            set
+            {
+                this._phone = value;
+            }
         }
+
+        #endregion
     }
 }

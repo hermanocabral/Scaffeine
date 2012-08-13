@@ -3,27 +3,28 @@
 namespace <#= Model.Namespace #>.Payments.AuthNet
 {
     /// <summary>
-    ///   The merchant.
+    ///   The authorize net response code.
     /// </summary>
-    public class Merchant
+    public enum ResponseCode
     {
-        #region Fields
+        /// <summary>
+        ///   The approved.
+        /// </summary>
+        Approved = 1, 
 
         /// <summary>
-        ///   The company name.
+        ///   The declined.
         /// </summary>
-        public string CompanyName;
+        Declined = 2, 
 
         /// <summary>
-        ///   The duplicate window.
+        ///   The error.
         /// </summary>
-        public string DuplicateWindow;
+        Error = 3, 
 
         /// <summary>
-        ///   The merchant email.
+        ///   The held for review.
         /// </summary>
-        public string MerchantEmail;
-
-        #endregion
+        HeldForReview = 4
     }
 }

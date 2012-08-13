@@ -4,8 +4,17 @@ namespace <#= Model.Namespace #>.Payments.AuthNet
 {
     public class Card
     {
-        public string CardNumber;
-        public string Code;
-        public string ExpDate; //order.CreditCard.DisplayExpiryMonth + order.CreditCard.ExpiryYear.ToString(
+        public readonly string CardNumber;
+
+        public readonly string Code;
+
+        public readonly string ExpDate;
+
+        public Card(string cardNumber, string code, string expDate)
+        {
+            this.CardNumber = cardNumber;
+            this.Code = code;
+            this.ExpDate = expDate;
+        }
     }
 }

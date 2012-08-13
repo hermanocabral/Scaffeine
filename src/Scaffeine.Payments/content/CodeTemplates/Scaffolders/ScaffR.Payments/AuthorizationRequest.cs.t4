@@ -1,9 +1,9 @@
-
-namespace MvcApplication116.Payments
+<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
+<#@ Output Extension="cs" #>
+namespace <#= Model.Namespace #>.Payments
 {
-    public partial class PreAuthRequest
-    {
-        public string CcSecurityCode { get; set; }
+    public partial class AuthorizationRequest
+    {        
         public string PhoneNumber { get; set; }
 
         public string IPAddress { get; set; }
@@ -13,6 +13,8 @@ namespace MvcApplication116.Payments
         public string CcExpMonth { get; set; }
 
         public string CcExpYear { get; set; }
+
+        public string CcSecurityCode { get; set; }
 
         public decimal Amount { get; set; }
 

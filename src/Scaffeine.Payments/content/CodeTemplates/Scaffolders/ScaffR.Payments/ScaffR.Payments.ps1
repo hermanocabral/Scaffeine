@@ -6,7 +6,38 @@ param(
 	[switch]$Force = $false
 )
 
-foreach ($tml in @("DummyPaymentProvider", "GatewayRequest", "PaymentProvider", "PaymentProviderCollection", "PaymentsManager", "PaymentsSection", "PostAuthRequest", "PostAuthResponse", "PreAuthRequest", "PreAuthResponse")){
+ $templates = 
+ 	@("AuthorizationRequest", `
+		"AuthorizationResponse", `
+		"CaptureRequest", `
+		"CaptureResponse", `
+		"PaymentProvider", `
+		"PaymentProviderCollection", `
+		"PaymentsManager", `
+		"PaymentsSection", `
+		"PaymentTransaction")
+
+foreach ($tml in $templates){
 	$outputPath = $tml
+	add-template $paymentProjectName $outputPath $tml -Force:$Force $TemplateFolders
+}
+
+ $templates = 
+ 	@("HttpGetStrategy", `
+		"HttpPostStrategy")
+
+foreach ($tml in $templates){
+	$outputPath = "Infrasctucture\$tml"
+	add-template $paymentProjectName $outputPath $tml -Force:$Force $TemplateFolders
+}
+
+ $templates = 
+ 	@(	"IRequest", `
+		"IRequestFactory", `
+		"IRequestStrategy", `
+		"IResponse")
+
+foreach ($tml in $templates){
+	$outputPath = "Interfaces\$tml"
 	add-template $paymentProjectName $outputPath $tml -Force:$Force $TemplateFolders
 }

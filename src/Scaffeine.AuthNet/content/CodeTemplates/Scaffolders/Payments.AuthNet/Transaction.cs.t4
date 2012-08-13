@@ -2,23 +2,32 @@
 <#@ Output Extension="cs" #>
 namespace <#= Model.Namespace #>.Payments.AuthNet
 {
+    /// <summary>
+    ///   The transaction.
+    /// </summary>
     public class Transaction
     {
-        public Transaction()
-        {
-            this.Type = AuthType.AuthCapture;
-            this.CurrencyCode = "USD";
-        }
-
         public double Amount;
-        public bool DelimData;
-        public bool Recurring;
-        public bool TestMode;
-        public AuthType Type;
-        public string Version;
+
         public string CurrencyCode;
+
+        public bool DelimData;
+
         public string PreviousAuthCode;
+
+        public bool Recurring;
+
+        public bool TestMode;
+
         public string TransactionId;
 
+        public AuthType Type;
+
+        public string Version;
+
+        public Transaction()
+        {
+            this.CurrencyCode = "USD";
+        }
     }
 }

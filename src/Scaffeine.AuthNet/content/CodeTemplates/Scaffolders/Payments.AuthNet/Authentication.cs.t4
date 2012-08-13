@@ -4,7 +4,14 @@ namespace <#= Model.Namespace #>.Payments.AuthNet
 {
     public class Authentication
     {
-        public string LoginId;
-        public string TransactionKey;
+        public readonly string LoginId;
+
+        public readonly string TransactionKey;
+
+        public Authentication(string loginId, string transactionKey)
+        {
+            LoginId = loginId;
+            TransactionKey = transactionKey;
+        }
     }
 }

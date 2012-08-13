@@ -3,33 +3,28 @@
 namespace <#= Model.Namespace #>.Payments.AuthNet
 {
     /// <summary>
-    ///   The auth type.
+    ///   The authorize net test mode.
     /// </summary>
-    public enum AuthType
+    public enum TestMode
     {
         /// <summary>
-        ///   The auth capture.
+        ///   The live.
         /// </summary>
-        AuthCapture, 
+        Live, 
 
         /// <summary>
-        ///   The auth only.
+        ///   The live test.
         /// </summary>
-        AuthOnly, 
+        LiveTest, 
 
         /// <summary>
-        ///   The void.
+        ///   The test account live.
         /// </summary>
-        Void, 
+        TestAccountLive, 
 
         /// <summary>
-        ///   The capture only.
+        ///   The test account test.
         /// </summary>
-        CaptureOnly, 
-
-        /// <summary>
-        ///   The credit.
-        /// </summary>
-        Credit
+        TestAccountTest
     }
 }
