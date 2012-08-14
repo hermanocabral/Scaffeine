@@ -23,3 +23,8 @@ The Scaffeine architecture uses the following frameworks
 * KnockoutJS
 * SignalR
 * Entity Framework CodeFirst (w/ migrations)
+
+Modules
+-----
+Scaffeine uses a module architecture, based on NuGet, that allows developers to quickly compose, customize, and build full-integrated
+source code your Scaffeine instance that is fully white-labeled.  Once the code has been generated, you can customize it as you see fit.
