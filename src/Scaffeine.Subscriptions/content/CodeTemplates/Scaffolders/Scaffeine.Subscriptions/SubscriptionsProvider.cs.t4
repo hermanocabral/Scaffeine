@@ -1,0 +1,13 @@
+﻿<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
+<#@ Output Extension="cs" #>
+namespace <#= Model.Namespace #>.Subscriptions
+{
+    using System.Configuration.Provider;
+
+    public abstract class SubscriptionsProvider : ProviderBase
+    {
+        public abstract CreateSubscriptionResponse CreateSubscription(CreateSubscriptionRequest request);
+
+        public abstract CancelSubscriptionResponse CancelSubscription(CancelSubscriptionRequest request);
+    }
+}

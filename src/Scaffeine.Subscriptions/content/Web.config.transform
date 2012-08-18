@@ -1,0 +1,16 @@
+﻿<configuration>
+
+  <configSections>
+    <sectionGroup name="$rootnamespace$">
+      <section name="$rootnamespace$.Subscriptions" type="$rootnamespace$.Subscriptions.SubscriptionsSection, $rootnamespace$.Subscriptions" requirePermission="false"/>
+    </sectionGroup>
+  </configSections>
+
+  <$rootnamespace$>
+    <$rootnamespace$.Subscriptions>
+      <providers>
+      </providers>
+    </$rootnamespace$.Subscriptions>
+  </$rootnamespace$>
+
+</configuration>
