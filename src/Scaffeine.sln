@@ -46,6 +46,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scaffeine.Facebook", "Scaff
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scaffeine.Notifications", "Scaffeine.Notifications\Scaffeine.Notifications.csproj", "{7152FF50-1BA9-43C1-B931-1A8B4827B6A7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scaffeine.Levels", "Scaffeine.Levels\Scaffeine.Levels.csproj", "{2890F91B-F398-481B-AEB3-8B44F9C3A4FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scaffeine.Integrations", "Scaffeine.Integrations\Scaffeine.Integrations.csproj", "{75F23001-47E7-4DC9-9ADA-041A3EE0B056}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -128,6 +132,14 @@ Global
 		{7152FF50-1BA9-43C1-B931-1A8B4827B6A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7152FF50-1BA9-43C1-B931-1A8B4827B6A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7152FF50-1BA9-43C1-B931-1A8B4827B6A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2890F91B-F398-481B-AEB3-8B44F9C3A4FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2890F91B-F398-481B-AEB3-8B44F9C3A4FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2890F91B-F398-481B-AEB3-8B44F9C3A4FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2890F91B-F398-481B-AEB3-8B44F9C3A4FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75F23001-47E7-4DC9-9ADA-041A3EE0B056}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75F23001-47E7-4DC9-9ADA-041A3EE0B056}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75F23001-47E7-4DC9-9ADA-041A3EE0B056}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75F23001-47E7-4DC9-9ADA-041A3EE0B056}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

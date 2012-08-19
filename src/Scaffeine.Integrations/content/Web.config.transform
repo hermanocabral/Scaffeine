@@ -1,0 +1,16 @@
+﻿<configuration>
+
+  <configSections>
+    <sectionGroup name="$rootnamespace$">
+      <section name="$rootnamespace$.Integrations" type="$rootnamespace$.Integrations.IntegrationsSection, $rootnamespace$.Integrations" requirePermission="false"/>
+    </sectionGroup>
+  </configSections>
+
+  <$rootnamespace$>
+    <$rootnamespace$.Integrations>
+      <providers>
+      </providers>
+    </$rootnamespace$.Integrations>
+  </$rootnamespace$>
+
+</configuration>

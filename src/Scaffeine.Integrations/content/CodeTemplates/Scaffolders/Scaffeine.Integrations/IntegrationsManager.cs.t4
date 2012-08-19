@@ -1,0 +1,54 @@
+﻿<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
+<#@ Output Extension="cs" #>
+namespace <#= Model.Namespace #>.Integrations
+{
+    using System.Configuration.Provider;
+    using System.Web.Configuration;
+
+    public partial class IntegrationsManager
+    {
+        private static readonly object _lock = new object();
+        private static IntegrationProvider _provider;
+        private static IntegrationProviderCollection _providers;
+
+        public static IntegrationProvider Provider
+        {
+            get
+            {
+                LoadProviders();
+                return _provider;
+            }
+        }
+
+        public static IntegrationProviderCollection Providers
+        {
+            get
+            {
+                LoadProviders();
+                return _providers;
+            }
+        }
+
+
+        private static void LoadProviders()
+        {
+            if (_provider == null)
+            {
+                lock (_lock)
+                {
+                    if (_provider == null)
+                    {
+                        var section = (IntegrationsSection)WebConfigurationManager.GetSection("MvcApplication7/MvcApplication7.Integrations");
+
+                        _providers = new IntegrationProviderCollection();
+                        ProvidersHelper.InstantiateProviders(section.Providers, _providers, typeof(IntegrationProvider));
+                        _provider = _providers[section.DefaultProvider];
+
+                        if (_provider == null)
+                            throw new ProviderException("Unable to load default SubscriptionProvider");
+                    }
+                }
+            }
+        }
+    }
+}

@@ -14,10 +14,14 @@
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
-    <SccProjectName>SAK</SccProjectName>
-    <SccLocalPath>SAK</SccLocalPath>
-    <SccAuxPath>SAK</SccAuxPath>
-    <SccProvider>SAK</SccProvider>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -54,6 +58,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Facebook\FacebookProvider.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Facebook\Scaffeine.Facebook.ps1" />
     <None Include="content\Controllers\IntegrationsController.Facebook.cs.pp" />
     <None Include="content\Sitemaps\System.sitemap.transform" />
     <None Include="content\web.config.transform" />
@@ -64,12 +70,17 @@
     <None Include="NuGet.exe" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="content\CodeTemplates\Scaffolding\" />
     <Folder Include="content\Views\" />
     <Folder Include="lib\" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Scaffeine.Integrations\Scaffeine.Integrations.csproj">
+      <Project>{75F23001-47E7-4DC9-9ADA-041A3EE0B056}</Project>
+      <Name>Scaffeine.Integrations</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
