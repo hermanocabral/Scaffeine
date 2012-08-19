@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{D93B699A-69CA-4CD8-96B5-0FAB2BE65902}</ProjectGuid>
+    <ProjectGuid>{AAF63586-59D3-4CAF-A8D5-837DC7212897}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Scaffeine.Payments.PayPal</RootNamespace>
-    <AssemblyName>Scaffeine.Payments.PayPal</AssemblyName>
+    <RootNamespace>Scaffeine.Commerce</RootNamespace>
+    <AssemblyName>Scaffeine.Commerce</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
@@ -50,11 +50,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />
-    <None Include="content\CodeTemplates\Scaffolders\Payments.PayPal\PayPalPaymentProvider.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Payments.PayPal\Payments.PayPal.ps1" />
-    <None Include="content\Web.config.transform">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="content\CodeTemplates\Scaffolders\Commerce\Department.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Commerce\Commerce.ps1" />
+    <None Include="content\CodeTemplates\Scaffolders\Commerce\Category.cs.t4" />
     <None Include="Package.nuspec" />
     <None Include="tools\init.ps1" />
     <None Include="tools\install.ps1" />
@@ -65,12 +63,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="NuGet.exe" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Scaffeine.Payments\Scaffeine.Payments.csproj">
-      <Project>{FBA2EB3C-7186-4773-BC77-B645E4BB67CE}</Project>
-      <Name>Scaffeine.Payments</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
