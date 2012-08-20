@@ -29,12 +29,27 @@ namespace <#= Model.Namespace #>.Subscriptions
             }
         }
 
-        public static CreateSubscriptionResponse CreateSubscription(CreateSubscriptionRequest request)
+		public static AccountResponse CreateAccount(AccountRequest request)
         {
-            return Provider.CreateSubscription(request);
+            return Provider.CreateAccount(request);
         }
 
-        public static CancelSubscriptionResponse Capture(CancelSubscriptionRequest request)
+        public static AccountResponse UpdateAccount(AccountRequest request)
+        {
+            return Provider.UpdateAccount(request);
+        }
+
+        public static bool CloseAccount(string accountCode)
+        {
+            return Provider.CloseAccount(accountCode);
+        }
+
+        public static bool ReopenAccount(string accountCode)
+        {
+            return Provider.ReopenAccount(accountCode);
+        }
+
+        public static CancelSubscriptionResponse CancelSubscription(CancelSubscriptionRequest request)
         {
             return Provider.CancelSubscription(request);
         }

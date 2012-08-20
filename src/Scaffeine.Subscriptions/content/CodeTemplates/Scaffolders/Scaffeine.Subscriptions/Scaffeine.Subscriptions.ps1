@@ -9,8 +9,8 @@ param(
  $templates = 
  	@("CancelSubscriptionRequest", `
 		"CancelSubscriptionResponse", `
-		"CreateSubscriptionRequest", `
-		"CreateSubscriptionResponse", `
+		"AccountRequest", `
+		"AccountResponse", `
 		"SubscriptionsManager", `
 		"SubscriptionsProvider", `
 		"SubscriptionsProviderCollection", `

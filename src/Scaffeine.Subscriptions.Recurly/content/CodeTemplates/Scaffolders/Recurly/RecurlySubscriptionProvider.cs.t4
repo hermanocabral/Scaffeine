@@ -68,6 +68,11 @@ namespace <#= Model.Namespace #>.Subscriptions.Recurly
 
         #region Public Methods and Operators
 
+        public override bool ReopenAccount(string accountCode)
+        {
+            throw new NotImplementedException();
+        }
+
         /// <summary>
         /// The cancel subscription.
         /// </summary>
@@ -75,7 +80,7 @@ namespace <#= Model.Namespace #>.Subscriptions.Recurly
         /// The request.
         /// </param>
         /// <returns>
-        /// The <#= Model.Namespace #>.Subscriptions.CancelSubscriptionResponse.
+        /// The MvcApplication24.Subscriptions.CancelSubscriptionResponse.
         /// </returns>
         /// <exception cref="NotImplementedException">
         /// </exception>
@@ -91,13 +96,50 @@ namespace <#= Model.Namespace #>.Subscriptions.Recurly
         /// The request.
         /// </param>
         /// <returns>
-        /// The <#= Model.Namespace #>.Subscriptions.CreateSubscriptionResponse.
+        /// The MvcApplication24.Subscriptions.CreateSubscriptionResponse.
         /// </returns>
-        public override CreateSubscriptionResponse CreateSubscription(CreateSubscriptionRequest request)
+        public override AccountResponse CreateAccount(AccountRequest request)
         {
             var acct = new RecurlyAccount(request.Accountcode);
             acct.Create();
-            return new CreateSubscriptionResponse();
+            return new AccountResponse();
+        }
+
+        public override AccountResponse UpdateAccount(AccountRequest request)
+        {
+            try
+            {
+                var acct = new RecurlyAccount(request.Accountcode)
+                {
+                    FirstName = request.FirstName,
+                    LastName = request.LastName,
+                    Email = request.Email,
+                    CompanyName = request.CompanyName
+                };
+
+                acct.Update();
+
+                // todo: implement automapper here
+                return new AccountResponse();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }            
+        }
+
+        public override bool CloseAccount(string accountCode)
+        {
+            try
+            {
+                var account = new RecurlyAccount(accountCode);
+                account.CloseAccount();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         /// <summary>

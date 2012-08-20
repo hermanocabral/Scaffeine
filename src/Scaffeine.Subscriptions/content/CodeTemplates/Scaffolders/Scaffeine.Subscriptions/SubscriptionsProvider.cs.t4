@@ -6,7 +6,13 @@ namespace <#= Model.Namespace #>.Subscriptions
 
     public abstract class SubscriptionsProvider : ProviderBase
     {
-        public abstract CreateSubscriptionResponse CreateSubscription(CreateSubscriptionRequest request);
+        public abstract AccountResponse CreateAccount(AccountRequest request);
+
+        public abstract AccountResponse UpdateAccount(AccountRequest request);
+
+        public abstract bool CloseAccount(string accountCode);
+
+        public abstract bool ReopenAccount(string accountCode);
 
         public abstract CancelSubscriptionResponse CancelSubscription(CancelSubscriptionRequest request);
     }
