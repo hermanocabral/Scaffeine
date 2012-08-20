@@ -1,0 +1,175 @@
+﻿<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
+<#@ Output Extension="cs" #>
+namespace <#= Model.Namespace #>.Subscriptions.Recurly
+{
+    using System;
+    using System.Collections.Specialized;
+    using System.Configuration.Provider;
+
+    /// <summary>
+    /// Defines username, password, and subdomain properties for web.config/app.config files.
+    /// </summary>
+    public class RecurlySubscriptionProvider : SubscriptionsProvider
+    {
+        #region Enums
+
+        /// <summary>
+        /// Recurly account type
+        /// </summary>
+        public enum EnvironmentType
+        {
+            /// <summary>
+            /// Production or sandbox Recurly accounts
+            /// </summary>
+            Production, 
+
+            /// <summary>
+            /// Local development by Recurly developers
+            /// </summary>
+            Development
+        }
+
+        #endregion
+
+        #region Public Properties
+
+        /// <summary>
+        /// Gets the current.
+        /// </summary>
+        public static RecurlySubscriptionProvider Current
+        {
+            get
+            {
+                return (RecurlySubscriptionProvider)SubscriptionsManager.Providers["Recurly"];
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the api key.
+        /// </summary>
+        public string ApiKey { get; set; }
+
+        /// <summary>
+        /// Gets or sets the environment.
+        /// </summary>
+        public EnvironmentType Environment { get; set; }
+
+        /// <summary>
+        /// Gets or sets the private key.
+        /// </summary>
+        public string PrivateKey { get; set; }
+
+        /// <summary>
+        /// Gets or sets the subdomain.
+        /// </summary>
+        public string Subdomain { get; set; }
+
+        #endregion
+
+        #region Public Methods and Operators
+
+        /// <summary>
+        /// The cancel subscription.
+        /// </summary>
+        /// <param name="request">
+        /// The request.
+        /// </param>
+        /// <returns>
+        /// The <#= Model.Namespace #>.Subscriptions.CancelSubscriptionResponse.
+        /// </returns>
+        /// <exception cref="NotImplementedException">
+        /// </exception>
+        public override CancelSubscriptionResponse CancelSubscription(CancelSubscriptionRequest request)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// The create subscription.
+        /// </summary>
+        /// <param name="request">
+        /// The request.
+        /// </param>
+        /// <returns>
+        /// The <#= Model.Namespace #>.Subscriptions.CreateSubscriptionResponse.
+        /// </returns>
+        public override CreateSubscriptionResponse CreateSubscription(CreateSubscriptionRequest request)
+        {
+            var acct = new RecurlyAccount(request.Accountcode);
+            acct.Create();
+            return new CreateSubscriptionResponse();
+        }
+
+        /// <summary>
+        /// The initialize.
+        /// </summary>
+        /// <param name="name">
+        /// The name.
+        /// </param>
+        /// <param name="config">
+        /// The config.
+        /// </param>
+        /// <exception cref="ArgumentNullException">
+        /// </exception>
+        /// <exception cref="ProviderException">
+        /// </exception>
+        public override void Initialize(string name, NameValueCollection config)
+        {
+            if (config == null)
+            {
+                throw new ArgumentNullException("config");
+            }
+
+            if (string.IsNullOrEmpty(name))
+            {
+                name = "Recurly";
+            }
+
+            if (string.IsNullOrWhiteSpace(config["description"]))
+            {
+                config.Remove("description");
+                config.Add("description", "Subscription provider for Recurly");
+            }
+
+            base.Initialize(name, config);
+
+            this.ApiKey = config["apiKey"];
+            if (string.IsNullOrEmpty(this.ApiKey))
+            {
+                throw new ProviderException("Empty or missing Api Key");
+            }
+
+            config.Remove("apiKey");
+
+            this.Subdomain = config["apiSubdomain"];
+            if (string.IsNullOrEmpty(this.Subdomain))
+            {
+                throw new ProviderException("Empty or missing API Subdomain");
+            }
+
+            config.Remove("apiSubdomain");
+
+            this.PrivateKey = config["privateKey"];
+            if (string.IsNullOrEmpty(this.PrivateKey))
+            {
+                throw new ProviderException("Empty or missing Private Key");
+            }
+
+            config.Remove("privateKey");
+
+            this.Environment = (EnvironmentType)Enum.Parse(typeof(EnvironmentType), config["environmentType"]);
+            config.Remove("environmentType");
+
+            if (config.Count > 0)
+            {
+                string attr = config.GetKey(0);
+                if (!string.IsNullOrWhiteSpace(attr))
+                {
+                    throw new ProviderException("Unrecognized attribute: " + attr);
+                }
+            }
+        }
+
+        #endregion
+    }
+}

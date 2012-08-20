@@ -95,7 +95,6 @@
     <None Include="content\Models\SettingsModel.cs.pp" />
     <None Include="content\Models\UserNotification.cs.pp" />
     <None Include="content\Models\NotificationsModel.cs.pp" />
-    <None Include="content\Views\Role\Manager.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />
@@ -199,9 +198,6 @@
     <Content Include="content\Scripts\jquery.ui.timepicker.js" />
     <Content Include="lib\net40\MvcSiteMapProvider.dll" />
     <Content Include="lib\net40\MvcSiteMapProvider.XML" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="content\Controllers\RoleController.cs.pp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

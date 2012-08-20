@@ -3,7 +3,7 @@
 namespace <#= Model.Namespace #>.Subscriptions
 {
     public partial class CreateSubscriptionRequest
-    {        
-
+    {
+        public string Accountcode { get; set; }
     }
 }
