@@ -108,7 +108,7 @@
     <None Include="content\Controllers\ProfileController.cs.pp" />
     <None Include="content\Controllers\EventsController.cs.pp" />
     <None Include="content\Controllers\DashboardController.cs.pp" />
-    <None Include="content\Controllers\HomeController.cs.pp" />
+    <None Include="content\Controllers\Home\HomeController.cs.pp" />
     <None Include="content\Controllers\SystemController.cs.pp" />
     <None Include="content\Mailers\ContactUsMailer.cs.pp" />
     <None Include="content\Models\Alert.cs.pp" />
