@@ -1,0 +1,21 @@
+﻿<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
+<#@ Output Extension="cs" #>
+using System.Collections.Generic;
+using System.Configuration.Provider;
+using <#= Model.Namespace #>.Photos.Models;
+
+namespace <#= Model.Namespace #>.Photos
+{
+	public abstract class PhotoProvider : ProviderBase
+	{
+		public abstract Photo SavePhotoResize(PhotoRequest item, string resizeName);
+
+		public abstract IList<Photo> SavePhotoForAllSizes(PhotoRequest item, bool keepOriginalSize);
+
+		public abstract Photo GetPhotoResize(string id, string resizeName);
+
+		public abstract IDictionary<string, Photo> GetAllPhotoResizes(string id);
+
+		public abstract IList<Photo> GetPhotosByResize(string resizeName, string[] ids);
+	}
+}

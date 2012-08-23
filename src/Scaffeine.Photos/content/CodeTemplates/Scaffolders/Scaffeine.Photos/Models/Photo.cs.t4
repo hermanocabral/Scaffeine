@@ -1,0 +1,13 @@
+﻿<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
+<#@ Output Extension="cs" #>
+namespace <#= Model.Namespace #>.Photos.Models
+{
+	public partial class Photo
+	{
+		public string ID { get; set; }
+		
+		public string Url { get; set; }
+
+		public string ResizeName { get; set; }
+	}
+}

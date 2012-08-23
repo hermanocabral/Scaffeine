@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{84A1D870-20D6-4829-82B7-CB59896AA941}</ProjectGuid>
+    <ProjectGuid>{E7E99320-41EB-48D6-93CB-FA01352E9E5C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Scaffeine.Inbox</RootNamespace>
-    <AssemblyName>Scaffeine.Inbox</AssemblyName>
+    <RootNamespace>Scaffeine.Photos</RootNamespace>
+    <AssemblyName>Scaffeine.Photos</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
@@ -46,11 +46,23 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Photos\Helpers\ImageHelper.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Photos\Models\Photo.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Photos\Models\PhotoList.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Photos\Models\PhotoRequest.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Photos\Models\PhotoThumbnail.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Photos\PhotoManager.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Photos\PhotoProvider.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Photos\PhotoProviderCollection.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Photos\PhotoResize.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Photos\PhotoResizeCollection.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Photos\PhotoResizeSettings.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Photos\PhotoSection.cs.t4" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Inbox\Scaffeine.Inbox.ps1" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Photos\Scaffeine.Photos.ps1" />
     <None Include="content\Web.config.transform">
       <SubType>Designer</SubType>
     </None>

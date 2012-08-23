@@ -1,0 +1,11 @@
+﻿<configuration>
+
+	<$rootnamespace$>
+		<$rootnamespace$.Photos defaultProvider="FileSystem">
+			<providers>
+				<add name="FileSystem" type="$rootnamespace$.Photos.FileSystem.FileSystemProvider, $rootnamespace$.Photos.FileSystem" imageFolder="~/Content" />
+			</providers>
+		</$rootnamespace$.Photos>
+	</$rootnamespace$>
+
+</configuration>
