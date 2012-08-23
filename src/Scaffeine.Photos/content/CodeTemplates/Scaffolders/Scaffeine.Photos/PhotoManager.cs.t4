@@ -1,0 +1,95 @@
+﻿<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
+<#@ Output Extension="cs" #>
+using System.Collections.Generic;
+using System.Configuration.Provider;
+using System.Web.Configuration;
+using <#= Model.Namespace #>.Photos.Models;
+
+namespace <#= Model.Namespace #>.Photos
+{
+	public class PhotoManager
+	{
+		#region Provider-specific code
+
+		private static readonly object Lock = new object();
+		private static PhotoProvider _provider;
+		private static PhotoProviderCollection _providers;
+		private static IDictionary<string, PhotoResize> _photoResize;
+
+		public static PhotoProvider Provider
+		{
+			get { LoadProviders(); return _provider; }
+		}
+
+		public static PhotoProviderCollection Providers
+		{
+			get { LoadProviders(); return _providers; }
+		}
+
+		public static IDictionary<string, PhotoResize> PhotoResizes
+		{
+			get 
+			{ 
+				LoadProviders();
+
+				return _photoResize;
+			}
+		}
+
+		private static void LoadProviders()
+		{
+			if(_provider == null)
+			{
+				lock(Lock)
+				{
+					var section = (PhotoSection)WebConfigurationManager.GetSection("<#= Model.Namespace #>/<#= Model.Namespace #>.Photos");
+
+					_providers = new PhotoProviderCollection();
+					ProvidersHelper.InstantiateProviders(section.Providers, _providers, typeof(PhotoProvider));
+					_provider = _providers[section.DefaultProvider];
+
+					_photoResize = new Dictionary<string, PhotoResize>();
+
+					foreach (PhotoResizeSettings photoResize in section.PhotoResizes)
+					{
+						_photoResize.Add(photoResize.Name, new PhotoResize(photoResize));
+					}
+
+					if(_provider == null)
+						throw new ProviderException("Unable to load default FileSystemProvider");
+				}
+			}
+		}
+
+		#endregion
+
+		#region Provider methods
+
+		public Photo SavePhotoResize(PhotoRequest item, string resizeName)
+		{
+			return Provider.SavePhotoResize(item, resizeName);
+		}
+
+		public IList<Photo> SavePhotoForAllSizes(PhotoRequest item, bool keepOriginalSize)
+		{
+			return Provider.SavePhotoForAllSizes(item, keepOriginalSize);
+		}
+
+		public Photo GetPhotoResize(string id, string resizeName)
+		{
+			return Provider.GetPhotoResize(id, resizeName);
+		}
+
+		public IDictionary<string, Photo> GetAllPhotoResizes(string id)
+		{
+			return Provider.GetAllPhotoResizes(id);
+		}
+
+		public IList<Photo> GetPhotosByResize(string resizeName, string[] ids)
+		{
+			return Provider.GetPhotosByResize(resizeName, ids);
+		}
+
+		#endregion
+	}
+}

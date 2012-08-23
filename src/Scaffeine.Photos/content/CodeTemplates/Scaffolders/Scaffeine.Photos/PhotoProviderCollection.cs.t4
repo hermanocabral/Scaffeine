@@ -1,0 +1,27 @@
+﻿<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
+<#@ Output Extension="cs" #>
+using System;
+using System.Configuration.Provider;
+
+namespace <#= Model.Namespace #>.Photos
+{
+	public class PhotoProviderCollection : ProviderCollection
+	{
+		public new PhotoProvider this[string name]
+		{
+			get { return (PhotoProvider)base[name]; }
+		}
+
+		public override void Add(ProviderBase provider)
+		{
+			if(provider == null)
+				throw new ArgumentNullException("provider");
+
+			if(!(provider is PhotoProvider))
+				throw new ArgumentException
+					("Invalid provider type", "provider");
+
+			base.Add(provider);
+		}
+	}
+}
