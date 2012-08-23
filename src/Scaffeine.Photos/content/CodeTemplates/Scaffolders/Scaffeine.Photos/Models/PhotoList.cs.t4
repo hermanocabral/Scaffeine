@@ -1,0 +1,13 @@
+﻿<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
+<#@ Output Extension="cs" #>
+namespace <#= Model.Namespace #>.Photos.Models
+{
+	public class PhotoList
+	{
+		public string Title { get; set; }
+
+		public int ListOrder { get; set; }
+
+		public int IsActive { get; set; }
+	}
+}

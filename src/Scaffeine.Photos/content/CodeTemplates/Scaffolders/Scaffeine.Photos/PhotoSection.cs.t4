@@ -1,0 +1,29 @@
+﻿<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
+<#@ Output Extension="cs" #>
+using System.Configuration;
+
+namespace <#= Model.Namespace #>.Photos
+{
+	public class PhotoSection : ConfigurationSection
+	{
+		[ConfigurationProperty("providers")]
+		public ProviderSettingsCollection Providers
+		{
+			get { return (ProviderSettingsCollection)base["providers"]; }
+		}
+
+		[StringValidator(MinLength = 1)]
+		[ConfigurationProperty("defaultProvider", DefaultValue = "SqlProvider")]
+		public string DefaultProvider
+		{
+			get { return (string)base["defaultProvider"]; }
+			set { base["defaultProvider"] = value; }
+		}
+
+		[ConfigurationProperty("PhotoResize")]
+		public PhotoResizeCollection PhotoResizes
+		{
+			get { return (PhotoResizeCollection)base["PhotoResize"]; }
+		}
+	}
+}
