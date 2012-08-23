@@ -6,13 +6,13 @@
 
     $(function () {
 
-        var notifier = $.connection.notifications;
+//        var notifier = $.connection.notifications;
 
-        notifier.notify = function (e) {
-            console.log(e);
-        };
+//        notifier.notify = function (e) {
+//            console.log(e);
+//        };
 
-        $.connection.hub.start();
+        //$.connection.hub.start();
 
         $('#myTab a').click(function (e) {
             e.preventDefault();

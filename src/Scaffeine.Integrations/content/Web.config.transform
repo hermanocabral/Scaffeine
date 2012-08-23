@@ -2,15 +2,15 @@
 
   <configSections>
     <sectionGroup name="$rootnamespace$">
-      <section name="$rootnamespace$.Integrations" type="$rootnamespace$.Integrations.IntegrationsSection, $rootnamespace$.Integrations" requirePermission="false"/>
+      <section name="$rootnamespace$.Organizations" type="$rootnamespace$.Organizations.OrganizationsSection, $rootnamespace$.Organizations" requirePermission="false"/>
     </sectionGroup>
   </configSections>
 
   <$rootnamespace$>
-    <$rootnamespace$.Integrations>
+    <$rootnamespace$.Organizations>
       <providers>
       </providers>
-    </$rootnamespace$.Integrations>
+    </$rootnamespace$.Organizations>
   </$rootnamespace$>
 
 </configuration>
