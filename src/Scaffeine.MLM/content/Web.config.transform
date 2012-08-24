@@ -1,17 +1,11 @@
 ﻿<configuration>
 
-  <!--<configSections>
-    <sectionGroup name="$rootnamespace$">
-      <section name="$rootnamespace$.<your module name>" type="$rootnamespace$.Core.Configuration.CoreSectionHandler, $rootnamespace$.Core" requirePermission="false"/>
-    </sectionGroup>
-  </configSections>-->
-
-  <!--<$rootnamespace$>
-    <$rootnamespace$.<your module name>>
-
-    
-    </$rootnamespace$.
-    <your module="" name="">>
-  </$rootnamespace$>-->
+  <$rootnamespace$>
+    <$rootnamespace$.Organizations defaultProvider="MLM">
+      <providers>
+        <add name="MLM" type="$rootnamespace$.MLM.MLMProvider, $rootnamespace$.MLM"/>
+      </providers>
+    </$rootnamespace$.Organizations>
+  </$rootnamespace$>
 
 </configuration>

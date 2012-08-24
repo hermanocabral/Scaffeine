@@ -1,17 +1,17 @@
 ﻿<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
 <#@ Output Extension="cs" #>
-namespace <#= Model.Namespace #>.Integrations
+namespace <#= Model.Namespace #>.Organizations
 {
     using System.Configuration.Provider;
     using System.Web.Configuration;
 
-    public partial class IntegrationsManager
+    public partial class OrganizationsManager
     {
         private static readonly object _lock = new object();
-        private static IntegrationProvider _provider;
-        private static IntegrationProviderCollection _providers;
+        private static OrganizationProvider _provider;
+        private static OrganizationProviderCollection _providers;
 
-        public static IntegrationProvider Provider
+        public static OrganizationProvider Provider
         {
             get
             {
@@ -20,7 +20,7 @@ namespace <#= Model.Namespace #>.Integrations
             }
         }
 
-        public static IntegrationProviderCollection Providers
+        public static OrganizationProviderCollection Providers
         {
             get
             {
@@ -38,10 +38,10 @@ namespace <#= Model.Namespace #>.Integrations
                 {
                     if (_provider == null)
                     {
-                        var section = (IntegrationsSection)WebConfigurationManager.GetSection("MvcApplication7/MvcApplication7.Integrations");
+                        var section = (OrganizationsSection)WebConfigurationManager.GetSection("MvcApplication7/MvcApplication7.Organizations");
 
-                        _providers = new IntegrationProviderCollection();
-                        ProvidersHelper.InstantiateProviders(section.Providers, _providers, typeof(IntegrationProvider));
+                        _providers = new OrganizationProviderCollection();
+                        ProvidersHelper.InstantiateProviders(section.Providers, _providers, typeof(OrganizationProvider));
                         _provider = _providers[section.DefaultProvider];
 
                         if (_provider == null)

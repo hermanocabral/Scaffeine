@@ -52,7 +52,7 @@
     <None Include="BuildPublishPackage.cmd" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Subscriptions\CancelSubscriptionRequest.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Subscriptions\CancelSubscriptionResponse.cs.t4" />
-    <Compile Include="content\CodeTemplates\Scaffolders\Scaffeine.Subscriptions\AccountRequest.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Subscriptions\AccountRequest.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Subscriptions\AccountResponse.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Subscriptions\Scaffeine.Subscriptions.ps1" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Subscriptions\SubscriptionsProvider.cs.t4" />

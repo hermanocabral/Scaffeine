@@ -1,0 +1,18 @@
+﻿<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
+<#@ Output Extension="cs" #>
+namespace <#= Model.Namespace #>.MLM
+{
+    using System;
+    using System.Collections.Generic;
+
+    using <#= Model.Namespace #>.Core.Model;
+    using <#= Model.Namespace #>.Organizations;
+
+    public class MLMProvider : OrganizationProvider
+    {
+        public override IList<User> GetContactsForUser(int userId)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}

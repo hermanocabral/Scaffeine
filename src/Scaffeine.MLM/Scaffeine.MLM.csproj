@@ -50,6 +50,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.MLM\MLMProvider.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.MLM\Scaffeine.MLM.ps1" />
     <None Include="content\Web.config.transform">
       <SubType>Designer</SubType>
     </None>
@@ -59,7 +61,6 @@
     <None Include="tools\uninstall.ps1" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="content\CodeTemplates\Scaffolders\" />
     <Folder Include="lib\" />
   </ItemGroup>
   <ItemGroup>
