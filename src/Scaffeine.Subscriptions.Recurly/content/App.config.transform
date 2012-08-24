@@ -1,0 +1,11 @@
+﻿<configuration>
+
+  <$rootnamespace$>
+    <$rootnamespace$.Subscriptions defaultProvider="Recurly">
+      <providers>
+        <add name="Recurly" type="$rootnamespace$.Subscriptions.Recurly.RecurlySubscriptionProvider, $rootnamespace$.Subscriptions.Recurly"/>
+      </providers>
+    </$rootnamespace$.Subscriptions>
+  </$rootnamespace$>
+
+</configuration>

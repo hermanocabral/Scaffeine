@@ -51,10 +51,17 @@
   <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Inbox\Scaffeine.Inbox.ps1" />
+    <None Include="content\Controllers\InboxController.cs.pp" />
+    <None Include="content\Content\Less\inbox.less" />
+    <None Include="content\Views\Inbox\Conversation.cshtml.pp" />
+    <None Include="content\Views\Inbox\Index.cshtml.pp" />
     <None Include="content\Web.config.transform">
       <SubType>Designer</SubType>
     </None>
     <None Include="Package.nuspec" />
+    <None Include="Sitemaps\Modules.sitemap.transform">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="tools\init.ps1" />
     <None Include="tools\install.ps1" />
     <None Include="tools\uninstall.ps1" />

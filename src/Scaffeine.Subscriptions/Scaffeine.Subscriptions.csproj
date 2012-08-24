@@ -59,6 +59,9 @@
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Subscriptions\SubscriptionsProviderCollection.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Subscriptions\SubscriptionsManager.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Subscriptions\SubscriptionsSection.cs.t4" />
+    <None Include="content\App.config.transform">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="content\Web.config.transform">
       <SubType>Designer</SubType>
     </None>

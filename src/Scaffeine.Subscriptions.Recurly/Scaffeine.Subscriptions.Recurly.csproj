@@ -76,6 +76,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />
+    <None Include="content\App.config.transform">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="content\Web.config.transform">
       <SubType>Designer</SubType>
     </None>
