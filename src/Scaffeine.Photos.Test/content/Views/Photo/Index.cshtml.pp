@@ -16,7 +16,7 @@
 			@foreach(var p in Model)
 			{
 				<li style="list-style-type: decimal">
-					<div>ID: @p.ID</div> 
+					<div>ID: @p.Id</div> 
 					<div>Size Type: @p.ResizeName</div> 
 					<div><img src="@Url.Content(p.Url)" alt="" /></div> 
 				</li>

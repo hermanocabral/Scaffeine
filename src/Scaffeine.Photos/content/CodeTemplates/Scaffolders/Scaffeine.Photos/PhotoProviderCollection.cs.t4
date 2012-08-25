@@ -1,27 +1,55 @@
 ﻿<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
 <#@ Output Extension="cs" #>
-using System;
-using System.Configuration.Provider;
-
 namespace <#= Model.Namespace #>.Photos
 {
-	public class PhotoProviderCollection : ProviderCollection
-	{
-		public new PhotoProvider this[string name]
-		{
-			get { return (PhotoProvider)base[name]; }
-		}
+    using System;
+    using System.Configuration.Provider;
 
-		public override void Add(ProviderBase provider)
-		{
-			if(provider == null)
-				throw new ArgumentNullException("provider");
+    /// <summary>
+    /// The photo provider collection.
+    /// </summary>
+    public class PhotoProviderCollection : ProviderCollection
+    {
+        /// <summary>
+        /// The this.
+        /// </summary>
+        /// <param name="name">
+        /// The name.
+        /// </param>
+        /// <returns>
+        /// The <#= Model.Namespace #>.Photos.PhotoProvider.
+        /// </returns>
+        public new PhotoProvider this[string name]
+        {
+            get
+            {
+                return (PhotoProvider)base[name];
+            }
+        }
 
-			if(!(provider is PhotoProvider))
-				throw new ArgumentException
-					("Invalid provider type", "provider");
+        /// <summary>
+        /// The add.
+        /// </summary>
+        /// <param name="provider">
+        /// The provider.
+        /// </param>
+        /// <exception cref="ArgumentNullException">
+        /// </exception>
+        /// <exception cref="ArgumentException">
+        /// </exception>
+        public override void Add(ProviderBase provider)
+        {
+            if (provider == null)
+            {
+                throw new ArgumentNullException("provider");
+            }
 
-			base.Add(provider);
-		}
-	}
+            if (!(provider is PhotoProvider))
+            {
+                throw new ArgumentException("Invalid provider type", "provider");
+            }
+
+            base.Add(provider);
+        }
+    }
 }

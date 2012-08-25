@@ -14,7 +14,7 @@
 	<body>
 		@if(Model != null)
 		{
-			<span>@Model.ID</span>
+			<span>@Model.Id</span>
 			<span>@Model.ResizeName</span>
 			<span>@Url.Content(Model.Url)</span>
 			<img src="@Url.Content(Model.Url)" alt=""/>

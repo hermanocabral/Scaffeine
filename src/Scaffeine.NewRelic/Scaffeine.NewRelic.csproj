@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{2BDEA833-2EE0-4C8F-B4BD-07D2585C32F3}</ProjectGuid>
+    <ProjectGuid>{26D274BB-FBD0-4D7C-BF31-231AFC2C2395}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Scaffeine.NewRelic</RootNamespace>

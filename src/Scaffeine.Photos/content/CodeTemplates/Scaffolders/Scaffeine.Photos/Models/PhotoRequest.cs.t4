@@ -1,20 +1,46 @@
 ﻿<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
 <#@ Output Extension="cs" #>
-using System.IO;
-
 namespace <#= Model.Namespace #>.Photos.Models
 {
-	public class PhotoRequest
-	{
-		public Stream Stream { get; private set; }
-		public string MimeType { get; private set; }
-		public string PhotoID { get; private set; }
+    using System.IO;
 
-		public PhotoRequest(Stream stream, string mimeType, string photoID)
-		{
-			Stream = stream;
-			MimeType = mimeType;
-			PhotoID = photoID;
-		}
-	}
+    /// <summary>
+    /// The photo request.
+    /// </summary>
+    public class PhotoRequest
+    {
+        /// <summary>
+        /// Gets the stream.
+        /// </summary>
+        public Stream Stream { get; private set; }
+
+        /// <summary>
+        /// Gets the mime type.
+        /// </summary>
+        public string MimeType { get; private set; }
+
+        /// <summary>
+        /// Gets the photo id.
+        /// </summary>
+        public string PhotoId { get; private set; }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PhotoRequest"/> class.
+        /// </summary>
+        /// <param name="stream">
+        /// The stream.
+        /// </param>
+        /// <param name="mimeType">
+        /// The mime type.
+        /// </param>
+        /// <param name="photoId">
+        /// The photo id.
+        /// </param>
+        public PhotoRequest(Stream stream, string mimeType, string photoId)
+        {
+            Stream = stream;
+            MimeType = mimeType;
+            this.PhotoId = photoId;
+        }
+    }
 }

@@ -1,95 +1,195 @@
 ﻿<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
 <#@ Output Extension="cs" #>
-using System.Collections.Generic;
-using System.Configuration.Provider;
-using System.Web.Configuration;
-using <#= Model.Namespace #>.Photos.Models;
-
 namespace <#= Model.Namespace #>.Photos
 {
-	public class PhotoManager
-	{
-		#region Provider-specific code
+    using System.Collections.Generic;
+    using System.Configuration.Provider;
+    using System.Web.Configuration;
 
-		private static readonly object Lock = new object();
-		private static PhotoProvider _provider;
-		private static PhotoProviderCollection _providers;
-		private static IDictionary<string, PhotoResize> _photoResize;
+    using <#= Model.Namespace #>.Photos.Models;
 
-		public static PhotoProvider Provider
-		{
-			get { LoadProviders(); return _provider; }
-		}
+    /// <summary>
+    /// The photo manager.
+    /// </summary>
+    public class PhotoManager
+    {
+        #region Provider-specific code
 
-		public static PhotoProviderCollection Providers
-		{
-			get { LoadProviders(); return _providers; }
-		}
+        /// <summary>
+        /// The lock.
+        /// </summary>
+        private static readonly object Lock = new object();
 
-		public static IDictionary<string, PhotoResize> PhotoResizes
-		{
-			get 
-			{ 
-				LoadProviders();
+        /// <summary>
+        /// The _provider.
+        /// </summary>
+        private static PhotoProvider _provider;
 
-				return _photoResize;
-			}
-		}
+        /// <summary>
+        /// The _providers.
+        /// </summary>
+        private static PhotoProviderCollection _providers;
 
-		private static void LoadProviders()
-		{
-			if(_provider == null)
-			{
-				lock(Lock)
-				{
-					var section = (PhotoSection)WebConfigurationManager.GetSection("<#= Model.Namespace #>/<#= Model.Namespace #>.Photos");
+        /// <summary>
+        /// The _photo resize.
+        /// </summary>
+        private static IDictionary<string, PhotoResize> _photoResize;
 
-					_providers = new PhotoProviderCollection();
-					ProvidersHelper.InstantiateProviders(section.Providers, _providers, typeof(PhotoProvider));
-					_provider = _providers[section.DefaultProvider];
+        /// <summary>
+        /// Gets the provider.
+        /// </summary>
+        public static PhotoProvider Provider
+        {
+            get
+            {
+                LoadProviders();
+                return _provider;
+            }
+        }
 
-					_photoResize = new Dictionary<string, PhotoResize>();
+        /// <summary>
+        /// Gets the providers.
+        /// </summary>
+        public static PhotoProviderCollection Providers
+        {
+            get
+            {
+                LoadProviders();
+                return _providers;
+            }
+        }
 
-					foreach (PhotoResizeSettings photoResize in section.PhotoResizes)
-					{
-						_photoResize.Add(photoResize.Name, new PhotoResize(photoResize));
-					}
+        /// <summary>
+        /// Gets the photo resizes.
+        /// </summary>
+        public static IDictionary<string, PhotoResize> PhotoResizes
+        {
+            get
+            {
+                LoadProviders();
+                return _photoResize;
+            }
+        }
 
-					if(_provider == null)
-						throw new ProviderException("Unable to load default FileSystemProvider");
-				}
-			}
-		}
+        /// <summary>
+        /// The load providers.
+        /// </summary>
+        /// <exception cref="ProviderException">
+        /// </exception>
+        private static void LoadProviders()
+        {
+            if (_provider == null)
+            {
+                lock (Lock)
+                {
+                    var section =
+                        (PhotoSection)WebConfigurationManager.GetSection("<#= Model.Namespace #>/<#= Model.Namespace #>.Photos");
 
-		#endregion
+                    _providers = new PhotoProviderCollection();
+                    ProvidersHelper.InstantiateProviders(section.Providers, _providers, typeof(PhotoProvider));
+                    _provider = _providers[section.DefaultProvider];
 
-		#region Provider methods
+                    _photoResize = new Dictionary<string, PhotoResize>();
 
-		public Photo SavePhotoResize(PhotoRequest item, string resizeName)
-		{
-			return Provider.SavePhotoResize(item, resizeName);
-		}
+                    foreach (PhotoResizeSettings photoResize in section.PhotoResizes)
+                    {
+                        _photoResize.Add(photoResize.Name, new PhotoResize(photoResize));
+                    }
 
-		public IList<Photo> SavePhotoForAllSizes(PhotoRequest item, bool keepOriginalSize)
-		{
-			return Provider.SavePhotoForAllSizes(item, keepOriginalSize);
-		}
+                    if (_provider == null)
+                    {
+                        throw new ProviderException("Unable to load default FileSystemProvider");
+                    }
+                }
+            }
+        }
 
-		public Photo GetPhotoResize(string id, string resizeName)
-		{
-			return Provider.GetPhotoResize(id, resizeName);
-		}
+        #endregion
 
-		public IDictionary<string, Photo> GetAllPhotoResizes(string id)
-		{
-			return Provider.GetAllPhotoResizes(id);
-		}
+        #region Provider methods
 
-		public IList<Photo> GetPhotosByResize(string resizeName, string[] ids)
-		{
-			return Provider.GetPhotosByResize(resizeName, ids);
-		}
+        /// <summary>
+        /// The save photo resize.
+        /// </summary>
+        /// <param name="item">
+        /// The item.
+        /// </param>
+        /// <param name="resizeName">
+        /// The resize name.
+        /// </param>
+        /// <returns>
+        /// The <#= Model.Namespace #>.Photos.Models.Photo.
+        /// </returns>
+        public Photo SavePhotoResize(PhotoRequest item, string resizeName)
+        {
+            return Provider.SavePhotoResize(item, resizeName);
+        }
 
-		#endregion
-	}
+        /// <summary>
+        /// The save photo for all sizes.
+        /// </summary>
+        /// <param name="item">
+        /// The item.
+        /// </param>
+        /// <param name="keepOriginalSize">
+        /// The keep original size.
+        /// </param>
+        /// <returns>
+        /// The System.Collections.Generic.IList`1[T -&gt; <#= Model.Namespace #>.Photos.Models.Photo].
+        /// </returns>
+        public IList<Photo> SavePhotoForAllSizes(PhotoRequest item, bool keepOriginalSize)
+        {
+            return Provider.SavePhotoForAllSizes(item, keepOriginalSize);
+        }
+
+        /// <summary>
+        /// The get photo resize.
+        /// </summary>
+        /// <param name="id">
+        /// The id.
+        /// </param>
+        /// <param name="resizeName">
+        /// The resize name.
+        /// </param>
+        /// <returns>
+        /// The <#= Model.Namespace #>.Photos.Models.Photo.
+        /// </returns>
+        public Photo GetPhotoResize(string id, string resizeName)
+        {
+            return Provider.GetPhotoResize(id, resizeName);
+        }
+
+        /// <summary>
+        /// The get all photo resizes.
+        /// </summary>
+        /// <param name="id">
+        /// The id.
+        /// </param>
+        /// <returns>
+        /// The System.Collections.Generic.IDictionary`2[TKey -&gt; System.String, TValue -&gt; <#= Model.Namespace #>.Photos.Models.Photo].
+        /// </returns>
+        public IDictionary<string, Photo> GetAllPhotoResizes(string id)
+        {
+            return Provider.GetAllPhotoResizes(id);
+        }
+
+        /// <summary>
+        /// The get photos by resize.
+        /// </summary>
+        /// <param name="resizeName">
+        /// The resize name.
+        /// </param>
+        /// <param name="ids">
+        /// The ids.
+        /// </param>
+        /// <returns>
+        /// The System.Collections.Generic.IList`1[T -&gt; <#= Model.Namespace #>.Photos.Models.Photo].
+        /// </returns>
+        public IList<Photo> GetPhotosByResize(string resizeName, string[] ids)
+        {
+            return Provider.GetPhotosByResize(resizeName, ids);
+        }
+
+        #endregion
+    }
 }

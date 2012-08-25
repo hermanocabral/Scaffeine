@@ -1,74 +1,146 @@
 <#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
 <#@ Output Extension="cs" #>
-using System;
-using System.Configuration;
-
 namespace <#= Model.Namespace #>.Photos
 {
-	[ConfigurationCollection(typeof(PhotoResizeSettings))]
-	public class PhotoResizeCollection : ConfigurationElementCollection
-	{
-		internal const string PropertyName = "add";
+    using System;
+    using System.Configuration;
 
-		protected override bool IsElementName(string elementName)
-		{
-			return elementName.Equals(PropertyName, StringComparison.InvariantCultureIgnoreCase);
-		}
+    /// <summary>
+    /// The photo resize collection.
+    /// </summary>
+    [ConfigurationCollection(typeof(PhotoResizeSettings))]
+    public class PhotoResizeCollection : ConfigurationElementCollection
+    {
+        /// <summary>
+        /// The property name.
+        /// </summary>
+        internal const string PropertyName = "add";
 
-		protected override string ElementName
-		{
-			get { return PropertyName; }
-		}
+        /// <summary>
+        /// The is element name.
+        /// </summary>
+        /// <param name="elementName">
+        /// The element name.
+        /// </param>
+        /// <returns>
+        /// The System.Boolean.
+        /// </returns>
+        protected override bool IsElementName(string elementName)
+        {
+            return elementName.Equals(PropertyName, StringComparison.InvariantCultureIgnoreCase);
+        }
 
+        /// <summary>
+        /// Gets the element name.
+        /// </summary>
+        protected override string ElementName
+        {
+            get
+            {
+                return PropertyName;
+            }
+        }
 
-		public void Add(ProviderSettings provider)
-		{
-			if(provider != null)
-			{
-				BaseAdd(provider);
-			}
-		}
+        /// <summary>
+        /// The add.
+        /// </summary>
+        /// <param name="provider">
+        /// The provider.
+        /// </param>
+        public void Add(ProviderSettings provider)
+        {
+            if (provider != null)
+            {
+                BaseAdd(provider);
+            }
+        }
 
-		public void Remove(String name)
-		{
-			BaseRemove(name);
-		}
+        /// <summary>
+        /// The remove.
+        /// </summary>
+        /// <param name="name">
+        /// The name.
+        /// </param>
+        public void Remove(string name)
+        {
+            BaseRemove(name);
+        }
 
-		public void Clear()
-		{
-			BaseClear();
-		}
+        /// <summary>
+        /// The clear.
+        /// </summary>
+        public void Clear()
+        {
+            BaseClear();
+        }
 
-		protected override ConfigurationElement CreateNewElement()
-		{
-			return new PhotoResizeSettings();
-		}
-		protected override Object GetElementKey(ConfigurationElement element)
-		{
-			return ((PhotoResizeSettings)element);
-		}
+        /// <summary>
+        /// The create new element.
+        /// </summary>
+        /// <returns>
+        /// The System.Configuration.ConfigurationElement.
+        /// </returns>
+        protected override ConfigurationElement CreateNewElement()
+        {
+            return new PhotoResizeSettings();
+        }
 
-		public new PhotoResizeSettings this[string key]
-		{
-			get
-			{
-				return (PhotoResizeSettings)BaseGet(key);
-			}
-		}
+        /// <summary>
+        /// The get element key.
+        /// </summary>
+        /// <param name="element">
+        /// The element.
+        /// </param>
+        /// <returns>
+        /// The System.Object.
+        /// </returns>
+        protected override object GetElementKey(ConfigurationElement element)
+        {
+            return (PhotoResizeSettings)element;
+        }
 
-		public PhotoResizeSettings this[int index]
-		{
-			get
-			{
-				return (PhotoResizeSettings)BaseGet(index);
-			}
-			set
-			{
-				if(BaseGet(index) != null)
-					BaseRemoveAt(index);
+        /// <summary>
+        /// The this.
+        /// </summary>
+        /// <param name="key">
+        /// The key.
+        /// </param>
+        /// <returns>
+        /// The <#= Model.Namespace #>.Photos.PhotoResizeSettings.
+        /// </returns>
+        public new PhotoResizeSettings this[string key]
+        {
+            get
+            {
+                return (PhotoResizeSettings)BaseGet(key);
+            }
+        }
 
-				BaseAdd(index, value);
-			}
-		} 
-	}
+        /// <summary>
+        /// The this.
+        /// </summary>
+        /// <param name="index">
+        /// The index.
+        /// </param>
+        /// <returns>
+        /// The <#= Model.Namespace #>.Photos.PhotoResizeSettings.
+        /// </returns>
+        public PhotoResizeSettings this[int index]
+        {
+            get
+            {
+                return (PhotoResizeSettings)BaseGet(index);
+            }
+
+            set
+            {
+                if (BaseGet(index) != null)
+                {
+                    BaseRemoveAt(index);
+                }
+
+                BaseAdd(index, value);
+            }
+        }
+    }
 }
