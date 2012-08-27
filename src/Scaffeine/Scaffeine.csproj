@@ -68,6 +68,8 @@
     <None Include="content\CodeTemplates\Scaffolders\ScaffR.Membership\UserRole.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\ScaffR.Website\ScaffR.Website.ps1" />
     <None Include="content\CodeTemplates\Scaffolders\ScaffR.Website\_Layout.cs.t4" />
+    <None Include="content\Content\custom\placeholder.less" />
+    <None Include="content\Content\includes.tt.pp" />
     <None Include="content\Controllers\AccountController.cs.pp" />
     <None Include="content\Controllers\AccountController.Profile.cs.pp" />
     <None Include="content\Controllers\BaseController.cs.pp" />
@@ -137,6 +139,7 @@
     <None Include="content\Views\Integrations\Facebook.cshtml.pp" />
     <None Include="content\Views\Integrations\Index.cshtml.pp" />
     <None Include="content\Views\Integrations\_ViewStart.cshtml.pp" />
+    <None Include="content\Views\Shared\_UserActions.cshtml.pp" />
     <None Include="content\Views\Shared\DisplayTemplates\Alert.cshtml.pp" />
     <None Include="content\Views\Shared\DisplayTemplates\Breadcrumb.cshtml.pp" />
     <None Include="content\Views\Shared\DisplayTemplates\Nav.cshtml.pp" />
@@ -188,6 +191,7 @@
     <Content Include="content\Content\images\glyphicons-halflings.png" />
     <Content Include="content\Content\images\open-source-icon.gif" />
     <Content Include="content\Content\images\open-source-icon.png" />
+    <Content Include="content\Content\images\rod.PNG" />
     <Content Include="content\favicon.ico" />
     <Content Include="content\Scripts\custom.js" />
     <Content Include="content\Scripts\custom.knockout.js" />

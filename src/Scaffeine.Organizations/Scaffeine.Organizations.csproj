@@ -50,10 +50,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Organizations\OrganizationProvider.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Organizations\OrganizationProviderCollection.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Organizations\OrganizationsManager.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Organizations\OrganizationsSection.cs.t4" />
+    <Compile Include="content\CodeTemplates\Scaffolders\Scaffeine.Organizations\OrganizationProvider.cs.t4" />
+    <Compile Include="content\CodeTemplates\Scaffolders\Scaffeine.Organizations\OrganizationProviderCollection.cs.t4" />
+    <Compile Include="content\CodeTemplates\Scaffolders\Scaffeine.Organizations\OrganizationsManager.cs.t4" />
+    <Compile Include="content\CodeTemplates\Scaffolders\Scaffeine.Organizations\OrganizationsSection.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Organizations\Scaffeine.Organizations.ps1" />
     <None Include="content\Web.config.transform">
       <SubType>Designer</SubType>

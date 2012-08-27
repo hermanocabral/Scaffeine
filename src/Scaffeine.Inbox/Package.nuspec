@@ -16,6 +16,7 @@
     <copyright>ScaffR, 2012</copyright>
     <tags></tags>
     <dependencies>
+      <dependency id="Scaffeine" version="1.1.1" />
       <dependency id="Scaffeine.Organizations" version="1.1.1" />
       <dependency id="T4Scaffolding" version="1.0.6" />
     </dependencies>

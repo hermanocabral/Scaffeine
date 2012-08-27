@@ -4,15 +4,8 @@
     Layout = "~/Views/Shared/_Folder.cshtml";
     ViewBag.SitemapProvider = "Modules";
 }
+
 <div class="row-fluid">
-    <div class="btn-group pull-right">
-        <a data-toggle="modal" href="#conversation" class="btn btn-primary"><i class="icon icon-envelope icon-white">
-        </i>Compose</a>
-    </div>
-    <ul class="nav nav-tabs">
-        <li class="active"><a href="#inbox" data-toggle="tab"><i class="icon-align-justify">
-        </i>My Inbox</a> </li>
-    </ul>
     <div class="tab-content">
         <div class="tab-pane active" id="inbox">
             <table class="table table-bordered inbox">
