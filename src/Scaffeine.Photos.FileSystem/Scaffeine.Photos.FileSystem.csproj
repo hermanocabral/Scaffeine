@@ -46,7 +46,7 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Photos.FileSystem\FileSystemProvider.cs.t4" />
+    <Compile Include="content\CodeTemplates\Scaffolders\Scaffeine.Photos.FileSystem\FileSystemProvider.cs.t4" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

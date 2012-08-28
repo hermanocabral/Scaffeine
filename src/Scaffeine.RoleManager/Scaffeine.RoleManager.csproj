@@ -51,7 +51,7 @@
   <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />
     <None Include="content\Controllers\RoleController.cs.pp" />
-    <None Include="content\Sitemaps\Modules.sitemap" />
+    <None Include="content\Sitemaps\Modules.sitemap.transform" />
     <None Include="content\Views\Role\Manager.cshtml.pp" />
     <None Include="content\Web.config.transform">
       <SubType>Designer</SubType>

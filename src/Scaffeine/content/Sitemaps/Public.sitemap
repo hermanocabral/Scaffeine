@@ -5,9 +5,6 @@
             enableLocalization="true">
 
   <mvcSiteMapNode title="Home" controller="Home" action="Index" imageUrl="icon-home" >
-    <mvcSiteMapNode title="Learn More" controller="Home" action="Learn" imageUrl="icon-book" />
-    <mvcSiteMapNode title="About" controller="Home" action="About" imageUrl="icon-info-sign" />
-    <mvcSiteMapNode title="Contact" controller="Home" action="Contact" imageUrl="icon-envelope" />
 
   </mvcSiteMapNode>
 

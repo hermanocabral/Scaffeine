@@ -16,7 +16,7 @@ else
     <div class="pull-right">
         <div class="nav-collapse">
             <ul class="nav">
-                <li @Html.ActiveWhen("Login", "Account")><a href="@Url.Action("Login", "Account")"><i
+                <li @Html.ActiveWhen("Logon", "Account")><a href="@Url.Action("Logon", "Account")"><i
                     class="icon-user icon-white"></i>Login</a></li>
                 <li @Html.ActiveWhen("Register", "Account")><a href="@Url.Action("Register", "Account")">
                     <i class="icon-th-list icon-white"></i>Register</a></li>

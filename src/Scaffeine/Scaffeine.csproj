@@ -63,15 +63,14 @@
     <None Include="content\CodeTemplates\Scaffolders\ScaffR.Membership\MembershipHelper.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\ScaffR.Membership\Role.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\ScaffR.Membership\ScaffR.Membership.ps1" />
-    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Membership\User.cs.t4" />
+    <Compile Include="content\CodeTemplates\Scaffolders\ScaffR.Membership\User.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\ScaffR.Membership\UserEmail.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\ScaffR.Membership\UserRole.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\ScaffR.Website\ScaffR.Website.ps1" />
-    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Website\_Layout.cs.t4" />
+    <Compile Include="content\CodeTemplates\Scaffolders\ScaffR.Website\_Layout.cs.t4" />
     <None Include="content\Content\custom\placeholder.less" />
     <None Include="content\Content\includes.tt.pp" />
-    <None Include="content\Controllers\AccountController.cs.pp" />
-    <None Include="content\Controllers\AccountController.Profile.cs.pp" />
+    <None Include="content\Controllers\Account\AccountController.cs.pp" />
     <None Include="content\Controllers\BaseController.cs.pp" />
     <None Include="content\App_Start\Start.cs.pp" />
     <None Include="content\Filters\AllowAnonymousAttribute.cs.pp" />
@@ -106,12 +105,7 @@
     <None Include="content\CodeTemplates\Scaffolders\ScaffR.Controller.For\Controller.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\ScaffR.Controller.For\ScaffR.Controller.For.ps1" />
     <None Include="content\CodeTemplates\Scaffolders\ScaffR.Page.For\ScaffR.Pages.ps1" />
-    <None Include="content\Controllers\IntegrationsController.cs.pp" />
-    <None Include="content\Controllers\ProfileController.cs.pp" />
-    <None Include="content\Controllers\EventsController.cs.pp" />
-    <None Include="content\Controllers\DashboardController.cs.pp" />
     <None Include="content\Controllers\Home\HomeController.cs.pp" />
-    <None Include="content\Controllers\SystemController.cs.pp" />
     <None Include="content\Mailers\ContactUsMailer.cs.pp" />
     <None Include="content\Models\Alert.cs.pp" />
     <None Include="content\Models\ContactUsModel.cs.pp" />
@@ -119,26 +113,11 @@
     <None Include="content\Sitemaps\Account.sitemap" />
     <None Include="content\Sitemaps\Modules.sitemap" />
     <None Include="content\Sitemaps\Public.sitemap" />
-    <None Include="content\Sitemaps\System.sitemap" />
     <None Include="content\Helpers\HtmlHelpers.cs.pp" />
     <None Include="content\Helpers\JSON.cs.pp" />
-    <None Include="content\Views\Account\ChangePasswordSuccess.cshtml.pp" />
-    <None Include="content\Views\Account\Emails.cshtml.pp" />
+    <None Include="content\Sitemaps\System.sitemap" />
     <None Include="content\Views\Account\ForgotPassword.cshtml.pp" />
-    <None Include="content\Views\Account\Login.cshtml.pp" />
-    <None Include="content\Views\Account\Notifications.cshtml.pp" />
-    <None Include="content\Views\Account\Profile.cshtml.pp" />
-    <None Include="content\Views\Account\Register.cshtml.pp" />
-    <None Include="content\Views\Account\Settings.cshtml.pp" />
-    <None Include="content\Views\Dashboard\Calendar.cshtml.pp" />
-    <None Include="content\Views\Dashboard\Header.cshtml.pp" />
-    <None Include="content\Views\Dashboard\Index.cshtml.pp" />
-    <None Include="content\Views\Dashboard\News.cshtml.pp" />
-    <None Include="content\Views\Dashboard\_TodoPartial.cshtml.pp" />
-    <None Include="content\Views\Dashboard\_ViewStart.cshtml.pp" />
-    <None Include="content\Views\Integrations\Facebook.cshtml.pp" />
-    <None Include="content\Views\Integrations\Index.cshtml.pp" />
-    <None Include="content\Views\Integrations\_ViewStart.cshtml.pp" />
+    <None Include="content\Views\Account\Logon.cshtml.pp" />
     <None Include="content\Views\Shared\_UserActions.cshtml.pp" />
     <None Include="content\Views\Shared\DisplayTemplates\Alert.cshtml.pp" />
     <None Include="content\Views\Shared\DisplayTemplates\Breadcrumb.cshtml.pp" />
@@ -147,8 +126,6 @@
     <None Include="content\Views\Shared\DisplayTemplates\Tabs.cshtml.pp" />
     <None Include="content\Views\Shared\_Folder.cshtml.pp" />
     <None Include="content\Views\Shared\_LogOnPartial.cshtml.pp" />
-    <None Include="content\Views\System\Module.cshtml.pp" />
-    <None Include="content\Views\Home\Contact.cshtml.pp" />
     <None Include="content\Views\Home\About.cshtml.pp" />
     <None Include="content\Views\Home\Learn.cshtml.pp" />
     <None Include="content\Views\Home\Index.cshtml.pp" />
@@ -157,8 +134,6 @@
     <None Include="content\Views\Events\Signups.cshtml.pp" />
     <None Include="content\Views\Events\Index.cshtml.pp" />
     <None Include="content\Views\Events\_ViewStart.cshtml.pp" />
-    <None Include="content\Views\System\Index.cshtml.pp" />
-    <None Include="content\Views\System\_ViewStart.cshtml.pp" />
     <None Include="content\Views\Shared\_BottomMenu.cshtml.pp" />
     <None Include="content\Views\Shared\_NotificationsPartial.cshtml.pp" />
     <None Include="content\Views\Shared\_TopMenu.cshtml.pp" />
@@ -177,6 +152,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="content\CodeTemplates\Scaffolders\ScaffR.Ninject\" />
+    <Folder Include="content\Views\Dashboard\" />
     <Folder Include="content\Views\Diagnostic\" />
     <Folder Include="lib\net35\" />
     <Folder Include="Properties\" />
@@ -186,12 +162,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="content\Content\images\facebook_lrg.png" />
-    <Content Include="content\Content\images\fleetio-screenshots.jpg" />
     <Content Include="content\Content\images\glyphicons-halflings-white.png" />
     <Content Include="content\Content\images\glyphicons-halflings.png" />
+    <Content Include="content\Content\images\hero-bg.png" />
+    <Content Include="content\Content\images\icon-square.png" />
     <Content Include="content\Content\images\open-source-icon.gif" />
     <Content Include="content\Content\images\open-source-icon.png" />
     <Content Include="content\Content\images\rod.PNG" />
+    <Content Include="content\Content\images\scaffr.png" />
     <Content Include="content\favicon.ico" />
     <Content Include="content\Scripts\custom.js" />
     <Content Include="content\Scripts\custom.knockout.js" />

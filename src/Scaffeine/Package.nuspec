@@ -16,8 +16,7 @@
     <copyright>World-Class Programmers 2012</copyright>
     <tags>Scaffolding, Boilerplate, Template, Bootstrap</tags>
     <dependencies>
-      <dependency id="T4Scaffolding" version="1.0.4" />      
-      <dependency id="WebApi.All" version="0.6.0" />
+      <dependency id="T4Scaffolding" version="1.0.4" />            
       <dependency id="ScaffR" version="1.1.1" />
       <dependency id="ScaffR.Backend" version="1.1.1" />      
       <dependency id="ScaffR.Ninject" version="1.1.1" />

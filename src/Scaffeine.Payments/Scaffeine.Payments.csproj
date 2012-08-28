@@ -61,8 +61,8 @@
     <None Include="content\CodeTemplates\Scaffolders\ScaffR.Payments\PaymentProviderCollection.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\ScaffR.Payments\PaymentsManager.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\ScaffR.Payments\PaymentsSection.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Payments\CaptureRequest.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Payments\CaptureResponse.cs.t4" />
+    <Compile Include="content\CodeTemplates\Scaffolders\ScaffR.Payments\CaptureRequest.cs.t4" />
+    <Compile Include="content\CodeTemplates\Scaffolders\ScaffR.Payments\CaptureResponse.cs.t4" />
   </ItemGroup>
   <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />

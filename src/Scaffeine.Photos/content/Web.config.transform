@@ -8,11 +8,11 @@
   
   <$rootnamespace$>
     <$rootnamespace$.Photos>
-		<PhotoResize>
-			<add name="Small" width="90" height="120" />
-			<add name="Medium" width="200" height="250" />
-			<add name="Large" width="400" height="480" />
-		</PhotoResize>
+		  <PhotoResize>
+			  <add name="Small" width="90" height="120" />
+			  <add name="Medium" width="200" height="250" />
+			  <add name="Large" width="400" height="480" />
+		  </PhotoResize>
       <providers>        
       </providers>
     </$rootnamespace$.Photos>      

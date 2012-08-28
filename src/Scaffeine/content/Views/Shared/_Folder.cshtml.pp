@@ -22,7 +22,7 @@
                     <td>
                         <h4>
                             Rod Johnson</h4>
-                        <span>Social icons</span>
+                        
                     </td>
                 </tr>
             </table>
@@ -40,11 +40,11 @@
             SiteMapProvider provider = SiteMap.Providers[ViewBag.SitemapProvider];
         }
         @Html.MvcSiteMap(provider).Pills(0, true, true, 1)
-        <h6>
+         @*<h6>
             My Friends</h6>
         <ul>
             <li>asdf</li>
-        </ul>
+        </ul>*@
     </div>
     <div class="span10" id="mainPanel">
         @Html.Alert()

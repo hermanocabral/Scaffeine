@@ -15,7 +15,7 @@ namespace $rootnamespace$.Filters
             _action = action;
         }
 
-        public OnlyAnonymousAttribute() : this("Index", "Dashboard") // this needs to come from configuration
+        public OnlyAnonymousAttribute() : this("Index", "Home") // this needs to come from configuration
         {
             
         }

@@ -50,6 +50,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />
+    <None Include="content\Content\custom\calendar.less" />
+    <None Include="content\Views\Dashboard\_Calendar.cshtml" />
     <None Include="content\Web.config.transform">
       <SubType>Designer</SubType>
     </None>
@@ -63,6 +65,7 @@
     <Folder Include="lib\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="content\images\calendar.PNG" />
     <Content Include="NuGet.exe" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
