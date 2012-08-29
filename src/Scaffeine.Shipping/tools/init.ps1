@@ -1,1 +1,3 @@
-﻿param($installPath, $toolsPath, $package)
+﻿param($installPath, $toolsPath, $package, $project)
+
+$global:shippingProjectName = $rootNamespace + ".Shipping"

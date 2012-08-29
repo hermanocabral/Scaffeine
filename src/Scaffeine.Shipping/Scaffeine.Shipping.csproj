@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{C98282C7-0C16-4D70-AAEE-BFD62B816199}</ProjectGuid>
+    <ProjectGuid>{362EAC7C-CA04-4AC6-A1C0-560BCEC51B3E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Scaffeine.Shipping</RootNamespace>
@@ -14,14 +14,6 @@
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
-    <SccProjectName>
-    </SccProjectName>
-    <SccLocalPath>
-    </SccLocalPath>
-    <SccAuxPath>
-    </SccAuxPath>
-    <SccProvider>
-    </SccProvider>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -54,15 +46,18 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Shipping\ScaffR.Shipping.ps1" />
-    <None Include="content\Controllers\ShippingController.cs.pp" />
-    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Shipping\Shipping.cs.t4" />
+    <None Include="content\App.config.transform">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Shipping\ShippingProvider.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Shipping\ShippingRateRequest.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Shipping\ShippingRateResponse.cs.t4" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />
-    <None Include="content\Sitemaps\Modules.sitemap.transform" />
-    <None Include="content\Views\Shipping\Header.cshtml.pp" />
-    <None Include="content\Views\Shipping\Manager.cshtml.pp" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Shipping\Scaffeine.Shipping.ps1" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Shipping\ShippingSection.cs.t4" />
     <None Include="content\Web.config.transform">
       <SubType>Designer</SubType>
     </None>
@@ -73,7 +68,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="lib\" />
-    <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="NuGet.exe" />

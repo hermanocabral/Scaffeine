@@ -1,4 +1,7 @@
-﻿param($installPath, $toolsPath, $package)
+﻿param($installPath, $toolsPath, $package, $project)
 
-scaffold ScaffR.Shipping
+add-project $shippingProjectName | with-reference "System.Configuration"
 
+get-project | with-reference $shippingProjectName
+
+scaffold Scaffeine.Shipping

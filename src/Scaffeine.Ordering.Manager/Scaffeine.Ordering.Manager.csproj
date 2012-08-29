@@ -5,15 +5,23 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{A2ADE471-847E-4F19-B575-A3CDABD53632}</ProjectGuid>
+    <ProjectGuid>{85B63B8A-A3B1-44AC-A8C2-78E1F94C8F0A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Scaffeine.Ordering</RootNamespace>
-    <AssemblyName>Scaffeine.Ordering</AssemblyName>
+    <RootNamespace>Scaffeine.Ordering.Manager</RootNamespace>
+    <AssemblyName>Scaffeine.Ordering.Manager</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,21 +54,27 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Ordering\ScaffR.Order.ps1" />
+    <None Include="content\Controllers\OrderController.cs.pp" />
+    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Ordering\Order.cs.t4" />
   </ItemGroup>
   <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />
+    <None Include="content\Sitemaps\Modules.sitemap.transform" />
+    <None Include="content\Views\Order\Manager.cshtml.pp" />
     <None Include="content\Web.config.transform">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Package.nuspec" />
+    <None Include="Package.nuspec">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="tools\init.ps1" />
     <None Include="tools\install.ps1" />
     <None Include="tools\uninstall.ps1" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="content\CodeTemplates\Scaffolders\" />
     <Folder Include="lib\" />
+    <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="NuGet.exe" />

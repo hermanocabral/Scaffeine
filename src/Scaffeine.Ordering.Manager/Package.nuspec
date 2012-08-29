@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>Scaffeine.Shipping</id>
+    <id>Scaffeine.Ordering.Manager</id>
     <version>1.1.1</version>
     <authors>Rod Johnson</authors>
     <owners>ScaffR</owners>
@@ -9,14 +9,15 @@
     <iconUrl>http://www.scaffr.com/favicon.ico</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
-      Description required.
+      Ordering Module for ScaffR.
     </description>
     <releaseNotes>
     </releaseNotes>
     <copyright>ScaffR, 2012</copyright>
     <tags></tags>
     <dependencies>
-      <dependency id="ScaffR" version="1.1.1" />
+      <dependency id="Scaffeine.Dashboard" version="1.1.1" />
+      <dependency id="Scaffeine.Ordering" version="1.1.1" />
     </dependencies>
   </metadata>
   <files>

@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{A2ADE471-847E-4F19-B575-A3CDABD53632}</ProjectGuid>
+    <ProjectGuid>{33E0046C-5C30-47CB-8D4E-62286867C8B1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Scaffeine.Ordering</RootNamespace>
-    <AssemblyName>Scaffeine.Ordering</AssemblyName>
+    <RootNamespace>Scaffeine.Shipwire</RootNamespace>
+    <AssemblyName>Scaffeine.Shipwire</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
