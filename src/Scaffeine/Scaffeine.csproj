@@ -115,7 +115,9 @@
     <None Include="content\Sitemaps\Public.sitemap" />
     <None Include="content\Helpers\HtmlHelpers.cs.pp" />
     <None Include="content\Helpers\JSON.cs.pp" />
-    <None Include="content\Sitemaps\System.sitemap" />
+    <None Include="content\Sitemaps\System.sitemap">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="content\Views\Account\ForgotPassword.cshtml.pp" />
     <None Include="content\Views\Account\Logon.cshtml.pp" />
     <None Include="content\Views\Shared\_UserActions.cshtml.pp" />

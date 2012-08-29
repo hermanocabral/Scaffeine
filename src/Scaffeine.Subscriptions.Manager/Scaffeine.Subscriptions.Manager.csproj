@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{0ADA6510-08AE-4A4F-B52D-BBF48FB8E217}</ProjectGuid>
+    <ProjectGuid>{1EC7F8D4-2342-46CC-AC8A-B5E5559D4B68}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Scaffeine.Shipping.Shipwire</RootNamespace>
-    <AssemblyName>Scaffeine.Shipping.Shipwire</AssemblyName>
+    <RootNamespace>Scaffeine.Subscriptions.Manager</RootNamespace>
+    <AssemblyName>Scaffeine.Subscriptions.Manager</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
@@ -50,7 +50,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Shipping.Shipwire\Scaffeine.Shipping.Shipwire.ps1" />
     <None Include="content\Web.config.transform">
       <SubType>Designer</SubType>
     </None>
@@ -60,6 +59,7 @@
     <None Include="tools\uninstall.ps1" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="content\CodeTemplates\Scaffolders\" />
     <Folder Include="lib\" />
   </ItemGroup>
   <ItemGroup>
