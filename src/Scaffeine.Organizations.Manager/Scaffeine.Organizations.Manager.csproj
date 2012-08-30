@@ -46,13 +46,15 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="content\Controllers\Organization\OrganizationController.cs.pp" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />
-    <None Include="content\Web.config.transform">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="content\Sitemaps\Modules.sitemap.transform" />
+    <None Include="content\Views\Organization\Index.cshtml.pp" />
+    <None Include="content\Views\Organization\_ActivityFeed.cshtml.pp" />
+    <None Include="content\Views\Organization\_UserActions.cshtml.pp" />
     <None Include="Package.nuspec" />
     <None Include="tools\init.ps1" />
     <None Include="tools\install.ps1" />
@@ -63,6 +65,7 @@
     <Folder Include="lib\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="content\Content\images\tree.PNG" />
     <Content Include="NuGet.exe" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

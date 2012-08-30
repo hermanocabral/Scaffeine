@@ -9,24 +9,9 @@
 @RenderSection("Scripts", false)
 <div class="row-fluid">
     <div class="span2">
-        @RenderSection("UserWidget", false)
-        @if (!this.IsSectionDefined("UserWidget"))
-        {
-            <table class="table">
-                <tr>
-                    <td style="width: 50px">
-                        <a href="#">
-                            <img style="width: 50px" src="../../Content/images/rod.PNG" />
-                        </a>
-                    </td>
-                    <td>
-                        <h4>
-                            Rod Johnson</h4>
-                        
-                    </td>
-                </tr>
-            </table>
-        }
+
+        @Html.Partial("_UserWidget")
+
         @RenderSection("UserActions", false)
         @if (!this.IsSectionDefined("UserActions"))
         {

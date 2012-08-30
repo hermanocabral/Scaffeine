@@ -63,11 +63,11 @@
     <None Include="content\CodeTemplates\Scaffolders\ScaffR.Membership\MembershipHelper.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\ScaffR.Membership\Role.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\ScaffR.Membership\ScaffR.Membership.ps1" />
-    <Compile Include="content\CodeTemplates\Scaffolders\ScaffR.Membership\User.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Membership\User.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\ScaffR.Membership\UserEmail.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\ScaffR.Membership\UserRole.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\ScaffR.Website\ScaffR.Website.ps1" />
-    <Compile Include="content\CodeTemplates\Scaffolders\ScaffR.Website\_Layout.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Website\_Layout.cs.t4" />
     <None Include="content\Content\custom\placeholder.less" />
     <None Include="content\Content\includes.tt.pp" />
     <None Include="content\Controllers\Account\AccountController.cs.pp" />
@@ -120,6 +120,7 @@
     </None>
     <None Include="content\Views\Account\ForgotPassword.cshtml.pp" />
     <None Include="content\Views\Account\Logon.cshtml.pp" />
+    <None Include="content\Views\Shared\_UserWidget.cshtml.pp" />
     <None Include="content\Views\Shared\_UserActions.cshtml.pp" />
     <None Include="content\Views\Shared\DisplayTemplates\Alert.cshtml.pp" />
     <None Include="content\Views\Shared\DisplayTemplates\Breadcrumb.cshtml.pp" />

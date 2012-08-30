@@ -50,7 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />
-    <Compile Include="content\CodeTemplates\Scaffolders\Scaffeine.Integrations\IntegrationProvider.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Integrations\IntegrationProvider.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Integrations\IntegrationProviderCollection.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Integrations\IntegrationsManager.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Integrations\IntegrationsSection.cs.t4" />

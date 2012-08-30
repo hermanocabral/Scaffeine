@@ -65,7 +65,7 @@
     <Folder Include="lib\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="content\images\calendar.PNG" />
+    <Content Include="content\Content\images\calendar.PNG" />
     <Content Include="NuGet.exe" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
