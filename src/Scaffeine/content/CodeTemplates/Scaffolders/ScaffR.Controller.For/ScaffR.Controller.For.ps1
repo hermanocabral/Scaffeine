@@ -1,4 +1,4 @@
-﻿[T4Scaffolding.Scaffolder(Description = "Enter a description of CodePlanner.MVC.JSONController.For here")][CmdletBinding()]
+﻿[T4Scaffolding.Scaffolder()][CmdletBinding()]
 param(
 	[parameter(Mandatory = $true, ValueFromPipelineByPropertyName = $true)][string]$ModelType,
     [string]$Project,
@@ -27,5 +27,5 @@ Add-ProjectItemViaTemplate $outputPath -Template Controller `
 	-SuccessMessage "Added Controller of $ModelType output at {0}" `
 	-TemplateFolders $TemplateFolders -Project $baseProject.Name -CodeLanguage $CodeLanguage -Force:$Force
 
-scaffold ScaffR.Model.For $ModelType
+scaffold ScaffR.Backend.For $ModelType
 scaffold ScaffR.Manager.For $ModelType

@@ -51,14 +51,12 @@
   <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffiene.Eventing\Bootstrapper.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffiene.Eventing\DataPoint.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffiene.Eventing\EventLogElement.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffiene.Eventing\EventTracker.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffiene.Eventing\Handles.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffiene.Eventing\IMessageBus.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffiene.Eventing\MessageBus.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffiene.Eventing\ScaffR.Core.ps1" />
-    <None Include="content\EventsController.cs.pp" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffiene.Eventing\Scaffeine.Eventing.ps1" />
+    <None Include="content\Controllers\Events\EventsController.cs.pp" />
     <None Include="content\Web.config.transform">
       <SubType>Designer</SubType>
     </None>

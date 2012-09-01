@@ -17,18 +17,17 @@ Add-Template $membershipProjectName "Helpers\MembershipHelper" "MembershipHelper
 Add-Template $dataProjectName "Seeders\MembershipDataSeeder" "MembershipDataSeeder" -Force:$Force $TemplateFolders
 
 # this seriously needs to be refactored
-Add-CodeToMethod $baseProject.Name "\App_Start\" "NinjectMVC3.cs" "NinjectMVC3" "RegisterServices" "kernel.Bind<IUserRepository>().To<UserRepository>().InRequestScope();"
-Add-CodeToMethod $baseProject.Name "\App_Start\" "NinjectMVC3.cs" "NinjectMVC3" "RegisterServices" "kernel.Bind<IRoleRepository>().To<RoleRepository>().InRequestScope();"
-Add-CodeToMethod $baseProject.Name "\App_Start\" "NinjectMVC3.cs" "NinjectMVC3" "RegisterServices" "kernel.Bind<IUserRoleRepository>().To<UserRoleRepository>().InRequestScope();"
+# Add-CodeToMethod $baseProject.Name "\App_Start\" "NinjectMVC3.cs" "NinjectMVC3" "RegisterServices" "kernel.Bind<IUserRepository>().To<UserRepository>().InRequestScope();"
+# Add-CodeToMethod $baseProject.Name "\App_Start\" "NinjectMVC3.cs" "NinjectMVC3" "RegisterServices" "kernel.Bind<IRoleRepository>().To<RoleRepository>().InRequestScope();"
+# Add-CodeToMethod $baseProject.Name "\App_Start\" "NinjectMVC3.cs" "NinjectMVC3" "RegisterServices" "kernel.Bind<IUserRoleRepository>().To<UserRoleRepository>().InRequestScope();"
 
 Write-Host "starting to create initial migration"
 enable-migrations -ProjectName $dataProjectName -EnableAutomaticMigrations
 add-migration  InitialMigration -ProjectName $dataProjectName
-
 Write-Host "initial migration successfully completed"
 
 Add-CodeToMethod (Get-Project $dataProjectName).Name "\Migrations\" "Configuration.cs" "Configuration" "Seed" "new Seeders.MembershipDataSeeder().Seed(context);"
-Add-CodeToMethod (Get-Project $baseProject.Name).Name "\" "Global.asax.cs" "MvcApplication" "RegisterGlobalFilters" "filters.Add(new Filters.LoginAuthorize());"
+Add-CodeToMethod (Get-Project).Name "\" "Global.asax.cs" "MvcApplication" "RegisterGlobalFilters" "filters.Add(new Filters.LoginAuthorize());"
 #update-database -ProjectName $dataProjectName
 
 

@@ -1,40 +1,40 @@
 ﻿<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
 <#@ Output Extension="cs" #>
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Runtime.Serialization;
-
 namespace <#= Model.Namespace #>.Core.Model
 {
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.Runtime.Serialization;
+
     [DataContract]
     [DisplayColumn("Username")]
     public partial class User : PersistentEntity
     {
         [Required]
         [DataMember]
-        public virtual String Username { get; set; }
+        public virtual string Username { get; set; }
 
         [Required]
         [DataType(DataType.EmailAddress)]
         [DataMember]
-        public virtual String Email { get; set; }
+        public virtual string Email { get; set; }
 
         [Required, DataType(DataType.Password)]
         [DataMember]
-        public virtual String Password { get; set; }
+        public virtual string Password { get; set; }
     
         [DataMember]
-        public virtual String FirstName { get; set; }
+        public virtual string FirstName { get; set; }
 
         [DataMember]
-        public virtual String LastName { get; set; }
+        public virtual string LastName { get; set; }
 
         [DataType(DataType.MultilineText)]
-        public virtual String Comment { get; set; }
+        public virtual string Comment { get; set; }
         
         [DataMember]
-        public virtual Boolean IsApproved { get; set; }
+        public virtual bool IsApproved { get; set; }
 
         [DataMember]
         public virtual int PasswordFailuresSinceLastSuccess { get; set; }
@@ -52,16 +52,16 @@ namespace <#= Model.Namespace #>.Core.Model
         public virtual DateTime? LastLoginDate { get; set; }
 
         [DataMember]
-        public virtual String ConfirmationToken { get; set; }
+        public virtual string ConfirmationToken { get; set; }
 
         [DataMember]
-        public virtual Boolean IsLockedOut { get; set; }
+        public virtual bool IsLockedOut { get; set; }
 
         [DataMember]
         public virtual DateTime? LastPasswordChangedDate { get; set; }
 
         [DataMember]
-        public virtual String PasswordVerificationToken { get; set; }
+        public virtual string PasswordVerificationToken { get; set; }
 
         [DataMember]
         public virtual DateTime? PasswordVerificationTokenExpirationDate { get; set; }

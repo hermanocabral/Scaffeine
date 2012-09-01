@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace $rootnamespace$.Controllers
+namespace $rootnamespace$.Controllers.Events
 {
     public partial class EventsController : Controller
     {
