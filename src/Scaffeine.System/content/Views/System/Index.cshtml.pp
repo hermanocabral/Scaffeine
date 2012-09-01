@@ -23,7 +23,7 @@
             ScaffR.Core
         </td>
         <td>
-            1.1.1
+            1.1.2
         </td>
         <td>
             Open Source
@@ -37,7 +37,7 @@
             ScaffR.Core
         </td>
         <td>
-            1.1.1
+            1.1.2
         </td>
         <td>
             Open Source
@@ -51,7 +51,7 @@
             ScaffR (Configuration)
         </td>
         <td>
-            1.1.1
+            1.1.2
         </td>
         <td>
             Proprietary
@@ -96,7 +96,7 @@
     </tr>
     <tr>
         <td>
-            1.1.1
+            1.1.2
         </td>
         <td>
             Open Source
@@ -131,7 +131,7 @@
             ScaffR.Membership
         </td>
         <td>
-            1.1.1
+            1.1.2
         </td>
         <td>
             Open Source

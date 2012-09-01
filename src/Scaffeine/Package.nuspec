@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>Scaffeine</id>
-    <version>1.1.1</version>
+    <version>1.1.2</version>
     <authors>Rod Johnson</authors>
     <owners>World-Class Programmers, LLC</owners>
     <projectUrl>http://scaffr.codeplex.com</projectUrl>
@@ -17,9 +17,10 @@
     <tags>Scaffolding, Boilerplate, Template, Bootstrap</tags>
     <dependencies>
       <dependency id="T4Scaffolding" version="1.0.4" />            
-      <dependency id="ScaffR" version="1.1.1" />
-      <dependency id="ScaffR.Backend" version="1.1.1" />      
-      <dependency id="ScaffR.Ninject" version="1.1.1" />
+      <dependency id="ScaffR" version="1.1.2" />
+      <dependency id="ScaffR.Backend" version="1.1.2" />
+      <dependency id="ScaffR.Configuration" version="1.1.2" />
+      <dependency id="ScaffR.Ninject" version="1.1.2" />
       <dependency id="ScaffR.Bootstrap" version="1.0.0"/>
       <dependency id="MvcMailer" version="1.1" />
       <dependency id="jQuery.UI.Combined" version="1.8.20" />

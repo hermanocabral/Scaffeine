@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Scaffeine.Promotions</id>
-    <version>1.1.1</version>
+    <version>1.1.2</version>
     <authors>Rod Johnson</authors>
     <owners>EyeCatch</owners>
     <projectUrl>https://github.com/wcpro/Scaffeine</projectUrl>
@@ -16,7 +16,7 @@
     <copyright>Copyright Scaffeine 2012</copyright>
     <tags></tags>
     <dependencies>
-      <dependency id="ScaffR" version="1.1.1"/>
+      <dependency id="ScaffR" version="1.1.2"/>
       <dependency id="T4Scaffolding" version="1.0.4" />
     </dependencies>
   </metadata>

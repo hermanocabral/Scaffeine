@@ -10,7 +10,7 @@
         </td>
         <td>
             <h4>
-                <a href="@Url.Action("Index", "User")">Rod Johnson</a></h4>
+                <a href="@Url.Action("Profile", "Account")">Rod Johnson</a></h4>
             <a href="@Url.Action("Profile", "Account")">Edit Profile</a>
         </td>
     </tr>

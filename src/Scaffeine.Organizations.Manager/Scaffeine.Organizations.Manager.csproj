@@ -46,7 +46,7 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="content\Controllers\Organization\OrganizationController.cs.pp" />
+    <None Include="content\Controllers\Organization\OrganizationController.cs.pp" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

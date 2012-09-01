@@ -1,0 +1,17 @@
+﻿<configuration>
+
+  <configSections>
+    <sectionGroup name="$rootnamespace$">
+      <section name="$rootnamespace$.Core" type="$rootnamespace$.Core.Configuration.CoreSectionHandler, $rootnamespace$.Core" requirePermission="false"/>
+    </sectionGroup>
+  </configSections>
+  
+  <$rootnamespace$>
+    <$rootnamespace$.Core>
+      <environment level="Local" demonstrationMode="false"/>
+      <security securityLevel="None"/>
+      <site email="webmaster@$rootnamespace$.com" websiteName="$rootnamespace$" companyName="$rootnamespace$" />
+    </$rootnamespace$.Core>
+  </$rootnamespace$>
+
+</configuration>
