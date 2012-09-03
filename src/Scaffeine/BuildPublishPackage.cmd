@@ -5,7 +5,7 @@ set key={your-api-key}
 set url={nuget-gallery-url}
 
 :: Make sure the nuget executable is writable
-attrib NuGet.exe
+attrib -R NuGet.exe
 
 :: Make sure the nupkg files are writeable and create backup
 IF EXIST *.nupkg (
