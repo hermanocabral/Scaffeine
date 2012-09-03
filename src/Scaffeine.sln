@@ -158,6 +158,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scaffeine.Inventory", "Scaf
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scaffeine.Inventory.Shipwire", "Scaffeine.Inventory.Shipwire\Scaffeine.Inventory.Shipwire.csproj", "{82E87C77-9D84-4A6A-B83A-BA24059E82FF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scaffeine.ShippingRates", "Scaffeine.ShippingRates\Scaffeine.ShippingRates.csproj", "{A58ACCFC-B5B6-4F7F-A5BA-4FB8FD45CBC7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scaffeine.ShippingRates.Shipwire", "Scaffeine.ShippingRates.Shipwire\Scaffeine.ShippingRates.Shipwire.csproj", "{C4D65D8A-F582-4EB7-9918-A49F70C7FB1C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -464,6 +468,14 @@ Global
 		{82E87C77-9D84-4A6A-B83A-BA24059E82FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82E87C77-9D84-4A6A-B83A-BA24059E82FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82E87C77-9D84-4A6A-B83A-BA24059E82FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A58ACCFC-B5B6-4F7F-A5BA-4FB8FD45CBC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A58ACCFC-B5B6-4F7F-A5BA-4FB8FD45CBC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A58ACCFC-B5B6-4F7F-A5BA-4FB8FD45CBC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A58ACCFC-B5B6-4F7F-A5BA-4FB8FD45CBC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4D65D8A-F582-4EB7-9918-A49F70C7FB1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4D65D8A-F582-4EB7-9918-A49F70C7FB1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4D65D8A-F582-4EB7-9918-A49F70C7FB1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4D65D8A-F582-4EB7-9918-A49F70C7FB1C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
