@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{A2ADE471-847E-4F19-B575-A3CDABD53632}</ProjectGuid>
+    <ProjectGuid>{82E87C77-9D84-4A6A-B83A-BA24059E82FF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Scaffeine.Ordering</RootNamespace>
-    <AssemblyName>Scaffeine.Ordering</AssemblyName>
+    <RootNamespace>Scaffeine.Inventory.Shipwire</RootNamespace>
+    <AssemblyName>Scaffeine.Inventory.Shipwire</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
@@ -50,25 +50,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />
-    <None Include="content\App.config.transform">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Ordering\OrderManager.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Ordering\OrderProvider.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Ordering\OrderProviderCollection.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Ordering\OrderSection.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Ordering\Scaffeine.Ordering.ps1" />
     <None Include="content\Web.config.transform">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Package.nuspec">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Package.nuspec" />
     <None Include="tools\init.ps1" />
     <None Include="tools\install.ps1" />
     <None Include="tools\uninstall.ps1" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="content\CodeTemplates\Scaffolders\" />
     <Folder Include="lib\" />
   </ItemGroup>
   <ItemGroup>

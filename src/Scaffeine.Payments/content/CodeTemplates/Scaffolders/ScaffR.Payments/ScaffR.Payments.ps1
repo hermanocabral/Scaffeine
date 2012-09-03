@@ -18,8 +18,7 @@ param(
 		"PaymentTransaction")
 
 foreach ($tml in $templates){
-	$outputPath = $tml
-	add-template $paymentProjectName $outputPath $tml -Force:$Force $TemplateFolders
+	add-template $paymentProjectName $tml $tml -Force:$Force $TemplateFolders
 }
 
  $templates = 

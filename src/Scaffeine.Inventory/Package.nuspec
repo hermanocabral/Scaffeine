@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>Scaffeine.Ordering.Shipwire</id>
+    <id>Scaffeine.Inventory</id>
     <version>1.1.2</version>
     <authors>Rod Johnson</authors>
     <owners>ScaffR</owners>
@@ -16,7 +16,7 @@
     <copyright>ScaffR, 2012</copyright>
     <tags></tags>
     <dependencies>
-      <dependency id="Scaffeine.Ordering" version="1.1.2" />
+      <dependency id="ScaffR" version="1.1.2" />
     </dependencies>
   </metadata>
   <files>
