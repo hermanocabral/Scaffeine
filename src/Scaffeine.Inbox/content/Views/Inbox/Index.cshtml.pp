@@ -5,7 +5,7 @@
     ViewBag.SitemapProvider = "Modules";
 }
 
-<div class="row-fluid">
+<div class="row-fluid">	
     <div class="tab-content">
         <div class="tab-pane active" id="inbox">
             <table class="table table-bordered inbox">

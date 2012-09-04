@@ -6,9 +6,7 @@ param(
 	[switch]$Force = $false
 )
 
-Add-NamespacesToHost $Project
-
 Add-Template $coreProjectName "Model\Customer" "Customer" -Force:$Force $TemplateFolders
 
 scaffold ScaffR.Backend.For Customer
-scaffold ScaffR.Ninject.For Customer
+scaffold ScaffR.Ninject.For Customer	

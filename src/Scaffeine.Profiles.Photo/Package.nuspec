@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+<package >
   <metadata>
-    <id>Scaffeine.Inbox</id>
+    <id>Scaffeine.Profiles.Photo</id>
     <version>1.1.2</version>
     <authors>Rod Johnson</authors>
     <owners>ScaffR</owners>
@@ -16,10 +16,8 @@
     <copyright>ScaffR, 2012</copyright>
     <tags></tags>
     <dependencies>
-      <dependency id="Scaffeine.Shell" version="1.1.2" />
-      <dependency id="Scaffeine.Dashboard" version="1.1.2" />
-      <dependency id="Scaffeine.Organizations" version="1.1.2" />
-      <dependency id="T4Scaffolding" version="1.0.6" />
+      <dependency id="Scaffeine.Profiles" version="1.1.2" />
+      <dependency id="Scaffeine.Photos.FileSystem" version="1.1.2" />
     </dependencies>
   </metadata>
   <files>

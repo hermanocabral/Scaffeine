@@ -53,9 +53,6 @@
     <None Include="BuildPublishPackage.cmd" />
     <None Include="content\Views\Photo\Index.cshtml.pp" />
     <None Include="content\Views\Photo\PhotoUpload.cshtml.pp" />
-    <None Include="content\Web.config.transform">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Package.nuspec" />
     <None Include="tools\init.ps1" />
     <None Include="tools\install.ps1" />

@@ -1,0 +1,12 @@
+<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
+<#@ Output Extension="cs" #>
+namespace <#= Model.Namespace #>.Core.Model
+{
+    using System.Runtime.Serialization;
+
+    public partial class User
+    {
+        [DataMember]
+        public string PhotoId { get; set; }
+    }
+}

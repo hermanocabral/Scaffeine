@@ -6,6 +6,8 @@ param(
 	[switch]$Force = $false
 )
 
+Add-Template $coreProjectName "Model\Gender" "Gender" -Force:$Force $TemplateFolders
+
 Add-DomainClass "Model\User" "User" -Force:$Force $TemplateFolders
 Add-DomainClass "Model\Role" "Role" -Force:$Force $TemplateFolders
 Add-DomainClass "Model\UserRole" "UserRole" -Force:$Force $TemplateFolders

@@ -68,5 +68,8 @@ namespace <#= Model.Namespace #>.Core.Model
 
         [DataMember]
         public virtual ICollection<UserRole> Roles { get; set; }
+		
+        [DataMember]
+        public Gender Gender { get; set; }
     }
 }

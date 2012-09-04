@@ -12,7 +12,7 @@
   <ul class="nav nav-tabs" style="width: 100%">
     <li class="active">
       <a href="#">
-        <i class="icon icon-folder-close"></i>Inbox <span
+        <i class="icon icon-folder-open"></i>Inbox <span
                 class="badge badge-inverse pull-right">3</span>
       </a>
     </li>
