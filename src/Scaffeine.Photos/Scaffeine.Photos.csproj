@@ -49,7 +49,7 @@
     <Compile Include="content\CodeTemplates\Scaffolders\Scaffeine.Photos\Helpers\ImageHelper.cs.t4" />
     <Compile Include="content\CodeTemplates\Scaffolders\Scaffeine.Photos\Models\Photo.cs.t4" />
     <Compile Include="content\CodeTemplates\Scaffolders\Scaffeine.Photos\Models\PhotoList.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Photos\Models\PhotoRequest.cs.t4" />
+    <Compile Include="content\CodeTemplates\Scaffolders\Scaffeine.Photos\Models\PhotoRequest.cs.t4" />
     <Compile Include="content\CodeTemplates\Scaffolders\Scaffeine.Photos\Models\PhotoThumbnail.cs.t4" />
     <Compile Include="content\CodeTemplates\Scaffolders\Scaffeine.Photos\PhotoManager.cs.t4" />
     <Compile Include="content\CodeTemplates\Scaffolders\Scaffeine.Photos\PhotoProvider.cs.t4" />

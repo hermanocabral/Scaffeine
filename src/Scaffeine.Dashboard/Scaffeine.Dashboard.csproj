@@ -46,26 +46,20 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <None Include="content\Controllers\Account\AccountController.Dashboard.cs.pp" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />
-    <None Include="content\Controllers\DashboardController.cs.pp" />
-    <None Include="content\Sitemaps\Modules.sitemap.transform" />
-    <None Include="content\Sitemaps\System.sitemap.transform" />
-    <None Include="content\Views\Dashboard\Index.cshtml.pp" />
-    <None Include="content\Views\Dashboard\_ViewStart.cshtml.pp" />
     <None Include="Package.nuspec" />
     <None Include="tools\init.ps1" />
     <None Include="tools\install.ps1" />
     <None Include="tools\uninstall.ps1" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="content\CodeTemplates\Scaffolders\" />
     <Folder Include="lib\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="content\deleteme.txt" />
     <Content Include="NuGet.exe" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

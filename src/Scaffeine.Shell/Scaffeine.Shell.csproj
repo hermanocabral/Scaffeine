@@ -61,10 +61,10 @@
     <None Include="content\CodeTemplates\Scaffolders\ScaffR.Membership\CodeFirstRoleProvider.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\ScaffR.Membership\MembershipDataSeeder.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\ScaffR.Membership\MembershipHelper.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Membership\Gender.cs.t4" />
+    <Compile Include="content\CodeTemplates\Scaffolders\ScaffR.Membership\Gender.cs.t4" />
     <Compile Include="content\CodeTemplates\Scaffolders\ScaffR.Membership\Role.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\ScaffR.Membership\ScaffR.Membership.ps1" />
-    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Membership\User.cs.t4" />
+    <Compile Include="content\CodeTemplates\Scaffolders\ScaffR.Membership\User.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\ScaffR.Membership\UserEmail.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\ScaffR.Membership\UserRole.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\ScaffR.Website\ScaffR.Website.ps1" />

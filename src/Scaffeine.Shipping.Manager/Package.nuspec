@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>Scaffeine.Shipping</id>
-    <version>1.1.1</version>
+    <id>Scaffeine.Shipping.Manager</id>
+    <version>1.1.2</version>
     <authors>Rod Johnson</authors>
     <owners>ScaffR</owners>
     <projectUrl>http://scaffr.codeplex.com</projectUrl>
@@ -16,8 +16,8 @@
     <copyright>Scaffeine, 2012</copyright>
     <tags></tags>
     <dependencies>
-      <dependency id="ScaffR" version="1.1.1" />
-      <dependency id="T4Scaffolding" version="1.0.6" />
+      <dependency id="Scaffeine.Shipping" version="1.1.2" />
+      <dependency id="Scaffeine.Dashboard" version="1.1.2" />
     </dependencies>
   </metadata>
   <files>

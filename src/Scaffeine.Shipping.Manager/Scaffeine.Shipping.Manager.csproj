@@ -54,11 +54,6 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Shipping\ScaffR.Shipping.ps1" />
-    <None Include="content\Controllers\ShippingController.cs.pp" />
-    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Shipping\Shipping.cs.t4" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />
     <None Include="content\Sitemaps\Modules.sitemap.transform" />
     <None Include="content\Views\Shipping\Header.cshtml.pp" />
@@ -74,6 +69,8 @@
     <None Include="tools\uninstall.ps1" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="content\CodeTemplates\Scaffolders\ScaffR.Shipping.Manager\" />
+    <Folder Include="content\Controllers\Shipping\" />
     <Folder Include="lib\" />
     <Folder Include="Properties\" />
   </ItemGroup>

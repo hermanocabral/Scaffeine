@@ -16,10 +16,9 @@
     <copyright>ScaffR, 2012</copyright>
     <tags></tags>
     <dependencies>
+      <dependency id="Scaffeine.Dashboard.Shell" version="1.1.2" />
       <dependency id="Scaffeine.Calendar" version="1.1.2" />
-      <dependency id="Scaffeine.TodoLists" version="1.1.2" />
-      <dependency id="Scaffeine.Logon" version="1.1.2" />
-      <dependency id="T4Scaffolding" version="1.0.6" />
+      <dependency id="Scaffeine.TodoLists" version="1.1.2" />      
     </dependencies>
   </metadata>
   <files>

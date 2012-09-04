@@ -48,7 +48,7 @@
   <ItemGroup>
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Profiles.Photo\Scaffeine.Profiles.Photo.ps1" />
     <None Include="content\Controllers\Account\AccountController.Photo.cs.pp" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Profiles.Photo\User.Photo.cs.t4" />
+    <Compile Include="content\CodeTemplates\Scaffolders\Scaffeine.Profiles.Photo\User.Photo.cs.t4" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
