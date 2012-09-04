@@ -12,8 +12,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scaffeine.CRM", "Scaffeine.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scaffeine.Payments", "Scaffeine.Payments\Scaffeine.Payments.csproj", "{FBA2EB3C-7186-4773-BC77-B645E4BB67CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scaffeine.Payments.AuthNet", "Scaffeine.AuthNet\Scaffeine.Payments.AuthNet.csproj", "{85738D2E-F06B-4093-B501-8F747139CF7D}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scaffeine.Payments.PayPal", "Scaffeine.Payments.PayPal\Scaffeine.Payments.PayPal.csproj", "{D93B699A-69CA-4CD8-96B5-0FAB2BE65902}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scaffeine.Promotions", "Scaffeine.Promotions\Scaffeine.Promotions.csproj", "{78F933CC-D2FA-4FDF-B3E3-B1CF698A301A}"
@@ -128,8 +126,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scaffeine.Ordering", "Scaff
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scaffeine.Ordering.Manager", "Scaffeine.Ordering.Manager\Scaffeine.Ordering.Manager.csproj", "{85B63B8A-A3B1-44AC-A8C2-78E1F94C8F0A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scaffeine.Subscriptions.User", "Scaffeine.Subscriptions.User\Scaffeine.Subscriptions.User.csproj", "{177F7843-F2AF-49DF-AA8C-E7E7D45587BD}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scaffeine.Subscriptions.Manager", "Scaffeine.Subscriptions.Manager\Scaffeine.Subscriptions.Manager.csproj", "{1EC7F8D4-2342-46CC-AC8A-B5E5559D4B68}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scaffeine.Profiles.Public", "Scaffeine.Profiles.Public\Scaffeine.Profiles.Public.csproj", "{57D35E27-0FB3-46A6-8F74-98B99E706062}"
@@ -162,6 +158,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scaffeine.ShippingRates", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scaffeine.ShippingRates.Shipwire", "Scaffeine.ShippingRates.Shipwire\Scaffeine.ShippingRates.Shipwire.csproj", "{C4D65D8A-F582-4EB7-9918-A49F70C7FB1C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scaffeine.Payments.AuthNet", "Scaffeine.Payments.AuthNet\Scaffeine.Payments.AuthNet.csproj", "{85738D2E-F06B-4093-B501-8F747139CF7D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scaffeine.Shipping.Manager", "Scaffeine.Shipping.Manager\Scaffeine.Shipping.Manager.csproj", "{C98282C7-0C16-4D70-AAEE-BFD62B816199}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -176,10 +176,6 @@ Global
 		{FBA2EB3C-7186-4773-BC77-B645E4BB67CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBA2EB3C-7186-4773-BC77-B645E4BB67CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBA2EB3C-7186-4773-BC77-B645E4BB67CE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{85738D2E-F06B-4093-B501-8F747139CF7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{85738D2E-F06B-4093-B501-8F747139CF7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{85738D2E-F06B-4093-B501-8F747139CF7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{85738D2E-F06B-4093-B501-8F747139CF7D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D93B699A-69CA-4CD8-96B5-0FAB2BE65902}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D93B699A-69CA-4CD8-96B5-0FAB2BE65902}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D93B699A-69CA-4CD8-96B5-0FAB2BE65902}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -408,10 +404,6 @@ Global
 		{85B63B8A-A3B1-44AC-A8C2-78E1F94C8F0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{85B63B8A-A3B1-44AC-A8C2-78E1F94C8F0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{85B63B8A-A3B1-44AC-A8C2-78E1F94C8F0A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{177F7843-F2AF-49DF-AA8C-E7E7D45587BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{177F7843-F2AF-49DF-AA8C-E7E7D45587BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{177F7843-F2AF-49DF-AA8C-E7E7D45587BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{177F7843-F2AF-49DF-AA8C-E7E7D45587BD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1EC7F8D4-2342-46CC-AC8A-B5E5559D4B68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1EC7F8D4-2342-46CC-AC8A-B5E5559D4B68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1EC7F8D4-2342-46CC-AC8A-B5E5559D4B68}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -476,6 +468,14 @@ Global
 		{C4D65D8A-F582-4EB7-9918-A49F70C7FB1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4D65D8A-F582-4EB7-9918-A49F70C7FB1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4D65D8A-F582-4EB7-9918-A49F70C7FB1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85738D2E-F06B-4093-B501-8F747139CF7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85738D2E-F06B-4093-B501-8F747139CF7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85738D2E-F06B-4093-B501-8F747139CF7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85738D2E-F06B-4093-B501-8F747139CF7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C98282C7-0C16-4D70-AAEE-BFD62B816199}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C98282C7-0C16-4D70-AAEE-BFD62B816199}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C98282C7-0C16-4D70-AAEE-BFD62B816199}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C98282C7-0C16-4D70-AAEE-BFD62B816199}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

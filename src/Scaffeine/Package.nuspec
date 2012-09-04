@@ -1,35 +1,40 @@
-<?xml version="1.0"?>
-<package >
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>Scaffeine</id>
-    <version>1.1.2</version>
-    <authors>Rod Johnson</authors>
-    <owners>ScaffR</owners>
-    <projectUrl>http://scaffr.codeplex.com</projectUrl>
-    <iconUrl>http://www.scaffr.com/favicon.ico</iconUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>
-      Description required.
-    </description>
-    <releaseNotes>
-    </releaseNotes>
-    <copyright>ScaffR, 2012</copyright>
-    <tags></tags>
+    <references>
+      <reference file="file1" />
+      <reference file="file2" />
+      <reference file="file3" />
+    </references>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="assemblyName1" targetFramework="targetFramework1" />
+      <frameworkAssembly assemblyName="assemblyName2" targetFramework="targetFramework2" />
+      <frameworkAssembly assemblyName="assemblyName3" targetFramework="targetFramework3" />
+    </frameworkAssemblies>
     <dependencies>
-      <dependency id="Scaffeine.Shell" version="1.1.2" />
-      <dependency id="Scaffeine.Dashboard" version="1.1.2" />
-      <dependency id="Scaffeine.System" version="1.1.2" />
-      <dependency id="Scaffeine.ContactUs" version="1.1.2" />
-      <dependency id="Scaffeine.Profiles" version="1.1.2" />
-      <dependency id="Scaffeine.Register" version="1.1.2" />
-      <dependency id="Scaffeine.Logon" version="1.1.2" />
-      <dependency id="Scaffeine.Notifications" version="1.1.2" />
-      <dependency id="T4Scaffolding" version="1.0.6" />
+      <dependency id="id1" version="version1" />
+      <group targetFramework="targetFramework1">
+        <dependency id="id1" version="version1" />
+        <dependency id="id2" version="version2" />
+        <dependency id="id3" version="version3" />
+      </group>
+      <dependency id="id2" version="version2" />
     </dependencies>
+    <tags>tags1</tags>
+    <language>en-US</language>
+    <copyright>copyright1</copyright>
+    <releaseNotes>releaseNotes1</releaseNotes>
+    <summary>summary1</summary>
+    <description>description1</description>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <iconUrl>http://uri1</iconUrl>
+    <projectUrl>http://uri1</projectUrl>
+    <licenseUrl>http://uri1</licenseUrl>
+    <owners>owners1</owners>
+    <authors>authors1</authors>
+    <title>title1</title>
+    <version>version1</version>
+    <id>id1</id>
   </metadata>
-  <files>
-    <file src="lib\**" target="lib" />
-    <file src="tools\**" target="tools" />
-    <file src="content\**" target="content" />
-  </files>
+  <files xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
 </package>
