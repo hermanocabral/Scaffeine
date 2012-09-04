@@ -52,7 +52,7 @@
   <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />
     <None Include="content\Sitemaps\Reports.sitemap" />
-    <None Include="content\Sitemaps\System.sitemap" />
+    <None Include="content\Sitemaps\System.sitemap.transform" />
     <None Include="content\Views\Reports\Index.cshtml.pp" />
     <None Include="content\Web.config.transform">
       <SubType>Designer</SubType>
