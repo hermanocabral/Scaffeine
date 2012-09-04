@@ -1,11 +1,11 @@
-﻿Scaffeine.Logging (1.1.2)
+﻿Scaffeine.Zendesk (1.1.2)
 ======
 
       Description required.
     
 Usage
 ======
-<pre>install-package Scaffeine.Logging</pre>
+<pre>install-package Scaffeine.Zendesk</pre>
 Dependencies (2)
 =====
 

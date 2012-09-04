@@ -1,11 +1,11 @@
-﻿Scaffeine.Logging (1.1.2)
+﻿Scaffeine.System (1.1.2)
 ======
 
       Description required.
     
 Usage
 ======
-<pre>install-package Scaffeine.Logging</pre>
+<pre>install-package Scaffeine.System</pre>
 Dependencies (2)
 =====
 

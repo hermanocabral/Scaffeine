@@ -1,11 +1,11 @@
-﻿Scaffeine.Logging (1.1.2)
+﻿Scaffeine.Subscriptions.Manager (1.1.2)
 ======
 
       Description required.
     
 Usage
 ======
-<pre>install-package Scaffeine.Logging</pre>
+<pre>install-package Scaffeine.Subscriptions.Manager</pre>
 Dependencies (2)
 =====
 

@@ -1,11 +1,11 @@
-﻿Scaffeine.Logging (1.1.2)
+﻿Scaffeine.TodoLists (1.1.2)
 ======
 
       Description required.
     
 Usage
 ======
-<pre>install-package Scaffeine.Logging</pre>
+<pre>install-package Scaffeine.TodoLists</pre>
 Dependencies (2)
 =====
 
