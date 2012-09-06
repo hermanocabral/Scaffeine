@@ -1,4 +1,4 @@
-﻿[T4Scaffolding.Scaffolder(Description = "Scaffeine.Subscriptions - Generic Subscriptions Provider")][CmdletBinding()]
+﻿[T4Scaffolding.Scaffolder()][CmdletBinding()]
 param(
     [string]$Project,
 	[string]$CodeLanguage,

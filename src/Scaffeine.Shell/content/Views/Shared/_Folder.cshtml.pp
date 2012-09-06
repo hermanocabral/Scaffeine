@@ -1,5 +1,4 @@
 ﻿@using $rootnamespace$.Extensions
-@using MvcSiteMapProvider
 @using MvcSiteMapProvider.Web.Html
 @{
     ViewBag.Title = "_Folder";

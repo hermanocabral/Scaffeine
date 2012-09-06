@@ -5,5 +5,6 @@ add-project $membershipProjectName | `
 
 $baseProject | with-reference "$membershipProjectName"
 
-Scaffold Scaffeine.Shell
+Scaffold ScaffR.Membership
+Scaffold ScaffR.Ninject
 

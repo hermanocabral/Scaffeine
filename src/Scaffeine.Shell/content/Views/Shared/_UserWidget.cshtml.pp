@@ -1,7 +1,4 @@
-﻿@{
-    ViewBag.Title = "_UserWidget";
-}
-<table class="table">
+﻿<table class="table">
     <tr>
         <td style="width: 50px">
             <a href="@Url.Action("Index", "User")">

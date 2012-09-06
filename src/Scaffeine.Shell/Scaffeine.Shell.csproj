@@ -56,22 +56,8 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Manager.For\Manager.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Membership\CodeFirstMembershipProvider.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Membership\CodeFirstRoleProvider.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Membership\MembershipDataSeeder.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Membership\MembershipHelper.cs.t4" />
-    <Compile Include="content\CodeTemplates\Scaffolders\ScaffR.Membership\Gender.cs.t4" />
-    <Compile Include="content\CodeTemplates\Scaffolders\ScaffR.Membership\Role.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Membership\ScaffR.Membership.ps1" />
-    <Compile Include="content\CodeTemplates\Scaffolders\ScaffR.Membership\User.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Membership\UserEmail.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Membership\UserRole.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Website\ScaffR.Website.ps1" />
-    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Website\_Layout.cs.t4" />
-    <None Include="content\Content\custom\placeholder.less" />
-    <None Include="content\Content\includes.tt.pp" />
-    <None Include="content\Controllers\Account\AccountController.cs.pp" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Shell\Scaffeine.Shell.ps1" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Shell\_Layout.cs.t4" />
     <None Include="content\Controllers\BaseController.cs.pp" />
     <None Include="content\App_Start\Start.cs.pp" />
     <None Include="content\Filters\AllowAnonymousAttribute.cs.pp" />
@@ -100,27 +86,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />
-    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Page.For\ScaffR.Page.For.ps1" />
-    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Manager.For\ScaffR.Manager.For.ps1" />
-    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Controller.For\ScaffR.Controller.ps1" />
-    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Controller.For\Controller.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Controller.For\ScaffR.Controller.For.ps1" />
-    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Page.For\ScaffR.Pages.ps1" />
     <None Include="content\Controllers\Home\HomeController.cs.pp" />
     <None Include="content\Mailers\ContactUsMailer.cs.pp" />
     <None Include="content\Models\Alert.cs.pp" />
     <None Include="content\Models\ContactUsModel.cs.pp" />
     <None Include="content\Models\ProfileModel.cs.pp" />
-    <None Include="content\Sitemaps\Account.sitemap" />
-    <None Include="content\Sitemaps\Modules.sitemap" />
     <None Include="content\Sitemaps\Public.sitemap" />
     <None Include="content\Helpers\HtmlHelpers.cs.pp" />
     <None Include="content\Helpers\JSON.cs.pp" />
-    <None Include="content\Sitemaps\System.sitemap">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="content\Views\Account\ForgotPassword.cshtml.pp" />
-    <None Include="content\Views\Account\Logon.cshtml.pp" />
     <None Include="content\Views\Shared\_UserWidget.cshtml.pp" />
     <None Include="content\Views\Shared\_UserActions.cshtml.pp" />
     <None Include="content\Views\Shared\DisplayTemplates\Alert.cshtml.pp" />
@@ -155,7 +128,6 @@
     <None Include="NuGet.exe" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="content\CodeTemplates\Scaffolders\ScaffR.Ninject\" />
     <Folder Include="content\Views\Dashboard\" />
     <Folder Include="content\Views\Diagnostic\" />
     <Folder Include="lib\net35\" />
@@ -166,8 +138,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="content\Content\images\facebook_lrg.png" />
-    <Content Include="content\Content\images\glyphicons-halflings-white.png" />
-    <Content Include="content\Content\images\glyphicons-halflings.png" />
     <Content Include="content\Content\images\hero-bg.png" />
     <Content Include="content\Content\images\icon-square.png" />
     <Content Include="content\Content\images\open-source-icon.gif" />

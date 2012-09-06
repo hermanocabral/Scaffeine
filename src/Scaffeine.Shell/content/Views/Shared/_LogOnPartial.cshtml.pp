@@ -3,6 +3,7 @@
 {
     <div class="btn-group pull-right">
         <a class="btn dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-user">
+            <img src="../../Content/images/rod.PNG" class="img-round" />
         </i> @User.Identity.Name <span class="caret"></span></a>
         <ul class="dropdown-menu">
             <li><a href="@Url.Action("Profile", "Account")">Profile</a></li>          

@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{C50CF3F2-9A23-49A6-9B46-38BE9701BA04}</ProjectGuid>
+    <ProjectGuid>{EF894FFA-97D7-4DA1-B84E-17E0B48B66BB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Scaffeine.Reports.Shell</RootNamespace>
-    <AssemblyName>Scaffeine.Reports.Shell</AssemblyName>
+    <RootNamespace>Scaffeine.System.Shell</RootNamespace>
+    <AssemblyName>Scaffeine.System.Shell</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
@@ -46,16 +46,17 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <None Include="content\Controllers\Reports\ReportsController.cs.pp" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />
-    <None Include="content\Sitemaps\Reports.sitemap" />
-    <None Include="content\Sitemaps\System.sitemap.transform">
+    <None Include="content\Controllers\SystemController.cs.pp" />
+    <None Include="content\Sitemaps\System.sitemap">
       <SubType>Designer</SubType>
     </None>
-    <None Include="content\Views\Reports\Index.cshtml.pp" />
+    <None Include="content\Views\System\Index.cshtml.pp" />
+    <None Include="content\Views\System\Module.cshtml.pp" />
+    <None Include="content\Views\System\_ViewStart.cshtml.pp" />
     <None Include="content\Web.config.transform">
       <SubType>Designer</SubType>
     </None>

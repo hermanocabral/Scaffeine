@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{C50CF3F2-9A23-49A6-9B46-38BE9701BA04}</ProjectGuid>
+    <ProjectGuid>{7D927932-5504-4082-92ED-123AC5E86FF0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Scaffeine.Reports.Shell</RootNamespace>
-    <AssemblyName>Scaffeine.Reports.Shell</AssemblyName>
+    <RootNamespace>Scaffeine.Membership</RootNamespace>
+    <AssemblyName>Scaffeine.Membership</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
@@ -46,16 +46,30 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <None Include="content\Controllers\Reports\ReportsController.cs.pp" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />
-    <None Include="content\Sitemaps\Reports.sitemap" />
-    <None Include="content\Sitemaps\System.sitemap.transform">
-      <SubType>Designer</SubType>
+    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Membership\CodeFirstMembershipProvider.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Membership\CodeFirstRoleProvider.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Membership\Gender.cs.t4">
+      <SubType>Code</SubType>
     </None>
-    <None Include="content\Views\Reports\Index.cshtml.pp" />
+    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Membership\MembershipDataSeeder.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Membership\MembershipHelper.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Membership\Role.cs.t4">
+      <SubType>Code</SubType>
+    </None>
+    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Membership\ScaffR.Membership.ps1" />
+    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Membership\User.cs.t4">
+      <SubType>Code</SubType>
+    </None>
+    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Membership\UserEmail.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Membership\UserRole.cs.t4" />
+    <None Include="content\Controllers\Account\AccountController.cs.pp" />
+    <None Include="content\Sitemaps\Account.sitemap" />
+    <None Include="content\Views\Account\ForgotPassword.cshtml.pp" />
+    <None Include="content\Views\Account\Logon.cshtml.pp" />
     <None Include="content\Web.config.transform">
       <SubType>Designer</SubType>
     </None>
@@ -65,7 +79,6 @@
     <None Include="tools\uninstall.ps1" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="content\CodeTemplates\Scaffolders\" />
     <Folder Include="lib\" />
   </ItemGroup>
   <ItemGroup>

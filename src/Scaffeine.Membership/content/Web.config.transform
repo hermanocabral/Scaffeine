@@ -1,0 +1,21 @@
+﻿<configuration>
+  <system.web>
+    <membership defaultProvider="$rootnamespace$MembershipProvider">
+      <providers>
+        <clear />
+        <add name="$rootnamespace$MembershipProvider" type="$rootnamespace$.Membership.Providers.CodeFirstMembershipProvider, $rootnamespace$.Membership" connectionStringName="DataContext" passwordFormat="Encrypted" enablePasswordRetrieval="false" enablePasswordReset="false" requiresQuestionAndAnswer="false" requiresUniqueEmail="true" maxInvalidPasswordAttempts="5" minRequiredPasswordLength="6" minRequiredNonalphanumericCharacters="0" passwordAttemptWindow="10" applicationName="$rootnamespace$" />
+      </providers>
+    </membership>
+    <roleManager enabled="true" cacheRolesInCookie="true" cookieName=".ROLES" cookieTimeout="120" cookiePath="/" cookieRequireSSL="false" cookieSlidingExpiration="true" cookieProtection="All" defaultProvider="$rootnamespace$RoleProvider" createPersistentCookie="false" maxCachedResults="25">
+      <providers>
+        <clear />
+        <add applicationName="$rootnamespace$" name="$rootnamespace$RoleProvider" connectionStringName="DataContext" type="$rootnamespace$.Membership.Providers.CodeFirstRoleProvider, $rootnamespace$.Membership" />
+      </providers>
+    </roleManager>
+    <siteMap defaultProvider="Public" enabled="true">
+      <providers>
+        <add name="Account" type="MvcSiteMapProvider.DefaultSiteMapProvider, MvcSiteMapProvider" siteMapFile="~/Sitemaps/Account.Sitemap" securityTrimmingEnabled="false" cacheDuration="5" enableLocalization="true" scanAssembliesForSiteMapNodes="false" includeAssembliesForScan="" excludeAssembliesForScan="" attributesToIgnore="visibility" nodeKeyGenerator="MvcSiteMapProvider.DefaultNodeKeyGenerator, MvcSiteMapProvider" controllerTypeResolver="MvcSiteMapProvider.DefaultControllerTypeResolver, MvcSiteMapProvider" actionMethodParameterResolver="MvcSiteMapProvider.DefaultActionMethodParameterResolver, MvcSiteMapProvider" aclModule="MvcSiteMapProvider.DefaultAclModule, MvcSiteMapProvider" siteMapNodeUrlResolver="MvcSiteMapProvider.DefaultSiteMapNodeUrlResolver, MvcSiteMapProvider" siteMapNodeVisibilityProvider="MvcSiteMapProvider.DefaultSiteMapNodeVisibilityProvider, MvcSiteMapProvider" siteMapProviderEventHandler="MvcSiteMapProvider.DefaultSiteMapProviderEventHandler, MvcSiteMapProvider" />
+      </providers>
+    </siteMap>
+  </system.web>
+</configuration>

@@ -50,14 +50,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />
-    <None Include="content\Controllers\SystemController.cs.pp" />
-    <None Include="content\Sitemaps\System.sitemap.transform" />
-    <None Include="content\Views\System\Index.cshtml.pp" />
-    <None Include="content\Views\System\Module.cshtml.pp" />
-    <None Include="content\Views\System\_ViewStart.cshtml.pp" />
-    <None Include="content\Web.config.transform">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Package.nuspec" />
     <None Include="tools\init.ps1" />
     <None Include="tools\install.ps1" />
@@ -68,6 +60,7 @@
     <Folder Include="lib\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="content\deleteme.txt" />
     <Content Include="NuGet.exe" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
