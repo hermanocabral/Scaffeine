@@ -11,13 +11,13 @@
     {
         partial void UserLoggedIn();
 
-        [AllowAnonymous]
+        [$rootnamespace$.Filters.AllowAnonymous]
         public ActionResult ForgotPassword()
         {
             return this.Logon();
         }
 
-        [AllowAnonymous]
+        [$rootnamespace$.Filters.AllowAnonymous]
         public ActionResult Logon()
         {
             if (MembershipHelper.IsAuthenticated)
@@ -29,7 +29,7 @@
         }
 
         [HttpPost]
-        [AllowAnonymous]
+        [$rootnamespace$.Filters.AllowAnonymous]
         public ActionResult Logon(LogOnModel model, string returnUrl)
         {
             if (this.ModelState.IsValid)

@@ -9,14 +9,14 @@
 
     public partial class AccountController
     {
-        [AllowAnonymous]
+        [$rootnamespace$.Filters.AllowAnonymous]
         public ActionResult Register()
         {
             return this.View();
         }
 
         [HttpPost]
-        [AllowAnonymous]
+        [$rootnamespace$.Filters.AllowAnonymous]
         public ActionResult Register(RegisterModel model)
         {
             if (this.ModelState.IsValid)

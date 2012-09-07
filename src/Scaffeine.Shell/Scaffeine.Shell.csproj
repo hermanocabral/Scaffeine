@@ -77,7 +77,6 @@
     <None Include="content\Hubs\NotificationHub.cs.pp" />
     <None Include="content\mail.config.pp" />
     <None Include="content\Mailers\AccountMailer.cs.pp" />
-    <None Include="content\Models\AccountModels.cs.pp" />
     <None Include="content\Models\EmailModel.cs.pp" />
     <None Include="content\Models\INotification.cs.pp" />
     <None Include="content\Models\SettingsModel.cs.pp" />
@@ -90,7 +89,6 @@
     <None Include="content\Mailers\ContactUsMailer.cs.pp" />
     <None Include="content\Models\Alert.cs.pp" />
     <None Include="content\Models\ContactUsModel.cs.pp" />
-    <None Include="content\Models\ProfileModel.cs.pp" />
     <None Include="content\Sitemaps\Public.sitemap" />
     <None Include="content\Helpers\HtmlHelpers.cs.pp" />
     <None Include="content\Helpers\JSON.cs.pp" />
@@ -125,7 +123,6 @@
     <None Include="tools\init.ps1" />
     <None Include="tools\install.ps1" />
     <None Include="tools\uninstall.ps1" />
-    <None Include="NuGet.exe" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="content\Views\Dashboard\" />

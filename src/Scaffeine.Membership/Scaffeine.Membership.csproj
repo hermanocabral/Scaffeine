@@ -67,6 +67,8 @@
     <None Include="content\CodeTemplates\Scaffolders\ScaffR.Membership\UserEmail.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\ScaffR.Membership\UserRole.cs.t4" />
     <None Include="content\Controllers\Account\AccountController.cs.pp" />
+    <None Include="content\Models\AccountModels.cs.pp" />
+    <None Include="content\Models\ProfileModel.cs.pp" />
     <None Include="content\Sitemaps\Account.sitemap" />
     <None Include="content\Views\Account\ForgotPassword.cshtml.pp" />
     <None Include="content\Views\Account\Logon.cshtml.pp" />

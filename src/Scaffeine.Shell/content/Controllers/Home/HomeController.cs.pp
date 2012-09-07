@@ -8,7 +8,7 @@
     {
         partial void IndexLoaded();
 
-        [AllowAnonymous]
+        [$rootnamespace$.Filters.AllowAnonymous]
         public ActionResult Index()
         {
             IndexLoaded();

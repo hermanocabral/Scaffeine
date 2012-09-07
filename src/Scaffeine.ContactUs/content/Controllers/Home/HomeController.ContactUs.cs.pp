@@ -10,15 +10,14 @@ namespace $rootnamespace$.Controllers.Home
 
     public partial class HomeController
     {
-
-        [AllowAnonymous]
+        [$rootnamespace$.Filters.AllowAnonymous]
         [HttpGet]
         public ActionResult Contact()
         {
             return this.View(new ContactUsModel());
         }
 
-        [AllowAnonymous]
+        [$rootnamespace$.Filters.AllowAnonymous]
         [HttpPost]
         public ActionResult Contact(ContactUsModel model)
         {
