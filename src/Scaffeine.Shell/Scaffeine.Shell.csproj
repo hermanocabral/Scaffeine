@@ -58,7 +58,6 @@
   <ItemGroup>
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Shell\Scaffeine.Shell.ps1" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Shell\_Layout.cs.t4" />
-    <None Include="content\Controllers\BaseController.cs.pp" />
     <None Include="content\App_Start\Start.cs.pp" />
     <None Include="content\Filters\AllowAnonymousAttribute.cs.pp" />
     <None Include="content\Filters\FolderInfoAttribute.cs.pp" />
@@ -75,7 +74,6 @@
     <None Include="content\Filters\OnlyAnonymous.cs.pp" />
     <None Include="content\Handlers\NotificationHandler.cs.pp" />
     <None Include="content\Hubs\NotificationHub.cs.pp" />
-    <None Include="content\mail.config.pp" />
     <None Include="content\Mailers\AccountMailer.cs.pp" />
     <None Include="content\Models\EmailModel.cs.pp" />
     <None Include="content\Models\INotification.cs.pp" />

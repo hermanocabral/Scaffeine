@@ -86,12 +86,12 @@
   <ItemGroup>
     <None Include="content\CodeTemplates\Scaffolders\ScaffR.Payments\IRequest.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\ScaffR.Payments\IResponse.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Payments\HttpPostStrategy.cs.t4" />
+    <Compile Include="content\CodeTemplates\Scaffolders\ScaffR.Payments\HttpPostStrategy.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\ScaffR.Payments\PaymentTransaction.cs.t4" />
     <Compile Include="content\CodeTemplates\Scaffolders\ScaffR.Payments\AuthorizationResponse.cs.t4" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Payments\AuthorizationRequest.cs.t4" />
+    <Compile Include="content\CodeTemplates\Scaffolders\ScaffR.Payments\AuthorizationRequest.cs.t4" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

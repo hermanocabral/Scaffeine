@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{A2ADE471-847E-4F19-B575-A3CDABD53632}</ProjectGuid>
+    <ProjectGuid>{5286A2AB-237F-4D4A-AAF5-90A8E65DBF4C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Scaffeine.Ordering</RootNamespace>
-    <AssemblyName>Scaffeine.Ordering</AssemblyName>
+    <RootNamespace>Scaffeine.Leads.Domain</RootNamespace>
+    <AssemblyName>Scaffeine.Leads.Domain</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
@@ -46,28 +46,14 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="content\CodeTemplates\Scaffolders\Scaffeine.Ordering\Order.cs" />
-    <Compile Include="content\CodeTemplates\Scaffolders\Scaffeine.Ordering\OrderItem.cs" />
-    <Compile Include="content\CodeTemplates\Scaffolders\Scaffeine.Ordering\Product.cs" />
-    <Compile Include="content\CodeTemplates\Scaffolders\Scaffeine.Ordering\ProductCategory.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Leads.Domain\Customer.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Leads.Domain\Lead.cs.t4" />
+    <None Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />
-    <None Include="content\App.config.transform">
-      <SubType>Designer</SubType>
-    </None>
-    <Compile Include="content\CodeTemplates\Scaffolders\Scaffeine.Ordering\OrderManager.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Ordering\OrderProvider.cs.t4" />
-    <Compile Include="content\CodeTemplates\Scaffolders\Scaffeine.Ordering\OrderProviderCollection.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Ordering\OrderSection.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Ordering\Scaffeine.Ordering.ps1" />
-    <None Include="content\Web.config.transform">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Package.nuspec">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Leads.Domain\Scaffeine.Leads.Domain.ps1" />
+    <None Include="Package.nuspec" />
     <None Include="tools\init.ps1" />
     <None Include="tools\install.ps1" />
     <None Include="tools\uninstall.ps1" />
@@ -76,7 +62,7 @@
     <Folder Include="lib\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="notes.txt" />
+    <Content Include="NuGet.exe" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

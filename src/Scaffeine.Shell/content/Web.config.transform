@@ -1,18 +1,18 @@
-﻿<configuration>
+﻿<configuration>  
   <appSettings>
     <add key="webpages:Version" value="1.0.0.0" />
     <add key="ClientValidationEnabled" value="true" />
     <add key="UnobtrusiveJavaScriptEnabled" value="true" />
   </appSettings>
-
-  <system.web>
+  <system.web>    
     <machineKey validationKey="3E6C3F5B1A2FCD268BA971B4DB9EE9768000B6C7E22A7C0FD679857E3E799DEC68042E520E7B3A13B785C785D7B7B1C9103F4074720C547B94A1F47A92262279" decryptionKey="61D3A8A5897D60D56EE70F3A6D5DE8C8474E82177AFC980262EF983DBE46FE01" validation="SHA1" decryption="AES" />
-
-    <siteMap defaultProvider="Public" enabled="true">
-      <providers>
-        <add name="Public" type="MvcSiteMapProvider.DefaultSiteMapProvider, MvcSiteMapProvider" siteMapFile="~/Sitemaps/Public.Sitemap" securityTrimmingEnabled="false" cacheDuration="5" enableLocalization="true" scanAssembliesForSiteMapNodes="true" includeAssembliesForScan="" excludeAssembliesForScan="" attributesToIgnore="visibility" nodeKeyGenerator="MvcSiteMapProvider.DefaultNodeKeyGenerator, MvcSiteMapProvider" controllerTypeResolver="MvcSiteMapProvider.DefaultControllerTypeResolver, MvcSiteMapProvider" actionMethodParameterResolver="MvcSiteMapProvider.DefaultActionMethodParameterResolver, MvcSiteMapProvider" aclModule="MvcSiteMapProvider.DefaultAclModule, MvcSiteMapProvider" siteMapNodeUrlResolver="MvcSiteMapProvider.DefaultSiteMapNodeUrlResolver, MvcSiteMapProvider" siteMapNodeVisibilityProvider="MvcSiteMapProvider.DefaultSiteMapNodeVisibilityProvider, MvcSiteMapProvider" siteMapProviderEventHandler="MvcSiteMapProvider.DefaultSiteMapProviderEventHandler, MvcSiteMapProvider" />
-        <add name="System" type="MvcSiteMapProvider.DefaultSiteMapProvider, MvcSiteMapProvider" siteMapFile="~/Sitemaps/System.Sitemap" securityTrimmingEnabled="false" cacheDuration="5" enableLocalization="true" scanAssembliesForSiteMapNodes="true" includeAssembliesForScan="" excludeAssembliesForScan="" attributesToIgnore="visibility" nodeKeyGenerator="MvcSiteMapProvider.DefaultNodeKeyGenerator, MvcSiteMapProvider" controllerTypeResolver="MvcSiteMapProvider.DefaultControllerTypeResolver, MvcSiteMapProvider" actionMethodParameterResolver="MvcSiteMapProvider.DefaultActionMethodParameterResolver, MvcSiteMapProvider" aclModule="MvcSiteMapProvider.DefaultAclModule, MvcSiteMapProvider" siteMapNodeUrlResolver="MvcSiteMapProvider.DefaultSiteMapNodeUrlResolver, MvcSiteMapProvider" siteMapNodeVisibilityProvider="MvcSiteMapProvider.DefaultSiteMapNodeVisibilityProvider, MvcSiteMapProvider" siteMapProviderEventHandler="MvcSiteMapProvider.DefaultSiteMapProviderEventHandler, MvcSiteMapProvider" />
-      </providers>
-    </siteMap>
+   
   </system.web>
+  <system.net>
+    <mailSettings>
+      <smtp from="webmaster@$rootnamespace$.com" deliveryMethod="Network">
+        <network enableSsl="true" host="smtp.gmail.com" port="587" userName="webmaster@$rootnamespace$.com" password=""  />
+      </smtp>
+    </mailSettings>
+  </system.net>
 </configuration>

@@ -15,32 +15,19 @@
     </releaseNotes>
     <copyright>World-Class Programmers 2012</copyright>
     <tags>Scaffolding, Boilerplate, Template, Bootstrap</tags>
-    <dependencies>
-      <dependency id="T4Scaffolding" version="1.0.4" />            
-      <dependency id="ScaffR" version="1.1.2" />
-      <dependency id="ScaffR.Backend" version="1.1.2" />
+    <dependencies>          
       <dependency id="ScaffR.MVC" version="1.1.2"/>
       <dependency id="Scaffeine.Configuration" version="1.1.2" />
+      <dependency id="Scaffeine.Notifications" version="1.1.2" />
       <dependency id="Scaffeine.Eventing" version="1.1.2" />
-      <dependency id="ScaffR.Ninject" version="1.1.2" />
       <dependency id="ScaffR.Bootstrap" version="1.1.2"/>
-      <dependency id="MvcMailer" version="1.1" />
-      <dependency id="jQuery.UI.Combined" version="1.8.20" />
-      <dependency id="jQuery" version="1.7.2" />
-      <dependency id="knockoutjs" version="2.1.0"/>
-      <dependency id="Cassette.AspNet" version="2.0.0" />
-      <dependency id="Cassette.Less" version="2.0.0" />
-      <dependency id="AutoMapper" version="2.1.267"/>
-      <dependency id="SignalR" version="0.5.2" />
-      <dependency id="SignalR.Client" version="0.5.2" />
-      <dependency id="SignalR.Hosting.AspNet" version="0.5.2" />
-      <dependency id="SignalR.Hosting.Common" version="0.5.2" />
-      <dependency id="SignalR.Js" version="0.5.2" />
-      <dependency id="SignalR.Server" version="0.5.2" />
+      <dependency id="ScaffR.Backend" version="1.1.2" />
+      <dependency id="ScaffR.Sitemap" version="1.1.2"/>
+      <dependency id="ScaffR.Ninject" version="1.1.2" />
+      <dependency id="ScaffR.MvcMailer" version="1.1.2" />
     </dependencies>
   </metadata>
   <files>
-    <file src="lib\**" target="lib" />
     <file src="tools\**" target="tools" />
     <file src="content\**" target="content" />
   </files>

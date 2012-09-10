@@ -5,5 +5,7 @@ add-project $membershipProjectName | `
 
 $baseProject | with-reference "$membershipProjectName"
 
+get-projectitem CassetteConfiguration.cs | % { $_.Delete() }
+
 Scaffold Scaffeine.Shell
 

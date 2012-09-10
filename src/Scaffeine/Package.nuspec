@@ -23,13 +23,12 @@
       <dependency id="Scaffeine.Profiles" version="1.1.2" />
       <dependency id="Scaffeine.Profiles.Photo" version="1.1.2" />
       <dependency id="Scaffeine.Register" version="1.1.2" />
+      <dependency id="Scaffeine.Membership" version="1.1.2" />
       <dependency id="Scaffeine.Logon" version="1.1.2" />
-      <dependency id="Scaffeine.Notifications" version="1.1.2" />
-      <dependency id="T4Scaffolding" version="1.0.6" />
+      
     </dependencies>
   </metadata>
   <files>
-    <file src="lib\**" target="lib" />
     <file src="tools\**" target="tools" />
     <file src="content\**" target="content" />
   </files>

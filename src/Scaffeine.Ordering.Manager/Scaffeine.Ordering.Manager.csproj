@@ -56,7 +56,7 @@
   <ItemGroup>
     <None Include="content\CodeTemplates\Scaffolders\ScaffR.Ordering\ScaffR.Order.ps1" />
     <None Include="content\Controllers\OrderController.cs.pp" />
-    <None Include="content\CodeTemplates\Scaffolders\ScaffR.Ordering\Order.cs.t4" />
+    <Compile Include="content\CodeTemplates\Scaffolders\ScaffR.Ordering\Order.cs.t4" />
   </ItemGroup>
   <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />

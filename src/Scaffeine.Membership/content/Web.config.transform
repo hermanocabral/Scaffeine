@@ -1,5 +1,8 @@
 ﻿<configuration>
   <system.web>
+    <authentication mode="Forms">
+      <forms loginUrl="~/Account/LogOn" timeout="2880" />
+    </authentication>
     <membership defaultProvider="$rootnamespace$MembershipProvider">
       <providers>
         <clear />
