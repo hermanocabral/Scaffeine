@@ -1,17 +1,40 @@
-namespace $rootnamespace$.Controllers.Leads
+﻿namespace $rootnamespace$.Controllers.Leads
 {
     using System.Web.Mvc;
 
-    public partial class LeadsController : Controller
+    using $rootnamespace$.Core.Interfaces.Service;
+    using $rootnamespace$.Core.Model;
+
+    public partial class LeadsController : BaseController<Lead>
     {
-        public ActionResult Record()
+        private readonly ILeadService _service;
+
+        public LeadsController(ILeadService service)
         {
-            return this.View();
+            this.Service = _service = service;
         }
 
-		public ActionResult Manager()
+        public ActionResult Record(int id)
         {
-            return this.View();
+            var lead = _service.GetById(id);
+            return this.View(lead);
+        }
+
+		public ActionResult Manager(int page = 1, int size = 10)
+		{
+		    var leads = _service.Page(page, size);
+		    return this.View(leads);
+		}
+
+        [HttpPost]
+        public ActionResult Delete(int id)
+        {
+            var entity = _service.GetById(id);
+            _service.Delete(entity);
+
+            TempData["Success"] = "Lead was successfuly deleted";
+
+            return RedirectToAction("Manager");
         }
     }
 }

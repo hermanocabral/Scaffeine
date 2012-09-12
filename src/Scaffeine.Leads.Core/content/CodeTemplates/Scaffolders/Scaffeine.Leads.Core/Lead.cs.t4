@@ -1,0 +1,20 @@
+<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
+<#@ Output Extension="cs" #>
+namespace <#= Model.Namespace #>.Core.Model
+{
+    public partial class Lead : PersistentEntity
+    {
+        public string IPAddress { get; set; }
+        public string SessionId { get; set; }
+        public bool IsTest { get; set; }
+        public string Source { get; set; }
+
+        public string SubId { get; set; }
+        public string CampaignId { get; set; }
+        public string Browser { get; set; }
+
+        public virtual Order Order { get; set; }
+
+        public virtual Customer Customer { get; set; }
+    }
+}

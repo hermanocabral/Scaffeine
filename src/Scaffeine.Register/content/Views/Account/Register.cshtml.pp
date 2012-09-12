@@ -5,7 +5,7 @@
 @section container{
     <div class="page-header">
         <h1>
-            Create A New Account <small>Today</small>
+            Create A New Account
         </h1>
     </div>
     <div class="row">
@@ -19,7 +19,7 @@
                         First Name
                     </label>
                     <div class="controls">
-                        @Html.TextBoxFor(m => m.FirstName, new { @class = "required" })
+                        @Html.TextBoxFor(m => m.FirstName, new { @class = "required input-xlarge" })
                         @Html.ValidationMessageFor(m => m.LastName)
                     </div>
                 </div>
@@ -29,7 +29,7 @@
                         Last Name
                     </label>
                     <div class="controls">
-                        @Html.TextBoxFor(m => m.LastName, new { @class = "required" })
+                        @Html.TextBoxFor(m => m.LastName, new { @class = "required input-xlarge" })
                         @Html.ValidationMessageFor(m => m.LastName)
                     </div>
                 </div>
@@ -40,7 +40,7 @@
                         Username
                     </label>
                     <div class="controls">
-                        @Html.TextBoxFor(m => m.UserName, new { @class = "required" })
+                        @Html.TextBoxFor(m => m.UserName, new { @class = "required input-xlarge" })
                         @Html.ValidationMessageFor(m => m.UserName)
                     </div>
                 </div>
@@ -49,7 +49,7 @@
                         Email Address
                     </label>
                     <div class="controls">
-                        @Html.TextBoxFor(m => m.Email, new { @class = "required email" })
+                        @Html.TextBoxFor(m => m.Email, new { @class = "required email input-xlarge" })
                         @Html.ValidationMessageFor(m => m.Email)
                     </div>
                 </div>
@@ -58,7 +58,7 @@
                         Password
                     </label>
                     <div class="controls">
-                        @Html.PasswordFor(m => m.Password, new { @class = "required" })
+                        @Html.PasswordFor(m => m.Password, new { @class = "required input-xlarge" })
                         @Html.ValidationMessageFor(m => m.Password)
                     </div>
                 </div>
@@ -67,7 +67,7 @@
                         Confirm Password
                     </label>
                     <div class="controls">
-                        @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "required" })
+                        @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "required input-xlarge" })
                         @Html.ValidationMessageFor(m => m.ConfirmPassword)
                     </div>
                 </div>

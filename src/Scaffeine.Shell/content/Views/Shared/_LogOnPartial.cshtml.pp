@@ -3,10 +3,10 @@
 {
     <div class="btn-group pull-right">
         <a class="btn dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-user">
-            <img src="../../Content/images/rod.PNG" class="img-round" />
+            <img src="@Url.Content(ViewBag.TinyProfileUrl)" class="img-round" />
         </i> @User.Identity.Name <span class="caret"></span></a>
         <ul class="dropdown-menu">
-            <li><a href="@Url.Action("Profile", "Account")">Profile</a></li>          
+            <li><a href="@Url.Action("Index", "Account")">Profile</a></li>          
             <li class="divider"></li>
             <li><a href="@Url.Action("LogOff", "Account")">Sign Out</a></li>
         </ul>

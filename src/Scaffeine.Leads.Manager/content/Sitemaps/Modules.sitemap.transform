@@ -5,4 +5,4 @@
       <mvcSiteMapNode title="Details" controller="Leads" action="Record" imageUrl="icon-user" />
     </mvcSiteMapNode>
   </mvcSiteMapNode>
-</mvcSiteMap>
+</mvcSiteMap> 

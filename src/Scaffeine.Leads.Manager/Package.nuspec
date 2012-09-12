@@ -16,12 +16,11 @@
     <copyright>ScaffR, 2012</copyright>
     <tags></tags>
     <dependencies>
-      <dependency id="Scaffeine.Leads" version="1.1.2" />
-      <dependency id="Scaffeine.Dashboard" version="1.1.2"/>
+      <dependency id="Scaffeine.Leads.Core" />
+      <dependency id="Scaffeine.Dashboard.Shell"/>
     </dependencies>
   </metadata>
   <files>
-    <file src="lib\**" target="lib" />
     <file src="tools\**" target="tools" />
     <file src="content\**" target="content" />
   </files>

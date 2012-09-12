@@ -57,7 +57,7 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Shell\Scaffeine.Shell.ps1" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Shell\_Layout.cs.t4" />
+    <Compile Include="content\CodeTemplates\Scaffolders\Scaffeine.Shell\_Layout.cs.t4" />
     <None Include="content\App_Start\Start.cs.pp" />
     <None Include="content\Filters\AllowAnonymousAttribute.cs.pp" />
     <None Include="content\Filters\FolderInfoAttribute.cs.pp" />
@@ -90,6 +90,7 @@
     <None Include="content\Sitemaps\Public.sitemap" />
     <None Include="content\Helpers\HtmlHelpers.cs.pp" />
     <None Include="content\Helpers\JSON.cs.pp" />
+    <None Include="content\Views\Shared\_Alert.cshtml.pp" />
     <None Include="content\Views\Shared\_UserWidget.cshtml.pp" />
     <None Include="content\Views\Shared\_UserActions.cshtml.pp" />
     <None Include="content\Views\Shared\DisplayTemplates\Alert.cshtml.pp" />

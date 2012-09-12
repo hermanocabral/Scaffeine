@@ -48,26 +48,21 @@
   <ItemGroup>
     <None Include="content\Controllers\Leads\LeadsController.cs.pp" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="tools\init.ps1" />
-    <None Include="tools\install.ps1" />
-    <None Include="tools\uninstall.ps1" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="BuildPublishPackage.cmd" />
-    <None Include="content\Sitemaps\Modules.sitemap.transform" />
-    <None Include="content\Views\Leads\Header.cshtml.pp" />
     <None Include="content\Views\Leads\Manager.cshtml.pp" />
     <None Include="content\Views\Leads\Record.cshtml.pp" />
     <None Include="content\Views\Leads\_Actions.cshtml.pp" />
     <None Include="content\Views\Leads\_History.cshtml.pp" />
     <None Include="content\Views\Leads\_LeadInformation.cshtml.pp" />
     <None Include="content\Views\Leads\_OrderDetails.cshtml.pp" />
-    <None Include="Package.nuspec" />
+    <None Include="tools\init.ps1" />
+    <None Include="tools\install.ps1" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="content\CodeTemplates\Scaffolders\" />
-    <Folder Include="lib\" />
+    <None Include="BuildPublishPackage.cmd" />
+    <None Include="content\Sitemaps\Modules.sitemap.transform" />
+    <None Include="Package.nuspec" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="NuGet.exe" />
   </ItemGroup>

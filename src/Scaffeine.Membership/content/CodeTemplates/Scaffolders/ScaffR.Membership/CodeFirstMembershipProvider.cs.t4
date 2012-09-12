@@ -382,15 +382,16 @@ namespace <#= Model.Namespace #>.Membership.Providers
                 IQueryable<User> users = context.Users.Where(usr => usr.Email == emailToMatch).OrderBy(usrn => usrn.Username).Skip(pageIndex * pageSize).Take(pageSize);
                 foreach (var user in users)
                 {
-                    membershipUsers.Add(new MembershipUser(System.Web.Security.Membership.Provider.Name, user.Username, user.Id, user.Email, null, null, user.IsApproved, user.IsLockedOut, user.Created.Value, user.LastLoginDate.Value, user.LastActivityDate.Value, user.LastPasswordChangedDate.Value, user.LastLockoutDate.Value));
+                    membershipUsers.Add(new MembershipUser(System.Web.Security.Membership.Provider.Name, user.Username, user.Id, user.Email, null, null, user.IsApproved, user.IsLockedOut, DateTime.MinValue, DateTime.MinValue, DateTime.MinValue, DateTime.MinValue, DateTime.MinValue));
                 }
             }
+
             return membershipUsers;
         }
 
         public override MembershipUserCollection FindUsersByName(string usernameToMatch, int pageIndex, int pageSize, out int totalRecords)
         {
-            MembershipUserCollection membershipUsers = new MembershipUserCollection();
+		    MembershipUserCollection membershipUsers = new MembershipUserCollection();
             using (var context = new DataContext())
             {
                 totalRecords = context.Users.Count(usr => usr.Username == usernameToMatch);

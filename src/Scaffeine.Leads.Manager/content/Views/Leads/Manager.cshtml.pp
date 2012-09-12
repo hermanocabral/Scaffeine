@@ -1,28 +1,51 @@
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Leads";
     ViewBag.SitemapProvider = "Modules";
     Layout = "~/Views/Shared/_Folder.cshtml";
 }
+@model $rootnamespace$.Core.Interfaces.Paging.IPage<$rootnamespace$.Core.Model.Lead>
 
-<div class="alert alert-success">
-    Customer Created
-</div>
+
+@if (TempData["Success"] != null)
+{                
+    <div class="alert alert-success">
+        @TempData["Success"]
+    </div>
+}
+
 
 <table class="table table-bordered">
-    <thead>
+    
+    @if (this.Model.Entities.Any())
+    {
+        <thead>
+            <tr>
+                <th>Creation Date</th>
+                <th>Source</th>
+                <th>Status</th>
+                <th></th>
+            </tr>
+        </thead>
+        
+        foreach (var customer in Model.Entities)
+        {
+            <tr>
+                <td>@customer.Created</td>            
+                <td>@customer.Source</td>
+                <td><a href="#">Qualified</a></td>
+                <td><a href="@Url.Action("Record", "Leads", new { id = customer.Id })">More Information</a></td>
+            </tr>
+        }
+
+    }
+    else
+    {
         <tr>
-            <th>Customer Name</th>
-            <th>Purchase Amount</th>
-            <th>Purchase Date</th>
-            <th>Status</th>
-            <th></th>
+            <td style="text-align: center">
+                <em>There are no leads created yet.  Leads must be created from an external source (See the API Information)</em>
+            </td>
         </tr>
-    </thead>
-    <tr>
-        <td>Walter White</td>
-        <td>$5.12</td>
-        <td>September 4, 2012</td>
-        <td><a href="#">Purchased</a></td>
-        <td><a href="@Url.Action("Record", "Leads")">More Information</a></td>
-    </tr>
+    }
+    
+
 </table>

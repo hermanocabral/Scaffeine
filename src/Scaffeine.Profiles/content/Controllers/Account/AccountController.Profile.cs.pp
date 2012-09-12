@@ -1,5 +1,6 @@
 ﻿namespace $rootnamespace$.Controllers.Account
 {
+    using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Web.Mvc;
@@ -14,7 +15,7 @@
     public partial class AccountController
     {
         [HttpGet]
-        public ActionResult Profile()
+        public ActionResult Index()
         {
             Mapper.CreateMap<User, ProfileModel>();
 
@@ -24,24 +25,38 @@
         }
 
         [HttpPost]
-        public ActionResult Profile(ProfileModel model)
+        public ActionResult Index(ProfileModel model)
         {
             if (ModelState.IsValid)
             {
-                // does email already exist?
-                if (MembershipHelper.EmailInUse(model.Email))
+                var user = MembershipHelper.CurrentUser;
+
+                if (string.Compare(user.Email, model.Email, StringComparison.InvariantCultureIgnoreCase) != 0)
                 {
-                    ModelState.AddModelError("EmailInUse", "Email already in use");
+                    if (MembershipHelper.EmailInUse(model.Email))
+                    {
+                        ModelState.AddModelError("EmailInUse", "Email already in use");
+                    }
                 }
-                else
+
+                if (ModelState.IsValid)
                 {
-                    var user = MembershipHelper.CurrentUser;
                     user.FirstName = model.FirstName;
                     user.LastName = model.LastName;
                     user.Email = model.Email;
-                    _userService.SaveOrUpdate(user);
+
+                    try
+                    {
+                        _userService.SaveOrUpdate(user);
+                        TempData["Success"] = "User was successfully updated.";
+                    }
+                    catch (Exception)
+                    {
+                        ModelState.AddModelError("Exception", "Unexpected error");
+                    }
                 }
             }
+
             return View(model);
         }
 
@@ -51,23 +66,25 @@
         {
             Mapper.CreateMap<UserEmail, EmailModel>();
 
-            List<EmailModel> model =
-                _userEmailService.Find(x => x.UserId == MembershipHelper.CurrentUser.Id).Select(
-                    x => new EmailModel() { EmailAddress = x.EmailAddress }).ToList();
-            model.Add(new EmailModel()
-                          {
-                              EmailAddress = MembershipHelper.CurrentUser.Email,
-                              IsDefault = true
-                          });
+            List<UserEmail> model =
+                _userEmailService.Find(x => x.UserId == MembershipHelper.CurrentUser.Id).ToList();
 
+            ViewBag.DefaultEmail = MembershipHelper.CurrentUser.Email;
 
             return View(model);
         }
 
         [HttpPost]
-        public ActionResult Emails(EmailModel model)
+        public ActionResult Emails(UserEmail model)
         {
-            return View();
+            model.UserId = MembershipHelper.CurrentUser.Id;
+            if (ModelState.IsValid)
+            {
+                _userEmailService.SaveOrUpdate(model);
+                TempData["Success"] = "Email was successfully added";
+            }
+
+            return RedirectToAction("Emails");
         }
 
         [LoginAuthorize]
@@ -87,10 +104,12 @@
 
                 if (status)
                 {
-                    return this.RedirectToAction("ChangePasswordSuccess");
+                    TempData["Success"] = "Password was changed successfully";
                 }
-
-                this.ModelState.AddModelError(string.Empty, "The current password is incorrect or the new password is invalid.");
+                else
+                {
+                    this.ModelState.AddModelError(string.Empty, "The current password is incorrect or the new password is invalid.");
+                }                
             }
 
             // If we got this far, something failed, redisplay form

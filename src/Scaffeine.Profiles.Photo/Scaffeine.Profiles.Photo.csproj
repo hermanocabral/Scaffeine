@@ -49,24 +49,25 @@
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Profiles.Photo\Scaffeine.Profiles.Photo.ps1" />
     <None Include="content\Controllers\Account\AccountController.Photo.cs.pp" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Profiles.Photo\User.Photo.cs.t4" />
+    <None Include="content\Filters\ProfileAttribute.cs.pp" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />
-    <None Include="content\Sitemaps\Account.sitemap.transform" />
     <None Include="content\Views\Account\Photo.cshtml.pp" />
-    <None Include="content\Web.config.transform">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Package.nuspec" />
     <None Include="tools\init.ps1" />
     <None Include="tools\install.ps1" />
     <None Include="tools\uninstall.ps1" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="content\Sitemaps\" />
     <Folder Include="lib\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="content\Content\Tiny\male.jpg" />
+    <Content Include="content\Content\Medium\male.jpg" />
+    <Content Include="content\Content\Small\male.jpg" />
     <Content Include="NuGet.exe" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,42 +1,63 @@
-﻿<table class="table table-bordered">
+@model $rootnamespace$.Core.Model.Lead
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <td>Created</td>
+    </tr>
+    <tr>
+        <td>@Model.Id</td>
+        <td>@Model.Created</td>
+    </tr>
+</table>
+
+<table class="table table-bordered">
     <tr>
         <th style="width: 200px">
-            First Name
+            Source
         </th>
         <td>
-            Rod
+           @Model.Source 
         </td>
     </tr>
     <tr>
-        <th>
-            Last Name
+        <th style="width: 200px">
+            Browser
         </th>
         <td>
-            Johnson
+            @Model.Browser
         </td>
     </tr>
     <tr>
-        <th>
-            Address
+        <th style="width: 200px">
+            IP Address
         </th>
         <td>
-            72 Summer Pl.
+            @Model.IPAddress 
         </td>
     </tr>
     <tr>
-        <th>
-            City
+        <th style="width: 200px">
+            Campaign ID
         </th>
         <td>
-            Saratoga Springs
+            @Model.CampaignId 
         </td>
     </tr>
     <tr>
-        <th>
-            State
+        <th style="width: 200px">
+            Campaign SubID
         </th>
         <td>
-            UT
+            @Model.SubId 
+        </td>
+    </tr>
+     <tr>
+        <th style="width: 200px">
+            Session ID
+        </th>
+        <td>
+           @Model.SessionId.ToUpper()
         </td>
     </tr>
 </table>

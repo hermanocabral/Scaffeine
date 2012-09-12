@@ -1,7 +1,6 @@
 ﻿@using $rootnamespace$.Extensions
 @using MvcSiteMapProvider.Web.Html
 @{
-    ViewBag.Title = "_Folder";
     Layout = "~/Views/Shared/_Dashboard.cshtml";    
 }
 @RenderSection("Stylesheets", false)
@@ -18,8 +17,7 @@
                 @Html.Partial("_UserActions")
             </div>            
         }
-        <h6>
-            My Services</h6>
+        <h6>My Services</h6>
         @{
             SiteMapProvider provider = SiteMap.Providers[ViewBag.SitemapProvider];
         }
@@ -34,6 +32,7 @@
         @Html.Alert()
         @Html.MvcSiteMap((string)ViewBag.SitemapProvider).Breadcrumb()
         <div class="row-fluid">
+			@Html.Partial("_Alert")
             @RenderBody()
         </div>
     </div>
