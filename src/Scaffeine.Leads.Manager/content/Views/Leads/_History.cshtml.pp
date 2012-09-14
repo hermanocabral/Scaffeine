@@ -1,1 +1,0 @@
-<h2>Lead Information</h2>

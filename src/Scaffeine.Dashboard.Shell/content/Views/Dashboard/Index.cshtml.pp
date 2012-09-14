@@ -1,5 +1,4 @@
 @{
-    ViewBag.Title = "News";
     ViewBag.SitemapProvider = "Modules";
 }
 <div class="row-fluid">
@@ -18,3 +17,11 @@
         </div>
     </div>
 </div>
+@section Stylesheets
+{
+    <style type="text/css">
+        .breadcrumb {
+            display: none;
+        }
+    </style>
+}

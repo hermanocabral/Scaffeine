@@ -1,0 +1,48 @@
+﻿<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
+<#@ Output Extension="cs" #>
+namespace <#= Model.Namespace #>.Core.Model
+{
+    using System.Collections.Generic;
+    using System.Collections.ObjectModel;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Linq;
+
+    public partial class Order : PersistentEntity
+    {
+		public Order()
+        {
+            OrderItems = new Collection<OrderLineItem>();
+        }
+
+        [NotMapped]
+        public double OrderTotal
+        {
+            get
+            {
+                if (this.OrderItems.Count > 0)
+                {
+                    return this.OrderItems.Sum(x => x.TotalPrice);
+                }
+
+                return 0;
+            }
+        }
+
+        [NotMapped]
+        public OrderStatus OrderStatus 
+        { 
+            get
+            {
+                if (this.OrderItems.Count > 0)
+                {
+                    return this.OrderItems.OrderBy(x => x.OrderStatus).FirstOrDefault().OrderStatus;
+                }
+
+                return OrderStatus.Entered;
+            } 
+        }
+
+        public virtual ICollection<OrderLineItem> OrderItems { get; set; }
+    }
+
+}

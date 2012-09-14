@@ -6,5 +6,5 @@ param(
 	[switch]$Force = $false
 )
 
-Add-DomainClass "Model\Customer" "Customer" -Force:$Force $TemplateFolders
+Add-Domain "Model\Customer" "Customer" -Force:$Force $TemplateFolders
 

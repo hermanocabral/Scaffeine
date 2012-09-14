@@ -111,7 +111,6 @@
     <None Include="content\Views\Shared\_BottomMenu.cshtml.pp" />
     <None Include="content\Views\Shared\_NotificationsPartial.cshtml.pp" />
     <None Include="content\Views\Shared\_TopMenu.cshtml.pp" />
-    <None Include="content\Views\Shared\_Dashboard.cshtml.pp" />
     <None Include="content\Web.config.transform">
       <SubType>Designer</SubType>
     </None>
@@ -148,6 +147,13 @@
     <Content Include="content\Scripts\jquery.simplemodal.js" />
     <Content Include="content\Scripts\jquery.ui.position.min.js" />
     <Content Include="content\Scripts\jquery.ui.timepicker.js" />
+    <Content Include="content\Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="content\Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="content\Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="content\Scripts\jquery.validate.js" />
+    <Content Include="content\Scripts\jquery.validate.min.js" />
+    <Content Include="content\Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="content\Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="lib\net40\MvcSiteMapProvider.dll" />
     <Content Include="lib\net40\MvcSiteMapProvider.XML" />
   </ItemGroup>

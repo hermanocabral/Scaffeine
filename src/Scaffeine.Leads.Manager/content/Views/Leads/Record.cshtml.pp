@@ -12,15 +12,15 @@
     </ul>
 </div>
 <ul class="nav nav-tabs">
-    <li class="active"><a href="#info" data-toggle="tab"><i class="icon-user"></i>Lead Information</a></li>
+    <li class="active"><a href="#info" data-toggle="tab">Lead Details</a></li>
     <li><a href="#order" data-toggle="tab">Order Details</a></li>
-    <li><a href="#history" data-toggle="tab">History</a></li>
+    <li><a href="#history" data-toggle="tab">Customer Details</a></li>
     <li><a href="#actions" data-toggle="tab">Actions</a></li>
 </ul>
 <div class="tab-content">
-    <div class="tab-pane active" id="info">@Html.Partial("_LeadInformation", Model)</div>
-    <div class="tab-pane" id="order">@Html.Partial("_OrderDetails")</div>
-    <div class="tab-pane" id="history">@Html.Partial("_History")</div>
+    <div class="tab-pane active" id="info">@Html.Partial("_LeadDetails", Model)</div>
+    <div class="tab-pane" id="order">@Html.Partial("_OrderDetails", Model.Order)</div>
+    <div class="tab-pane" id="history">@Html.Partial("_CustomerDetails", Model.Customer)</div>
     <div class="tab-pane" id="actions">@Html.Partial("_Actions")</div>
 </div>
 <form action="@Url.Action("Delete")" method="POST">
@@ -29,7 +29,7 @@
     @Html.HiddenFor(x => x.Id)
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-            ×</button>
+            ï¿½</button>
         <h3 id="myModalLabel">
             Are you sure you want to delete?</h3>
     </div>

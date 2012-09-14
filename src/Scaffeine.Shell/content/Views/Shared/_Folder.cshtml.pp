@@ -1,7 +1,7 @@
 ﻿@using $rootnamespace$.Extensions
 @using MvcSiteMapProvider.Web.Html
 @{
-    Layout = "~/Views/Shared/_Dashboard.cshtml";    
+    Layout = "~/Views/Shared/_Layout.cshtml";    
 }
 @RenderSection("Stylesheets", false)
 @RenderSection("Scripts", false)
@@ -22,7 +22,7 @@
             SiteMapProvider provider = SiteMap.Providers[ViewBag.SitemapProvider];
         }
         @Html.MvcSiteMap(provider).Pills(0, true, true, 1)
-         @*<h6>
+        @*<h6>
             My Friends</h6>
         <ul>
             <li>asdf</li>
@@ -32,8 +32,12 @@
         @Html.Alert()
         @Html.MvcSiteMap((string)ViewBag.SitemapProvider).Breadcrumb()
         <div class="row-fluid">
-			@Html.Partial("_Alert")
+            @Html.Partial("_Alert")
             @RenderBody()
         </div>
     </div>
 </div>
+
+@section footer{
+    <span></span>
+}

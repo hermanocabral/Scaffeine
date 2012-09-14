@@ -27,5 +27,7 @@ namespace <#= Model.Namespace #>.Core.Model
         public string Country { get; set; }
 
         public string CardType { get; set; }    
+		
+        public string CardCode { get; set; }
     }
 }

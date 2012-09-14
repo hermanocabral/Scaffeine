@@ -2,7 +2,7 @@
 @if (Request.IsAuthenticated)
 {
     <div class="btn-group pull-right">
-        <a class="btn dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-user">
+        <a class="btn dropdown-toggle" data-toggle="dropdown" href="#"><i class="">
             <img src="@Url.Content(ViewBag.TinyProfileUrl)" class="img-round" />
         </i> @User.Identity.Name <span class="caret"></span></a>
         <ul class="dropdown-menu">

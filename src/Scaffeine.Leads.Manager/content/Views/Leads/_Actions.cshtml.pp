@@ -1,1 +1,3 @@
-<h2>Lead Information</h2>
+<div class="well">
+  Coming Soon!
+</div>

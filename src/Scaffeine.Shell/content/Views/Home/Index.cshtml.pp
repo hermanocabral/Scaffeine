@@ -1,134 +1,98 @@
 ﻿@using $rootnamespace$.Core.Configuration
-@{
-    ViewBag.Title = Site.Instance.WebsiteName;
-}
 @section hero{
-    <div class="container showcase">
-        <div id="carousel-features" class="carousel slide">
-            <div class="carousel-inner" style="height: 413px">
-                <div class=" active item">
-                    <div style="text-align: center">
-                        <h1>
-                            Never write the same code twice...</h1>                        
-                        <img width="940" height="250" src="@Url.Content("~/content/images/scaffr.png")"/>
-                        <br/>
-                        <h2>Powershell + NuGet + T4 + Visual Studio</h2>
-                    </div>
-                </div>                
-            </div>
+    <div class="hero-content">
+        <h1>
+            @Site.Instance.WebsiteName</h1>
+        <p>
+            Just another site built with ScaffR</p>
+        <div class="actions">            
+            <span class="nuget-badge">
+                <code>PM&gt; Install-Package Scaffeine</code>
+            </span>
         </div>
-        <a class="carousel-control left" href="#carousel-features" data-slide="prev">&lsaquo;</a>
-        <a class="carousel-control right" href="#carousel-features" data-slide="next">&rsaquo;</a>
     </div>
 }
-
-<div class="container">
+<section id="social-buttons">
+    <span class="watch">
+        <a class="btn" href="http://www.github.com/wcpro/scaffr"><i class="icon-github"></i> Watch</a> 
+        <span id="followers" class="count btn">1917</span> 
+    </span>
+    <span class="fork">
+        <a class="btn" href="http://www.github.com/wcpro/scaffr"><i class="icon-github"></i> Fork</a> 
+        <span id="followers" class="count btn">1917</span> 
+    </span>
+    <span class="follow">
+        <a class="btn" href="http://www.facebook.com/scaffr">
+            <i class="icon-facebook-sign"></i> Follow</a> 
+        <span id="followers" class="count btn">1917</span> 
+    </span>
+    <span class="twitter">
+        <a class="btn" href="http://www.twitter.com/scafffr"><i class="icon-twitter-sign"></i> Follow</a>
+        <span id="followers" class="count btn">1917</span> 
+    </span>
+</section>
+<section id="features">
     <div class="row">
-        <div class="span6">
-            <div class="row">
-                <div class="span1">
-                    <img src="@Url.Content("~/content/images/icon-square.png")"/>
-                </div>
-                <div class="span5">
-                    <h2>
-                        .NET Scaffolding Framework
-                    </h2>
-                    <p>
-                        ScaffR is a new framework designed to solve real-world problems that everyday developers face.
-                    </p>
-                </div>
-            </div>
+        <div class="span4">
+            <h3>
+                <i class="icon-bolt"></i>Smart Code Generation
+            </h3>
+            ScaffR takes advantage of the latest Microsoft technologies to extend the functionality of Nuget.
         </div>
-        <div class="span6">
-            <div class="row">
-                <div class="span1">
-                    <img src="@Url.Content("~/content/images/icon-square.png")"/>
-                </div>
-                <div class="span5">
-                    <h2>
-                        Improve Speed, Cost, and Quality</h2>
-                    <p>
-                        ScaffR allows both teams and individual programmers to improve quality and speed.
-                    </p>
-                </div>
-            </div>
+        <div class="span4">
+            <h3>
+                <i class="icon-copy"></i>A New Paradigm
+            </h3>
+            Easily design, build, and deploy perfect software. Learn the secrets to building
+            highly-profitable software business using our proven techniques. <a href="#">Learn More</a>
+        </div>
+        <div class="span4">
+            <h3>
+                <i class="icon-magic"></i>Improved Productivity
+            </h3>
+            By utilizing our system, you will be more productive, and will build better software.
         </div>
     </div>
-    <hr />
     <div class="row">
-        <div class="span6">
-            <div class="row">
-                <div class="span1">
-                    <img src="@Url.Content("~/content/images/icon-square.png")"/>
-                </div>
-                <div class="span5">
-                    <h2>
-                        NuGet Packages
-                    </h2>
-                    <p>
-                        Use this as the baseline for all your new projects. You will be able to take advantage
-                        of all the infrastructure that has been already developed and that will be developed.
-                    </p>
-                </div>
-            </div>
+        <div class="span4">
+            <h3>
+                <i class="icon-copy"></i>Effective Code Reuse
+            </h3>
+            Our patterns for code reuse lower the overhead of developing really cool software
         </div>
-       
-        <div class="span6">
-            <div class="row">
-                <div class="span1">
-                    <img src="@Url.Content("~/content/images/icon-square.png")"/>
-                </div>
-                <div class="span5">
-                    <h2>
-                        Easy to use</h2>
-                    <p>
-                        Use this as the baseline for all your new projects. You will be able to take advantage
-                        of all the infrastructure that has been already developed and that will be developed.
-                    </p>
-                </div>
-            </div>
+        <div class="span4">
+            <h3>
+                <i class="icon-globe"></i>Production Ready
+            </h3>
+            Quickly generate software solutions that solve most business problems.  Want to offer recurring subscriptions to people to watch videos of cats?  Yeah, we can do that.
         </div>
-       
-    </div>
-    <hr/>
-    <div class="row">
-        <div class="span6">
-            <div class="row">
-                <div class="span1">
-                    <img src="@Url.Content("~/content/images/icon-square.png")"/>
-                </div>
-                <div class="span5">
-                    <h2>
-                        Professional Starter Template
-                    </h2>
-                    <p>
-                        Use this as the baseline for all your new projects. You will be able to take advantage
-                        of all the infrastructure that has been already developed and that will be developed.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="span6">
-            <div class="row">
-                <div class="span1">
-                    <img src="@Url.Content("~/content/images/icon-square.png")"/>
-                </div>
-                <div class="span5">
-                    <h2>
-                        Open Source</h2>
-                    <p>
-                        ScaffR is and will always be Open Source.  There is a set of proprietary modules that we call Scaffeine that are proprietary.
-                    </p>
-                </div>
-            </div>
+        <div class="span4">
+            <h3>
+                <i class="icon-trophy"></i>Modular Architecture
+            </h3>
+            ScaffR is totally open source and always will be. Experts are available to assist
+            you.
         </div>
     </div>
-    
-    <br />
-    <br />
-    <div class="well feature">
-        <h3>
-            Do the right thing and sign up</h3>
-        <a href="@Url.Action("Register", "Account")">Get Started Today</a>
-    </div>
-</div>
+</section>
+@section footer{
+    <footer>
+        <div class="row">
+            <div class="span4">
+                <h3>
+                    Contact</h3>
+                <ul class="icons">
+                    <li><i class="icon-comment-alt"></i>Email</li>
+                    <li><i class="icon-phone"></i>Phone</li>
+                </ul>
+            </div>
+            <div class="span8">
+                <h3>
+                    License</h3>
+                <p>
+                    ScaffR is open-source and is subject to the super awesome license...
+                </p>
+            </div>
+        </div>
+    </footer>
+}

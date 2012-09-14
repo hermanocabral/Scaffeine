@@ -5,35 +5,32 @@
 }
 @model $rootnamespace$.Core.Interfaces.Paging.IPage<$rootnamespace$.Core.Model.Lead>
 
-
-@if (TempData["Success"] != null)
-{                
-    <div class="alert alert-success">
-        @TempData["Success"]
-    </div>
-}
-
-
 <table class="table table-bordered">
     
     @if (this.Model.Entities.Any())
     {
         <thead>
             <tr>
-                <th>Creation Date</th>
+                <th>Id</th>                
+                <th>Customer Name</th>
+                <th style="text-align: right">Order Total</th>
                 <th>Source</th>
-                <th>Status</th>
-                <th></th>
+                <th>Lead Status</th>
+                <th>Created</th>             
+               
             </tr>
         </thead>
         
         foreach (var customer in Model.Entities)
         {
             <tr>
+                <td><a href="@Url.Action("Record", "Leads", new { id = customer.Id })">@customer.Id</a></td>
+                <td>@customer.Customer.FullName</td>  
+                <td style="text-align: right">@customer.Order.OrderTotal.ToString("c")</td>            
+                <td>@customer.Source</td>               
+                <td><a href="#">@customer.Order.OrderStatus</a></td>   
                 <td>@customer.Created</td>            
-                <td>@customer.Source</td>
-                <td><a href="#">Qualified</a></td>
-                <td><a href="@Url.Action("Record", "Leads", new { id = customer.Id })">More Information</a></td>
+                
             </tr>
         }
 

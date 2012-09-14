@@ -2,74 +2,55 @@
 <#@ Output Extension="cs" #>
 namespace <#= Model.Namespace #>.Core.Model
 {
-    using System;
+	using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
-    using System.Runtime.Serialization;
 
-    [DataContract]
     [DisplayColumn("Username")]
     public partial class User : PersistentEntity
     {
         [Required]
-        [DataMember]
         public virtual string Username { get; set; }
 
         [Required]
         [DataType(DataType.EmailAddress)]
-        [DataMember]
+        
         public virtual string Email { get; set; }
 
-        [Required, DataType(DataType.Password)]
-        [DataMember]
+        [Required, DataType(DataType.Password)]        
         public virtual string Password { get; set; }
-    
-        [DataMember]
+            
         public virtual string FirstName { get; set; }
-
-        [DataMember]
+        
         public virtual string LastName { get; set; }
 
         [DataType(DataType.MultilineText)]
         public virtual string Comment { get; set; }
-        
-        [DataMember]
+                
         public virtual bool IsApproved { get; set; }
-
-        [DataMember]
+        
         public virtual int PasswordFailuresSinceLastSuccess { get; set; }
 
-        [DataMember]
         public virtual DateTime? LastPasswordFailureDate { get; set; }
 
-        [DataMember]
         public virtual DateTime? LastActivityDate { get; set; }
 
-        [DataMember]
         public virtual DateTime? LastLockoutDate { get; set; }
 
-        [DataMember]
         public virtual DateTime? LastLoginDate { get; set; }
 
-        [DataMember]
         public virtual string ConfirmationToken { get; set; }
 
-        [DataMember]
         public virtual bool IsLockedOut { get; set; }
 
-        [DataMember]
         public virtual DateTime? LastPasswordChangedDate { get; set; }
 
-        [DataMember]
         public virtual string PasswordVerificationToken { get; set; }
 
-        [DataMember]
         public virtual DateTime? PasswordVerificationTokenExpirationDate { get; set; }
 
-        [DataMember]
         public virtual ICollection<UserRole> Roles { get; set; }
-		
-        [DataMember]
+
         public Gender Gender { get; set; }
     }
 }

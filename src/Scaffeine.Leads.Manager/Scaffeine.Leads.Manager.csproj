@@ -51,8 +51,8 @@
     <None Include="content\Views\Leads\Manager.cshtml.pp" />
     <None Include="content\Views\Leads\Record.cshtml.pp" />
     <None Include="content\Views\Leads\_Actions.cshtml.pp" />
-    <None Include="content\Views\Leads\_History.cshtml.pp" />
-    <None Include="content\Views\Leads\_LeadInformation.cshtml.pp" />
+    <None Include="content\Views\Leads\_CustomerDetails.cshtml.pp" />
+    <None Include="content\Views\Leads\_LeadDetails.cshtml.pp" />
     <None Include="content\Views\Leads\_OrderDetails.cshtml.pp" />
     <None Include="tools\init.ps1" />
     <None Include="tools\install.ps1" />

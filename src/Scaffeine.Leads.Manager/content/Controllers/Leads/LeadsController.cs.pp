@@ -20,7 +20,7 @@
             return this.View(lead);
         }
 
-		public ActionResult Manager(int page = 1, int size = 10)
+		public ActionResult Manager(int page = 1, int size = 20)
 		{
 		    var leads = _service.Page(page, size);
 		    return this.View(leads);

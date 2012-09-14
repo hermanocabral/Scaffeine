@@ -6,7 +6,7 @@
     <membership defaultProvider="$rootnamespace$MembershipProvider">
       <providers>
         <clear />
-        <add name="$rootnamespace$MembershipProvider" type="$rootnamespace$.Membership.Providers.CodeFirstMembershipProvider, $rootnamespace$.Membership" connectionStringName="DataContext" passwordFormat="Encrypted" enablePasswordRetrieval="false" enablePasswordReset="false" requiresQuestionAndAnswer="false" requiresUniqueEmail="true" maxInvalidPasswordAttempts="5" minRequiredPasswordLength="6" minRequiredNonalphanumericCharacters="0" passwordAttemptWindow="10" applicationName="$rootnamespace$" />
+        <add name="$rootnamespace$MembershipProvider" type="$rootnamespace$.Membership.Providers.CodeFirstMembershipProvider, $rootnamespace$.Membership" connectionStringName="DataContext" passwordFormat="Encrypted" enablePasswordRetrieval="false" enablePasswordReset="false" requiresQuestionAndAnswer="false" requiresUniqueEmail="true" maxInvalidPasswordAttempts="5" minRequiredPasswordLength="6" minRequiredNonalphanumericCharacters="0" passwordAttemptWindow="10" applicationName="/" />
       </providers>
     </membership>
     <roleManager enabled="true" cacheRolesInCookie="true" cookieName=".ROLES" cookieTimeout="120" cookiePath="/" cookieRequireSSL="false" cookieSlidingExpiration="true" cookieProtection="All" defaultProvider="$rootnamespace$RoleProvider" createPersistentCookie="false" maxCachedResults="25">

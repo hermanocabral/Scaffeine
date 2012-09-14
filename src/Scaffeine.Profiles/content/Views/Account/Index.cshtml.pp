@@ -47,3 +47,11 @@
         
     }
 </div>
+@section Stylesheets
+{
+    <style type="text/css">
+        .breadcrumb {
+            display: none;
+        }
+    </style>
+}

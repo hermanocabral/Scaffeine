@@ -50,7 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />
-    <Compile Include="content\CodeTemplates\Scaffolders\Scaffeine.Leads.Core\Lead.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Leads.Core\Lead.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Leads.Core\Scaffeine.Leads.Core.ps1" />
     <None Include="Package.nuspec">
       <SubType>Designer</SubType>

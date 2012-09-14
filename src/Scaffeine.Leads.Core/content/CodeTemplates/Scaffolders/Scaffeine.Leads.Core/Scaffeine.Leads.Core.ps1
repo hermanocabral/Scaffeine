@@ -6,6 +6,6 @@ param(
 	[switch]$Force = $false
 )
 
-Add-DomainClass "Model\Lead" "Lead" -Force:$Force $TemplateFolders
+Add-Domain "Model\Lead" "Lead" -Force:$Force $TemplateFolders
 
 
