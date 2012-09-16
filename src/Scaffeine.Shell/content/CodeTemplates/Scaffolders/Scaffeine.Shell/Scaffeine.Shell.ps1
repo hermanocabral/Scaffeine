@@ -7,4 +7,5 @@ param(
 )
 
 $outputPath = "Views\Shared\_Layout"
-Add-Template $baseProject.Name $outputPath "_Layout" -Force $TemplateFolders
+Add-Template $baseProject.Name $outputPath "Layout" -Force $TemplateFolders
+

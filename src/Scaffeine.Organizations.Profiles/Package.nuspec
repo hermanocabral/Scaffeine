@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Scaffeine.Organizations.Profiles</id>
-    <version>1.1.2</version>
+    <version>1.1.3</version>
     <authors>Rod Johnson</authors>
     <owners>ScaffR</owners>
     <projectUrl>http://scaffr.codeplex.com</projectUrl>
@@ -16,8 +16,8 @@
     <copyright>ScaffR, 2012</copyright>
     <tags></tags>
     <dependencies>
-      <dependency id="ScaffR" version="1.1.2" />
-      <dependency id="T4Scaffolding" version="1.0.6" />
+      <dependency id="ScaffR"  />
+      <dependency id="T4Scaffolding" />
     </dependencies>
   </metadata>
   <files>

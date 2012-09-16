@@ -1,0 +1,81 @@
+<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
+<#@ Output Extension="cs" #>
+namespace <#= Model.Namespace #>.Service
+{
+    using System;
+    using System.Linq;
+
+    using <#= Model.Namespace #>.Core.Common.Membership;
+    using <#= Model.Namespace #>.Core.Model;
+
+    public partial class UserService
+    {
+        public AuthenticationStatus Authenticate(string username, string password, out User user)
+        {
+            user = this.Find(u => u.Username == username).First();
+
+            if (user == null)
+            {
+                return AuthenticationStatus.InvalidUsername;
+            }
+
+            if (user.Password != password)
+            {
+                return AuthenticationStatus.InvalidPassword;
+            }
+
+            return AuthenticationStatus.Authenticated;
+        }
+
+        public ChangePasswordStatus ChangePassword(User user, string currentPassword, string newPassword)
+        {
+            return ChangePassword(user, currentPassword, newPassword, false);
+        }
+
+        public CreateUserStatus CreateUser(User user)
+        {
+            if (this.UserExistsAlready(user.Username))
+            {
+                return CreateUserStatus.DuplicateUserName;
+            }
+
+            User existingUser = this.Find(u => u.Email == user.Email).First();
+
+            if (existingUser != null)
+            {
+                return CreateUserStatus.DuplicateEmail;
+            }
+
+            this.SaveOrUpdate(user);
+
+            return CreateUserStatus.Success;
+        }
+
+        public ChangePasswordStatus ResetPassword(User user)
+        {
+            string newPassword = Guid.NewGuid().ToString().Replace("-", "").Substring(0, 8);
+
+            return ChangePassword(user, user.Password, newPassword, true);
+        }
+
+        public bool UserExistsAlready(string userName)
+        {
+            User existingUser = this.Find(u => u.Username == userName).First();
+
+            return existingUser != null;
+        }
+
+        private static ChangePasswordStatus ChangePassword(User user, string currentPassword, string newPassword, bool resetPassword)
+        {
+            if (user.Password != currentPassword)
+            {
+                return ChangePasswordStatus.InvalidPassword;
+            }
+
+            user.ResetPassword = resetPassword;
+            user.Password = newPassword;
+
+            return ChangePasswordStatus.Success;
+        }
+    }
+}

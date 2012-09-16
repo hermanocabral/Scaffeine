@@ -1,10 +1,9 @@
 namespace $rootnamespace$.Controllers.Account
 {
-    using System.Linq;
     using System.Web;
     using System.Web.Mvc;
 
-    using $rootnamespace$.Membership.Helpers;
+    using $rootnamespace$.Core.Common.Membership;
     using $rootnamespace$.Photos;
     using $rootnamespace$.Photos.Models;
 
@@ -14,17 +13,14 @@ namespace $rootnamespace$.Controllers.Account
         public ActionResult Photo()
         {
             // use this http://blueimp.github.com/jQuery-File-Upload/
-            if (!string.IsNullOrWhiteSpace(MembershipHelper.CurrentUser.PhotoId))
+            if (!string.IsNullOrWhiteSpace(UserPrincipal.CurrentUser.PhotoId))
             {
-                var photo = PhotoManager.Provider.GetPhotoResize(MembershipHelper.CurrentUser.PhotoId, "Medium");
+                var photo = PhotoManager.Provider.GetPhotoResize(UserPrincipal.CurrentUser.PhotoId, "Medium");
                 return View(photo);
             }
 
-            return this.View(new Photo()
-                {
-                    Url = Url.Content("~/Content/Medium/Male.jpg")
-                });
-        }  
+            return this.View(new Photo { Url = Url.Content("~/Content/Medium/Male.jpg") });
+        }
 
         [HttpPost]
         public ActionResult Photo(HttpPostedFileBase file)
@@ -33,7 +29,7 @@ namespace $rootnamespace$.Controllers.Account
 
             var photo = PhotoManager.Provider.SavePhotoForAllSizes(request, true);
 
-            var user = MembershipHelper.CurrentUser;
+            var user = UserPrincipal.CurrentUser;
             
             user.PhotoId = photo[0].Id;
             this._userService.SaveOrUpdate(user);

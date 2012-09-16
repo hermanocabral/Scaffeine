@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace $rootnamespace$.Filters
+﻿namespace $rootnamespace$.Filters
 {
     using System.Web.Mvc;
 
-    using $rootnamespace$.Membership.Helpers;
+    using $rootnamespace$.Core.Common.Membership;
     using $rootnamespace$.Photos;
 
     public class ProfileAttribute : ActionFilterAttribute
@@ -16,7 +11,7 @@ namespace $rootnamespace$.Filters
         {
             if (filterContext.HttpContext.Request.IsAuthenticated)
             {
-                var user = MembershipHelper.CurrentUser;
+                var user = UserPrincipal.CurrentUser;
                 var viewbag = filterContext.Controller.ViewBag;
                 viewbag.Username = user.Username;
                 viewbag.FirstName = user.FirstName;

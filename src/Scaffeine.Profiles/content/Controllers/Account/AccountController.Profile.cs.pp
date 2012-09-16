@@ -7,9 +7,8 @@
 
     using AutoMapper;
 
+    using $rootnamespace$.Core.Common.Membership;
     using $rootnamespace$.Core.Model;
-    using $rootnamespace$.Filters;
-    using $rootnamespace$.Membership.Helpers;
     using $rootnamespace$.Models;
 
     public partial class AccountController
@@ -19,7 +18,7 @@
         {
             Mapper.CreateMap<User, ProfileModel>();
 
-            var model = Mapper.Map<User, ProfileModel>(MembershipHelper.CurrentUser);
+            var model = Mapper.Map<User, ProfileModel>(UserPrincipal.CurrentUser);
 
             return View(model);
         }
@@ -29,11 +28,12 @@
         {
             if (ModelState.IsValid)
             {
-                var user = MembershipHelper.CurrentUser;
+                var user = UserPrincipal.CurrentUser;
 
                 if (string.Compare(user.Email, model.Email, StringComparison.InvariantCultureIgnoreCase) != 0)
                 {
-                    if (MembershipHelper.EmailInUse(model.Email))
+                    var inUse = _userService.Find(u => u.Email == model.Email).Any();
+                    if (inUse)
                     {
                         ModelState.AddModelError("EmailInUse", "Email already in use");
                     }
@@ -60,16 +60,15 @@
             return View(model);
         }
 
-
         [HttpGet]
         public ActionResult Emails()
         {
             Mapper.CreateMap<UserEmail, EmailModel>();
 
             List<UserEmail> model =
-                _userEmailService.Find(x => x.UserId == MembershipHelper.CurrentUser.Id).ToList();
+                _userEmailService.Find(x => x.UserId == UserPrincipal.CurrentUser.Id).ToList();
 
-            ViewBag.DefaultEmail = MembershipHelper.CurrentUser.Email;
+            ViewBag.DefaultEmail = UserPrincipal.CurrentUser.Email;
 
             return View(model);
         }
@@ -77,7 +76,7 @@
         [HttpPost]
         public ActionResult Emails(UserEmail model)
         {
-            model.UserId = MembershipHelper.CurrentUser.Id;
+            model.UserId = UserPrincipal.CurrentUser.Id;
             if (ModelState.IsValid)
             {
                 _userEmailService.SaveOrUpdate(model);
@@ -85,37 +84,7 @@
             }
 
             return RedirectToAction("Emails");
-        }
-
-        [LoginAuthorize]
-        public ActionResult Settings()
-        {
-            this.ViewBag.PasswordLength = System.Web.Security.Membership.MinRequiredPasswordLength;
-            return this.View();
-        }
-
-        [LoginAuthorize]
-        [HttpPost]
-        public ActionResult Settings(ChangePasswordModel model)
-        {
-            if (this.ModelState.IsValid)
-            {
-                var status = MembershipHelper.ChangePassword(model.OldPassword, model.NewPassword);
-
-                if (status)
-                {
-                    TempData["Success"] = "Password was changed successfully";
-                }
-                else
-                {
-                    this.ModelState.AddModelError(string.Empty, "The current password is incorrect or the new password is invalid.");
-                }                
-            }
-
-            // If we got this far, something failed, redisplay form
-            this.ViewBag.PasswordLength = System.Web.Security.Membership.MinRequiredPasswordLength;
-            return this.View(model);
-        }
+        }       
 
         [HttpGet]
         public ActionResult Notifications()

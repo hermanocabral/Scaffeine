@@ -1,0 +1,73 @@
+<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
+<#@ Output Extension="cs" #>
+namespace <#= Model.Namespace #>.Service
+{
+    using System;
+    using System.Linq;
+    using System.Web;
+    using System.Web.Security;
+
+    using <#= Model.Namespace #>.Core.Interfaces.Service;
+
+    public class AuthenticationService : IAuthenticationService
+    {
+        private readonly string _loginUrl = FormsAuthentication.LoginUrl;
+
+        private readonly string _authCookieName = FormsAuthentication.FormsCookieName;
+
+        public bool IsAuthenticated()
+        {
+            return HttpContext.Current.Request.Cookies.AllKeys.Contains(this._authCookieName);
+        }
+
+        public void ClearImpersonationCookie()
+        {
+            HttpCookie cookie = HttpContext.Current.Response.Cookies["impersonate"];
+
+            if (cookie != null) cookie.Expires = DateTime.Now.AddDays(-1);
+        }
+
+        public void SetAuthCookie(string username)
+        {
+            var ticket = new FormsAuthenticationTicket(1, username, DateTime.Now, DateTime.Now.AddMinutes(15), false, "a|b");
+
+            string encodedTicket = FormsAuthentication.Encrypt(ticket);
+
+            var cookie = new HttpCookie(FormsAuthentication.FormsCookieName, encodedTicket);
+            HttpContext.Current.Response.Cookies.Add(cookie);
+        }
+
+        public void SetImpersonationAuthCookie(int impersonatorId)
+        {
+            var cookie = new HttpCookie("impersonate")
+                {
+                    Value = string.Format("{0}{1}", Guid.NewGuid(), impersonatorId),
+                    Expires = DateTime.Now.AddDays(1)
+                };
+
+            HttpContext.Current.Response.Cookies.Add(cookie);
+        }
+
+        public void SignOut()
+        {
+            string cookieName = FormsAuthentication.FormsCookieName;
+            HttpCookie cookie = HttpContext.Current.Response.Cookies[cookieName];
+            if (cookie != null) cookie.Expires = DateTime.Now.AddDays(-1);
+        }
+
+        public void RedirectToLoginPage()
+        {
+            if (HttpContext.Current.Request.Path == this._loginUrl)
+            {
+                return;
+            }
+
+            HttpContext.Current.Response.Redirect(this._loginUrl);
+        }
+
+        public string GetRedirectUrl(string username, bool createPersistentCookie)
+        {
+            return FormsAuthentication.GetRedirectUrl(username, createPersistentCookie);
+        }
+    }
+}

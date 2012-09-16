@@ -57,10 +57,8 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Shell\Scaffeine.Shell.ps1" />
-    <Compile Include="content\CodeTemplates\Scaffolders\Scaffeine.Shell\_Layout.cs.t4" />
+    <Compile Include="content\CodeTemplates\Scaffolders\Scaffeine.Shell\Layout.cs.t4" />
     <None Include="content\App_Start\Start.cs.pp" />
-    <None Include="content\Filters\AllowAnonymousAttribute.cs.pp" />
-    <None Include="content\Filters\FolderInfoAttribute.cs.pp" />
     <None Include="content\Extensions\BreadcrumbHelper.cs.pp" />
     <None Include="content\Extensions\BreadcrumbHelperModel.cs.pp" />
     <None Include="content\Extensions\NavHelper.cs.pp" />
@@ -70,11 +68,8 @@
     <None Include="content\Extensions\TabsHelper.cs.pp" />
     <None Include="content\Extensions\TabsHelperModel.cs.pp" />
     <None Include="content\Extensions\AlertExtensions.cs.pp" />
-    <None Include="content\Filters\LoginAuthorizeAttribute.cs.pp" />
-    <None Include="content\Filters\OnlyAnonymous.cs.pp" />
     <None Include="content\Handlers\NotificationHandler.cs.pp" />
     <None Include="content\Hubs\NotificationHub.cs.pp" />
-    <None Include="content\Mailers\AccountMailer.cs.pp" />
     <None Include="content\Models\EmailModel.cs.pp" />
     <None Include="content\Models\INotification.cs.pp" />
     <None Include="content\Models\SettingsModel.cs.pp" />

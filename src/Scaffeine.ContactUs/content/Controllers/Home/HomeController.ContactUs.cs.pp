@@ -4,20 +4,19 @@ namespace $rootnamespace$.Controllers.Home
 
     using Mvc.Mailer;
 
-    using $rootnamespace$.Filters;
     using $rootnamespace$.Mailers;
     using $rootnamespace$.Models;
 
     public partial class HomeController
     {
-        [$rootnamespace$.Filters.AllowAnonymous]
+        [AllowAnonymous]
         [HttpGet]
         public ActionResult Contact()
         {
             return this.View(new ContactUsModel());
         }
 
-        [$rootnamespace$.Filters.AllowAnonymous]
+        [AllowAnonymous]
         [HttpPost]
         public ActionResult Contact(ContactUsModel model)
         {

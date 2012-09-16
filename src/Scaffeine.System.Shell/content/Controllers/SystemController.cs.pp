@@ -1,9 +1,7 @@
-﻿using System.Web.Mvc;
-using $rootnamespace$.Filters;
-
-namespace $rootnamespace$.Controllers
+﻿namespace $rootnamespace$.Controllers
 {
-    [LoginAuthorize]
+    using System.Web.Mvc;
+
     public partial class SystemController : Controller
     {        
         // GET: /Settings/

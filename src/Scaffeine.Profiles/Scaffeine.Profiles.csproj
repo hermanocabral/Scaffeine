@@ -51,6 +51,7 @@
   <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />
     <None Include="content\Controllers\Account\AccountController.Profile.cs.pp" />
+    <None Include="content\Models\ProfileModel.cs.pp" />
     <None Include="content\Views\Account\Emails.cshtml.pp" />
     <None Include="content\Views\Account\Notifications.cshtml.pp" />
     <None Include="content\Views\Account\Index.cshtml.pp" />

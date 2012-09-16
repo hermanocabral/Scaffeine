@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Scaffeine</id>
-    <version>1.1.2</version>
+    <version>1.1.3</version>
     <authors>Rod Johnson</authors>
     <owners>ScaffR</owners>
     <projectUrl>http://scaffr.codeplex.com</projectUrl>
@@ -16,16 +16,13 @@
     <copyright>ScaffR, 2012</copyright>
     <tags></tags>
     <dependencies>
-      <dependency id="Scaffeine.Shell" version="1.1.2" />
-      <dependency id="Scaffeine.Dashboard" version="1.1.2" />
-      <dependency id="Scaffeine.System" version="1.1.2" />
-      <dependency id="Scaffeine.ContactUs" version="1.1.2" />
-      <dependency id="Scaffeine.Profiles" version="1.1.2" />
-      <dependency id="Scaffeine.Profiles.Photo" version="1.1.2" />
-      <dependency id="Scaffeine.Register" version="1.1.2" />
-      <dependency id="Scaffeine.Membership" version="1.1.2" />
-      <dependency id="Scaffeine.Logon" version="1.1.2" />
-      
+      <dependency id="Scaffeine.Shell"/>
+      <dependency id="Scaffeine.Dashboard"/>
+      <dependency id="Scaffeine.System"/>
+      <dependency id="Scaffeine.ContactUs"/>
+      <dependency id="Scaffeine.Profiles"/>
+      <dependency id="Scaffeine.Profiles.Photo"/>
+      <dependency id="Scaffeine.Membership.Suite"/>     
     </dependencies>
   </metadata>
   <files>

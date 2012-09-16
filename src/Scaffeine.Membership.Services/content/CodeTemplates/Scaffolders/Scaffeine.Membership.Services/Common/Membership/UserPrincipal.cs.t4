@@ -1,0 +1,59 @@
+﻿<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
+<#@ Output Extension="cs" #>
+namespace <#= Model.Namespace #>.Core.Common.Membership
+{
+    using System;
+    using System.Security.Principal;
+    using System.Threading;
+
+    using <#= Model.Namespace #>.Core.Model;
+
+    public class UserPrincipal : IPrincipal
+    {              
+        public UserPrincipal(User user)
+        {
+            this._user = user;
+            this._identity = new GenericIdentity(user.Username);
+        }
+
+        private readonly User _user;
+        public User User 
+        { 
+            get
+            {
+                return _user;
+            } 
+        }
+
+        private readonly IIdentity _identity;
+
+        public bool IsInRole(string role)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static UserPrincipal Current
+        {
+            get
+            {
+                return Thread.CurrentPrincipal as UserPrincipal;
+            }
+        }
+
+        public static User CurrentUser
+        {
+            get
+            {
+                return Current != null ? Current.User : null;
+            }
+        }
+
+        public IIdentity Identity
+        {
+            get
+            {
+                return this._identity;
+            }
+        }
+    }
+}

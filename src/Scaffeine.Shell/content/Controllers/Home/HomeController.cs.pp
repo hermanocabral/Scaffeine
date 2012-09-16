@@ -2,13 +2,11 @@
 {
     using System.Web.Mvc;
 
-    using $rootnamespace$.Filters;
-
     public partial class HomeController : Controller
     {
         partial void IndexLoaded();
 
-        [$rootnamespace$.Filters.AllowAnonymous]
+        [AllowAnonymous]
         public ActionResult Index()
         {
             IndexLoaded();
