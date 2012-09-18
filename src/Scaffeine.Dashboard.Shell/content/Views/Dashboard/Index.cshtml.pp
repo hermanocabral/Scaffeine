@@ -1,11 +1,23 @@
-@{
-    ViewBag.SitemapProvider = "Modules";
+@section Stylesheets
+{
+    <style type="text/css">
+        .breadcrumb {
+            display: none;
+        }
+    </style>
 }
+
 <div class="row-fluid">
     <ul class="nav nav-tabs">
-        <li class="active"><a href="#todo" data-toggle="tab"><i class="icon-check"></i>To-Do
-            List</a> </li>
-        <li><a href="#calendar" data-toggle="tab"><i class="icon-calendar"></i>Calendar</a>
+        <li class="active">
+            <a href="#todo" data-toggle="tab">
+                <i class="icon-check"></i>To-Do List
+            </a> 
+        </li>
+        <li>
+            <a href="#calendar" data-toggle="tab">
+                <i class="icon-calendar"></i>Calendar
+            </a>
         </li>
     </ul>
     <div class="tab-content">
@@ -17,11 +29,3 @@
         </div>
     </div>
 </div>
-@section Stylesheets
-{
-    <style type="text/css">
-        .breadcrumb {
-            display: none;
-        }
-    </style>
-}

@@ -1,7 +1,11 @@
 ﻿@using $rootnamespace$.Extensions
 @using MvcSiteMapProvider.Web.Html
 @{
-    Layout = "~/Views/Shared/_Layout.cshtml";    
+    Layout = "~/Views/Shared/_Layout.cshtml";  
+	if (ViewBag.SitemapProvider == null)
+    {
+        ViewBag.SitemapProvider = "Modules";
+    }
 }
 @RenderSection("Stylesheets", false)
 @RenderSection("Scripts", false)

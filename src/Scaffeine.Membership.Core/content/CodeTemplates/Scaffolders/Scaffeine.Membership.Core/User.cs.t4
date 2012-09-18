@@ -35,5 +35,7 @@ namespace <#= Model.Namespace #>.Core.Model
 		public virtual ICollection<UserRole> Roles { get; set; }
 
 		public bool ResetPassword { get; set; }
+		
+        public bool ShowWelcomePage { get; set; }
 	}
 }

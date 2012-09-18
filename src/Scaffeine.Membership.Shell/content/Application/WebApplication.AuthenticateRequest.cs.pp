@@ -6,9 +6,9 @@
     using System.Web;
     using System.Web.Security;
 
-    using $rootnamespace$.App_Start;
-    using $rootnamespace$.Core.Common.Membership;
-    using $rootnamespace$.Core.Interfaces.Service;
+    using App_Start;
+    using Core.Common.Membership;
+    using Core.Interfaces.Service;
 
     using Ninject;
 

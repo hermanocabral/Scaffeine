@@ -2,23 +2,22 @@
 {
     using System.Web.Mvc;
 
-    using $rootnamespace$.Core.Common.Membership;
-    using $rootnamespace$.Core.Model;
-    using $rootnamespace$.Models;
+    using Core.Common.Membership;
+    using Core.Model;
+    using Models;
 
     public partial class AccountController
     {
         [AllowAnonymous]
         public ActionResult Register()
         {
-            return this.View();
+            return View();
         }
 
-        [HttpPost]
-        [AllowAnonymous]
+        [HttpPost, AllowAnonymous]
         public ActionResult Register(RegisterModel model)
         {
-            if (this.ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 var user = new User
                     {
@@ -26,7 +25,8 @@
                         LastName = model.LastName,
                         Username = model.UserName,
                         Email = model.Email,
-                        Password = model.Password
+                        Password = model.Password,
+                        ShowWelcomePage = true
                     };
 
                 CreateUserStatus createStatus = _userService.CreateUser(user);
@@ -34,13 +34,13 @@
                 if (createStatus == CreateUserStatus.Success)
                 {
                     _authenticationService.SetAuthCookie(model.UserName);
-                    return this.RedirectToAction("Welcome", "Account");
+                    return RedirectToAction("Welcome", "Account");
                 }
 
-                this.ModelState.AddModelError(string.Empty, ErrorCodeToString(createStatus));
+                ModelState.AddModelError(string.Empty, ErrorCodeToString(createStatus));
             }
 
-            return this.View(model);
+            return View(model);
         }
 
         private static string ErrorCodeToString(CreateUserStatus createStatus)

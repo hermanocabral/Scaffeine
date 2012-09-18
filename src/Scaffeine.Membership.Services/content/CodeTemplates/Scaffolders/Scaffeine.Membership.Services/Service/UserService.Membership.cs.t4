@@ -5,14 +5,14 @@ namespace <#= Model.Namespace #>.Service
     using System;
     using System.Linq;
 
-    using <#= Model.Namespace #>.Core.Common.Membership;
-    using <#= Model.Namespace #>.Core.Model;
+    using Core.Common.Membership;
+    using Core.Model;
 
     public partial class UserService
     {
         public AuthenticationStatus Authenticate(string username, string password, out User user)
         {
-            user = this.Find(u => u.Username == username).First();
+            user = Find(u => u.Username == username).First();
 
             if (user == null)
             {
@@ -34,19 +34,19 @@ namespace <#= Model.Namespace #>.Service
 
         public CreateUserStatus CreateUser(User user)
         {
-            if (this.UserExistsAlready(user.Username))
+            if (UserExistsAlready(user.Username))
             {
                 return CreateUserStatus.DuplicateUserName;
             }
 
-            User existingUser = this.Find(u => u.Email == user.Email).First();
+            User existingUser = Find(u => u.Email == user.Email).FirstOrDefault();
 
             if (existingUser != null)
             {
                 return CreateUserStatus.DuplicateEmail;
             }
 
-            this.SaveOrUpdate(user);
+            SaveOrUpdate(user);
 
             return CreateUserStatus.Success;
         }
@@ -60,7 +60,7 @@ namespace <#= Model.Namespace #>.Service
 
         public bool UserExistsAlready(string userName)
         {
-            User existingUser = this.Find(u => u.Username == userName).First();
+            User existingUser = Find(u => u.Username == userName).FirstOrDefault();
 
             return existingUser != null;
         }
