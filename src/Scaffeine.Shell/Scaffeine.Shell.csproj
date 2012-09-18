@@ -57,7 +57,7 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Shell\Scaffeine.Shell.ps1" />
-    <Compile Include="content\CodeTemplates\Scaffolders\Scaffeine.Shell\Layout.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Shell\Layout.cs.t4" />
     <None Include="content\App_Start\Start.cs.pp" />
     <None Include="content\Extensions\BreadcrumbHelper.cs.pp" />
     <None Include="content\Extensions\BreadcrumbHelperModel.cs.pp" />
@@ -124,11 +124,7 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="content\Content\images\facebook_lrg.png" />
-    <Content Include="content\Content\images\hero-bg.png" />
     <Content Include="content\Content\images\icon-square.png" />
-    <Content Include="content\Content\images\open-source-icon.gif" />
-    <Content Include="content\Content\images\open-source-icon.png" />
     <Content Include="content\Content\images\rod.PNG" />
     <Content Include="content\Content\images\scaffr.png" />
     <Content Include="content\favicon.ico" />
