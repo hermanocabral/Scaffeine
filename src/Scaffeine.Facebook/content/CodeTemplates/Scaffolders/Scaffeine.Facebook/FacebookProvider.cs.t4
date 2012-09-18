@@ -6,7 +6,7 @@ namespace <#= Model.Namespace #>.Facebook
     using System.Configuration.Provider;
     using System.IO;
     using System.Net;
-    using MvcApplication9.Integrations;
+    using <#= Model.Namespace #>.Integrations;
 
     public class FacebookProvider : IntegrationProvider
     {

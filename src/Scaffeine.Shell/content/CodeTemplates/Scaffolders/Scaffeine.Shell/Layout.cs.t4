@@ -40,6 +40,9 @@
         </div>
     </div>
     <div class="container">
+        
+        @Html.Partial("_Alert")
+
         @if (IsSectionDefined("hero"))
         {
             <div class="hero-unit">
@@ -49,6 +52,7 @@
         @if (IsSectionDefined("container"))
         {
             <div class="content">
+                @Html.Partial("_Alert")
                 @RenderSection("container")
             </div>                
         }

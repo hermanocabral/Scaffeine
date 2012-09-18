@@ -2,7 +2,7 @@
 {
     using System.Web.Mvc;
 
-    using $rootnamespace$.Core.Interfaces.Service;
+    using Core.Interfaces.Service;
 
     public partial class AccountController : Controller
     {

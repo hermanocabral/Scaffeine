@@ -55,7 +55,6 @@
     <None Include="content\Views\Account\Emails.cshtml.pp" />
     <None Include="content\Views\Account\Notifications.cshtml.pp" />
     <None Include="content\Views\Account\Index.cshtml.pp" />
-    <None Include="content\Views\Account\Settings.cshtml.pp" />
     <None Include="Package.nuspec" />
     <None Include="tools\init.ps1" />
     <None Include="tools\install.ps1" />

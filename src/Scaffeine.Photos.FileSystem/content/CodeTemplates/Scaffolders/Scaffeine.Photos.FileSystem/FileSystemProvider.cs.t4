@@ -81,7 +81,7 @@ namespace <#= Model.Namespace #>.Photos.FileSystem
         /// The resize name.
         /// </param>
         /// <returns>
-        /// The MvcApplication36.Photos.Models.Photo.
+        /// The $rootnamespace$6.Photos.Models.Photo.
         /// </returns>
         public override Photo SavePhotoResize(PhotoRequest item, string resizeName)
         {
@@ -109,7 +109,7 @@ namespace <#= Model.Namespace #>.Photos.FileSystem
         /// The keep original size.
         /// </param>
         /// <returns>
-        /// The System.Collections.Generic.IList`1[T -&gt; MvcApplication36.Photos.Models.Photo].
+        /// The System.Collections.Generic.IList`1[T -&gt; $rootnamespace$6.Photos.Models.Photo].
         /// </returns>
         public override IList<Photo> SavePhotoForAllSizes(PhotoRequest item, bool keepOriginalSize)
         {
@@ -155,7 +155,7 @@ namespace <#= Model.Namespace #>.Photos.FileSystem
         /// The resize name.
         /// </param>
         /// <returns>
-        /// The MvcApplication36.Photos.Models.Photo.
+        /// The $rootnamespace$6.Photos.Models.Photo.
         /// </returns>
         public override Photo GetPhotoResize(string id, string resizeName)
         {
@@ -171,7 +171,7 @@ namespace <#= Model.Namespace #>.Photos.FileSystem
         /// The id.
         /// </param>
         /// <returns>
-        /// The System.Collections.Generic.IDictionary`2[TKey -&gt; System.String, TValue -&gt; MvcApplication36.Photos.Models.Photo].
+        /// The System.Collections.Generic.IDictionary`2[TKey -&gt; System.String, TValue -&gt; $rootnamespace$6.Photos.Models.Photo].
         /// </returns>
         public override IDictionary<string, Photo> GetAllPhotoResizes(string id)
         {
@@ -208,7 +208,7 @@ namespace <#= Model.Namespace #>.Photos.FileSystem
         /// The ids.
         /// </param>
         /// <returns>
-        /// The System.Collections.Generic.IList`1[T -&gt; MvcApplication36.Photos.Models.Photo].
+        /// The System.Collections.Generic.IList`1[T -&gt; $rootnamespace$6.Photos.Models.Photo].
         /// </returns>
         public override IList<Photo> GetPhotosByResize(string resizeName, string[] ids)
         {
@@ -262,7 +262,7 @@ namespace <#= Model.Namespace #>.Photos.FileSystem
         /// The mime type.
         /// </param>
         /// <returns>
-        /// The MvcApplication36.Photos.Models.Photo.
+        /// The $rootnamespace$6.Photos.Models.Photo.
         /// </returns>
         private Photo SaveImage(
             Stream stream,
@@ -317,7 +317,7 @@ namespace <#= Model.Namespace #>.Photos.FileSystem
         /// The resize name.
         /// </param>
         /// <returns>
-        /// The MvcApplication36.Photos.Models.Photo.
+        /// The $rootnamespace$6.Photos.Models.Photo.
         /// </returns>
         private Photo GetPhoto(string id, string resizeName)
         {

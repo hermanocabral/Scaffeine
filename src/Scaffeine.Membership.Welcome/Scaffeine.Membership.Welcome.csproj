@@ -47,13 +47,14 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="content\Controllers\Account\AccountController.Welcome.cs.pp" />
-    <None Include="content\Mailers\AccountMailer.Welcome.cs.pp" />
+    <None Include="content\Mailers\Mailer.Welcome.cs.pp" />
     <None Include="content\Models\WelcomeMemberModel.cs.pp" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />
     <None Include="content\Views\Account\Welcome.cshtml.pp" />
+    <None Include="content\Views\Mailer\WelcomeMember.cshtml.pp" />
     <None Include="Package.nuspec" />
     <None Include="tools\init.ps1" />
     <None Include="tools\install.ps1" />

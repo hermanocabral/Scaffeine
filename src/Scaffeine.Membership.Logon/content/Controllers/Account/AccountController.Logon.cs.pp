@@ -11,13 +11,7 @@
 
     public partial class AccountController
     {
-        partial void UserLoggedIn();
-
-        [AllowAnonymous]
-        public ActionResult ForgotPassword()
-        {
-            return this.Logon();
-        }
+        partial void UserLoggedIn();      
 
         [AllowAnonymous]
         public ActionResult Logon()
@@ -41,10 +35,14 @@
                         _authenticationService.SetAuthCookie(model.UserName);
 
                         string redirectUrl = _authenticationService.GetRedirectUrl(model.UserName, false);
-
+                        
                         return this.Redirect(redirectUrl);
 
                     case AuthenticationStatus.ResetPassword:
+
+                        _authenticationService.SetAuthCookie(model.UserName);
+                        
+                        this._userService.SaveOrUpdate(user);
 
                         TempData["Error"] = "Password Change Required";
                         

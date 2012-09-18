@@ -32,11 +32,9 @@
             <li>asdf</li>
         </ul>*@
     </div>
-    <div class="span10" id="mainPanel">
-        @Html.Alert()
+    <div class="span10" id="mainPanel">        
         @Html.MvcSiteMap((string)ViewBag.SitemapProvider).Breadcrumb()
-        <div class="row-fluid">
-            @Html.Partial("_Alert")
+        <div class="row-fluid">            
             @RenderBody()
         </div>
     </div>

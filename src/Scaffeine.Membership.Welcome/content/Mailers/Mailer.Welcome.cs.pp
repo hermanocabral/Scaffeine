@@ -1,13 +1,11 @@
-﻿using System;
-using System.Net.Mail;
-using Mvc.Mailer;
+﻿using System.Net.Mail;
 using $rootnamespace$.Models;
 
 namespace $rootnamespace$.Mailers
 {
-    public partial class AccountMailers
+    public partial class Mailer
     {
-		public virtual MailMessage ForgotPassword(ForgotPasswordModel model)
+        public virtual MailMessage WelcomeMember(WelcomeMemberModel model)
         {
             var mailMessage = new MailMessage { Subject = "Welcome" };
 

@@ -38,7 +38,7 @@ namespace <#= Model.Namespace #>.Organizations
                 {
                     if (_provider == null)
                     {
-                        var section = (OrganizationsSection)WebConfigurationManager.GetSection("MvcApplication7/MvcApplication7.Organizations");
+                        var section = (OrganizationsSection)WebConfigurationManager.GetSection("$rootnamespace$/$rootnamespace$.Organizations");
 
                         _providers = new OrganizationProviderCollection();
                         ProvidersHelper.InstantiateProviders(section.Providers, _providers, typeof(OrganizationProvider));

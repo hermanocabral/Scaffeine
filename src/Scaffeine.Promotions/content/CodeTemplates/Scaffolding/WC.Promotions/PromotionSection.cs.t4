@@ -8,7 +8,7 @@ namespace Promotions
     {
         public static PromotionSection GetConfig()
         {
-            return (PromotionSection)ConfigurationManager.GetSection("MvcApplication3/MvcApplication3.Promotions") ?? new PromotionSection();
+            return (PromotionSection)ConfigurationManager.GetSection("$rootnamespace$/$rootnamespace$.Promotions") ?? new PromotionSection();
         }
 
         [ConfigurationProperty("promotions")]

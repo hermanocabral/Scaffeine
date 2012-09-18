@@ -4,8 +4,8 @@ namespace $rootnamespace$.Controllers.Home
 
     using Mvc.Mailer;
 
-    using $rootnamespace$.Mailers;
-    using $rootnamespace$.Models;
+    using Mailers;
+    using Models;
 
     public partial class HomeController
     {
@@ -13,19 +13,19 @@ namespace $rootnamespace$.Controllers.Home
         [HttpGet]
         public ActionResult Contact()
         {
-            return this.View(new ContactUsModel());
+            return View(new ContactUsModel());
         }
 
         [AllowAnonymous]
         [HttpPost]
         public ActionResult Contact(ContactUsModel model)
         {
-            if (this.ModelState.IsValid)
+            if (ModelState.IsValid)
             {
-                new ContactUsMailer().ContactUs(model).Send();
+                new Mailer().ContactUs(model).Send();
             }
 
-            return this.View(model);
+            return View(model);
         }
     }
 }

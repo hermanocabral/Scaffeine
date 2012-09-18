@@ -72,19 +72,16 @@
     <None Include="content\Hubs\NotificationHub.cs.pp" />
     <None Include="content\Models\EmailModel.cs.pp" />
     <None Include="content\Models\INotification.cs.pp" />
-    <None Include="content\Models\SettingsModel.cs.pp" />
     <None Include="content\Models\UserNotification.cs.pp" />
     <None Include="content\Models\NotificationsModel.cs.pp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />
     <None Include="content\Controllers\Home\HomeController.cs.pp" />
-    <None Include="content\Mailers\ContactUsMailer.cs.pp" />
+    <None Include="content\Mailers\Mailer.ContactUs.cs.pp" />
     <None Include="content\Models\Alert.cs.pp" />
     <None Include="content\Models\ContactUsModel.cs.pp" />
     <None Include="content\Sitemaps\Public.sitemap" />
-    <None Include="content\Helpers\HtmlHelpers.cs.pp" />
-    <None Include="content\Helpers\JSON.cs.pp" />
     <None Include="content\Views\Shared\_Alert.cshtml.pp" />
     <None Include="content\Views\Shared\_UserWidget.cshtml.pp" />
     <None Include="content\Views\Shared\_UserActions.cshtml.pp" />

@@ -47,6 +47,7 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="content\Application\WebApplication.AuthenticateRequest.cs.pp" />
+    <None Include="content\Controllers\Home\HomeController.Start.cs.pp" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

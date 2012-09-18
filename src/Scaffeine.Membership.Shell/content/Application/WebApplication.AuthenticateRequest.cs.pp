@@ -22,11 +22,11 @@
             if (authCookie == null) return;
 
             FormsAuthenticationTicket authTicket = FormsAuthentication.Decrypt(authCookie.Value);
-            string[] roles = authTicket.UserData.Split(new char[] { '|' });
+            string[] roles = authTicket.UserData.Split(new[] { '|' });
 
             var userService = NinjectWebCommon.Kernel().Get<IUserService>();
 
-            var user = userService.Find(u => u.Username == authTicket.Name).First();
+            var user = userService.Find(u => u.Username == authTicket.Name).FirstOrDefault();
             if (user != null)
             {
                 var principal = new UserPrincipal(user);

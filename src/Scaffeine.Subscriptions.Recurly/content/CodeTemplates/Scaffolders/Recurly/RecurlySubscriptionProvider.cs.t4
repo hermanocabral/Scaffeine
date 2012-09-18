@@ -80,7 +80,7 @@ namespace <#= Model.Namespace #>.Subscriptions.Recurly
         /// The request.
         /// </param>
         /// <returns>
-        /// The MvcApplication24.Subscriptions.CancelSubscriptionResponse.
+        /// The Subscriptions.CancelSubscriptionResponse.
         /// </returns>
         /// <exception cref="NotImplementedException">
         /// </exception>

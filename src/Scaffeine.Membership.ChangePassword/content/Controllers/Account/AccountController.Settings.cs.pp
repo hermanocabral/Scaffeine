@@ -1,5 +1,3 @@
-﻿using System.Web.Security;
-
 namespace $rootnamespace$.Controllers.Account
 {
     using System.Web.Mvc;
@@ -8,14 +6,15 @@ namespace $rootnamespace$.Controllers.Account
     using Models;
 
     public partial class AccountController
-    {
-        public ActionResult ChangePassword(string username)
+    {      
+		public ActionResult Settings()
         {
+            ViewBag.PasswordLength = System.Web.Security.Membership.MinRequiredPasswordLength;
             return View();
         }
 
         [HttpPost]
-        public ActionResult ChangePassword(ChangePasswordModel model)
+        public ActionResult Settings(ChangePasswordModel model)
         {
             if (ModelState.IsValid)
             {
@@ -24,21 +23,15 @@ namespace $rootnamespace$.Controllers.Account
                 switch (status)
                 {
                     case ChangePasswordStatus.Success:
-                        
                         TempData["Success"] = "Password was changed successfully";
-
-                        return Redirect(FormsAuthentication.DefaultUrl);
-                        
-                    case ChangePasswordStatus.InvalidPassword:
-                        ModelState.AddModelError(string.Empty, "The current password is incorrect or the new password is invalid.");
                         break;
                     case ChangePasswordStatus.Failure:
-                        ModelState.AddModelError(string.Empty, "An unexpected error occurred.");
+                        ModelState.AddModelError(string.Empty, "The current password is incorrect or the new password is invalid.");
                         break;
-                }
+                }           
             }
 
-            ViewBag.PasswordLength = Membership.MinRequiredPasswordLength;
+            ViewBag.PasswordLength = System.Web.Security.Membership.MinRequiredPasswordLength;
             return View(model);
         }
     }

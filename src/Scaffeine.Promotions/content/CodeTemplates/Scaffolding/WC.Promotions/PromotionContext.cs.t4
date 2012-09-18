@@ -1,9 +1,9 @@
 <#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
 <#@ Output Extension="cs" #>
 using System.Linq;
-using MvcApplication3.Core.Interfaces.Data;
-using MvcApplication3.Core.Interfaces.Service;
-using MvcApplication3.Core.Model;
+using $rootnamespace$.Core.Interfaces.Data;
+using $rootnamespace$.Core.Interfaces.Service;
+using $rootnamespace$.Core.Model;
 
 namespace Promotions
 {

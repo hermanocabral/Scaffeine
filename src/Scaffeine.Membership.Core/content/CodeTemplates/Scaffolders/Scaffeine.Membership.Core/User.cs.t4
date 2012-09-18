@@ -37,5 +37,7 @@ namespace <#= Model.Namespace #>.Core.Model
 		public bool ResetPassword { get; set; }
 		
         public bool ShowWelcomePage { get; set; }
+
+        public string TemporaryPassword { get; set; }
 	}
 }

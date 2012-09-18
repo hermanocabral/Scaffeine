@@ -12,24 +12,48 @@ namespace <#= Model.Namespace #>.Service
     {
         public AuthenticationStatus Authenticate(string username, string password, out User user)
         {
-            user = Find(u => u.Username == username).First();
+            user = Find(u => u.Username == username).FirstOrDefault();
 
             if (user == null)
             {
                 return AuthenticationStatus.InvalidUsername;
             }
 
-            if (user.Password != password)
+            if (user.Password == password)
             {
-                return AuthenticationStatus.InvalidPassword;
+                return AuthenticationStatus.Authenticated;
+            }
+            
+            if (user.TemporaryPassword == password)
+            {
+                user.ResetPassword = true;
+                user.Password = user.TemporaryPassword;
+                return AuthenticationStatus.ResetPassword;
             }
 
-            return AuthenticationStatus.Authenticated;
+            return AuthenticationStatus.InvalidPassword;
         }
 
         public ChangePasswordStatus ChangePassword(User user, string currentPassword, string newPassword)
         {
-            return ChangePassword(user, currentPassword, newPassword, false);
+            if (user.Password != currentPassword)
+            {
+                return ChangePasswordStatus.InvalidPassword;
+            }
+            
+            try
+            {
+                user.ResetPassword = false;
+                user.Password = newPassword;
+
+                SaveOrUpdate(user);
+            }
+            catch (Exception)
+            {
+                return ChangePasswordStatus.Failure;
+            }
+            
+            return ChangePasswordStatus.Success;
         }
 
         public CreateUserStatus CreateUser(User user)

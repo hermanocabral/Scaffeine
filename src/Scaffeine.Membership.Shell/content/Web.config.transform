@@ -1,7 +1,7 @@
 ﻿<configuration>
   <system.web>
     <authentication mode="Forms">
-      <forms name="rootnamespace$.auth" loginUrl="/Account/LogOn" timeout="2880" defaultUrl="/" />
+      <forms name="$rootnamespace$.auth" loginUrl="/Account/LogOn" timeout="2880" defaultUrl="/Home/Start" />
     </authentication>
     <siteMap defaultProvider="Public" enabled="true">
       <providers>

@@ -5,13 +5,8 @@ using $rootnamespace$.Models;
 
 namespace $rootnamespace$.Mailers
 {
-    public partial class ContactUsMailer : MailerBase
-    {
-        public ContactUsMailer()
-        {
-            MasterName = "_Layout";
-        }
-
+    public partial class Mailer
+    {       
         public virtual MailMessage ContactUs(ContactUsModel model)
         {
             var mailMessage = new MailMessage { Subject = "Contact Us" };
