@@ -10,6 +10,7 @@ namespace $rootnamespace$.Mailers
             var mailMessage = new MailMessage { Subject = "Welcome" };
 
             mailMessage.To.Add(model.EmailAddress);
+			ViewBag.Data = model;
             PopulateBody(mailMessage, viewName: "WelcomeMember");
 
             return mailMessage;
