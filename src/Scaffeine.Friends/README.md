@@ -1,4 +1,4 @@
-﻿Scaffeine.Friends.Core (1.1.2)
+﻿Scaffeine.Friends.Core (1.1.3)
 ======
 
 A friendship has 2 parties, the initiator, and the person who accepted.  Friendship can be one way (following).
