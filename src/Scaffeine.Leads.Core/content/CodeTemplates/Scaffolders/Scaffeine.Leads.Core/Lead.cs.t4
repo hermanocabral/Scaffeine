@@ -22,11 +22,11 @@ namespace <#= Model.Namespace #>.Core.Model
 
         public DateTime? SalesDate { get; set; }
 
-		public int OrderId { get; set; }
+		public int? OrderId { get; set; }
 
         public virtual Order Order { get; set; }
 
-		public int CustomerId { get; set; }
+		public int? CustomerId { get; set; }
 
         public virtual Customer Customer { get; set; }
     }

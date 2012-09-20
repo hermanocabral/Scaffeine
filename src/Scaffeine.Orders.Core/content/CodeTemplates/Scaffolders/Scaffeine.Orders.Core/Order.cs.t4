@@ -7,7 +7,7 @@ namespace <#= Model.Namespace #>.Core.Model
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class Order : PersistentEntity
+    public sealed partial class Order : PersistentEntity
     {
 		public Order()
         {
@@ -19,9 +19,9 @@ namespace <#= Model.Namespace #>.Core.Model
         {
             get
             {
-                if (this.OrderItems.Count > 0)
+                if (OrderItems.Count > 0)
                 {
-                    return this.OrderItems.Sum(x => x.TotalPrice);
+                    return OrderItems.Sum(x => x.TotalPrice);
                 }
 
                 return 0;
@@ -33,16 +33,17 @@ namespace <#= Model.Namespace #>.Core.Model
         { 
             get
             {
-                if (this.OrderItems.Count > 0)
+                if (OrderItems.Count > 0)
                 {
-                    return this.OrderItems.OrderBy(x => x.OrderStatus).FirstOrDefault().OrderStatus;
+                    var firstOrDefault = OrderItems.OrderBy(x => x.OrderStatus).FirstOrDefault();
+                    if (firstOrDefault != null)
+                        return firstOrDefault.OrderStatus;
                 }
 
                 return OrderStatus.Entered;
             } 
         }
 
-        public virtual ICollection<OrderLineItem> OrderItems { get; set; }
+        public ICollection<OrderLineItem> OrderItems { get; set; }
     }
-
 }

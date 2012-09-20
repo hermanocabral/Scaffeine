@@ -1,10 +1,9 @@
-﻿using System.Net.Mail;
-using Mvc.Mailer;
-using $rootnamespace$.Core.Configuration;
-using $rootnamespace$.Models;
-
-namespace $rootnamespace$.Mailers
+﻿namespace $rootnamespace$.Mailers
 {
+    using System.Net.Mail;
+    using Core.Common.Site;
+    using Models;
+
     public partial class Mailer
     {       
         public virtual MailMessage ContactUs(ContactUsModel model)

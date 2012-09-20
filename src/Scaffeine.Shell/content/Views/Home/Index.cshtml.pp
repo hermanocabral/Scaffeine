@@ -1,4 +1,4 @@
-﻿@using $rootnamespace$.Core.Configuration
+﻿@using $rootnamespace$.Core.Common.Site
 @section hero{
     <div class="hero-content">
         <h1>

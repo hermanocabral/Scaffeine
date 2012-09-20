@@ -3,6 +3,7 @@
 namespace <#= Model.Namespace #>.Core.Model
 {
     using System.ComponentModel.DataAnnotations.Schema;
+	using Newtonsoft.Json;
 
     public partial class OrderLineItem : PersistentEntity
     {
@@ -30,6 +31,7 @@ namespace <#= Model.Namespace #>.Core.Model
         public int OrderId { get; set; }
 
         [ForeignKey("OrderId")]
+		[JsonIgnore]
         public virtual Order Order { get; set; }
     }
 }

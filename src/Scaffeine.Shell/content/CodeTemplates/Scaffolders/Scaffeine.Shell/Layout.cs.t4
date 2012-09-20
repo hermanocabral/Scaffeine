@@ -1,6 +1,6 @@
 ﻿<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
 <#@ Output Extension="cshtml" #>
-@using <#= Model.Namespace #>.Core.Configuration
+@using <#= Model.Namespace #>.Core.Common.Site
 @{
     Bundles.Reference("content/site.less");
     Bundles.Reference("content/custom");
