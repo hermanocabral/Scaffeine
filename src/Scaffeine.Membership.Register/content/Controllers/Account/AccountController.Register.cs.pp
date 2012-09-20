@@ -5,6 +5,8 @@
     using Core.Common.Membership;
     using Core.Model;
     using Models;
+	using $rootnamespace$.Mailers;
+    using Mvc.Mailer;
 
     public partial class AccountController
     {
@@ -34,6 +36,15 @@
                 if (createStatus == CreateUserStatus.Success)
                 {
                     _authenticationService.SetAuthCookie(model.UserName);
+
+					new Mailer().WelcomeMember(new WelcomeMemberModel { 
+                        Name = user.FirstName + " " + user.LastName,
+                        Password = user.Password,
+                        Username = user.Username,
+                        LoginUrl = Url.Action("Logon", "Account"),
+                        EmailAddress = user.Email
+                    }).Send();
+
                     return RedirectToAction("Welcome", "Account");
                 }
 
