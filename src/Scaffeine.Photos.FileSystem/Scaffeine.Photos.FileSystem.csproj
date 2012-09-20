@@ -46,12 +46,15 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="content\CodeTemplates\Scaffolders\Scaffeine.Photos.FileSystem\FileSystemProvider.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Photos.FileSystem\FileSystemProvider.cs.t4" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Photos.FileSystem\Scaffeine.Photos.FileSystem.ps1" />
+    <None Include="content\App.config.transform">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="content\Web.config.transform">
       <SubType>Designer</SubType>
     </None>

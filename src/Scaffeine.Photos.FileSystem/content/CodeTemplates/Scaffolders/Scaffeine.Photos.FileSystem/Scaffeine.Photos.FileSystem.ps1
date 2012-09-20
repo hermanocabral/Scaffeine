@@ -10,6 +10,6 @@ param(
  	@("FileSystemProvider")
 
 foreach ($tml in $templates){
-	$outputPath = $tml
-	add-template $photosFileSystemProjectName $outputPath $tml -Force:$Force $TemplateFolders
+	$outputPath = "Providers\$tml"
+	add-template $photosProjectName $outputPath $tml -Force:$Force $TemplateFolders
 }

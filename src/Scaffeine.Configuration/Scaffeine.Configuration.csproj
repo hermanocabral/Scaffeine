@@ -50,30 +50,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Configuration\PermissionLevel.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Configuration\Scaffeine.Configuration.ps1" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Configuration\CoreSectionHandler.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Configuration\DevLevel.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Configuration\EnvironmentConfiguration.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Configuration\ISiteConfiguration.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Configuration\Security.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Configuration\SecurityConfiguration.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Configuration\SecurityLevel.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Configuration\Site.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Configuration\SiteConfiguration.cs.t4" />
-    <None Include="content\App.config.transform">
+    <None Include="Package.nuspec">
       <SubType>Designer</SubType>
     </None>
-    <None Include="content\Web.config.transform">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Package.nuspec" />
     <None Include="tools\init.ps1" />
     <None Include="tools\install.ps1" />
     <None Include="tools\uninstall.ps1" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="content\deleteme.txt" />
     <Content Include="NuGet.exe" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

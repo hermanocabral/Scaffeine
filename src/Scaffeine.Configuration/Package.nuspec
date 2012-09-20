@@ -16,7 +16,9 @@
     <copyright>ScaffR, 2012</copyright>
     <tags></tags>
     <dependencies>
-      <dependency id="ScaffR.Core"  />
+      <dependency id="ScaffR.Security"  />
+      <dependency id="ScaffR.Site"  />
+      <dependency id="ScaffR.Environment"  />
     </dependencies>
   </metadata>
   <files>
