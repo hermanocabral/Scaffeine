@@ -12,6 +12,11 @@ Use case 2
 User A adds user B as a friend.  User B needs to approve the friendship.  Both are firends with each other.
 
 
+Use case 3
+-----
+User A adds user B as a friend.  User B is autoamtically added a friend to user A.
+
+
 What is a friendship?
 -----
 A connection, either 1-way, or 2-ways betweeen 2 users.  We want to know who initiated it, when it was approved, and we need 
@@ -29,6 +34,15 @@ GetFriendsForUser(int userId){
 }
 </pre>
 
+Configuration
+-----
+<code>
+
+ <$rootnamespace$.Friendships>
+     \<allowOneWayFriendships value="true"/>  
+ </$rootnamespace$.Friendships>
+
+</code>
 
     
 Usage
