@@ -1,0 +1,20 @@
+﻿<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
+<#@ Output Extension="cs" #>
+namespace <#= Model.Namespace #>.Core.Model
+{
+	using System;
+
+	public partial class Friendship : PersistentEntity
+    {
+        public virtual User User { get; set; }
+        public int UserId { get; set; }
+
+        public virtual User Friend { get; set; }
+        public int FriendId { get; set; }
+
+        public FriendshipInvitation FriendshipInvitation { get; set; }
+        public int FriendshipInvitationId { get; set; }
+        
+        public bool IniciatedByPrimaryUser { get; set; }
+    }
+}

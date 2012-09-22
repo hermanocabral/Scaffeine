@@ -50,6 +50,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Friends.Services\Interfaces\IFriendsService.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Friends.Services\FriendsDataSeeder.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Friends.Services\Services\FriendsService.cs.t4" />
     <None Include="content\Web.config.transform">
       <SubType>Designer</SubType>
     </None>
@@ -59,7 +62,6 @@
     <None Include="tools\uninstall.ps1" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="content\CodeTemplates\Scaffolders\" />
     <Folder Include="lib\" />
   </ItemGroup>
   <ItemGroup>

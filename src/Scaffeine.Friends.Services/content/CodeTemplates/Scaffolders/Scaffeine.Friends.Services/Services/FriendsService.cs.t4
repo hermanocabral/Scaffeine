@@ -1,0 +1,48 @@
+<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
+<#@ Output Extension="cs" #>
+namespace <#= Model.Namespace #>.Service.Friends
+{
+    using Core.Model;
+    using Core.Common.Friends;
+    using System;
+
+    public partial class FriendshipService
+    {
+        public CreateFriendshipStatus CreateFriendship(int userId, int friendId, bool oneWay)
+        {
+            throw new NotImplementedException();
+            //if (oneWay && !FriendshipSettings.Instance.AllowOneWayFriendships)
+            //    throw new InvalidOperationException("AllowOneWayFriendships not allowed");
+            
+            //var status = FriendshipSettings.Instance.RequireApproval
+            //                 ? InvitationStatus.Pending
+            //                 : InvitationStatus.Approved;
+            //var primaryFriendship = new Friendship { 
+            //    PrimaryUserId = primaryUserId,
+            //    SecondaryUserId = secondaryUserId,
+            //    InvitationStatus = status,
+            //    IniciatedByPrimaryUser = true
+            //};
+
+            //Repository.SaveOrUpdate(primaryFriendship);
+
+            //if (!oneWay)
+            //{
+            //    status = FriendshipSettings.Instance.RequireApproval
+            //                 ? InvitationStatus.AwaitingApproval
+            //                 : InvitationStatus.Approved;
+            //    var secondaryFriendship = new Friendship
+            //    {
+            //        PrimaryUserId = primaryUserId,
+            //        SecondaryUserId = secondaryUserId,
+            //        InvitationStatus = status,
+            //        IniciatedByPrimaryUser = false
+            //    };    
+            //    Repository.SaveOrUpdate(secondaryFriendship);
+            //}
+
+            //UnitOfWork.Commit();
+            //return CreateFriendshipStatus.FriendshipCreated;
+        }
+    }
+}

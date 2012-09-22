@@ -17,7 +17,7 @@
     <tags></tags>
     <dependencies>
       <dependency id="ScaffR.Core"/>
-      <dependency id="ScaffR.Membership.Core"/>
+      <dependency id="Scaffeine.Membership.Core"/>
     </dependencies>
   </metadata>
   <files>

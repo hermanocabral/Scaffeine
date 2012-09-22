@@ -1,0 +1,11 @@
+<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
+<#@ Output Extension="cs" #>
+namespace <#= Model.Namespace #>.Core.Interfaces.Service.Friends
+{
+    using Model;
+
+    public partial interface IFriendshipService
+    {
+        CreateFriendshipStatus CreateFriendship(int userId, int friendId, bool oneWay);
+    }
+}
