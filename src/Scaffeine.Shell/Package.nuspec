@@ -25,6 +25,7 @@
       <dependency id="ScaffR.Sitemap" />
       <dependency id="ScaffR.Ninject"/>
       <dependency id="ScaffR.MvcMailer"/>
+      <dependency id="ScaffR.Mail.Gmail"/>
     </dependencies>
   </metadata>
   <files>

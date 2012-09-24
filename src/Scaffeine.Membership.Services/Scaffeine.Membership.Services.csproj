@@ -60,7 +60,6 @@
     <None Include="BuildPublishPackage.cmd" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Services\MembershipDataSeeder.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Services\Scaffeine.Membership.Services.ps1" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Services\_Application_AuthenticateRequest.cs.t4" />
     <None Include="Package.nuspec" />
     <None Include="tools\init.ps1" />
     <None Include="tools\install.ps1" />

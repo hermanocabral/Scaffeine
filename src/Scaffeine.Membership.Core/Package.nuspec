@@ -17,6 +17,8 @@
     <tags></tags>
     <dependencies>
       <dependency id="ScaffR.Core"/>
+      <dependency id="ScaffR.Users.Core"/>
+      <dependency id="ScaffR.Security"/>
     </dependencies>
   </metadata>
   <files>

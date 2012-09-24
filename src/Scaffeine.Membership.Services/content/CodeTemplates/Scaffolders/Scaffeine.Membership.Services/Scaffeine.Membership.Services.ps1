@@ -35,10 +35,8 @@ foreach ($tml in $templates){
 	add-template $serviceProjectName $outputPath $tml -Force:$Force $TemplateFolders
 }
 
-scaffold scaffr.backend.for User
 scaffold scaffr.backend.for Role
 scaffold scaffr.backend.for UserRole
-scaffold scaffr.backend.for Person
 scaffold scaffr.backend.for UserEmail
 
 Add-Template $dataProjectName "Seeders\MembershipDataSeeder" "MembershipDataSeeder" -Force:$Force $TemplateFolders

@@ -1,4 +1,4 @@
-﻿namespace $rootnamespace$.Controllers.User
+﻿namespace $rootnamespace$.Controllers.Users
 {
     using System.Web.Mvc;
 

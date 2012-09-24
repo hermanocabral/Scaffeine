@@ -46,7 +46,6 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <None Include="content\Application\WebApplication.AuthenticateRequest.cs.pp" />
     <None Include="content\Controllers\Home\HomeController.Start.cs.pp" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -63,7 +62,9 @@
     <None Include="tools\install.ps1" />
     <None Include="tools\uninstall.ps1" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="content\Application\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="NuGet.exe" />
   </ItemGroup>
