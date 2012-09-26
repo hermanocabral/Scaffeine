@@ -50,7 +50,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Friendships.Services\Common\CreateFriendshipStatus.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Friendships.Services\Data\FriendshipRepository.Custom.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Friendships.Services\Interfaces\IFriendshipService.Custom.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Friendships.Services\FriendshipsDataSeeder.cs.t4" />

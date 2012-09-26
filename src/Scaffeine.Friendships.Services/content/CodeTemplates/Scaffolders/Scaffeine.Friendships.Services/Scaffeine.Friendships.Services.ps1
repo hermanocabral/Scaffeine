@@ -7,14 +7,6 @@ param(
 )
 
  $templates = 
- 	@("CreateFriendshipStatus")
-
-foreach ($tml in $templates){
-	$outputPath = "Common\Friendship\$tml"
-	add-template $coreProjectName $outputPath $tml -Force:$Force $TemplateFolders
-}
-
- $templates = 
  	@("IFriendshipService.Custom")
 
 foreach ($tml in $templates){
