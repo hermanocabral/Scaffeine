@@ -2,8 +2,6 @@
 <#@ Output Extension="cs" #>
 namespace <#= Model.Namespace #>.Core.Model
 {
-	using System;
-
 	public partial class Friendship : PersistentEntity
     {
         public virtual User User { get; set; }
@@ -12,9 +10,8 @@ namespace <#= Model.Namespace #>.Core.Model
         public virtual User Friend { get; set; }
         public int FriendId { get; set; }
 
-        public FriendshipInvitation FriendshipInvitation { get; set; }
-        public int FriendshipInvitationId { get; set; }
+        public InvitationStatus InvitationStatus { get; set; }
         
-        public bool IniciatedByPrimaryUser { get; set; }
+        public bool IniciatedByUser { get; set; }
     }
 }

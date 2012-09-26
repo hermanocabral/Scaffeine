@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{BB469C71-B9E5-4FBC-899C-A9BD656845FA}</ProjectGuid>
+    <ProjectGuid>{1B2C41A5-0685-48CC-B1B5-1BF51229B6D7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Scaffeine.Friends.Services</RootNamespace>
-    <AssemblyName>Scaffeine.Friends.Services</AssemblyName>
+    <RootNamespace>Scaffeine.Friends.Core</RootNamespace>
+    <AssemblyName>Scaffeine.Friends.Core</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
@@ -46,16 +46,17 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Friendships.Core\CoreSection.Friends.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Friendships.Core\FriendshipElement.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Friendships.Core\FriendshipSettings.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Friendships.Core\User.Friendship.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Friendships.Core\InvitationStatus.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Friendships.Core\Friendship.cs.t4" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Friends.Services\Interfaces\IFriendsService.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Friends.Services\FriendsDataSeeder.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Friends.Services\Services\FriendsService.cs.t4" />
-    <None Include="content\Web.config.transform">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Friendships.Core\Scaffeine.Friendships.Core.ps1" />
     <None Include="Package.nuspec" />
     <None Include="tools\init.ps1" />
     <None Include="tools\install.ps1" />
@@ -66,6 +67,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="NuGet.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

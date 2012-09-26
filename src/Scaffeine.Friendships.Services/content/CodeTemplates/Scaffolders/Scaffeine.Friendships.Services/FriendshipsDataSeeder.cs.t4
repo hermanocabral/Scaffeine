@@ -6,9 +6,9 @@ namespace <#= Model.Namespace #>.Data.Seeders
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    using <#= Model.Namespace #>.Core.Model.Friends;
+    using <#= Model.Namespace #>.Core.Model;
 
-    public partial class FriendsDataSeeder
+    public partial class FriendshipsDataSeeder
     {
         public void Seed(DataContext context)
         {
