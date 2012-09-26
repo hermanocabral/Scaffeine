@@ -1,22 +1,22 @@
 ﻿<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
 <#@ Output Extension="cs" #>
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading;
-using <#= Model.Namespace #>.Core.Interfaces.Eventing;
-
-namespace <#= Model.Namespace #>.Core.Eventing
+namespace <#= Model.Namespace #>.Core.Infrastructure.Eventing
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Threading;
+    using Interfaces.Eventing;
+
     public partial class MessageBus : IMessageBus
     {
-        private static MessageBus instance;
+        private static MessageBus _instance;
 
         private MessageBus(){}
 
         public static MessageBus Instance
         {
-            get { return instance ?? (instance = new MessageBus()); }
+            get { return _instance ?? (_instance = new MessageBus()); }
         }
 
         private readonly Dictionary<Type, List<WeakReference>> _eventSubscriberLists =
@@ -28,7 +28,7 @@ namespace <#= Model.Namespace #>.Core.Eventing
             lock (_lock)
             {
                 var subscriberTypes =
-                    subscriber.GetType().GetInterfaces().Where(i => i.IsGenericType && i.GetGenericTypeDefinition() == typeof(Handles<>));
+                    subscriber.GetType().GetInterfaces().Where(i => i.IsGenericType && i.GetGenericTypeDefinition() == typeof(IHandles<>));
 
                 var weakReference = new WeakReference(subscriber);
                 foreach (var subscriberType in subscriberTypes)
@@ -41,15 +41,15 @@ namespace <#= Model.Namespace #>.Core.Eventing
 
         public void Publish<TEvent>(TEvent eventToPublish)
         {
-            var subscriberType = typeof(Handles<>).MakeGenericType(typeof(TEvent));
+            var subscriberType = typeof(IHandles<>).MakeGenericType(typeof(TEvent));
             var subscribers = GetSubscribers(subscriberType);
-            List<WeakReference> subscribersToRemove = new List<WeakReference>();
+            var subscribersToRemove = new List<WeakReference>();
 
             foreach (var weakSubscriber in subscribers)
             {
                 if (weakSubscriber.IsAlive)
                 {
-                    var subscriber = (Handles<TEvent>)weakSubscriber.Target;
+                    var subscriber = (IHandles<TEvent>)weakSubscriber.Target;
                     var syncContext = SynchronizationContext.Current;
                     if (syncContext == null)
                         syncContext = new SynchronizationContext();

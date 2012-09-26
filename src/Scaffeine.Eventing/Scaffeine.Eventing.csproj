@@ -52,7 +52,7 @@
     <None Include="BuildPublishPackage.cmd" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffiene.Eventing\Bootstrapper.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffiene.Eventing\EventLogElement.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffiene.Eventing\Handles.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffiene.Eventing\IHandles.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffiene.Eventing\IMessageBus.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffiene.Eventing\MessageBus.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffiene.Eventing\Scaffeine.Eventing.ps1" />

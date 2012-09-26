@@ -10,14 +10,14 @@ param(
 $outputPath = "Configuration\EventLogElement"
 Add-Template $coreProjectName $outputPath "EventLogElement" -Force:$Force $TemplateFolders
 
-$outputPath = "Interfaces\Eventing\BootStrapper"
+$outputPath = "Infrastructure\Eventing\BootStrapper"
 Add-Template $coreProjectName $outputPath "BootStrapper" -Force:$Force $TemplateFolders
 
-$outputPath = "Interfaces\Eventing\Handles"
-Add-Template $coreProjectName $outputPath "Handles" -Force:$Force $TemplateFolders
+$outputPath = "Interfaces\Eventing\IHandles"
+Add-Template $coreProjectName $outputPath "IHandles" -Force:$Force $TemplateFolders
 
 $outputPath = "Interfaces\Eventing\IMessageBus"
 Add-Template $coreProjectName $outputPath "IMessageBus" -Force:$Force $TemplateFolders
 
-$outputPath = "Eventing\MessageBus"
+$outputPath = "Infrastructure\Eventing\MessageBus"
 Add-Template $coreProjectName $outputPath "MessageBus" -Force:$Force $TemplateFolders

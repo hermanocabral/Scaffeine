@@ -23,6 +23,6 @@ foreach ($tml in $templates){
 		"PipelineManager")
 
 foreach ($tml in $templates){
-	$outputPath = "Infrasctructure\Pipeline\$tml"
+	$outputPath = "Infrastructure\Pipeline\$tml"
 	add-template $coreProjectName $outputPath $tml -Force:$Force $TemplateFolders
 }

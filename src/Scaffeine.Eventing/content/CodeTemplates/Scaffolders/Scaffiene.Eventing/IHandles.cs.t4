@@ -2,7 +2,7 @@
 <#@ Output Extension="cs" #>
 namespace <#= Model.Namespace #>.Core.Interfaces.Eventing
 {
-    public interface Handles<T>
+    public interface IHandles<T>
     {
         void OnEvent(T e);
     }

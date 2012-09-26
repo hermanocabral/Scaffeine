@@ -1,12 +1,10 @@
-﻿using System;
-using $rootnamespace$.Core.Eventing;
+﻿using $rootnamespace$.Core.Infrastructure.Eventing;
 using $rootnamespace$.Handlers;
-using $rootnamespace$.Models;
 
-[assembly: WebActivator.PreApplicationStartMethod(typeof($rootnamespace$.App_Start.MVCToolsStart), "PreStart")]
+[assembly: WebActivator.PreApplicationStartMethod(typeof($rootnamespace$.App_Start.MvcToolsStart), "PreStart")]
 
 namespace $rootnamespace$.App_Start {
-    public static class MVCToolsStart {
+    public static class MvcToolsStart {
         public static void PreStart() {
             MessageBus.Instance.Subscribe(NotificationHandler.Instance);
         }
