@@ -15,7 +15,7 @@ foreach ($tml in $templates){
 }
 
  $templates = 
- 	@("IFriendsService.Custom")
+ 	@("IFriendshipService.Custom")
 
 foreach ($tml in $templates){
 	$outputPath = "Interfaces\Service\$tml"
@@ -23,7 +23,7 @@ foreach ($tml in $templates){
 }
 
  $templates = 
- 	@("FriendsService.Custom")
+ 	@("FriendshipService.Custom")
 
 foreach ($tml in $templates){
 	$outputPath = $tml
