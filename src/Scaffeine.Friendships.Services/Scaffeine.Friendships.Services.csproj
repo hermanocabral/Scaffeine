@@ -50,6 +50,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Friendships.Services\Common\CreateFriendshipStatus.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Friendships.Services\Data\FriendshipRepository.Custom.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Friendships.Services\Interfaces\IFriendsService.Custom.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Friendships.Services\FriendshipsDataSeeder.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Friendships.Services\Scaffeine.Friendships.Services.ps1" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Friendships.Services\Services\FriendsService.Custom.cs.t4" />
     <None Include="content\Web.config.transform">
       <SubType>Designer</SubType>
     </None>
@@ -59,7 +65,6 @@
     <None Include="tools\uninstall.ps1" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="content\CodeTemplates\Scaffolders\" />
     <Folder Include="lib\" />
   </ItemGroup>
   <ItemGroup>

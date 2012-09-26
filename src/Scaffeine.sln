@@ -254,11 +254,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scaffeine.Membership.Servic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scaffeine.Leads.Services", "Scaffeine.Leads.Services\Scaffeine.Leads.Services.csproj", "{2BDEA833-2EE0-4C8F-B4BD-07D2585C32F3}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Friends", "Friends", "{ACC3C61E-FDD8-4D77-8F34-C9BB0817A6E9}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Friendships", "Friendships", "{ACC3C61E-FDD8-4D77-8F34-C9BB0817A6E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scaffeine.Friends.Core", "Scaffeine.Friends.Core\Scaffeine.Friends.Core.csproj", "{1B2C41A5-0685-48CC-B1B5-1BF51229B6D7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scaffeine.Friendships.Core", "Scaffeine.Friendships.Core\Scaffeine.Friendships.Core.csproj", "{1B2C41A5-0685-48CC-B1B5-1BF51229B6D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scaffeine.Friends.Services", "Scaffeine.Friends.Services\Scaffeine.Friends.Services.csproj", "{BB469C71-B9E5-4FBC-899C-A9BD656845FA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scaffeine.Friendships.Services", "Scaffeine.Friendships.Services\Scaffeine.Friendships.Services.csproj", "{BB469C71-B9E5-4FBC-899C-A9BD656845FA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Promotions", "Promotions", "{449AEE1F-0277-4601-806E-0BE500C0B4F4}"
 EndProject
