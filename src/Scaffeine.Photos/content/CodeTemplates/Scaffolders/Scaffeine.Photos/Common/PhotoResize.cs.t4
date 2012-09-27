@@ -1,7 +1,9 @@
 <#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
 <#@ Output Extension="cs" #>
-namespace <#= Model.Namespace #>.Photos
+namespace <#= Model.Namespace #>.Core.Common.Photos
 {
+    using Configuration.Photos;
+
     /// <summary>
     /// The photo resize.
     /// </summary>
@@ -25,14 +27,14 @@ namespace <#= Model.Namespace #>.Photos
         /// <summary>
         /// Initializes a new instance of the <see cref="PhotoResize"/> class.
         /// </summary>
-        /// <param name="settings">
-        /// The settings.
+        /// <param name="element">
+        /// The element.
         /// </param>
-        public PhotoResize(PhotoResizeSettings settings)
+        public PhotoResize(PhotoResizeElement element)
         {
-            Name = settings.Name;
-            Width = settings.Width;
-            Height = settings.Height;
+            Name = element.Name;
+            Width = element.Width;
+            Height = element.Height;
         }
     }
 }

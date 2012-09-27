@@ -1,6 +1,6 @@
 <#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
 <#@ Output Extension="cs" #>
-namespace <#= Model.Namespace #>.Photos
+namespace <#= Model.Namespace #>.Core.Configuration.Photos
 {
     using System;
     using System.Configuration;
@@ -8,7 +8,7 @@ namespace <#= Model.Namespace #>.Photos
     /// <summary>
     /// The photo resize collection.
     /// </summary>
-    [ConfigurationCollection(typeof(PhotoResizeSettings))]
+    [ConfigurationCollection(typeof(PhotoResizeElement))]
     public class PhotoResizeCollection : ConfigurationElementCollection
     {
         /// <summary>
@@ -82,7 +82,7 @@ namespace <#= Model.Namespace #>.Photos
         /// </returns>
         protected override ConfigurationElement CreateNewElement()
         {
-            return new PhotoResizeSettings();
+            return new PhotoResizeElement();
         }
 
         /// <summary>
@@ -96,7 +96,7 @@ namespace <#= Model.Namespace #>.Photos
         /// </returns>
         protected override object GetElementKey(ConfigurationElement element)
         {
-            return (PhotoResizeSettings)element;
+            return (PhotoResizeElement)element;
         }
 
         /// <summary>
@@ -106,13 +106,13 @@ namespace <#= Model.Namespace #>.Photos
         /// The key.
         /// </param>
         /// <returns>
-        /// The <#= Model.Namespace #>.Photos.PhotoResizeSettings.
+        /// The JamesRocks.Photos.PhotoResizeElement.
         /// </returns>
-        public new PhotoResizeSettings this[string key]
+        public new PhotoResizeElement this[string key]
         {
             get
             {
-                return (PhotoResizeSettings)BaseGet(key);
+                return (PhotoResizeElement)BaseGet(key);
             }
         }
 
@@ -123,13 +123,13 @@ namespace <#= Model.Namespace #>.Photos
         /// The index.
         /// </param>
         /// <returns>
-        /// The <#= Model.Namespace #>.Photos.PhotoResizeSettings.
+        /// The JamesRocks.Photos.PhotoResizeElement.
         /// </returns>
-        public PhotoResizeSettings this[int index]
+        public PhotoResizeElement this[int index]
         {
             get
             {
-                return (PhotoResizeSettings)BaseGet(index);
+                return (PhotoResizeElement)BaseGet(index);
             }
 
             set

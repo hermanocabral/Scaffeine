@@ -1,9 +1,10 @@
 ﻿<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
 <#@ Output Extension="cs" #>
-namespace <#= Model.Namespace #>.Photos
+namespace <#= Model.Namespace #>.Core.Configuration.Photos
 {
     using System;
     using System.Configuration.Provider;
+    using Common.Photos;
 
     /// <summary>
     /// The photo provider collection.
@@ -17,7 +18,7 @@ namespace <#= Model.Namespace #>.Photos
         /// The name.
         /// </param>
         /// <returns>
-        /// The <#= Model.Namespace #>.Photos.PhotoProvider.
+        /// The JamesRocks.Photos.PhotoProvider.
         /// </returns>
         public new PhotoProvider this[string name]
         {

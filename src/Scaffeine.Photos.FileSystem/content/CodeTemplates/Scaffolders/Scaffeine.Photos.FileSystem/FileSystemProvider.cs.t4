@@ -1,18 +1,15 @@
 ﻿<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
 <#@ Output Extension="cs" #>
-namespace <#= Model.Namespace #>.Photos.Providers
+namespace <#= Model.Namespace #>.Core.Common.Photos.Providers
 {
     using System;
     using System.Collections.Generic;
     using System.Collections.Specialized;
     using System.Configuration.Provider;
-
     using System.Drawing;
     using System.IO;
     using System.Linq;
     using System.Security.AccessControl;
-    using Helpers;
-    using Models;
 
     public class FileSystemProvider : PhotoProvider
     {
@@ -29,8 +26,8 @@ namespace <#= Model.Namespace #>.Photos.Providers
                 throw new ArgumentNullException("config");
             }
 
-            this._filePath = config["imageFolder"];
-            if (string.IsNullOrEmpty(this._filePath))
+            _filePath = config["imageFolder"];
+            if (string.IsNullOrEmpty(_filePath))
             {
                 throw new ProviderException("Empty or missing 'imageFolder' value");
             }

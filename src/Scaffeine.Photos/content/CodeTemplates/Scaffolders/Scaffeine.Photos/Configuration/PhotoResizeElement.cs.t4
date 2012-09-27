@@ -1,22 +1,13 @@
 <#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
 <#@ Output Extension="cs" #>
-// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="PhotoResizeSettings.cs" company="">
-//   
-// </copyright>
-// <summary>
-//   The photo resize settings.
-// </summary>
-// --------------------------------------------------------------------------------------------------------------------
-
-namespace <#= Model.Namespace #>.Photos
+namespace <#= Model.Namespace #>.Core.Configuration.Photos
 {
     using System.Configuration;
 
     /// <summary>
-    /// The photo resize settings.
+    /// The photo resize element.
     /// </summary>
-    public class PhotoResizeSettings : ConfigurationElement
+    public class PhotoResizeElement : ConfigurationElement
     {
         /// <summary>
         /// Gets or sets the name.

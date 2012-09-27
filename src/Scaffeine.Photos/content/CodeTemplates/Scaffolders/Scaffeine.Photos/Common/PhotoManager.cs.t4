@@ -1,12 +1,12 @@
 ﻿<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
 <#@ Output Extension="cs" #>
-namespace <#= Model.Namespace #>.Photos
+namespace <#= Model.Namespace #>.Core.Common.Photos
 {
     using System.Collections.Generic;
     using System.Configuration.Provider;
     using System.Web.Configuration;
-
-    using <#= Model.Namespace #>.Photos.Models;
+    using Configuration;
+    using Configuration.Photos;
 
     /// <summary>
     /// The photo manager.
@@ -82,8 +82,7 @@ namespace <#= Model.Namespace #>.Photos
             {
                 lock (Lock)
                 {
-                    var section =
-                        (PhotoSection)WebConfigurationManager.GetSection("<#= Model.Namespace #>/<#= Model.Namespace #>.Photos");
+                    var section = CoreSection.GetConfig().Photos;
 
                     _providers = new PhotoProviderCollection();
                     ProvidersHelper.InstantiateProviders(section.Providers, _providers, typeof(PhotoProvider));
@@ -91,7 +90,7 @@ namespace <#= Model.Namespace #>.Photos
 
                     _photoResize = new Dictionary<string, PhotoResize>();
 
-                    foreach (PhotoResizeSettings photoResize in section.PhotoResizes)
+                    foreach (PhotoResizeElement photoResize in section.PhotoResizes)
                     {
                         _photoResize.Add(photoResize.Name, new PhotoResize(photoResize));
                     }
@@ -118,7 +117,7 @@ namespace <#= Model.Namespace #>.Photos
         /// The resize name.
         /// </param>
         /// <returns>
-        /// The <#= Model.Namespace #>.Photos.Models.Photo.
+        /// The JamesRocks.Photos.Models.Photo.
         /// </returns>
         public Photo SavePhotoResize(PhotoRequest item, string resizeName)
         {
@@ -135,7 +134,7 @@ namespace <#= Model.Namespace #>.Photos
         /// The keep original size.
         /// </param>
         /// <returns>
-        /// The System.Collections.Generic.IList`1[T -&gt; <#= Model.Namespace #>.Photos.Models.Photo].
+        /// The System.Collections.Generic.IList`1[T -&gt; JamesRocks.Photos.Models.Photo].
         /// </returns>
         public IList<Photo> SavePhotoForAllSizes(PhotoRequest item, bool keepOriginalSize)
         {
@@ -152,7 +151,7 @@ namespace <#= Model.Namespace #>.Photos
         /// The resize name.
         /// </param>
         /// <returns>
-        /// The <#= Model.Namespace #>.Photos.Models.Photo.
+        /// The JamesRocks.Photos.Models.Photo.
         /// </returns>
         public Photo GetPhotoResize(string id, string resizeName)
         {
@@ -166,7 +165,7 @@ namespace <#= Model.Namespace #>.Photos
         /// The id.
         /// </param>
         /// <returns>
-        /// The System.Collections.Generic.IDictionary`2[TKey -&gt; System.String, TValue -&gt; <#= Model.Namespace #>.Photos.Models.Photo].
+        /// The System.Collections.Generic.IDictionary`2[TKey -&gt; System.String, TValue -&gt; JamesRocks.Photos.Models.Photo].
         /// </returns>
         public IDictionary<string, Photo> GetAllPhotoResizes(string id)
         {
@@ -183,7 +182,7 @@ namespace <#= Model.Namespace #>.Photos
         /// The ids.
         /// </param>
         /// <returns>
-        /// The System.Collections.Generic.IList`1[T -&gt; <#= Model.Namespace #>.Photos.Models.Photo].
+        /// The System.Collections.Generic.IList`1[T -&gt; JamesRocks.Photos.Models.Photo].
         /// </returns>
         public IList<Photo> GetPhotosByResize(string resizeName, string[] ids)
         {
