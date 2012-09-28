@@ -2,7 +2,7 @@
 <#@ Output Extension="cs" #>
 namespace <#= Model.Namespace #>.Core.Infrastructure.Pipeline
 {
-	public class PipelineManager<T> where T : IPipelineContext
+	public class PipelineManager<T>
 	{
         private readonly FilterChain<T> _filters;
         private ICoreProcessor<T> _processor;

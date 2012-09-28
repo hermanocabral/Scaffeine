@@ -4,7 +4,7 @@
 
     using $rootnamespace$.Filters;
 
-    public partial class UserController : Controller
+    public partial class UserController : BaseController
     {
         public UserController()
         {

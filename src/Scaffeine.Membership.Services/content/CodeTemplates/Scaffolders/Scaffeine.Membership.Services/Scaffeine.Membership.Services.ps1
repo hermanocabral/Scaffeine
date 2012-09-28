@@ -9,8 +9,7 @@ param(
  $templates = 
  	@("AuthenticationStatus", `
 		"ChangePasswordStatus", `
-		"CreateUserStatus", `
-		"UserPrincipal")
+		"CreateUserStatus")
 
 foreach ($tml in $templates){
 	$outputPath = "Common\Membership\$tml"

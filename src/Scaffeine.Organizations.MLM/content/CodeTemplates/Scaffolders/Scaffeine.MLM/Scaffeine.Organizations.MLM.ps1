@@ -10,6 +10,6 @@ param(
  	@("MLMProvider")
 
 foreach ($tml in $templates){
-	$outputPath = $tml
-	add-template $mlmProjectName $outputPath $tml -Force:$Force $TemplateFolders
+	$outputPath = "Common\Organizations\Providers\$tml"
+	add-template $coreProjectName $outputPath $tml -Force:$Force $TemplateFolders
 }

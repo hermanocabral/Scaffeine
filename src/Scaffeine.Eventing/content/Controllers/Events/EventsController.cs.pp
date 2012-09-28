@@ -2,7 +2,7 @@
 
 namespace $rootnamespace$.Controllers.Events
 {
-    public partial class EventsController : Controller
+    public partial class EventsController : BaseController
     {
         public ActionResult Index()
         {

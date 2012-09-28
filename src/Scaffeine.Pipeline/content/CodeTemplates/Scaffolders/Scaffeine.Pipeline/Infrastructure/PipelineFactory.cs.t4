@@ -1,9 +1,5 @@
 <#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
 <#@ Output Extension="cs" #>
-using System.Configuration;
-using System.Configuration.Provider;
-using System.Web.Configuration;
-
 namespace <#= Model.Namespace #>.Core.Infrastructure.Pipeline
 {
     using System;
@@ -11,7 +7,7 @@ namespace <#= Model.Namespace #>.Core.Infrastructure.Pipeline
 
     public static class PipelineFactory
     {
-        public static PipelineManager<T> Create<T>(PipelineConfigurationElement pipelineSettings) where T : IPipelineContext
+        public static PipelineManager<T> Create<T>(PipelineConfigurationElement pipelineSettings)
         {
             var processor = ((ICoreProcessor<T>) ObjectFactory.Create(pipelineSettings.ProcessorType));
 

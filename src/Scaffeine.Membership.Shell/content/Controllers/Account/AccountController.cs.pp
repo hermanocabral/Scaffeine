@@ -4,7 +4,7 @@
 
     using Core.Interfaces.Service;
 
-    public partial class AccountController : Controller
+    public partial class AccountController : BaseController
     {
         private readonly IUserService _userService;
         private readonly IUserEmailService _userEmailService;

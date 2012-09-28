@@ -1,9 +1,9 @@
-﻿@using $rootnamespace$.Helpers
+﻿@using $rootnamespace$.Core.Model
 @if (Request.IsAuthenticated)
 {
     <div class="btn-group pull-right">
         <a class="btn dropdown-toggle" data-toggle="dropdown" href="#"><i class="">
-            <img src="@Url.Content(ViewBag.TinyProfileUrl)" class="img-round" />
+            <img width="14" src="@Url.ProfilePicture((string)ViewBag.CurrentUser.PhotoId, "Tiny", (Gender)ViewBag.CurrentUser.Gender)" class="img-round" />
         </i> @User.Identity.Name <span class="caret"></span></a>
         <ul class="dropdown-menu">
             <li><a href="@Url.Action("Index", "Account")">Profile</a></li>          

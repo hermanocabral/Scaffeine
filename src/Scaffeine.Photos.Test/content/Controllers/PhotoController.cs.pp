@@ -7,7 +7,7 @@ namespace $rootnamespace$.Controllers
     using $rootnamespace$.Photos;
     using $rootnamespace$.Photos.Models;
 
-    public partial class PhotoController : Controller
+    public partial class PhotoController : BaseController
     {
         public ActionResult Index()
         {

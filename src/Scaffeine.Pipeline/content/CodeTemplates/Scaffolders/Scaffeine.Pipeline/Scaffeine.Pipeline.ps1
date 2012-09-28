@@ -18,7 +18,6 @@ foreach ($tml in $templates){
 		"FilterActivator", `
 		"FilterChain", `
 		"ICoreProcessor", `
-		"IPipelineContext", `
 		"PipelineFactory", `
 		"PipelineManager")
 
