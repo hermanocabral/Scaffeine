@@ -1,7 +1,6 @@
 <#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
 <#@ Output Extension="cs" #>
-
-namespace <#= Model.Namespace #>.Core.Configuration
+namespace <#= Model.Namespace #>.Core.Configuration.Friendships
 {
     public class FriendshipSettings
     {

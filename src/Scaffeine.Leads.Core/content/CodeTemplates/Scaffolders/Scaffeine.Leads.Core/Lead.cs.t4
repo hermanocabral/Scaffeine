@@ -4,7 +4,7 @@ namespace <#= Model.Namespace #>.Core.Model
 {
 	using System;
 
-    public partial class Lead : PersistentEntity
+    public partial class Lead : DomainObject
     {
         public string IPAddress { get; set; }
 

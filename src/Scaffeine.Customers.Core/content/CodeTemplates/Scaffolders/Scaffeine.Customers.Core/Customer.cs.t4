@@ -2,7 +2,7 @@
 <#@ Output Extension="cs" #>
 namespace <#= Model.Namespace #>.Core.Model
 {
-    public partial class Customer : PersistentEntity
+    public partial class Customer : DomainObject
     {
         public string EmailAddress { get; set; }
 

@@ -5,7 +5,7 @@ namespace <#= Model.Namespace #>.Core.Model
     using System.ComponentModel.DataAnnotations.Schema;
 	using Newtonsoft.Json;
 
-    public partial class OrderLineItem : PersistentEntity
+    public partial class OrderLineItem : DomainObject
     {
         public OrderStatus OrderStatus { get; set; }
 

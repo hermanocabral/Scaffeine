@@ -4,4 +4,4 @@ add-project $mlmProjectName | with-reference "System.Configuration,System.Runtim
 
 get-project | with-reference $mlmProjectName
 
-scaffold Scaffeine.MLM
+scaffold Scaffeine.Organizations.MLM

@@ -7,7 +7,7 @@ namespace <#= Model.Namespace #>.Core.Model
 	using System.Runtime.Serialization;
 
     [DisplayColumn("Name")]
-    public partial class Product : PersistentEntity
+    public partial class Product : DomainObject
     {
         [Required]
         public string Name { get; set; }

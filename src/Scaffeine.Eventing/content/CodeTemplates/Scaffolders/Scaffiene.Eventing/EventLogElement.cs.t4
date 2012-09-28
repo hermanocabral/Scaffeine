@@ -2,7 +2,7 @@
 <#@ Output Extension="cs" #>
 using System.Configuration;
 
-namespace <#= Model.Namespace #>.Core.Configuration
+namespace <#= Model.Namespace #>.Core.Configuration.Eventing
 {
     public partial class EventLogElement : ConfigurationElement
     {

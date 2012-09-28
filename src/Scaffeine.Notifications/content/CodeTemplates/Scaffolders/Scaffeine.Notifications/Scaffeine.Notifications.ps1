@@ -21,8 +21,8 @@ Add-Template $coreProjectName $outputPath "IDataContext" -Force:$Force $Template
 $outputPath = "Interfaces\Service\IService"
 Add-Template $coreProjectName $outputPath "IService" -Force:$Force $TemplateFolders
 
-$outputPath = "Model\PersistentEntity"
-Add-Template $coreProjectName $outputPath "PersistentEntity" -Force:$Force $TemplateFolders
+$outputPath = "Model\DomainObject"
+Add-Template $coreProjectName $outputPath "DomainObject" -Force:$Force $TemplateFolders
 
 $outputPath = "Interfaces\Validation\IValidationContainer"
 Add-Template $coreProjectName $outputPath "IValidationContainer" -Force:$Force $TemplateFolders

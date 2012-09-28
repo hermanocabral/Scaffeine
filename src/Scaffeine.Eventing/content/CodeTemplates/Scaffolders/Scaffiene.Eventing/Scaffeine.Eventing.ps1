@@ -7,7 +7,7 @@ param(
 )
 
 
-$outputPath = "Configuration\EventLogElement"
+$outputPath = "Configuration\Eventing\EventLogElement"
 Add-Template $coreProjectName $outputPath "EventLogElement" -Force:$Force $TemplateFolders
 
 $outputPath = "Infrastructure\Eventing\BootStrapper"

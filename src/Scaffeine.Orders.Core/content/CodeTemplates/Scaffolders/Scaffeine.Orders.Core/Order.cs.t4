@@ -7,7 +7,7 @@ namespace <#= Model.Namespace #>.Core.Model
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public sealed partial class Order : PersistentEntity
+    public sealed partial class Order : DomainObject
     {
 		public Order()
         {
