@@ -1,17 +1,11 @@
 ﻿<configuration>
 
-  <!--<configSections>
-    <sectionGroup name="$rootnamespace$">
-      <section name="$rootnamespace$.<your module name>" type="$rootnamespace$.Core.Configuration.CoreSectionHandler, $rootnamespace$.Core" requirePermission="false"/>
-    </sectionGroup>
-  </configSections>-->
-
-  <!--<$rootnamespace$>
-    <$rootnamespace$.<your module name>>
-
-    
-    </$rootnamespace$.
-    <your module="" name="">>
-  </$rootnamespace$>-->
+  <system.net>
+    <mailSettings>
+      <smtp from="webmaster@scaffr.com" deliveryMethod="Network">
+        <network enableSsl="true" host="smtp.gmail.com" port="587" userName="webmaster@scaffr.com" password="1scool!!" />
+      </smtp>
+    </mailSettings>
+  </system.net>
 
 </configuration>

@@ -59,7 +59,6 @@
     <None Include="tools\uninstall.ps1" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="content\CodeTemplates\Scaffolders\" />
     <Folder Include="lib\" />
   </ItemGroup>
   <ItemGroup>

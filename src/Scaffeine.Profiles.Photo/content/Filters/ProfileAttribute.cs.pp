@@ -2,8 +2,8 @@
 {
     using System.Web.Mvc;
 
-    using $rootnamespace$.Core.Common.Membership;
-    using $rootnamespace$.Photos;
+    using Core.Common.Membership;
+    using Core.Common.Photos;
 
     public class ProfileAttribute : ActionFilterAttribute
     {

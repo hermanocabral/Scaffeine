@@ -32,7 +32,7 @@
                 {
                     case AuthenticationStatus.Authenticated:
 
-                        _authenticationService.SetAuthCookie(model.UserName);
+                        _authenticationService.SetAuthCookie(model.UserName, model.RememberMe);
 
                         string redirectUrl = _authenticationService.GetRedirectUrl(model.UserName, false);
                         
@@ -40,7 +40,7 @@
 
                     case AuthenticationStatus.ResetPassword:
 
-                        _authenticationService.SetAuthCookie(model.UserName);
+                        _authenticationService.SetAuthCookie(model.UserName, model.RememberMe);
                         
                         this._userService.SaveOrUpdate(user);
 

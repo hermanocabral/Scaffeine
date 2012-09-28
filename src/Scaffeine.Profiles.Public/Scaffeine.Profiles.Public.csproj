@@ -50,7 +50,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />
-    <None Include="content\Controllers\User\UserController.cs.pp" />
     <None Include="content\Views\User\Index.cshtml.pp" />
     <None Include="Package.nuspec">
       <SubType>Designer</SubType>
@@ -61,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="content\CodeTemplates\Scaffolders\" />
+    <Folder Include="content\Controllers\" />
     <Folder Include="lib\" />
   </ItemGroup>
   <ItemGroup>

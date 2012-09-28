@@ -2,10 +2,9 @@ namespace $rootnamespace$.Controllers.Account
 {
     using System.Web;
     using System.Web.Mvc;
+    using Core.Common.Photos;
 
-    using $rootnamespace$.Core.Common.Membership;
-    using $rootnamespace$.Photos;
-    using $rootnamespace$.Photos.Models;
+    using Core.Common.Membership;
 
     public partial class AccountController
     {

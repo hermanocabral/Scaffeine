@@ -1,11 +1,10 @@
-﻿using System;
-using $rootnamespace$.Core.Interfaces.Eventing;
-using $rootnamespace$.Models;
-using SignalR;
-
-namespace $rootnamespace$.Handlers
+﻿namespace $rootnamespace$.Handlers
 {
-    public partial class NotificationHandler : Handles<UserNotification>
+    using Core.Interfaces.Eventing;
+    using Models;
+    using SignalR;
+
+    public partial class NotificationHandler : IHandles<UserNotification>
     {
         private static object mLock = new object();
         private static NotificationHandler _instance;

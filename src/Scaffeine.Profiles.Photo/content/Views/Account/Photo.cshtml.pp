@@ -1,9 +1,11 @@
-﻿@{
+﻿@model $rootnamespace$.Core.Common.Photos.Photo
+
+@{
     ViewBag.Title = "Photo";
     Layout = "~/Views/Shared/_Folder.cshtml";
     ViewBag.SitemapProvider = "Account";
 }
-@model $rootnamespace$.Photos.Models.Photo
+
 <div class="page-header">
     <h1>
         Your Profile Photo</h1>

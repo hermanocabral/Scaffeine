@@ -26,6 +26,8 @@ namespace <#= Model.Namespace #>.Core.Model
 
         public int ProductId { get; set; }
 
+        [JsonIgnore]
+        [ForeignKey("ProductId")]
         public virtual Product Product { get; set; }
 
         public int OrderId { get; set; }

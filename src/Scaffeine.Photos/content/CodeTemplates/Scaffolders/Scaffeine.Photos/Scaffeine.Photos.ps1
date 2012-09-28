@@ -7,34 +7,35 @@ param(
 )
 
  $templates = 
- 	@("ImageHelper")
-
-foreach ($tml in $templates){
-	$outputPath = "Helpers\$tml"
-	add-template $photosProjectName $outputPath $tml -Force:$Force $TemplateFolders
-}
-
- $templates = 
- 	@("Photo", `
+ 	@("ImageHelper", `
+		"Photo", `
 		"PhotoList", `
+		"PhotoManager", `
+		"PhotoProvider", `
 		"PhotoRequest", `
+		"PhotoResize", `
 		"PhotoThumbnail")
 
 foreach ($tml in $templates){
-	$outputPath = "Models\$tml"
-	add-template $photosProjectName $outputPath $tml -Force:$Force $TemplateFolders
+	$outputPath = "Common\Photos\$tml"
+	add-template $coreProjectName $outputPath $tml -Force:$Force $TemplateFolders
 }
 
  $templates = 
- 	@(	"PhotoManager", `
-		"PhotoProvider", `
+ 	@(	"PhotoConfigurationElement", `
 		"PhotoProviderCollection", `
-		"PhotoResize", `
 		"PhotoResizeCollection", `
-		"PhotoResizeSettings", `
-		"PhotoSection")
+		"PhotoResizeElement")
 
 foreach ($tml in $templates){
-	$outputPath = $tml
-	add-template $photosProjectName $outputPath $tml -Force:$Force $TemplateFolders
+	$outputPath = "Configuration\Photos\$tml"
+	add-template $coreProjectName $outputPath $tml -Force:$Force $TemplateFolders
+}
+
+ $templates = 
+ 	@(	"CoreSection.Photos")
+
+foreach ($tml in $templates){
+	$outputPath = "Configuration\$tml"
+	add-template $coreProjectName $outputPath $tml -Force:$Force $TemplateFolders
 }

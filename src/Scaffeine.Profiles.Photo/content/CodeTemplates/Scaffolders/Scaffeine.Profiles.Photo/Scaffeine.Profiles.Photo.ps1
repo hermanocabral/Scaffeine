@@ -14,4 +14,4 @@ foreach ($tml in $templates){
 	add-template $coreProjectName $outputPath $tml -Force:$Force $TemplateFolders
 }
 
-Add-CodeToMethod (Get-Project).Name "\" "Global.asax.cs" "MvcApplication" "RegisterGlobalFilters" "filters.Add(new Filters.ProfileAttribute());"
+Add-CodeToMethod (Get-Project).Name "\App_Start\" "FilterConfig.cs" "FilterConfig" "RegisterGlobalFilters" "filters.Add(new Filters.ProfileAttribute());"

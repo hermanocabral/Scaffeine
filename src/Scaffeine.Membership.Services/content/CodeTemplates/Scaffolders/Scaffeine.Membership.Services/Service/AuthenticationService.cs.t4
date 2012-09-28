@@ -6,8 +6,9 @@ namespace <#= Model.Namespace #>.Service
     using System.Linq;
     using System.Web;
     using System.Web.Security;
+    using System.IdentityModel.Services;
 
-    using <#= Model.Namespace #>.Core.Interfaces.Service;
+    using Core.Interfaces.Service;
 
     public class AuthenticationService : IAuthenticationService
     {
@@ -27,14 +28,9 @@ namespace <#= Model.Namespace #>.Service
             if (cookie != null) cookie.Expires = DateTime.Now.AddDays(-1);
         }
 
-        public void SetAuthCookie(string username)
+        public void SetAuthCookie(string username, bool persisted)
         {
-            var ticket = new FormsAuthenticationTicket(1, username, DateTime.Now, DateTime.Now.AddMinutes(15), false, "a|b");
-
-            string encodedTicket = FormsAuthentication.Encrypt(ticket);
-
-            var cookie = new HttpCookie(FormsAuthentication.FormsCookieName, encodedTicket);
-            HttpContext.Current.Response.Cookies.Add(cookie);
+            FormsAuthentication.SetAuthCookie(username, persisted);
         }
 
         public void SetImpersonationAuthCookie(int impersonatorId)
@@ -50,9 +46,8 @@ namespace <#= Model.Namespace #>.Service
 
         public void SignOut()
         {
-            string cookieName = FormsAuthentication.FormsCookieName;
-            HttpCookie cookie = HttpContext.Current.Response.Cookies[cookieName];
-            if (cookie != null) cookie.Expires = DateTime.Now.AddDays(-1);
+            FormsAuthentication.SignOut();
+            FederatedAuthentication.SessionAuthenticationModule.SignOut();
         }
 
         public void RedirectToLoginPage()

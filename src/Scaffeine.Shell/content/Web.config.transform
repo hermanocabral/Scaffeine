@@ -8,11 +8,5 @@
     <machineKey validationKey="3E6C3F5B1A2FCD268BA971B4DB9EE9768000B6C7E22A7C0FD679857E3E799DEC68042E520E7B3A13B785C785D7B7B1C9103F4074720C547B94A1F47A92262279" decryptionKey="61D3A8A5897D60D56EE70F3A6D5DE8C8474E82177AFC980262EF983DBE46FE01" validation="SHA1" decryption="AES" />
    
   </system.web>
-  <system.net>
-    <mailSettings>
-      <smtp from="webmaster@scaffr.com" deliveryMethod="Network">
-        <network enableSsl="true" host="smtp.gmail.com" port="587" userName="webmaster@scaffr.com" password="1scool!!" />
-      </smtp>
-    </mailSettings>
-  </system.net>
+ 
 </configuration>

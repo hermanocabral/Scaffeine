@@ -46,15 +46,14 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Core\UserPrincipal.cs.t4" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Core\Person.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Core\Gender.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Core\Role.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Core\Scaffeine.Membership.Core.ps1" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Core\User.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Core\User.Membership.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Core\UserEmail.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Core\UserRole.cs.t4" />
     <None Include="Package.nuspec" />
@@ -62,9 +61,11 @@
     <None Include="tools\install.ps1" />
     <None Include="tools\uninstall.ps1" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Content Include="NuGet.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
