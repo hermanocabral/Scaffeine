@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{7D927932-5504-4082-92ED-123AC5E86FF0}</ProjectGuid>
+    <ProjectGuid>{8B417018-54C3-42AE-99E9-C6C56EA57A50}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Scaffeine.Membership</RootNamespace>
-    <AssemblyName>Scaffeine.Membership</AssemblyName>
+    <RootNamespace>Scaffeine.Inbox.Services</RootNamespace>
+    <AssemblyName>Scaffeine.Inbox.Services</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
@@ -46,21 +46,24 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Services\Interfaces\IUserService.Membership.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Services\Common\Membership\AuthenticationStatus.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Services\Common\Membership\ChangePasswordStatus.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Services\Common\Membership\CreateUserStatus.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Services\Service\UserService.Membership.cs.t4" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Services\MembershipDataSeeder.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Services\Scaffeine.Membership.Services.ps1" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Inbox.Services\Data\MessageRepository.Custom.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Inbox.Services\InboxDataSeeder.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Inbox.Services\Interfaces\IMessageRepository.Custom.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Inbox.Services\Interfaces\IMessageService.Custom.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Inbox.Services\Scaffeine.Inbox.Services.ps1" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Inbox.Services\Services\MessageService.Custom.cs.t4" />
     <None Include="Package.nuspec" />
+    <None Include="tools\init.ps1" />
     <None Include="tools\install.ps1" />
+    <None Include="tools\uninstall.ps1" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="lib\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="NuGet.exe" />
   </ItemGroup>
