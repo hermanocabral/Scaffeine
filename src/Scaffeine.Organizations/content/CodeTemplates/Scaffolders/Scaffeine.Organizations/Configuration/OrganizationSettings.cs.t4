@@ -12,8 +12,7 @@ namespace <#= Model.Namespace #>.Core.Configuration.Organizations
             get { return (ProviderSettingsCollection)base["providers"]; }
         }
 
-        [StringValidator(MinLength = 1)]
-        [ConfigurationProperty("defaultProvider", DefaultValue = "")]
+        [ConfigurationProperty("defaultProvider")]
         public string DefaultProvider
         {
             get { return (string)base["defaultProvider"]; }

@@ -2,9 +2,9 @@
 
   <$rootnamespace$>
     <$rootnamespace$.Core>
-      <organizations>
+      <organization>
         <providers></providers>
-      </organizations>
+      </organization>
     </$rootnamespace$.Core>
   </$rootnamespace$>
 
