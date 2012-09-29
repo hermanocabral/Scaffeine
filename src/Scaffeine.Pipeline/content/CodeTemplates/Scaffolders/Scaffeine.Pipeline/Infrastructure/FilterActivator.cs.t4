@@ -1,16 +1,14 @@
 ﻿<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
 <#@ Output Extension="cs" #>
-using System;
-using System.Collections.Generic;
-using System.Collections.Specialized;
-using System.Configuration;
-
 namespace <#= Model.Namespace #>.Core.Infrastructure.Pipeline
 {
+    using System;
+    using System.Collections.Specialized;
+    using System.Configuration;
     /// <summary>
     /// The pipeline activator.
     /// </summary>
-    public static class FilterActivator<T> where T : IPipelineContext
+    public static class FilterActivator<T>
     {
         public static void InstantiateFilters(
             ProviderSettingsCollection settings, FilterChain<T> sections)

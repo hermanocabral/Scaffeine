@@ -2,7 +2,7 @@
 
 namespace $rootnamespace$.Controllers
 {
-    public partial class IntegrationsController : Controller
+    public partial class IntegrationsController : BaseController
     {
         //
         // GET: /Integrations/

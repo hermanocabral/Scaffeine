@@ -6,4 +6,5 @@ param(
 	[switch]$Force = $false
 )
 
-Add-CodeToMethod (Get-Project).Name "\App_Start\" "FilterConfig.cs" "FilterConfig" "RegisterGlobalFilters" "filters.Add(new Filters.ForcedUserActionsFilterAttribute());"
+Add-CodeToMethod $baseProject.Name "\Filters\" "UserContextFilter.cs" "UserContextFilter" "RegisterFilters" "filters.Add(new UserContextFilters.ChangePasswordRequired());"
+

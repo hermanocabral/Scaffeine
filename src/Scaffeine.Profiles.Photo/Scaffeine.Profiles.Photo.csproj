@@ -49,7 +49,7 @@
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Profiles.Photo\Scaffeine.Profiles.Photo.ps1" />
     <None Include="content\Controllers\Account\AccountController.Photo.cs.pp" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Profiles.Photo\User.Photo.cs.t4" />
-    <None Include="content\Filters\ProfileAttribute.cs.pp" />
+    <None Include="content\Helpers\UrlHelpers.ProfilePicture.cs.pp" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

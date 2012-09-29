@@ -2,7 +2,7 @@
 <#@ Output Extension="cs" #>
 namespace <#= Model.Namespace #>.Core.Model
 {
-	public partial class Friendship : PersistentEntity
+	public partial class Friendship : DomainObject
     {
         public virtual User User { get; set; }
         public int UserId { get; set; }

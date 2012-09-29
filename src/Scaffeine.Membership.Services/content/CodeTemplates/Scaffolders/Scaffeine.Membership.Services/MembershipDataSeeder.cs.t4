@@ -6,7 +6,7 @@ namespace <#= Model.Namespace #>.Data.Seeders
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    using <#= Model.Namespace #>.Core.Model;
+    using Core.Model;
 
     public partial class MembershipDataSeeder
     {
@@ -31,7 +31,8 @@ namespace <#= Model.Namespace #>.Data.Seeders
                             FirstName = "John",
                             LastName = "Doe",
                             Password = "admin",
-                            IsApproved = true
+                            IsApproved = true,							
+                            Gender = Gender.Male
                         }
                 }.ForEach(u => context.Users.AddOrUpdate(u));
 

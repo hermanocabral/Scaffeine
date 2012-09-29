@@ -1,12 +1,11 @@
 ﻿<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
 <#@ Output Extension="cs" #>
-namespace <#= Model.Namespace #>.MLM
+namespace <#= Model.Namespace #>.Core.Common.Organizations.Providers
 {
     using System;
     using System.Collections.Generic;
-
-    using <#= Model.Namespace #>.Core.Model;
-    using <#= Model.Namespace #>.Organizations;
+    using Model;
+    using Organizations;
 
     public class MLMProvider : OrganizationProvider
     {

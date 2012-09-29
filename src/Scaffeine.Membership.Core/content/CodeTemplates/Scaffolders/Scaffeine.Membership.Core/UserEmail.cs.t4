@@ -5,7 +5,7 @@ namespace <#= Model.Namespace #>.Core.Model
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
 
-    public class UserEmail : PersistentEntity
+    public class UserEmail : DomainObject
     {
         [DataType(DataType.EmailAddress)]
         [Required]

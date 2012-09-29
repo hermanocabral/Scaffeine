@@ -4,21 +4,20 @@ namespace $rootnamespace$.Controllers.Account
     using System.Web.Mvc;
     using Core.Common.Photos;
 
-    using Core.Common.Membership;
-
     public partial class AccountController
     {
         [HttpGet]
         public ActionResult Photo()
         {
+
             // use this http://blueimp.github.com/jQuery-File-Upload/
-            if (!string.IsNullOrWhiteSpace(UserPrincipal.CurrentUser.PhotoId))
+            if (!string.IsNullOrWhiteSpace(CurrentUser.PhotoId))
             {
-                var photo = PhotoManager.Provider.GetPhotoResize(UserPrincipal.CurrentUser.PhotoId, "Medium");
+                var photo = PhotoManager.Provider.GetPhotoResize(CurrentUser.PhotoId, "Medium");
                 return View(photo);
             }
 
-            return this.View(new Photo { Url = Url.Content("~/Content/Medium/Male.jpg") });
+            return View(new Photo { Url = Url.Content("~/Content/Medium/Male.jpg") });
         }
 
         [HttpPost]
@@ -28,10 +27,10 @@ namespace $rootnamespace$.Controllers.Account
 
             var photo = PhotoManager.Provider.SavePhotoForAllSizes(request, true);
 
-            var user = UserPrincipal.CurrentUser;
+            var user = CurrentUser;
             
             user.PhotoId = photo[0].Id;
-            this._userService.SaveOrUpdate(user);
+            _userService.SaveOrUpdate(user);
 
             TempData["Success"] = "Profile photo was successfully updated";
 

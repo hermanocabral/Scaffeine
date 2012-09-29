@@ -11,7 +11,7 @@ namespace <#= Model.Namespace #>.Core.Model
 
     [DataContract]
     [DisplayColumn("RoleName")]
-    public partial class Role : PersistentEntity
+    public partial class Role : DomainObject
     {
         [Required, DataMember]
         public virtual string RoleName { get; set; }

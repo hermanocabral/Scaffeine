@@ -1,12 +1,11 @@
 namespace $rootnamespace$.Controllers.Account
 {
     using System.Web.Mvc;
-
     using Core.Common.Membership;
     using Models;
 
     public partial class AccountController
-    {      
+    {              
 		public ActionResult Settings()
         {
             ViewBag.PasswordLength = System.Web.Security.Membership.MinRequiredPasswordLength;
@@ -18,7 +17,7 @@ namespace $rootnamespace$.Controllers.Account
         {
             if (ModelState.IsValid)
             {
-                var status = _userService.ChangePassword(UserPrincipal.CurrentUser, model.OldPassword, model.NewPassword);
+                var status = _userService.ChangePassword(CurrentUser, model.OldPassword, model.NewPassword);
 
                 switch (status)
                 {

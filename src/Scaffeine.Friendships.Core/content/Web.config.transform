@@ -2,9 +2,7 @@
 
   <$rootnamespace$>
     <$rootnamespace$.Core>
-      <organization>
-        <providers></providers>
-      </organization>
+      <friendships allowOneWayFriendships="" requireApproval="" />
     </$rootnamespace$.Core>
   </$rootnamespace$>
 

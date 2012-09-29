@@ -1,8 +1,9 @@
-﻿<table class="table">
+﻿@using $rootnamespace$.Core.Model
+<table class="table">
   <tr>
     <td style="width: 50px; border-top: 0">
       <a href="@Url.Action("Photo", "Account")" class="thumbnail">
-        <img style="width: 50px" src="@Url.Content(ViewBag.SmallProfileUrl)" class="img-rounded" />
+        <img style="width: 50px" src="@Url.ProfilePicture((string)ViewBag.CurrentUser.PhotoId, "Small", (Gender)ViewBag.CurrentUser.Gender)" class="img-rounded" />
       </a>
     </td>
     <td style="border-top: 0">

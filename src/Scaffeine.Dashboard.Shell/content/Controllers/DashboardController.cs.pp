@@ -2,7 +2,7 @@
 {
     using System.Web.Mvc;
 
-    public partial class DashboardController : Controller
+    public partial class DashboardController : BaseController
     {
         [HttpGet]
         public ActionResult Index()

@@ -15,9 +15,8 @@
     </releaseNotes>
     <copyright>ScaffR, 2012</copyright>
     <tags></tags>
-    <dependencies>
-      <dependency id="Scaffeine.Shell"  />
-      <dependency id="T4Scaffolding" />
+    <dependencies>      
+      <dependency id="ScaffR.Users.Core"  />
     </dependencies>
   </metadata>
   <files>

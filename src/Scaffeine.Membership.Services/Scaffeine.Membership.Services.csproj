@@ -51,7 +51,6 @@
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Services\Common\Membership\AuthenticationStatus.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Services\Common\Membership\ChangePasswordStatus.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Services\Common\Membership\CreateUserStatus.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Services\Common\Membership\UserPrincipal.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Services\Service\AuthenticationService.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Services\Service\UserService.Membership.cs.t4" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -61,9 +60,7 @@
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Services\MembershipDataSeeder.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Services\Scaffeine.Membership.Services.ps1" />
     <None Include="Package.nuspec" />
-    <None Include="tools\init.ps1" />
     <None Include="tools\install.ps1" />
-    <None Include="tools\uninstall.ps1" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

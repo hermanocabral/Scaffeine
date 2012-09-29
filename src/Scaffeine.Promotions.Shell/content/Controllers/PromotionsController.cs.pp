@@ -2,7 +2,7 @@
 
 namespace $rootnamespace$.Controllers
 {
-    public partial class PromotionsController : Controller
+    public partial class PromotionsController : BaseController
     {
         // GET: /Promotions/
         public ActionResult Index()

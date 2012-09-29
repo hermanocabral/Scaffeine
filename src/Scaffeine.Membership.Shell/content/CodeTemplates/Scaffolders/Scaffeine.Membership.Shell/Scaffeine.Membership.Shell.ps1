@@ -16,4 +16,4 @@ Add-CodeToMethod (Get-Project).Name "\App_Start\" "FilterConfig.cs" "FilterConfi
 
 Add-CodeToMethod $baseProject.Name "\App_Start\" "NinjectWebCommon.cs" "NinjectWebCommon" "RegisterServices" "kernel.Bind<IAuthenticationService>().To<AuthenticationService>().InRequestScope();"
 
-
+Add-CodeToMethod (Get-Project).Name "\App_Start\" "FilterConfig.cs" "FilterConfig" "RegisterGlobalFilters" "filters.Add(new UserContextFilter());"

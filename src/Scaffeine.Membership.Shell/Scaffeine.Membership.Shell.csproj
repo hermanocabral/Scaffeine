@@ -47,6 +47,8 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="content\Controllers\Home\HomeController.Start.cs.pp" />
+    <None Include="content\Filters\UserContextFilter.cs.pp" />
+    <None Include="content\Filters\UserContextFilters\SetProfileValues.cs.pp" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,8 +1,6 @@
 <#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
 <#@ Output Extension="cs" #>
-using System.Configuration;
-
-namespace <#= Model.Namespace #>.Core.Configuration
+namespace <#= Model.Namespace #>.Core.Configuration.Friendships
 {
     using System.Configuration;
 

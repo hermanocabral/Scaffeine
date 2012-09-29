@@ -2,7 +2,7 @@
 {
     using System.Web.Mvc;
 
-    public class ReportsController : Controller
+    public class ReportsController : BaseController
     {
         public ActionResult Index()
         {

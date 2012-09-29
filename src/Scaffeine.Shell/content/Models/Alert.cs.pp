@@ -21,11 +21,11 @@ namespace $rootnamespace$.Models
     {
         NotificationType NotificationType { get; }
         NotificationAction NotificationAction { get; }
-        PersistentEntity Entity { get; }
+        DomainObject Entity { get; }
         string Message { get; }
     }
 
-    public partial class Alert<T> : IAlert where T: PersistentEntity
+    public partial class Alert<T> : IAlert where T: DomainObject
     {
         private readonly T _entity;
         private readonly NotificationType _notificationType;
@@ -62,7 +62,7 @@ namespace $rootnamespace$.Models
             get { return _notificationAction; }
         }
 
-        public PersistentEntity Entity
+        public DomainObject Entity
         {
             get { return _entity; }            
         }

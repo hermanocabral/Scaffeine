@@ -8,7 +8,7 @@ using System.Runtime.Serialization;
 namespace <#= Model.Namespace #>.Core.Model
 {
     [DisplayColumn("Name")]
-    public class Department : PersistentEntity
+    public class Department : DomainObject
     {
         [DataMember,Required]
         public string Name { get; set; }

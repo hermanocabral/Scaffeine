@@ -50,7 +50,6 @@
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Pipeline\Infrastructure\FilterActivator.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Pipeline\Infrastructure\FilterChain.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Pipeline\Infrastructure\ICoreProcessor.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Pipeline\Infrastructure\IPipelineContext.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Pipeline\Infrastructure\PipelineFactory.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Pipeline\Infrastructure\PipelineManager.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Pipeline\Configuration\PipelineConfigurationElement.cs.t4" />

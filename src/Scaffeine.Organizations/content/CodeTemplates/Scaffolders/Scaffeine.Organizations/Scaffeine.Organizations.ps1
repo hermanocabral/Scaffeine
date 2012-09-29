@@ -6,13 +6,26 @@ param(
 	[switch]$Force = $false
 )
 
- $templates = 
- 	@("OrganizationsManager", `
-		"OrganizationProvider", `
-		"OrganizationProviderCollection", `
-		"OrganizationsSection")
+$templates = 
+ 	@("CoreSection.Organizations")
 
 foreach ($tml in $templates){
-	$outputPath = $tml
-	add-template $organizationsProjectName $outputPath $tml -Force:$Force $TemplateFolders
+	$outputPath = "Configuration\$tml"
+	add-template $coreProjectName $outputPath $tml -Force:$Force $TemplateFolders
+}
+
+$templates = 
+ 	@("OrganizationSettings","OrganizationProviderCollection")
+
+foreach ($tml in $templates){
+	$outputPath = "Configuration\Organizations\$tml"
+	add-template $coreProjectName $outputPath $tml -Force:$Force $TemplateFolders
+}
+
+$templates = 
+ 	@("OrganizationProvider","OrganizationManager")
+
+foreach ($tml in $templates){
+	$outputPath = "Common\Organizations\$tml"
+	add-template $coreProjectName $outputPath $tml -Force:$Force $TemplateFolders
 }
