@@ -17,8 +17,7 @@ foreach ($tml in $templates){
 }
 
  $templates = 
- 	@("IAuthenticationService", `
-		"IUserService.Membership")
+ 	@("IUserService.Membership")
 
 foreach ($tml in $templates){
 	$outputPath = "Interfaces\Service\$tml"
@@ -26,8 +25,7 @@ foreach ($tml in $templates){
 }
 
  $templates = 
- 	@("AuthenticationService", `
-		"UserService.Membership")
+ 	@("UserService.Membership")
 
 foreach ($tml in $templates){
 	$outputPath = $tml
