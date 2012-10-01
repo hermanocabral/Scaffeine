@@ -6,6 +6,8 @@ namespace <#= Model.Namespace #>.Service
     using Core.Configuration;
     using System;
 	using System.Collections.Generic;
+	using Core.Configuration.Friendships;
+	using System.Linq;
 
     public partial class FriendshipService
     {
@@ -55,6 +57,11 @@ namespace <#= Model.Namespace #>.Service
         public IEnumerable<Friendship> GetFriends(int userId)
         {
             return Find(f => f.UserId == userId && f.InvitationStatus == InvitationStatus.Approved);
+        }
+
+		public bool FriendshipExists(int userId1, int userid2)
+        {
+            return Repository.Find(x => x.UserId == userId1 && x.FriendId == userid2).Any();
         }
     }
 }

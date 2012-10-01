@@ -1,14 +1,14 @@
 ﻿namespace $rootnamespace$.Controllers.Users
 {
-    using System.Web.Mvc;
-
-    using $rootnamespace$.Filters;
+    using Core.Interfaces.Service;
 
     public partial class UserController : BaseController
     {
-        public UserController()
+        private readonly IUserService _service;
+
+        protected UserController(IUserService service)
         {
-            
+            _service = service;
         }
     }
 }
