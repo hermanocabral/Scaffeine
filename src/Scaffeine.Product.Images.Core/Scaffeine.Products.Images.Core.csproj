@@ -47,6 +47,7 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Products.Images.Core\Product.Image.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Products.Images.Core\ProductImage.cs.t4" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="content\App.config.transform">
       <SubType>Designer</SubType>
