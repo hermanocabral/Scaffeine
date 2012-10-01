@@ -21,6 +21,8 @@
       <dependency id="Scaffeine.Membership.ForgotPassword"/>
       <dependency id="Scaffeine.Membership.ChangePassword"/>
       <dependency id="Scaffeine.Membership.Welcome"/>
+      <dependency id="Scaffeine.Membership.Profiles"/>
+      <dependency id="Scaffeine.Membership.Photo"/>
     </dependencies>
   </metadata>
   <files>

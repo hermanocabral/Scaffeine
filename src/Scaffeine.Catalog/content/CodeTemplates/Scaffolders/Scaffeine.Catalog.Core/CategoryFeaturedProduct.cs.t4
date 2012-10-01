@@ -1,0 +1,13 @@
+namespace ConsoleApplication27.Core.Model
+{
+    using System;
+
+    public partial class CategoryFeaturedProduct : DomainObject
+    {        
+        public int CategoryId { get; set; }
+        public int ProductId { get; set; }
+
+        public DateTime? StartTime { get; set; }
+        public DateTime? EndTime { get; set; }
+    }
+}

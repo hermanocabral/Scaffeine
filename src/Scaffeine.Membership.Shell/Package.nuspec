@@ -15,10 +15,10 @@
     </releaseNotes>
     <copyright>ScaffR, 2012</copyright>
     <tags></tags>
-    <dependencies>
+    <dependencies>      
       <dependency id="Scaffeine.Membership.Services" />
       <dependency id="Scaffeine.Pipeline" />
-      <dependency id="ScaffR.MVC.Shell"/>
+      <dependency id="Scaffeine.Shell"/>
       <dependency id="ScaffR.MvcMailer"/>
     </dependencies>
   </metadata>

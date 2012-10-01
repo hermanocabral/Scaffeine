@@ -2,38 +2,18 @@
 <#@ Output Extension="cs" #>
 namespace <#= Model.Namespace #>.Core.Model
 {
-    using System.ComponentModel.DataAnnotations.Schema;
-	using Newtonsoft.Json;
-
     public partial class OrderLineItem : DomainObject
     {
         public OrderStatus OrderStatus { get; set; }
 
-        [NotMapped]
-        public double TotalPrice
-        {
-            get
-            {
-                if (Product != null)
-                {
-                    return Product.Price * Quantity;
-                }
-                return 0;
-            }
-        }
-
         public int Quantity { get; set; }
+
+        public decimal SalesPrice { get; set; }
+
+        public decimal SalesTax { get; set; }
 
         public int ProductId { get; set; }
 
-        [JsonIgnore]
-        [ForeignKey("ProductId")]
-        public virtual Product Product { get; set; }
-
         public int OrderId { get; set; }
-
-        [ForeignKey("OrderId")]
-		[JsonIgnore]
-        public virtual Order Order { get; set; }
     }
 }

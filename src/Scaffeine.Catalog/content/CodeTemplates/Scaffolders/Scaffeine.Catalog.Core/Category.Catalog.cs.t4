@@ -1,0 +1,18 @@
+﻿namespace ConsoleApplication27.Core.Model
+{
+    using System.Collections.Generic;
+    using System.Collections.ObjectModel;
+    using System.ComponentModel.DataAnnotations.Schema;
+
+    public partial class Category
+    {
+        private ICollection<CategoryFeaturedProduct> _featuredProducts;
+
+        [ForeignKey("Id")]
+        public virtual ICollection<CategoryFeaturedProduct> FeaturedProducts
+        {
+            get { return _featuredProducts ?? (_featuredProducts = new Collection<CategoryFeaturedProduct>()); }
+            set { _featuredProducts = value; }
+        }
+    }
+}
