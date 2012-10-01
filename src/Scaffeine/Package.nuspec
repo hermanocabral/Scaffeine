@@ -20,8 +20,6 @@
       <dependency id="Scaffeine.Dashboard"/>
       <dependency id="Scaffeine.System"/>
       <dependency id="Scaffeine.ContactUs"/>
-      <dependency id="Scaffeine.Profiles"/>
-      <dependency id="Scaffeine.Profiles.Photo"/>
       <dependency id="Scaffeine.Membership.Suite"/>     
     </dependencies>
   </metadata>

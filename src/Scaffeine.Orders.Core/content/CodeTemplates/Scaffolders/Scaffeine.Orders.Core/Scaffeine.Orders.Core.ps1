@@ -15,3 +15,12 @@ foreach ($tml in $templates){
 	$outputPath = "Model\$tml"
 	Add-Domain $outputPath $tml -Force:$Force $TemplateFolders
 }
+
+ $templates = 
+ 	@(	"OrderExtensions", `
+		"OrderLineItemExtensions")
+
+foreach ($tml in $templates){
+	$outputPath = "Common\Ordering\Extensions\$tml"
+	Add-Template $coreProjectName $outputPath $tml -Force:$Force $TemplateFolders
+}

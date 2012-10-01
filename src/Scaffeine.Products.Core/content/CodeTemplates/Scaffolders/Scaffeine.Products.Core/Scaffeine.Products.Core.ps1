@@ -6,7 +6,7 @@ param(
 	[switch]$Force = $false
 )
 
- $templates = 
+$templates = 
  	@("Product")
 
 foreach ($tml in $templates){

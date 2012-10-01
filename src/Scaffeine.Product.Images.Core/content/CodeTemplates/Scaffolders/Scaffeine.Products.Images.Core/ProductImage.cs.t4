@@ -1,0 +1,11 @@
+namespace ConsoleApplication27.Core.Model
+{
+    public class ProductImage : DomainObject
+    {
+        public int ProductId { get; set; }        
+
+        public string Title { get; set; }
+
+        public bool IsDefault { get; set; }
+    }
+}

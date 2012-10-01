@@ -1,0 +1,18 @@
+﻿<configuration>
+
+  <$rootnamespace$>
+    <$rootnamespace$.Core>
+      <photos>
+        <PhotoResize>
+          <add name="Product-Thumbnail" width="50" height="50" />
+          <add name="Product-Search" width="90" height="90" />
+          <add name="Product-Medium" width="200" height="200" />
+          <add name="Product-Large" width="400" height="400" />
+        </PhotoResize>
+        <providers>
+        </providers>
+      </photos>
+    </$rootnamespace$.Core>
+  </$rootnamespace$>
+
+</configuration>

@@ -59,6 +59,9 @@
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Photos\Configuration\PhotoResizeCollection.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Photos\Configuration\PhotoResizeElement.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Photos\Configuration\CoreSection.Photos.cs.t4" />
+    <None Include="content\App.config.transform">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="content\Web.config.transform">
       <SubType>Designer</SubType>
     </None>
