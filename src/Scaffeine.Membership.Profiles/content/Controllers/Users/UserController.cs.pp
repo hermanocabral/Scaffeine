@@ -6,7 +6,7 @@
     {
         private readonly IUserService _service;
 
-        protected UserController(IUserService service)
+        public UserController(IUserService service)
         {
             _service = service;
         }
