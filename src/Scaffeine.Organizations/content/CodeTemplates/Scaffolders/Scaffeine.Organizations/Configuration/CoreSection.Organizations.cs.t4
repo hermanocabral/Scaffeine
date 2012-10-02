@@ -7,12 +7,12 @@ namespace <#= Model.Namespace #>.Core.Configuration
 
     public partial class CoreSection
     {
-        [ConfigurationProperty("organization", IsRequired = true)]
+        [ConfigurationProperty("organizations", IsRequired = true)]
         public OrganizationSettings Organization
         {
             get
             {
-                return (OrganizationSettings)base["organization"];
+                return (OrganizationSettings)base["organizations"];
             }
         }
     }
