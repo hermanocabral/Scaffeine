@@ -16,6 +16,7 @@
     <copyright>ScaffR, 2012</copyright>
     <tags></tags>
     <dependencies>
+      <dependency id="ScaffR.Users.Service" />
       <dependency id="Scaffeine.Membership.Core" />
       <dependency id="ScaffR.Backend" />
     </dependencies>
