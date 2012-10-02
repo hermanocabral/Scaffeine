@@ -21,15 +21,8 @@
         {
             if (ModelState.IsValid)
             {
-                var user = new User
-                    {
-                        FirstName = model.FirstName,
-                        LastName = model.LastName,
-                        Username = model.UserName,
-                        Email = model.Email,
-                        Password = model.Password,
-                        ShowWelcomePage = true
-                    };
+                var user = AutoMapper.Mapper.Map<RegisterModel, User>(model);
+                user.ShowWelcomePage = true;
 
                 CreateUserStatus createStatus = _userService.CreateUser(user);
 

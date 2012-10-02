@@ -12,5 +12,7 @@ namespace <#= Model.Namespace #>.Core.Interfaces.Service
         IEnumerable<Friendship> GetPendingRequests(int userId);
 
         IEnumerable<Friendship> GetFriends(int userId);
+
+		bool FriendshipExists(int userId1, int userid2);
     }
 }

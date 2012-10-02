@@ -20,6 +20,7 @@
       <dependency id="Scaffeine.Pipeline" />
       <dependency id="Scaffeine.Shell"/>
       <dependency id="ScaffR.MvcMailer"/>
+      <dependency id="ScaffR.Automapper"/>
     </dependencies>
   </metadata>
   <files>
