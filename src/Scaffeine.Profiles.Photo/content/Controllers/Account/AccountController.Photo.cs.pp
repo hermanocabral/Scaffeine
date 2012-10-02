@@ -3,6 +3,7 @@ namespace $rootnamespace$.Controllers.Account
     using System.Web;
     using System.Web.Mvc;
     using Core.Common.Photos;
+    using Extensions;
 
     public partial class AccountController
     {
@@ -11,9 +12,9 @@ namespace $rootnamespace$.Controllers.Account
         {
 
             // use this http://blueimp.github.com/jQuery-File-Upload/
-            if (!string.IsNullOrWhiteSpace(CurrentUser.PhotoId))
+            if (!string.IsNullOrWhiteSpace(this.GetCurrentUser().PhotoId))
             {
-                var photo = PhotoManager.Provider.GetPhotoResize(CurrentUser.PhotoId, "Medium");
+                var photo = PhotoManager.Provider.GetPhotoResize(this.GetCurrentUser().PhotoId, "Medium");
                 return View(photo);
             }
 
@@ -27,7 +28,7 @@ namespace $rootnamespace$.Controllers.Account
 
             var photo = PhotoManager.Provider.SavePhotoForAllSizes(request, true);
 
-            var user = CurrentUser;
+            var user = this.GetCurrentUser();
             
             user.PhotoId = photo[0].Id;
             _userService.SaveOrUpdate(user);

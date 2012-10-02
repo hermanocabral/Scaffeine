@@ -7,6 +7,7 @@
 
     using AutoMapper;
     using Core.Model;
+    using Extensions;
     using Models;
 
     public partial class AccountController
@@ -16,7 +17,7 @@
         {
             Mapper.CreateMap<User, ProfileModel>();
 
-            var model = Mapper.Map<User, ProfileModel>(this.CurrentUser);
+            var model = Mapper.Map<User, ProfileModel>(this.GetCurrentUser());
 
             return View(model);
         }
@@ -26,7 +27,7 @@
         {
             if (ModelState.IsValid)
             {
-                if (string.Compare(CurrentUser.Email, model.Email, StringComparison.InvariantCultureIgnoreCase) != 0)
+                if (string.Compare(this.GetCurrentUser().Email, model.Email, StringComparison.InvariantCultureIgnoreCase) != 0)
                 {
                     var inUse = _userService.Find(u => u.Email == model.Email).Any();
                     if (inUse)
@@ -37,13 +38,13 @@
 
                 if (ModelState.IsValid)
                 {
-                    CurrentUser.FirstName = model.FirstName;
-                    CurrentUser.LastName = model.LastName;
-                    CurrentUser.Email = model.Email;
+                    this.GetCurrentUser().FirstName = model.FirstName;
+                    this.GetCurrentUser().LastName = model.LastName;
+                    this.GetCurrentUser().Email = model.Email;
 
                     try
                     {
-                        _userService.SaveOrUpdate(CurrentUser);
+                        _userService.SaveOrUpdate(this.GetCurrentUser());
                         TempData["Success"] = "User was successfully updated.";
                     }
                     catch (Exception)
@@ -62,9 +63,9 @@
             Mapper.CreateMap<UserEmail, EmailModel>();
 
             List<UserEmail> model =
-                _userEmailService.Find(x => x.UserId == CurrentUser.Id).ToList();
+                _userEmailService.Find(x => x.UserId == this.GetCurrentUser().Id).ToList();
 
-            ViewBag.DefaultEmail = CurrentUser.Email;
+            ViewBag.DefaultEmail = this.GetCurrentUser().Email;
 
             return View(model);
         }
@@ -72,7 +73,7 @@
         [HttpPost]
         public ActionResult Emails(UserEmail model)
         {
-            model.UserId = CurrentUser.Id;
+            model.UserId = this.GetCurrentUser().Id;
             if (ModelState.IsValid)
             {
                 _userEmailService.SaveOrUpdate(model);

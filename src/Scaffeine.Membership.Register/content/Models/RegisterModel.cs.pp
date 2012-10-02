@@ -1,6 +1,7 @@
 namespace $rootnamespace$.Models
 {
     using System.ComponentModel.DataAnnotations;
+	using Core.Model;
 
     public partial class RegisterModel
     {
@@ -37,5 +38,8 @@ namespace $rootnamespace$.Models
         [Display(Name = "Confirm password")]
         [System.Web.Mvc.Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+		
+        [Display(Name = "Gender")]
+        public Gender Gender { get; set; }
     }
 }

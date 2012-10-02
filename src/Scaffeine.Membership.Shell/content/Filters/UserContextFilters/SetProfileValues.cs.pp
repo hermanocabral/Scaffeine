@@ -1,8 +1,8 @@
 namespace $rootnamespace$.Filters.UserContextFilters
 {
     using System.Web.Mvc;
-    using Controllers;
     using Core.Infrastructure.Pipeline;
+    using Extensions;
 
     public class SetProfileValues : Filter<ActionExecutingContext>
 	{
@@ -10,7 +10,7 @@ namespace $rootnamespace$.Filters.UserContextFilters
 	    {
 	        if (data.HttpContext.Request.IsAuthenticated)
             {
-                var user = ((BaseController)data.Controller).CurrentUser;
+                var user = data.Controller.GetCurrentUser();
 
                 if (user == null)
                 {

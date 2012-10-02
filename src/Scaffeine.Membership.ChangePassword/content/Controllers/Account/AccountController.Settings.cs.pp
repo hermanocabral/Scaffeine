@@ -2,6 +2,7 @@ namespace $rootnamespace$.Controllers.Account
 {
     using System.Web.Mvc;
     using Core.Common.Membership;
+    using Extensions;
     using Models;
 
     public partial class AccountController
@@ -17,7 +18,7 @@ namespace $rootnamespace$.Controllers.Account
         {
             if (ModelState.IsValid)
             {
-                var status = _userService.ChangePassword(CurrentUser, model.OldPassword, model.NewPassword);
+                var status = _userService.ChangePassword(this.GetCurrentUser(), model.OldPassword, model.NewPassword);
 
                 switch (status)
                 {

@@ -4,6 +4,7 @@
     using System.Web.Security;
 
     using Core.Common.Membership;
+    using Extensions;
     using Models;
 
     public partial class AccountController
@@ -18,7 +19,7 @@
         {
             if (ModelState.IsValid)
             {
-                var status = _userService.ChangePassword(CurrentUser, model.OldPassword, model.NewPassword);
+                var status = _userService.ChangePassword(this.GetCurrentUser(), model.OldPassword, model.NewPassword);
 
                 switch (status)
                 {

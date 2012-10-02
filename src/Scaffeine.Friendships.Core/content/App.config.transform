@@ -2,7 +2,7 @@
 
   <$rootnamespace$>
     <$rootnamespace$.Core>
-      <friendships allowOneWayFriendships="" requireApproval="" />
+      <friendships allowOneWayFriendships="true" requireApproval="true" />
     </$rootnamespace$.Core>
   </$rootnamespace$>
 
