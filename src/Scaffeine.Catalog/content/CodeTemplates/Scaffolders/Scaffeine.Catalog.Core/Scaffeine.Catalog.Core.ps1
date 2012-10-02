@@ -10,3 +10,5 @@ Add-Template $coreProjectName "Model\Product.Catalog" "Product.Catalog" -Force:$
 Add-Template $coreProjectName "Model\Category.Catalog" "Category.Catalog" -Force:$Force $TemplateFolders
 Add-Template $coreProjectName "Model\Category.Product" "Category.Product" -Force:$Force $TemplateFolders
 Add-Domain "Model\CategoryFeaturedProduct" "CategoryFeaturedProduct" -Force:$Force $TemplateFolders
+Add-Domain "Model\ProductAttributeHeader" "ProductAttributeHeader" -Force:$Force $TemplateFolders
+Add-Domain "Model\ProductAttributeValue" "ProductAttributeValue" -Force:$Force $TemplateFolders

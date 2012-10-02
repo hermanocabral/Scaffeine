@@ -50,6 +50,8 @@
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Catalog.Core\Category.Product.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Catalog.Core\CategoryFeaturedProduct.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Catalog.Core\Product.Catalog.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Catalog.Core\ProductAttributeHeader.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Catalog.Core\ProductAttributeValue.cs.t4" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
