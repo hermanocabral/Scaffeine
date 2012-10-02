@@ -16,6 +16,8 @@
     <copyright>ScaffR, 2012</copyright>
     <tags></tags>
     <dependencies>
+      <dependency id="ScaffR.Security"/>
+      
       <dependency id="Scaffeine.Membership.Logon"/>
       <dependency id="Scaffeine.Membership.Register"/>
       <dependency id="Scaffeine.Membership.ForgotPassword"/>

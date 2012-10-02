@@ -16,8 +16,8 @@
     <copyright>ScaffR, 2012</copyright>
     <tags></tags>
     <dependencies>
-      <dependency id="ScaffR"/>
-      <dependency id="T4Scaffolding" />
+      <dependency id="Scaffeine.Categories.Core"/>
+      <dependency id="Scaffeine.Products.Core" />
     </dependencies>
   </metadata>
   <files>

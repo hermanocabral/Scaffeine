@@ -46,7 +46,6 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Core\UserPrincipal.cs.t4" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -57,9 +56,7 @@
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Core\UserEmail.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Core\UserRole.cs.t4" />
     <None Include="Package.nuspec" />
-    <None Include="tools\init.ps1" />
     <None Include="tools\install.ps1" />
-    <None Include="tools\uninstall.ps1" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="NuGet.exe" />

@@ -4,6 +4,6 @@ namespace <#= Model.Namespace #>.Core.Model
 {
     public partial class User
     {        
-        public string PhotoId { get; set; }
+        
     }
 }

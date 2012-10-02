@@ -11,5 +11,5 @@ param(
 
 foreach ($tml in $templates){
 	$outputPath = "Model\$tml"
-	add-template $coreProjectName $outputPath $tml -Force:$Force $TemplateFolders
+	#add-template $coreProjectName $outputPath $tml -Force:$Force $TemplateFolders
 }

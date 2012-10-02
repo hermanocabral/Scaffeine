@@ -16,16 +16,20 @@
     <copyright>World-Class Programmers 2012</copyright>
     <tags>Scaffolding, Boilerplate, Template, Bootstrap</tags>
     <dependencies>          
-      <dependency id="ScaffR.MVC" />
-      <dependency id="Scaffeine.Configuration"/>
-      <dependency id="Scaffeine.Notifications"/>
-      <dependency id="Scaffeine.Eventing"/>
+      
+      <dependency id="ScaffR.MVC" />      
       <dependency id="ScaffR.Bootstrap" />
       <dependency id="ScaffR.Backend"/>
       <dependency id="ScaffR.Sitemap" />
       <dependency id="ScaffR.Ninject"/>
       <dependency id="ScaffR.MvcMailer"/>
+      <dependency id="ScaffR.Security"/>
+      
       <dependency id="Scaffeine.Mail.Gmail"/>
+      <dependency id="Scaffeine.Configuration"/>
+      <dependency id="Scaffeine.Notifications"/>
+      <dependency id="Scaffeine.Eventing"/>
+      
     </dependencies>
   </metadata>
   <files>
