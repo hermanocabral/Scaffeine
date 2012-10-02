@@ -8,8 +8,8 @@
     <ProjectGuid>{DF99EBAF-9243-4D96-B094-3CBB9B842282}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Scaffeine.Catalog</RootNamespace>
-    <AssemblyName>Scaffeine.Catalog</AssemblyName>
+    <RootNamespace>Scaffeine.Catalog.Core</RootNamespace>
+    <AssemblyName>Scaffeine.Catalog.Core</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
