@@ -5,7 +5,7 @@
     <$rootnamespace$.Core>
       <photos defaultProvider="FileSystem">
         <providers>
-          <add name="FileSystem" type="$rootnamespace$.Core.Common.Photos.Providers.FileSystemProvider, $rootnamespace$.Core" imageFolder="~/Content" />
+          <add name="FileSystem" type="$rootnamespace$.Core.Common.Photos.Providers.FileSystemProvider, $rootnamespace$.Core" imageFolder="~/Content/Images" />
         </providers>
       </photos>
     </$rootnamespace$.Core>

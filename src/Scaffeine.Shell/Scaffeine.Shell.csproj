@@ -68,12 +68,7 @@
     <None Include="content\Extensions\TabsHelper.cs.pp" />
     <None Include="content\Extensions\TabsHelperModel.cs.pp" />
     <None Include="content\Extensions\AlertExtensions.cs.pp" />
-    <None Include="content\Handlers\NotificationHandler.cs.pp" />
-    <None Include="content\Hubs\NotificationHub.cs.pp" />
     <None Include="content\Models\EmailModel.cs.pp" />
-    <None Include="content\Models\INotification.cs.pp" />
-    <None Include="content\Models\UserNotification.cs.pp" />
-    <None Include="content\Models\NotificationsModel.cs.pp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />
@@ -115,6 +110,7 @@
     <None Include="tools\uninstall.ps1" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="content\Scripts\Global\" />
     <Folder Include="content\Views\Dashboard\" />
     <Folder Include="content\Views\Diagnostic\" />
     <Folder Include="lib\net35\" />
@@ -128,20 +124,6 @@
     <Content Include="content\Content\images\rod.PNG" />
     <Content Include="content\Content\images\scaffr.png" />
     <Content Include="content\favicon.ico" />
-    <Content Include="content\Scripts\custom.js" />
-    <Content Include="content\Scripts\custom.knockout.js" />
-    <Content Include="content\Scripts\jquery-ui-datepicker-personalized-1.5.3.packed.js" />
-    <Content Include="content\Scripts\jquery.maskedinput-1.3.min.js" />
-    <Content Include="content\Scripts\jquery.simplemodal.js" />
-    <Content Include="content\Scripts\jquery.ui.position.min.js" />
-    <Content Include="content\Scripts\jquery.ui.timepicker.js" />
-    <Content Include="content\Scripts\jquery.unobtrusive-ajax.js" />
-    <Content Include="content\Scripts\jquery.unobtrusive-ajax.min.js" />
-    <Content Include="content\Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="content\Scripts\jquery.validate.js" />
-    <Content Include="content\Scripts\jquery.validate.min.js" />
-    <Content Include="content\Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="content\Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="lib\net40\MvcSiteMapProvider.dll" />
     <Content Include="lib\net40\MvcSiteMapProvider.XML" />
   </ItemGroup>

@@ -6,7 +6,7 @@
             <img width="14" src="@Url.ProfilePicture((string)ViewBag.CurrentUser.PhotoId, "Tiny", (Gender)ViewBag.CurrentUser.Gender)" class="img-round" />
         </i> @User.Identity.Name <span class="caret"></span></a>
         <ul class="dropdown-menu">
-            <li><a href="@Url.Action("Index", "Account")">Profile</a></li>          
+            <li><a href="@Url.Action("Profile", "Account")">Profile</a></li>          
             <li class="divider"></li>
             <li><a href="@Url.Action("LogOff", "Account")">Sign Out</a></li>
         </ul>

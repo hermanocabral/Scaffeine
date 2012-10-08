@@ -1,13 +1,9 @@
 ﻿namespace $rootnamespace$.Controllers.Account
 {
-    using System;
-    using System.Web;
     using System.Web.Mvc;
-    using System.Web.Security;
-
-    using $rootnamespace$.Core.Common.Membership;
-    using $rootnamespace$.Core.Model;
-    using $rootnamespace$.Models;
+    using Core.Common.Membership;
+    using Core.Model;
+    using Models;
 
     public partial class AccountController
     {

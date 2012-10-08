@@ -1,10 +1,6 @@
-@section Stylesheets
-{
-    <style type="text/css">
-        .breadcrumb {
-            display: none;
-        }
-    </style>
+@{
+	ViewBag.Title = "Dashboard";
+    Bundles.Reference("content/custom/hide-breadcrumb.less", "custom");
 }
 
 <div class="row-fluid">

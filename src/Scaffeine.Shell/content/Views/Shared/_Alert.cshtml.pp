@@ -10,3 +10,9 @@
         @TempData["Error"]
     </div>
 }
+@if (TempData["Information"] != null)
+{                
+    <div class="alert alert-info">
+        @TempData["Information"]
+    </div>
+}

@@ -1,7 +1,5 @@
 ﻿namespace $rootnamespace$.Controllers.Account
 {
-    using System.Web.Mvc;
-
     using Core.Interfaces.Service;
 
     public partial class AccountController : BaseController
@@ -13,9 +11,9 @@
         
         public AccountController(IUserService userService, IUserEmailService userEmailService, IAuthenticationService authenticationService)
         {
-            this._userService = userService;
-            this._userEmailService = userEmailService;
-            this._authenticationService = authenticationService;
+            _userService = userService;
+            _userEmailService = userEmailService;
+            _authenticationService = authenticationService;
         }       
     }
 }
