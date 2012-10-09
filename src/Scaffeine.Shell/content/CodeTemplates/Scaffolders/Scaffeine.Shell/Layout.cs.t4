@@ -4,7 +4,7 @@
 @{
     Bundles.Reference("content/framework", "framework");
     Bundles.Reference("content/global", "global");
-    Bundles.Reference("scripts/jquery-1.8.2.js", "framework");
+    Bundles.Reference("scripts/jquery-1.8.2.js", "top");
     Bundles.Reference("scripts/jquery.unobtrusive-ajax.js", "framework");
     Bundles.Reference("scripts/jquery.validate.js", "framework");
 	Bundles.Reference("scripts/jquery.validate.unobtrusive.js", "framework");
@@ -22,7 +22,6 @@
     @Bundles.RenderStylesheets("framework")
     @Bundles.RenderStylesheets("global")
     @Bundles.RenderStylesheets("custom")
-    @Bundles.RenderStylesheets()
 
 </head>
 <body>
@@ -68,9 +67,10 @@
         }
 
     </div>
+
+	@Bundles.RenderScripts("top")
+	@Bundles.RenderScripts("framework")
+	@Bundles.RenderScripts("global")
+	@Bundles.RenderScripts("custom")
 </body>
-@Bundles.RenderScripts("framework")
-@Bundles.RenderScripts("global")
-@Bundles.RenderScripts("custom")
-@Bundles.RenderScripts()
 </html>
