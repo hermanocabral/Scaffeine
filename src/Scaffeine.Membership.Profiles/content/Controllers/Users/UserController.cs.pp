@@ -1,5 +1,6 @@
 ﻿namespace $rootnamespace$.Controllers.Users
 {
+	using System.Web.Mvc;
     using Core.Interfaces.Service;
 
     public partial class UserController : Controller
