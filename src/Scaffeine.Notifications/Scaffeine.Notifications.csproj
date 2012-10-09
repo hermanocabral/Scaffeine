@@ -53,6 +53,11 @@
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Notifications\INotificationBubble.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Notifications\NotificationItem.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Notifications\Scaffeine.Notifications.ps1" />
+    <None Include="content\Handlers\NotificationHandler.cs.pp" />
+    <None Include="content\Hubs\NotificationHub.cs.pp" />
+    <None Include="content\Models\INotification.cs.pp" />
+    <None Include="content\Models\NotificationsModel.cs.pp" />
+    <None Include="content\Models\UserNotification.cs.pp" />
     <None Include="content\Web.config.transform">
       <SubType>Designer</SubType>
     </None>

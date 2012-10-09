@@ -7,6 +7,7 @@
     using Models;
 	using Mailers;
     using Mvc.Mailer;
+    using Omu.ValueInjecter;
 
     public partial class AccountController
     {
@@ -21,14 +22,16 @@
         {
             if (ModelState.IsValid)
             {
-                var user = AutoMapper.Mapper.Map<RegisterModel, User>(model);
+                var user = new User();
+
+                user.InjectFrom<UnflatLoopValueInjection>(model);
                 user.ShowWelcomePage = true;
 
                 CreateUserStatus createStatus = _userService.CreateUser(user);
 
                 if (createStatus == CreateUserStatus.Success)
                 {
-                    _authenticationService.SetAuthCookie(model.UserName, true);
+                    _authenticationService.SetAuthCookie(model.Username, true);
 
 					new Mailer().WelcomeMember(new WelcomeMemberModel { 
                         Name = user.FirstName + " " + user.LastName,

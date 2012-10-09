@@ -51,7 +51,7 @@
   <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />
     <None Include="content\Content\custom\calendar.less" />
-    <None Include="content\Views\Dashboard\_Calendar.cshtml" />
+    <None Include="content\Views\Dashboard\_Calendar.cshtml.pp" />
     <None Include="content\Web.config.transform">
       <SubType>Designer</SubType>
     </None>

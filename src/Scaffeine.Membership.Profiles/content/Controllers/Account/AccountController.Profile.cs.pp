@@ -9,21 +9,22 @@
     using Core.Model;
     using Extensions;
     using Models;
+    using Omu.ValueInjecter;
 
     public partial class AccountController
     {
         [HttpGet]
-        public ActionResult Index()
+        public new ActionResult Profile()
         {
-            Mapper.CreateMap<User, ProfileModel>();
+            var model = new ProfileModel();
 
-            var model = Mapper.Map<User, ProfileModel>(this.GetCurrentUser());
+            model.InjectFrom<UnflatLoopValueInjection>(this.GetCurrentUser());
 
             return View(model);
         }
 
         [HttpPost]
-        public ActionResult Index(ProfileModel model)
+        public new ActionResult Profile(ProfileModel model)
         {
             if (ModelState.IsValid)
             {
@@ -38,14 +39,13 @@
 
                 if (ModelState.IsValid)
                 {
-                    this.GetCurrentUser().FirstName = model.FirstName;
-                    this.GetCurrentUser().LastName = model.LastName;
-                    this.GetCurrentUser().Email = model.Email;
+                    this.GetCurrentUser().InjectFrom<UnflatLoopValueInjection>(model);
 
                     try
                     {
                         _userService.SaveOrUpdate(this.GetCurrentUser());
                         TempData["Success"] = "User was successfully updated.";
+                        return RedirectToAction("Profile");
                     }
                     catch (Exception)
                     {
@@ -62,8 +62,9 @@
         {
             Mapper.CreateMap<UserEmail, EmailModel>();
 
-            List<UserEmail> model =
-                _userEmailService.Find(x => x.UserId == this.GetCurrentUser().Id).ToList();
+            var user = this.GetCurrentUser();
+
+            List<UserEmail> model = _userEmailService.Find(x => x.UserId == user.Id).ToList();
 
             ViewBag.DefaultEmail = this.GetCurrentUser().Email;
 
@@ -82,17 +83,5 @@
 
             return RedirectToAction("Emails");
         }       
-
-        [HttpGet]
-        public ActionResult Notifications()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public ActionResult Notifications(NotificationsModel model)
-        {
-            return View();
-        }
     }
 }

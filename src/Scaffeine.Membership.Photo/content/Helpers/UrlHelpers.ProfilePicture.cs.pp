@@ -12,7 +12,7 @@ namespace $rootnamespace$.Helpers
             if (!PhotoManager.PhotoResizes.ContainsKey(resize))
                 throw new ArgumentException("'{0}' photo resize is not defined");
 
-            string returnValue = string.Format("~/Content/{0}/{1}.jpg", resize, gender.ToString());
+            string returnValue = string.Format("~/Content/images/{0}/{1}.jpg", resize, gender.ToString());
 
             if (!string.IsNullOrWhiteSpace(photoId))
             {

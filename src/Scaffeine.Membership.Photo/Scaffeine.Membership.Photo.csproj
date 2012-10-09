@@ -67,9 +67,9 @@
     <Folder Include="lib\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="content\Content\Tiny\male.jpg" />
-    <Content Include="content\Content\Medium\male.jpg" />
-    <Content Include="content\Content\Small\male.jpg" />
+    <Content Include="content\Content\Images\Tiny\male.jpg" />
+    <Content Include="content\Content\Images\Medium\male.jpg" />
+    <Content Include="content\Content\Images\Small\male.jpg" />
     <Content Include="NuGet.exe" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

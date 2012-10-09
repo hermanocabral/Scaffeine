@@ -18,7 +18,7 @@ namespace $rootnamespace$.Controllers.Account
                 return View(photo);
             }
 
-            return View(new Photo { Url = Url.Content("~/Content/Medium/Male.jpg") });
+            return View(new Photo { Url = Url.Content("~/Content/images/Medium/Male.jpg") });
         }
 
         [HttpPost]

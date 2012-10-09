@@ -10,7 +10,7 @@
       <h4>
         <a href="@Url.Action("Index", "Dashboard")">@ViewBag.CurrentUser.FirstName @ViewBag.CurrentUser.LastName</a>
       </h4>
-      <a href="@Url.Action("Index", "Account")">Edit Profile</a>
+      <a href="@Url.Action("Profile", "Account")">Edit Profile</a>
     </td>
   </tr>
 </table>
