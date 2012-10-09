@@ -11,3 +11,6 @@ Add-Template $coreProjectName "Model\User.Membership" "User.Membership" -Force:$
 Add-Domain "Model\Role" "Role" -Force:$Force $TemplateFolders
 Add-Domain "Model\UserRole" "UserRole" -Force:$Force $TemplateFolders
 Add-Domain "Model\UserEmail" "UserEmail" -Force:$Force $TemplateFolders
+
+Add-Template $coreProjectName "Common\Membership\Events\UserCreated" "UserCreated" -Force:$Force $TemplateFolders
+

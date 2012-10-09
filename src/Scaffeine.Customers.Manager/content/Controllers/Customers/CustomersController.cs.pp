@@ -5,7 +5,7 @@
     using $rootnamespace$.Core.Interfaces.Service;
     using $rootnamespace$.Core.Model;
 
-    public class CustomersController : BaseController<Customer>
+    public class CustomersController : Controller
     {
          private readonly ICustomerService _service;
 

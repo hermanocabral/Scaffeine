@@ -2,7 +2,7 @@
 {
     using System.Web.Mvc;
 
-    public class CommunityController : BaseController
+    public class CommunityController : Controller
     {
         public ActionResult Index()
         {

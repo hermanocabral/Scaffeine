@@ -1,8 +1,9 @@
 ﻿namespace $rootnamespace$.Controllers.Account
 {
+	using System.Web.Mvc;
     using Core.Interfaces.Service;
 
-    public partial class AccountController : BaseController
+    public partial class AccountController : Controller
     {
         private readonly IUserService _userService;
         private readonly IUserEmailService _userEmailService;

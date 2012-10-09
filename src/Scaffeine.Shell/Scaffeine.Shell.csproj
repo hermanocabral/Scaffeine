@@ -58,7 +58,6 @@
   <ItemGroup>
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Shell\Scaffeine.Shell.ps1" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Shell\Layout.cs.t4" />
-    <None Include="content\App_Start\Start.cs.pp" />
     <None Include="content\Extensions\BreadcrumbHelper.cs.pp" />
     <None Include="content\Extensions\BreadcrumbHelperModel.cs.pp" />
     <None Include="content\Extensions\NavHelper.cs.pp" />

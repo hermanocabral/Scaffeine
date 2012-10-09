@@ -2,7 +2,7 @@
 {
     using System.Web.Mvc;
 
-    public partial class SystemController : BaseController
+    public partial class SystemController : Controller
     {        
         // GET: /Settings/
         public ActionResult Index()

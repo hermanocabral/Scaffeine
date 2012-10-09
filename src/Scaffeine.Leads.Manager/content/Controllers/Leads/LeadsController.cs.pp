@@ -5,7 +5,7 @@
     using $rootnamespace$.Core.Interfaces.Service;
     using $rootnamespace$.Core.Model;
 
-    public partial class LeadsController : BaseController<Lead>
+    public partial class LeadsController : Controller
     {
         private readonly ILeadService _service;
 

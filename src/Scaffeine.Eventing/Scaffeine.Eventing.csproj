@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />
+    <None Include="content\App_Start\Start.cs.pp" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffiene.Eventing\Bootstrapper.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffiene.Eventing\EventLogElement.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffiene.Eventing\IHandles.cs.t4" />
@@ -61,6 +62,7 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Package.nuspec" />
+    <None Include="tools\EventingHelpers\EventingHelpers.psm1" />
     <None Include="tools\init.ps1" />
     <None Include="tools\install.ps1" />
     <None Include="tools\uninstall.ps1" />

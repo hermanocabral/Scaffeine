@@ -46,8 +46,5 @@ namespace $rootnamespace$.Models
         [Display(Name = "Confirm password", Order = 7)]
         [System.Web.Mvc.Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
-
-        [Display(Name = "Gender", Order = 8)]
-        public Gender Gender { get; set; }
     }
 }

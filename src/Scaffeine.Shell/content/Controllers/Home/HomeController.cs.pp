@@ -2,7 +2,7 @@
 {
     using System.Web.Mvc;
 
-    public partial class HomeController : BaseController
+    public partial class HomeController : Controller
     {
         partial void IndexLoaded();
 

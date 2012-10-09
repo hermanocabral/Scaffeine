@@ -2,7 +2,7 @@
 {
     using Core.Interfaces.Service;
 
-    public partial class UserController : BaseController
+    public partial class UserController : Controller
     {
         private readonly IUserService _service;
 

@@ -4,7 +4,7 @@ namespace $rootnamespace$.Controllers.Offers
 {
     using $rootnamespace$.Core.Model;
 
-    public class OffersController : BaseController
+    public class OffersController : Controller
     {
         public ActionResult Record()
         {

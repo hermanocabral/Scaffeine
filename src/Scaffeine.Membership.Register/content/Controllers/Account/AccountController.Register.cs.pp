@@ -3,10 +3,11 @@
     using System.Web.Mvc;
 
     using Core.Common.Membership;
+    using Core.Common.Membership.Events;
+    using Core.Infrastructure.Eventing;
     using Core.Model;
+    using Helpers;
     using Models;
-	using Mailers;
-    using Mvc.Mailer;
     using Omu.ValueInjecter;
 
     public partial class AccountController
@@ -33,13 +34,7 @@
                 {
                     _authenticationService.SetAuthCookie(model.Username, true);
 
-					new Mailer().WelcomeMember(new WelcomeMemberModel { 
-                        Name = user.FirstName + " " + user.LastName,
-                        Password = user.Password,
-                        Username = user.Username,
-                        LoginUrl = Url.Action("Logon", "Account"),
-                        EmailAddress = user.Email
-                    }).Send();
+                    MessageBus.Instance.Publish(new UserCreated(user, Url.AbsoluteAction("Logon", "Account")));
 
                     return RedirectToAction("Welcome", "Account");
                 }

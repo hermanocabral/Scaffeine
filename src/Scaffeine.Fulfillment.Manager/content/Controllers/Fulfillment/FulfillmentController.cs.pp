@@ -2,7 +2,7 @@ namespace $rootnamespace$.Controllers.Fulfillment
 {
     using System.Web.Mvc;
 
-    public partial class FulfillmentController : BaseController
+    public partial class FulfillmentController : Controller
     {
 		public ActionResult Manager()
         {

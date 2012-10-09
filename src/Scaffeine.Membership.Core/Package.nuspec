@@ -16,7 +16,7 @@
     <copyright>ScaffR, 2012</copyright>
     <tags></tags>
     <dependencies>
-      <dependency id="ScaffR.Core"/>
+      <dependency id="Scaffeine.Eventing"/>
       <dependency id="ScaffR.Users.Core"/>
     </dependencies>
   </metadata>
