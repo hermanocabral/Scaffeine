@@ -1,0 +1,21 @@
+﻿<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
+<#@ Output Extension="cs" #>
+namespace <#= Model.Namespace #>.Core.Model
+{
+    using System.Collections.Generic;
+    using System.Collections.ObjectModel;
+	
+	public partial class Department : DomainObject
+    {
+        public string Name { get; set; }
+        public string Description { get; set; }
+
+		private ICollection<Category> _categories;
+
+        public virtual ICollection<Category> Categories
+        {
+            get { return _categories ?? (_categories = new Collection<Category>()); }
+            set { _categories = value; }
+        }
+    }
+}

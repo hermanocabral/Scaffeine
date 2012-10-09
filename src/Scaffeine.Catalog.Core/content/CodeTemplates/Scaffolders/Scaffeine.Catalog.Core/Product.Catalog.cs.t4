@@ -9,9 +9,7 @@ namespace <#= Model.Namespace #>.Core.Model
     public partial class Product
     {
         private ICollection<CategoryFeaturedProduct> _featuredCategories;
-        public bool IsFeatured { get; set; }
 
-        [ForeignKey("Id")]
         public virtual ICollection<CategoryFeaturedProduct> FeaturedCategories
         {
             get { return _featuredCategories ?? (_featuredCategories = new Collection<CategoryFeaturedProduct>()); }

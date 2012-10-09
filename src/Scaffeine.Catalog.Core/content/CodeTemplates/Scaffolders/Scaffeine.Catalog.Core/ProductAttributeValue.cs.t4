@@ -6,7 +6,6 @@ namespace <#= Model.Namespace #>.Core.Model
 
     public class ProductAttributeValue : DomainObject
     {
-        [ForeignKey("Id")]
         public int HeaderId { get; set; }
 
         public string Name { get; set; }

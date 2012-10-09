@@ -294,6 +294,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scaffeine.Membership.Photo"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scaffeine.Membership.Subscriptions", "Scaffeine.Membership.Subscriptions\Scaffeine.Membership.Subscriptions.csproj", "{777981B4-9323-49FD-8B15-DBB077510481}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Department", "Department", "{ED991042-391B-4CF7-9C9E-D73EA2F2BD7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scaffeine.Department.Core", "Scaffeine.Department.Core\Scaffeine.Department.Core.csproj", "{2871F59C-02A3-4A3D-BFE1-A4D2CB38DC74}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scaffeine.Department.Shell", "Scaffeine.Department.Shell\Scaffeine.Department.Shell.csproj", "{70CFCFF8-8959-4C05-85A0-B0648D871AD1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -670,6 +676,14 @@ Global
 		{777981B4-9323-49FD-8B15-DBB077510481}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{777981B4-9323-49FD-8B15-DBB077510481}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{777981B4-9323-49FD-8B15-DBB077510481}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2871F59C-02A3-4A3D-BFE1-A4D2CB38DC74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2871F59C-02A3-4A3D-BFE1-A4D2CB38DC74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2871F59C-02A3-4A3D-BFE1-A4D2CB38DC74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2871F59C-02A3-4A3D-BFE1-A4D2CB38DC74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70CFCFF8-8959-4C05-85A0-B0648D871AD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70CFCFF8-8959-4C05-85A0-B0648D871AD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70CFCFF8-8959-4C05-85A0-B0648D871AD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70CFCFF8-8959-4C05-85A0-B0648D871AD1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -782,5 +796,7 @@ Global
 		{26B10E5C-3EC0-4E7B-930F-0199300A784F} = {26275027-1DF3-4F2C-BAD7-E88EFB511A92}
 		{AC92AF4A-5B8D-4B7D-B515-FA4D93F29AF6} = {08C7AF31-953D-45E8-B4BF-13E52B4662F2}
 		{DB292EFA-4607-47B9-80AC-3009AB688CE7} = {B99F2BA7-D19F-4268-B20C-C26A11647BF6}
+		{2871F59C-02A3-4A3D-BFE1-A4D2CB38DC74} = {ED991042-391B-4CF7-9C9E-D73EA2F2BD7F}
+		{70CFCFF8-8959-4C05-85A0-B0648D871AD1} = {ED991042-391B-4CF7-9C9E-D73EA2F2BD7F}
 	EndGlobalSection
 EndGlobal

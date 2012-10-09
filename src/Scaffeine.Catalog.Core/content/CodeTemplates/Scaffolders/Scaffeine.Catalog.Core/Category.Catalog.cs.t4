@@ -10,7 +10,6 @@ namespace <#= Model.Namespace #>.Core.Model
     {
         private ICollection<CategoryFeaturedProduct> _featuredProducts;
 
-        [ForeignKey("Id")]
         public virtual ICollection<CategoryFeaturedProduct> FeaturedProducts
         {
             get { return _featuredProducts ?? (_featuredProducts = new Collection<CategoryFeaturedProduct>()); }
