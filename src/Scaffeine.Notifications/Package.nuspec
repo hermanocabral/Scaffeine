@@ -18,6 +18,7 @@
     <dependencies>
       <dependency id="ScaffR"/>
       <dependency id="T4Scaffolding" />
+      <dependency id="ScaffR.SignalR" />
     </dependencies>
   </metadata>
   <files>
