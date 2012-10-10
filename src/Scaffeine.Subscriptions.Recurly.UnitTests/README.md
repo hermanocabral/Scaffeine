@@ -9,11 +9,11 @@ Dependencies (3)
 
 Scaffeine Packages
 ------
-* [Scaffeine.Subscriptions.Recurly ()](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.Subscriptions.Recurly)
+* [Scaffeine.Subscriptions.Recurly](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.Subscriptions.Recurly)
 
 ScaffR Packages
 ------
-* [ScaffR.QA ()](https://github.com/wcpro/ScaffR/tree/master/src/ScaffR.QA)
+* [ScaffR.QA](https://github.com/wcpro/ScaffR/tree/master/src/ScaffR.QA)
 
 Other Packages
 ------

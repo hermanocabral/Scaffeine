@@ -9,11 +9,11 @@ Dependencies (3)
 
 Scaffeine Packages
 ------
-* [Scaffeine.Integrations ()](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.Integrations)
+* [Scaffeine.Integrations](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.Integrations)
 
 ScaffR Packages
 ------
-* [ScaffR ()](https://github.com/wcpro/ScaffR/tree/master/src/ScaffR)
+* [ScaffR](https://github.com/wcpro/ScaffR/tree/master/src/ScaffR)
 
 Other Packages
 ------

@@ -52,7 +52,9 @@
     <None Include="BuildPublishPackage.cmd" />
     <None Include="content\Controllers\Account\AccountController.Dashboard.cs.pp" />
     <None Include="content\Controllers\DashboardController.cs.pp" />
-    <None Include="content\Sitemaps\Modules.sitemap" />
+    <None Include="content\Sitemaps\Modules.sitemap">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="content\Sitemaps\System.sitemap.transform" />
     <None Include="content\Views\Dashboard\Index.cshtml.pp" />
     <None Include="content\Views\Dashboard\_ViewStart.cshtml.pp" />

@@ -9,12 +9,12 @@ Dependencies (3)
 
 Scaffeine Packages
 ------
-* [Scaffeine.Customers.Core ()](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.Customers.Core)
-* [Scaffeine.Dashboard.Shell ()](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.Dashboard.Shell)
+* [Scaffeine.Customers.Core](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.Customers.Core)
+* [Scaffeine.Dashboard.Shell](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.Dashboard.Shell)
 
 ScaffR Packages
 ------
-* [ScaffR ()](https://github.com/wcpro/ScaffR/tree/master/src/ScaffR)
+* [ScaffR](https://github.com/wcpro/ScaffR/tree/master/src/ScaffR)
 
 Other Packages
 ------

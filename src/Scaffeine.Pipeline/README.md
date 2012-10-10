@@ -9,7 +9,12 @@ Dependencies (1)
 
 ScaffR Packages
 ------
-* [ScaffR.Core ()](https://github.com/wcpro/ScaffR/tree/master/src/ScaffR.Core)
+* [ScaffR.Core](https://github.com/wcpro/ScaffR/tree/master/src/ScaffR.Core)
 
 Other Packages
 ------
+
+Reverse Dependencies
+-----
+* [Scaffeine.Membership.Shell](https://github.com/wcpro/scaffeine/tree/master/src/Scaffeine.Membership.Shell)
+* [Scaffeine.Promotions.Core](https://github.com/wcpro/scaffeine/tree/master/src/Scaffeine.Promotions.Core)

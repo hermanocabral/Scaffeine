@@ -9,7 +9,11 @@ Dependencies (1)
 
 ScaffR Packages
 ------
-* [ScaffR (1.1.1)](https://github.com/wcpro/ScaffR/tree/master/src/ScaffR)
+* [ScaffR](https://github.com/wcpro/ScaffR/tree/master/src/ScaffR)
 
 Other Packages
 ------
+
+Reverse Dependencies
+-----
+* [Scaffeine.Fulfillment.Manager](https://github.com/wcpro/scaffeine/tree/master/src/Scaffeine.Fulfillment.Manager)

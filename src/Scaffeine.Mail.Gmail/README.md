@@ -9,7 +9,11 @@ Dependencies (1)
 
 ScaffR Packages
 ------
-* [ScaffR ()](https://github.com/wcpro/ScaffR/tree/master/src/ScaffR)
+* [ScaffR](https://github.com/wcpro/ScaffR/tree/master/src/ScaffR)
 
 Other Packages
 ------
+
+Reverse Dependencies
+-----
+* [Scaffeine.Shell](https://github.com/wcpro/scaffeine/tree/master/src/Scaffeine.Shell)

@@ -9,7 +9,7 @@ Dependencies (1)
 
 Scaffeine Packages
 ------
-* [Scaffeine.Ordering ()](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.Ordering)
+* [Scaffeine.Ordering](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.Ordering)
 
 Other Packages
 ------

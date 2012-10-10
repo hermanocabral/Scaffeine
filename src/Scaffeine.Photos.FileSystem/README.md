@@ -9,7 +9,11 @@ Dependencies (1)
 
 Scaffeine Packages
 ------
-* [Scaffeine.Photos ()](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.Photos)
+* [Scaffeine.Photos](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.Photos)
 
 Other Packages
 ------
+
+Reverse Dependencies
+-----
+* [Scaffeine.Membership.Photo](https://github.com/wcpro/scaffeine/tree/master/src/Scaffeine.Membership.Photo)

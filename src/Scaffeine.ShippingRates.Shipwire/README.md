@@ -9,7 +9,7 @@ Dependencies (1)
 
 Scaffeine Packages
 ------
-* [Scaffeine.ShippingRates ()](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.ShippingRates)
+* [Scaffeine.ShippingRates](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.ShippingRates)
 
 Other Packages
 ------

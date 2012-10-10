@@ -9,7 +9,11 @@ Dependencies (1)
 
 Scaffeine Packages
 ------
-* [Scaffeine.Shell (1.1.1)](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.Shell)
+* [Scaffeine.Shell](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.Shell)
 
 Other Packages
 ------
+
+Reverse Dependencies
+-----
+* [Scaffeine.Reports](https://github.com/wcpro/scaffeine/tree/master/src/Scaffeine.Reports)

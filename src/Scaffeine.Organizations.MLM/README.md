@@ -9,7 +9,7 @@ Dependencies (2)
 
 Scaffeine Packages
 ------
-* [Scaffeine.Organizations ()](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.Organizations)
+* [Scaffeine.Organizations](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.Organizations)
 
 Other Packages
 ------

@@ -9,8 +9,8 @@ Dependencies (2)
 
 Scaffeine Packages
 ------
-* [Scaffeine.Shipping ()](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.Shipping)
-* [Scaffeine.Shipwire ()](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.Shipwire)
+* [Scaffeine.Shipping](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.Shipping)
+* [Scaffeine.Shipwire](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.Shipwire)
 
 Other Packages
 ------

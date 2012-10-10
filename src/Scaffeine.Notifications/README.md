@@ -9,8 +9,8 @@ Dependencies (3)
 
 ScaffR Packages
 ------
-* [ScaffR ()](https://github.com/wcpro/ScaffR/tree/master/src/ScaffR)
-* [ScaffR.SignalR ()](https://github.com/wcpro/ScaffR/tree/master/src/ScaffR.SignalR)
+* [ScaffR](https://github.com/wcpro/ScaffR/tree/master/src/ScaffR)
+* [ScaffR.SignalR](https://github.com/wcpro/ScaffR/tree/master/src/ScaffR.SignalR)
 
 Other Packages
 ------

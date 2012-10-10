@@ -9,8 +9,8 @@ Dependencies (2)
 
 Scaffeine Packages
 ------
-* [Scaffeine.Orders.Core ()](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.Orders.Core)
-* [Scaffeine.Dashboard.Shell ()](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.Dashboard.Shell)
+* [Scaffeine.Orders.Core](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.Orders.Core)
+* [Scaffeine.Dashboard.Shell](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.Dashboard.Shell)
 
 Other Packages
 ------

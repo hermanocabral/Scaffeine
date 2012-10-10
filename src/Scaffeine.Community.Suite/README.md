@@ -9,8 +9,8 @@ Dependencies (2)
 
 Scaffeine Packages
 ------
-* [Scaffeine.Shell ()](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.Shell)
-* [Scaffeine.KnowledgeBase ()](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.KnowledgeBase)
+* [Scaffeine.Shell](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.Shell)
+* [Scaffeine.KnowledgeBase](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.KnowledgeBase)
 
 Other Packages
 ------

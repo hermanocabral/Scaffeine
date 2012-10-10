@@ -9,11 +9,11 @@ Dependencies (2)
 
 Scaffeine Packages
 ------
-* [Scaffeine.Orders.Core ()](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.Orders.Core)
+* [Scaffeine.Orders.Core](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.Orders.Core)
 
 ScaffR Packages
 ------
-* [ScaffR ()](https://github.com/wcpro/ScaffR/tree/master/src/ScaffR)
+* [ScaffR](https://github.com/wcpro/ScaffR/tree/master/src/ScaffR)
 
 Other Packages
 ------

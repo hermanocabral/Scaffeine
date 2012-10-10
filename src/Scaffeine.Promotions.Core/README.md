@@ -9,7 +9,7 @@ Dependencies (1)
 
 Scaffeine Packages
 ------
-* [Scaffeine.Pipeline ()](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.Pipeline)
+* [Scaffeine.Pipeline](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.Pipeline)
 
 Other Packages
 ------

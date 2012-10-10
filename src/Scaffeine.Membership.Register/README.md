@@ -9,7 +9,11 @@ Dependencies (1)
 
 Scaffeine Packages
 ------
-* [Scaffeine.Membership.Shell ()](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.Membership.Shell)
+* [Scaffeine.Membership.Shell](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.Membership.Shell)
 
 Other Packages
 ------
+
+Reverse Dependencies
+-----
+* [Scaffeine.Membership.Suite](https://github.com/wcpro/scaffeine/tree/master/src/Scaffeine.Membership.Suite)
