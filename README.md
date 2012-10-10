@@ -1,7 +1,12 @@
 Scaffeine
 =========
 
-Scaffeine is a collection of modular source code packages packages like blogs, membership, commerce, etc that let you speed up your development.
+Scaffeine is a collection of modular source code packages packages like blogs, membership, 
+commerce, etc that let you quickly create white-label source code solutions.  This is different than projects like
+orchard or wordpress in that our focus is on the source code itself... making it easy to use, consume and customize.
+
+Whether you are making a Console Application or a MVC Website, our tools make it possible to never write the same code
+twice!
 
 Philosophy
 -----
