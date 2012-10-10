@@ -26,9 +26,9 @@ Prerequisites
 ------
 Currently Scaffeine has the following dependencies
 
-1) .NET 4.5
-2) Visual Studio 2012
-3) Powershell 2
+* .NET 4.5
+* Visual Studio 2012 Professional or higher
+* Powershell 2
 
 Usage
 ------
