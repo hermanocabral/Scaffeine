@@ -1,8 +1,6 @@
-﻿Scaffeine.Inventory.Shipwire (1.1.1)
+﻿Scaffeine.Inventory.Shipwire (1.1.4)
 ======
-
-      Description required.
-    
+Description required.
 Usage
 ======
 <pre>install-package Scaffeine.Inventory.Shipwire</pre>
@@ -15,4 +13,4 @@ ScaffR Packages
 
 Other Packages
 ------
-* T4Scaffolding(1.0.6)
+* T4Scaffolding()

@@ -1,18 +1,16 @@
-﻿Scaffeine.Profiles (1.1.2)
+﻿Scaffeine.Membership.Profiles (1.1.4)
 ======
-
-      Description required.
-    
+Description required.
 Usage
 ======
-<pre>install-package Scaffeine.Profiles</pre>
+<pre>install-package Scaffeine.Membership.Profiles</pre>
 Dependencies (2)
 =====
 
 Scaffeine Packages
 ------
-* [Scaffeine.Shell (1.1.2)](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.Shell)
-* [Scaffeine.Logon (1.1.2)](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.Logon)
+* [Scaffeine.Membership.Shell ()](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.Membership.Shell)
+* [Scaffeine.Membership.Logon ()](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.Membership.Logon)
 
 Other Packages
 ------

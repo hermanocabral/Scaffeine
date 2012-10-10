@@ -1,18 +1,15 @@
-﻿Scaffeine.Organizations (1.1.2)
+﻿Scaffeine.Organizations (1.1.4)
 ======
-
-      Description required.
-    
+Description required.
 Usage
 ======
 <pre>install-package Scaffeine.Organizations</pre>
-Dependencies (2)
+Dependencies (1)
 =====
 
-Scaffeine Packages
+ScaffR Packages
 ------
-* [Scaffeine.Shell (1.1.2)](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.Shell)
+* [ScaffR.Users.Core ()](https://github.com/wcpro/ScaffR/tree/master/src/ScaffR.Users.Core)
 
 Other Packages
 ------
-* T4Scaffolding(1.0.6)

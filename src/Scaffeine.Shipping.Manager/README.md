@@ -1,18 +1,16 @@
-﻿Scaffeine.Shipping (1.1.1)
+﻿Scaffeine.Shipping.Manager (1.1.4)
 ======
-
-      Shipping Module for Scaffeine.
-    
+Shipping Module for Scaffeine.
 Usage
 ======
-<pre>install-package Scaffeine.Shipping</pre>
+<pre>install-package Scaffeine.Shipping.Manager</pre>
 Dependencies (2)
 =====
 
-ScaffR Packages
+Scaffeine Packages
 ------
-* [ScaffR (1.1.1)](https://github.com/wcpro/ScaffR/tree/master/src/ScaffR)
+* [Scaffeine.Shipping ()](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.Shipping)
+* [Scaffeine.Dashboard ()](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.Dashboard)
 
 Other Packages
 ------
-* T4Scaffolding(1.0.6)

@@ -1,18 +1,16 @@
-﻿ScaffR.Chat (1.1.2)
+﻿Scaffeine.Chat (1.1.4)
 ======
-
-      Core library for developing testing tools using T4 Scaffolding.
-    
+Core library for developing testing tools using T4 Scaffolding.
 Usage
 ======
-<pre>install-package ScaffR.Chat</pre>
+<pre>install-package Scaffeine.Chat</pre>
 Dependencies (2)
 =====
 
 ScaffR Packages
 ------
-* [ScaffR.Core (1.1.2)](https://github.com/wcpro/ScaffR/tree/master/src/ScaffR.Core)
+* [ScaffR.Core ()](https://github.com/wcpro/ScaffR/tree/master/src/ScaffR.Core)
 
 Other Packages
 ------
-* T4Scaffolding(1.0.6)
+* T4Scaffolding()

@@ -1,18 +1,15 @@
-﻿Scaffeine.Photos.Database (1.1.2)
+﻿Scaffeine.Photos.Database (1.1.4)
 ======
-
-      Description required.
-    
+Description required.
 Usage
 ======
 <pre>install-package Scaffeine.Photos.Database</pre>
-Dependencies (2)
+Dependencies (1)
 =====
 
-ScaffR Packages
+Scaffeine Packages
 ------
-* [ScaffR (1.1.2)](https://github.com/wcpro/ScaffR/tree/master/src/ScaffR)
+* [Scaffeine.Photos ()](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.Photos)
 
 Other Packages
 ------
-* T4Scaffolding(1.0.6)

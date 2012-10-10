@@ -1,17 +1,16 @@
-﻿Scaffeine.Ordering (1.1.2)
+﻿Scaffeine.Orders.Core (1.1.4)
 ======
-
-      Description required.
-    
+Description required.
 Usage
 ======
-<pre>install-package Scaffeine.Ordering</pre>
-Dependencies (1)
+<pre>install-package Scaffeine.Orders.Core</pre>
+Dependencies (2)
 =====
 
-ScaffR Packages
+Scaffeine Packages
 ------
-* [ScaffR (1.1.2)](https://github.com/wcpro/ScaffR/tree/master/src/ScaffR)
+* [Scaffeine.Customers.Core ()](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.Customers.Core)
+* [Scaffeine.Products.Core ()](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.Products.Core)
 
 Other Packages
 ------

@@ -1,22 +1,15 @@
-﻿Scaffeine.Photos.FileSystem (1.1.2)
+﻿Scaffeine.Photos.FileSystem (1.1.4)
 ======
-
-      Description required.
-    
+Description required.
 Usage
 ======
 <pre>install-package Scaffeine.Photos.FileSystem</pre>
-Dependencies (3)
+Dependencies (1)
 =====
 
 Scaffeine Packages
 ------
-* [Scaffeine.Photos (1.1.2)](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.Photos)
-
-ScaffR Packages
-------
-* [ScaffR (1.1.2)](https://github.com/wcpro/ScaffR/tree/master/src/ScaffR)
+* [Scaffeine.Photos ()](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.Photos)
 
 Other Packages
 ------
-* T4Scaffolding(1.0.6)

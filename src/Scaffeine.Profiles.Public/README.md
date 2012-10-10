@@ -1,17 +1,16 @@
-﻿Scaffeine.Profiles.Public (1.1.2)
+﻿Scaffeine.Profiles.Public (1.1.4)
 ======
-
-      Description required.
-    
+Description required.
 Usage
 ======
 <pre>install-package Scaffeine.Profiles.Public</pre>
-Dependencies (1)
+Dependencies (2)
 =====
 
 Scaffeine Packages
 ------
-* [Scaffeine.Profiles (1.1.2)](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.Profiles)
+* [Scaffeine.Membership.Profiles ()](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.Membership.Profiles)
+* [Scaffeine.Membership.Photo ()](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.Membership.Photo)
 
 Other Packages
 ------

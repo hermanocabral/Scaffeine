@@ -1,17 +1,15 @@
-﻿Scaffeine.Logon (1.1.2)
+﻿Scaffeine.Membership.Logon (1.1.4)
 ======
-
-      Description required.
-    
+Description required.
 Usage
 ======
-<pre>install-package Scaffeine.Logon</pre>
+<pre>install-package Scaffeine.Membership.Logon</pre>
 Dependencies (1)
 =====
 
 Scaffeine Packages
 ------
-* [Scaffeine.Shell (1.1.2)](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.Shell)
+* [Scaffeine.Membership.Shell ()](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.Membership.Shell)
 
 Other Packages
 ------

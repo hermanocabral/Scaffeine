@@ -1,13 +1,19 @@
-﻿id1 (version1)
+﻿Scaffeine (1.1.4)
 ======
-description1
+Description required.
 Usage
 ======
-<pre>install-package id1</pre>
-Dependencies (3)
+<pre>install-package Scaffeine</pre>
+Dependencies (5)
 =====
+
+Scaffeine Packages
+------
+* [Scaffeine.Shell ()](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.Shell)
+* [Scaffeine.Dashboard ()](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.Dashboard)
+* [Scaffeine.System ()](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.System)
+* [Scaffeine.ContactUs ()](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.ContactUs)
+* [Scaffeine.Membership.Suite ()](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.Membership.Suite)
 
 Other Packages
 ------
-* id1(version1)
-* id2(version2)

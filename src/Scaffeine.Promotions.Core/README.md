@@ -1,18 +1,15 @@
-﻿Scaffeine.Promotions (1.1.2)
+﻿Scaffeine.Promotions.Core (1.1.4)
 ======
-
-      Promotions
-    
+Promotions
 Usage
 ======
-<pre>install-package Scaffeine.Promotions</pre>
-Dependencies (2)
+<pre>install-package Scaffeine.Promotions.Core</pre>
+Dependencies (1)
 =====
 
-ScaffR Packages
+Scaffeine Packages
 ------
-* [ScaffR (1.1.2)](https://github.com/wcpro/ScaffR/tree/master/src/ScaffR)
+* [Scaffeine.Pipeline ()](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.Pipeline)
 
 Other Packages
 ------
-* T4Scaffolding(1.0.4)

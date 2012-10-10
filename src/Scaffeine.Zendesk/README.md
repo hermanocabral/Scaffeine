@@ -1,8 +1,6 @@
-﻿Scaffeine.Zendesk (1.1.2)
+﻿Scaffeine.Zendesk (1.1.4)
 ======
-
-      Description required.
-    
+Description required.
 Usage
 ======
 <pre>install-package Scaffeine.Zendesk</pre>
@@ -11,8 +9,8 @@ Dependencies (2)
 
 ScaffR Packages
 ------
-* [ScaffR (1.1.2)](https://github.com/wcpro/ScaffR/tree/master/src/ScaffR)
+* [ScaffR ()](https://github.com/wcpro/ScaffR/tree/master/src/ScaffR)
 
 Other Packages
 ------
-* T4Scaffolding(1.0.6)
+* T4Scaffolding()

@@ -1,17 +1,15 @@
-﻿Scaffeine.Inventory (1.1.2)
+﻿Scaffeine.Products.Inventory.Core (1.1.4)
 ======
-
-      Description required.
-    
+Description required.
 Usage
 ======
-<pre>install-package Scaffeine.Inventory</pre>
+<pre>install-package Scaffeine.Products.Inventory.Core</pre>
 Dependencies (1)
 =====
 
-ScaffR Packages
+Scaffeine Packages
 ------
-* [ScaffR (1.1.2)](https://github.com/wcpro/ScaffR/tree/master/src/ScaffR)
+* [Scaffeine.Products.Core ()](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.Products.Core)
 
 Other Packages
 ------

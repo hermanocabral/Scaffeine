@@ -1,18 +1,15 @@
-﻿Scaffeine.System (1.1.2)
+﻿Scaffeine.System (1.1.4)
 ======
-
-      Description required.
-    
+Description required.
 Usage
 ======
 <pre>install-package Scaffeine.System</pre>
-Dependencies (2)
+Dependencies (1)
 =====
 
-ScaffR Packages
+Scaffeine Packages
 ------
-* [ScaffR (1.1.2)](https://github.com/wcpro/ScaffR/tree/master/src/ScaffR)
+* [Scaffeine.System.Shell ()](https://github.com/wcpro/Scaffeine/tree/master/src/Scaffeine.System.Shell)
 
 Other Packages
 ------
-* T4Scaffolding(1.0.6)
