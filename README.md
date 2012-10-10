@@ -1,7 +1,7 @@
 Scaffeine
 =========
 
-Scaffeine is a collection packages like blog, commerce, etc that let you speed up your development.
+Scaffeine is a collection of modular source code packages packages like blogs, membership, commerce, etc that let you speed up your development.
 
 Philosophy
 -----
