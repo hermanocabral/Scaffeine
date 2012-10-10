@@ -1,7 +1,12 @@
 Scaffeine
 =========
 
-Scaffeine is a collection packages like blog, commerce, etc that let you speed up your development.
+Scaffeine is a collection of modular source code packages packages like blogs, membership, 
+commerce, etc that let you quickly compose production-ready, white-label source code solutions.  This is different than projects like
+orchard or wordpress in that our focus is on the source code itself... making it easy to use, consume and customize.
+
+Whether you are making a Console Application or a MVC Website, our tools make it possible to never write the same code
+twice!
 
 Philosophy
 -----
@@ -22,10 +27,20 @@ The Scaffeine architecture uses the following frameworks
 * SignalR
 * Entity Framework CodeFirst (w/ migrations)
 
-Modules
------
-Scaffeine uses a module architecture, based on NuGet, that allows developers to quickly compose, customize, and build full-integrated
-source code your Scaffeine instance that is fully white-labeled.  Once the code has been generated, you can customize it as you see fit.
+Prerequisites
+------
+Currently Scaffeine has the following dependencies
+
+* .NET 4.5
+* Visual Studio 2012 Professional or higher
+* Powershell 2
+
+Usage
+------
+1) Download the latest code and run package.bat found on the root directory
+2) Add a nuget source to c:\development\localnuget
+3) Create an empty MVC 4 application
+4) From nuget console window, type install-package Scaffeine
 
 Contact Us
 ------
