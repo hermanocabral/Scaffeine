@@ -1,7 +1,7 @@
 Scaffeine
 =========
 
-Scaffeine is a collection of reusable components using C#.
+Scaffeine is a collection packages like blog, commerce, etc that let you speed up your development.
 
 Philosophy
 -----
