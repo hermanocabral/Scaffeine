@@ -22,10 +22,19 @@ The Scaffeine architecture uses the following frameworks
 * SignalR
 * Entity Framework CodeFirst (w/ migrations)
 
-Modules
------
-Scaffeine uses a module architecture, based on NuGet, that allows developers to quickly compose, customize, and build full-integrated
-source code your Scaffeine instance that is fully white-labeled.  Once the code has been generated, you can customize it as you see fit.
+Prerequisites
+------
+Currently Scaffeine has the following dependencies
+1) .NET 4.5
+2) Visual Studio 2012
+3) Powershell 2
+
+Usage
+------
+1) Download the latest code and run package.bat found on the root directory
+2) Add a nuget source to c:\development\localnuget
+3) Create an empty MVC 4 application
+4) From nuget console window, type install-package Scaffeine
 
 Contact Us
 ------
