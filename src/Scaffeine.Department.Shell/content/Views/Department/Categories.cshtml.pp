@@ -1,78 +1,94 @@
 ﻿@{
-    ViewBag.Title = "Departmens and Categories";
+    ViewBag.Title = "Manage Departments";
     Layout = "~/Views/Shared/_Folder.cshtml";
-	Bundles.Reference("content/custom/categories.less", "custom");
+
     Bundles.Reference("scripts/custom/department/department.js", "custom");
+    Bundles.Reference("content/custom/department.less", "custom");
 }
 
-<div id="viewArea">
-    <h2>Departments <a href="#" class="btn" data-bind="click: $root.addDepartment"><i class="icon-plus"></i>Add</a></h2>
 
-    <div data-bind="template: {name: templateToUse, foreach: departments}">
+<div id="viewArea">
+    <div class="page-header">
+        <h2>Departments <a href="#" class="btn btn-inverse" data-bind="click: $root.addDepartment"><i class="icon-plus"></i>&nbsp;Add</a></h2>
     </div>
+
+    <div data-bind="template: {name: templateToUse, foreach: departments}"></div>
 </div>
 
 <script id="itemTmpl" type="text/html">
     <div class="row-fluid">
-        <div class="span12 editable" style="padding-left: 75px;">
-            <div class="controls hide">
-                <a class="btn btn-small" data-bind="click: $root.editDepartment" href="#" title="edit"><i class="icon-edit"></i></a>
-                <a class="btn btn-small" data-bind="click: $root.removeDepartment" href="#" title="remove"><i class="icon-trash"></i></a>
+        <div class="span12 editable">
+
+            <div style="padding: 10px">
+                <div class="controls pull-right">
+                    <a class="btn btn-small" data-bind="click: $root.editDepartment" title="edit"><i class="icon-edit"></i></a>
+                    <a class="btn btn-small" data-bind="click: $root.removeDepartment" title="remove"><i class="icon-trash"></i></a>
+                </div>
+
+
+                <h4 style="display: inline" data-bind="text: Name"></h4>
+                <span style="font-style: italic;" data-bind="text: Description"></span>
             </div>
-            <p style="font-weight: bold;" data-bind="text: Name"></p>
-            <span data-bind="text: Description"></span>
-            <div data-bind="template: {name: $root.tmplToUse, foreach: Categories}">
-            </div>
-            <a href="#" class="btn btn-small" data-bind="click: $root.addCategory">Add Category</a>
+
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th style="width: 35%">Name</th>
+                        <th>Description</th>
+                      
+                    </tr>
+                </thead>
+                <tbody data-bind="template: {name: $root.tmplToUse, foreach: Categories}"></tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">
+                            <a class="btn btn-primary" data-bind="click: $root.addCategory">Add a Category</a>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
         </div>
     </div>
-    <hr />
+
 </script>
 
 <script id="editTmpl" type="text/html">
-    <div class="row-fluid">
+    <div class="row-fluid well" style="margin-bottom: 20px;">
         <div class="span12">
-            <div class="pull-right">
-                <a class="btn btn-small btn-success" data-bind="click: $root.saveDepartment" href="#" title="save"><i class="icon-ok"></i></a>
-                <a class="btn btn-small" data-bind="click: $root.cancel" href="#" title="cancel"><i class="icon-remove"></i></a>
-            </div>
             <p>
-                <input type="text" data-bind="value: Name" class="input-xxlarge" />
+                <input type="text" data-bind="value: Name" class="span12" placeholder="Enter Department Name" />
             </p>
             <span>
-                <textarea data-bind="value:Description" class="input-xxlarge"></textarea></span>
+                <textarea data-bind="value:Description" placeholder="Enter Department Description" class="span12"></textarea></span>
+        </div>
+        <div>
+            <a class="btn btn-success" data-bind="click: $root.saveDepartment" href="#" title="save"><i class="icon-ok"></i>&nbsp;Save</a>
+            or 
+            <a data-bind="click: $root.cancel" href="#" title="cancel">Cancel</a>
         </div>
     </div>
-    <hr />
 </script>
 
 <script id="categoryTmpl" type="text/html">
-    <div class="row-fluid">
-        <div class="span12 categoryEditable" style="padding-left: 75px;">
-            <div class="categoryControls hide">
-                <a class="btn btn-small" data-bind="click: function(){$root.editCategory($parent, this);}" href="#" title="edit"><i class="icon-edit"></i></a>
-                <a class="btn btn-small" data-bind="click: function(){$root.removeCategory($parent, this);}" href="#" title="remove"><i class="icon-trash"></i></a>
-            </div>
-            <p style="font-weight: bold;" data-bind="text: Name"></p>
-            <span data-bind="text: Description"></span>
-        </div>
-    </div>
+    <tr data-bind="click: function(){$root.editCategory($parent, this);}">
+        <td data-bind="text: Name"></td>
+        <td data-bind="text: Description"></td>
+    </tr>
+
 </script>
 
 <script id="editCategory" type="text/html">
-    <div class="row-fluid">
-        <div class="span2">
-            <div class="pull-right">
-                <a class="btn btn-small btn-success" data-bind="click: $root.saveCategory" href="#" title="edit"><i class="icon-ok"></i></a>
-                <a class="btn btn-small" data-bind="click: $root.cancelCategory" href="#" title="remove"><i class="icon-remove"></i></a>
+    <tr style="background-color: #efefef">
+        <td colspan="2">
+            <input type="text" data-bind="value: Name" class="span12" placeholder="Category Name" /><br />
+            <textarea data-bind="value:Description" class="span12" placeholder="Category Description"></textarea>
+            <br />
+            <div class="categoryControls">
+                <a class="btn btn-medium btn-success" data-bind="click: $root.saveCategory" href="#" title="edit"><i class="icon-ok"></i>&nbsp;Save Category</a>
+                or
+                <a data-bind="click: $root.cancelCategory" href="#" title="remove">Cancel</a>
+                <a class="btn btn-medium btn-warning pull-right" data-bind="click: function(){$root.removeCategory($parent, this);}" href="#" title="remove"><i class="icon-trash"></i>&nbsp;Delete Category</a>
             </div>
-        </div>
-        <div class="span10">
-            <p>
-                <input type="text" data-bind="value: Name" class="input-xxlarge" />
-            </p>
-            <span>
-                <textarea data-bind="value:Description" class="input-xxlarge"></textarea></span>
-        </div>
-    </div>
+        </td>
+    </tr>
 </script>

@@ -8,6 +8,9 @@
     self.Name = ko.observable(data.Name);
     self.Description = ko.observable(data.Description);
     self.Categories = ko.observableArray();
+    self.shouldShowCategoryList = ko.computed(function () {
+        return self.Categories.length > 0;
+    });
 }
 
 function Category(data) {
@@ -64,7 +67,7 @@ var DepartmentViewModel = function (departments) {
         $.ajax({
             url: '/api/departments',
             type: verb,
-            contentTYpe: 'application/json; charset=utf-8',
+            contentType: 'application/json; charset=utf-8',
             data: model,
             success: function (data) {
                 self.selectedItem().Id(data.Id);
