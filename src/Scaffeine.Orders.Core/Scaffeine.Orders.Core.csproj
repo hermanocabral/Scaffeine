@@ -46,6 +46,7 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Orders.Core\Filters\OrderItems\RemoveFromInventory.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Orders.Core\Order.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Orders.Core\OrderLineItem.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Orders.Core\OrderStatus.cs.t4" />
@@ -60,7 +61,6 @@
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Orders.Core\Configuration\CoreSection.Ordering.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Orders.Core\Configuration\Ordering\OrderingElement.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Orders.Core\Filters\OrderItems\MarkAsShipped.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Orders.Core\Filters\OrderItems\RemoveFromInvetory.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Orders.Core\Filters\OrderItems\UpdateAvailableQuantity.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Orders.Core\Filters\Orders\CheckFraudFilter.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Orders.Core\Filters\Orders\CheckInventory.cs.t4" />
