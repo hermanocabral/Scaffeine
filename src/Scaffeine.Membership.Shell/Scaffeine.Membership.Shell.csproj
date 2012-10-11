@@ -57,6 +57,7 @@
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Shell\Scaffeine.Membership.Shell.ps1" />
     <None Include="content\Controllers\Account\AccountController.cs.pp" />
     <None Include="content\Sitemaps\Account.sitemap" />
+    <None Include="content\Sitemaps\Modules.sitemap.transform" />
     <None Include="content\Web.config.transform">
       <SubType>Designer</SubType>
     </None>
