@@ -5,6 +5,7 @@ namespace <#= Model.Namespace #>.Subscriptions.Recurly
     using System;
     using System.Collections.Specialized;
     using System.Configuration.Provider;
+    using Core.Common.Subscriptions;
 
     /// <summary>
     /// Defines username, password, and subdomain properties for web.config/app.config files.
@@ -21,7 +22,7 @@ namespace <#= Model.Namespace #>.Subscriptions.Recurly
             /// <summary>
             /// Production or sandbox Recurly accounts
             /// </summary>
-            Production, 
+            Production,
 
             /// <summary>
             /// Local development by Recurly developers
@@ -99,47 +100,62 @@ namespace <#= Model.Namespace #>.Subscriptions.Recurly
         /// The MvcApplication24.Subscriptions.CreateSubscriptionResponse.
         /// </returns>
         public override AccountResponse CreateAccount(AccountRequest request)
-        {
-            var acct = new RecurlyAccount(request.Accountcode);
+        {//twili4all
+            var acct = new RecurlyAccount(request.Accountcode)
+            {
+                FirstName = request.FirstName,
+                LastName = request.LastName,
+                Email = request.Email,
+                AcceptLanguage = request.AcceptLanguage,
+                Username = request.Username,
+                BillingInfo = new RecurlyBillingInfo(request.Accountcode)
+                {
+                    FirstName = request.FirstName,
+                    Address1 = request.Address1,
+                    Address2 = request.Address2,
+                    City = request.City,
+                    State = request.State,
+                    Country = request.Country,
+                    IpAddress = request.IPAddress,
+                    LastName = request.LastName,
+                    PhoneNumber = request.Phone,
+                    PostalCode = request.ZipCode
+                }
+            };
+
             acct.Create();
-            return new AccountResponse();
+
+            var newAcct = RecurlyAccount.Get(request.Accountcode);
+
+            return new AccountResponse
+                       {
+                           CreationDate = DateTime.Now,
+                           AccountCode = newAcct.AccountCode
+                       };
+
         }
 
         public override AccountResponse UpdateAccount(AccountRequest request)
         {
-            try
-            {
-                var acct = new RecurlyAccount(request.Accountcode)
-                {
-                    FirstName = request.FirstName,
-                    LastName = request.LastName,
-                    Email = request.Email,
-                    CompanyName = request.CompanyName
-                };
+            var acct = new RecurlyAccount(request.Accountcode)
+                           {
+                               FirstName = request.FirstName,
+                               LastName = request.LastName,
+                               Email = request.Email,
+                               CompanyName = request.CompanyName
+                           };
 
-                acct.Update();
+            acct.Update();
 
-                // todo: implement automapper here
-                return new AccountResponse();
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }            
+            // todo: implement automapper here
+            return new AccountResponse();
         }
 
         public override bool CloseAccount(string accountCode)
         {
-            try
-            {
-                var account = new RecurlyAccount(accountCode);
-                account.CloseAccount();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+            var account = new RecurlyAccount(accountCode);
+            account.CloseAccount();
+            return true;
         }
 
         /// <summary>
@@ -175,31 +191,31 @@ namespace <#= Model.Namespace #>.Subscriptions.Recurly
 
             base.Initialize(name, config);
 
-            this.ApiKey = config["apiKey"];
-            if (string.IsNullOrEmpty(this.ApiKey))
+            ApiKey = config["apiKey"];
+            if (string.IsNullOrEmpty(ApiKey))
             {
                 throw new ProviderException("Empty or missing Api Key");
             }
 
             config.Remove("apiKey");
 
-            this.Subdomain = config["apiSubdomain"];
-            if (string.IsNullOrEmpty(this.Subdomain))
+            Subdomain = config["apiSubdomain"];
+            if (string.IsNullOrEmpty(Subdomain))
             {
                 throw new ProviderException("Empty or missing API Subdomain");
             }
 
             config.Remove("apiSubdomain");
 
-            this.PrivateKey = config["privateKey"];
-            if (string.IsNullOrEmpty(this.PrivateKey))
+            PrivateKey = config["privateKey"];
+            if (string.IsNullOrEmpty(PrivateKey))
             {
                 throw new ProviderException("Empty or missing Private Key");
             }
 
             config.Remove("privateKey");
 
-            this.Environment = (EnvironmentType)Enum.Parse(typeof(EnvironmentType), config["environmentType"]);
+            Environment = (EnvironmentType)Enum.Parse(typeof(EnvironmentType), config["environmentType"]);
             config.Remove("environmentType");
 
             if (config.Count > 0)

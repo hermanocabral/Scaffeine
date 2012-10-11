@@ -46,32 +46,32 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="content\CodeTemplates\Scaffolders\Subscriptions.Recurly\RecurlySubscriptionProvider.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Subscriptions.Recurly\RecurlySubscriptionProvider.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Subscriptions.Recurly\Subscriptions.Recurly.ps1" />
-    <Compile Include="content\CodeTemplates\Scaffolders\Subscriptions.Recurly\ForgedQueryStringException.cs.t4" />
-    <Compile Include="content\CodeTemplates\Scaffolders\Subscriptions.Recurly\RecurlyAccount.cs.t4" />
-    <Compile Include="content\CodeTemplates\Scaffolders\Subscriptions.Recurly\RecurlyAccountCoupon.cs.t4" />
-    <Compile Include="content\CodeTemplates\Scaffolders\Subscriptions.Recurly\RecurlyBillingInfo.cs.t4" />
-    <Compile Include="content\CodeTemplates\Scaffolders\Subscriptions.Recurly\RecurlyCharge.cs.t4" />
-    <Compile Include="content\CodeTemplates\Scaffolders\Subscriptions.Recurly\RecurlyClient.cs.t4" />
-    <Compile Include="content\CodeTemplates\Scaffolders\Subscriptions.Recurly\RecurlyCredit.cs.t4" />
-    <Compile Include="content\CodeTemplates\Scaffolders\Subscriptions.Recurly\RecurlyCreditCard.cs.t4" />
-    <Compile Include="content\CodeTemplates\Scaffolders\Subscriptions.Recurly\RecurlyError.cs.t4" />
-    <Compile Include="content\CodeTemplates\Scaffolders\Subscriptions.Recurly\RecurlyException.cs.t4" />
-    <Compile Include="content\CodeTemplates\Scaffolders\Subscriptions.Recurly\RecurlyInvoice.cs.t4" />
-    <Compile Include="content\CodeTemplates\Scaffolders\Subscriptions.Recurly\RecurlyInvoiceList.cs.t4" />
-    <Compile Include="content\CodeTemplates\Scaffolders\Subscriptions.Recurly\RecurlyLineItem.cs.t4" />
-    <Compile Include="content\CodeTemplates\Scaffolders\Subscriptions.Recurly\RecurlyLineItemList.cs.t4" />
-    <Compile Include="content\CodeTemplates\Scaffolders\Subscriptions.Recurly\RecurlyPlan.cs.t4" />
-    <Compile Include="content\CodeTemplates\Scaffolders\Subscriptions.Recurly\RecurlyServerException.cs.t4" />
-    <Compile Include="content\CodeTemplates\Scaffolders\Subscriptions.Recurly\RecurlySubscription.cs.t4" />
-    <Compile Include="content\CodeTemplates\Scaffolders\Subscriptions.Recurly\RecurlyTransaction.cs.t4" />
-    <Compile Include="content\CodeTemplates\Scaffolders\Subscriptions.Recurly\RecurlyTransactionList.cs.t4" />
-    <Compile Include="content\CodeTemplates\Scaffolders\Subscriptions.Recurly\RecurlyTransparent.cs.t4" />
-    <Compile Include="content\CodeTemplates\Scaffolders\Subscriptions.Recurly\TemporarilyUnavailableException.cs.t4" />
-    <Compile Include="content\CodeTemplates\Scaffolders\Subscriptions.Recurly\ValidationException.cs.t4" />
-    <Compile Include="content\CodeTemplates\Scaffolders\Subscriptions.Recurly\InvalidCredentialsException.cs.t4" />
-    <Compile Include="content\CodeTemplates\Scaffolders\Subscriptions.Recurly\NotFoundException.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Subscriptions.Recurly\ForgedQueryStringException.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Subscriptions.Recurly\RecurlyAccount.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Subscriptions.Recurly\RecurlyAccountCoupon.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Subscriptions.Recurly\RecurlyBillingInfo.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Subscriptions.Recurly\RecurlyCharge.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Subscriptions.Recurly\RecurlyClient.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Subscriptions.Recurly\RecurlyCredit.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Subscriptions.Recurly\RecurlyCreditCard.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Subscriptions.Recurly\RecurlyError.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Subscriptions.Recurly\RecurlyException.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Subscriptions.Recurly\RecurlyInvoice.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Subscriptions.Recurly\RecurlyInvoiceList.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Subscriptions.Recurly\RecurlyLineItem.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Subscriptions.Recurly\RecurlyLineItemList.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Subscriptions.Recurly\RecurlyPlan.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Subscriptions.Recurly\RecurlyServerException.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Subscriptions.Recurly\RecurlySubscription.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Subscriptions.Recurly\RecurlyTransaction.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Subscriptions.Recurly\RecurlyTransactionList.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Subscriptions.Recurly\RecurlyTransparent.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Subscriptions.Recurly\TemporarilyUnavailableException.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Subscriptions.Recurly\ValidationException.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Subscriptions.Recurly\InvalidCredentialsException.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Subscriptions.Recurly\NotFoundException.cs.t4" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
