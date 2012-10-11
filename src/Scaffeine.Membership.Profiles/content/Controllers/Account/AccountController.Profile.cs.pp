@@ -37,21 +37,18 @@
                     }
                 }
 
-                if (ModelState.IsValid)
-                {
-                    this.GetCurrentUser().InjectFrom<UnflatLoopValueInjection>(model);
+                this.GetCurrentUser().InjectFrom<UnflatLoopValueInjection>(model);
 
-                    try
-                    {
-                        _userService.SaveOrUpdate(this.GetCurrentUser());
-                        TempData["Success"] = "User was successfully updated.";
-                        return RedirectToAction("Profile");
-                    }
-                    catch (Exception)
-                    {
-                        ModelState.AddModelError("Exception", "Unexpected error");
-                    }
+                try
+                {
+					_userService.SaveOrUpdate(this.GetCurrentUser());
+                    TempData["Success"] = "User was successfully updated.";
+                    return RedirectToAction("Profile");
                 }
+                catch (Exception)
+                {
+                    ModelState.AddModelError("Exception", "Unexpected error");
+                }                
             }
 
             return View(model);

@@ -46,6 +46,7 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Orders.Core\Filters\OrderItems\RemoveFromInventory.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Orders.Core\Order.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Orders.Core\OrderLineItem.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Orders.Core\OrderStatus.cs.t4" />

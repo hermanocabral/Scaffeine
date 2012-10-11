@@ -18,6 +18,7 @@
     <dependencies>
       <dependency id="Scaffeine.Customers.Core" />
       <dependency id="Scaffeine.Products.Core" />
+      <dependency id="Scaffeine.Pipeline" />
     </dependencies>
   </metadata>
   <files>

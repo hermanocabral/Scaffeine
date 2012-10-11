@@ -9,7 +9,7 @@
     <iconUrl>http://www.scaffr.com/favicon.ico</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
-      Description required.
+      Provides a simple eventing architecture complete with message bus, event handler registration, etc.
     </description>
     <releaseNotes>
     </releaseNotes>
