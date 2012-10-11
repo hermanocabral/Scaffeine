@@ -6,6 +6,7 @@
     using Models;
 	using System;
 	using System.Web.Mvc;
+    using Omu.ValueInjecter;
 
     public class SubscriptionController : Controller
     {
@@ -22,26 +23,11 @@
             {
                 try
                 {
-                    var response = SubscriptionsManager.CreateAccount(new AccountRequest()
-                    {
-                        AcceptLanguage = "en-US",
-                        Accountcode = Guid.NewGuid().ToString().Substring(0, 5),
-                        Email = this.GetCurrentUser().Email,
-                        FirstName = this.GetCurrentUser().FirstName,
-                        LastName = this.GetCurrentUser().LastName,
-                        Address1 = this.GetCurrentUser().AddressLine1,
-                        Address2 = this.GetCurrentUser().AddressLine2,
-                        Username = this.GetCurrentUser().Username,
-                        City = this.GetCurrentUser().City,
-                        State = this.GetCurrentUser().State,
-                        Phone = this.GetCurrentUser().PhoneNumber,
-                        ZipCode = this.GetCurrentUser().ZipCode,
-                        IPAddress = "1.1.1.1",
-                        CardNumber = model.CreditCardNumber,
-                        CardType = model.CardType,
-                        Month = model.Month,
-                        Year = model.Year
-                    });
+                    var request = new AccountRequest();
+
+                    request.InjectFrom<UnflatLoopValueInjection>(this.GetCurrentUser(), model);                    
+
+                    var response = SubscriptionsManager.CreateAccount(request);
                 }
                 catch (Exception ex)
                 {

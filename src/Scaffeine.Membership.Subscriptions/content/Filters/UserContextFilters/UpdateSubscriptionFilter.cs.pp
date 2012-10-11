@@ -1,4 +1,4 @@
-namespace $rootnamespcae$.Filters.UserContextFilters
+namespace $rootnamespace$.Filters.UserContextFilters
 {
     using System.Web.Mvc;
     using Core.Infrastructure.Pipeline;
