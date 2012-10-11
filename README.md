@@ -37,10 +37,11 @@ Currently Scaffeine has the following dependencies
 
 Usage
 ------
-1) Download the latest code and run package.bat found on the root directory
-2) Add a nuget source to c:\development\localnuget
-3) Create an empty MVC 4 application
-4) From nuget console window, type install-package Scaffeine
+1. Download the latest code and run package.bat found on the root directory
+2. Download the latest code from ScaffR and do the same (https://www.github.com/wcpro/scaffr)
+3. Add a nuget source to c:\development\localnuget
+4. Create an empty MVC 4 application
+5. From nuget console window, type install-package Scaffeine
 
 Contact Us
 ------
