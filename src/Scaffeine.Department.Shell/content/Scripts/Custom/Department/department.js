@@ -30,6 +30,7 @@ var DepartmentViewModel = function (departments) {
     self.departments = ko.observableArray(departments);
     self.selectedItem = ko.observable();
     self.dpt = null;
+    self.cat = null;
     self.selectedCategory = ko.observable();
 
     self.addDepartment = function () {
@@ -45,18 +46,25 @@ var DepartmentViewModel = function (departments) {
         self.selectedItem(dpt);
     };
 
-    self.removeDepartment = function (dpt) {
-        var model = ko.toJS(dpt);
+    self.confirmDeleteDepartment = function (dpt) {
+        self.dpt = dpt;
+        modal.content('Are you sure to delete the "' + dpt.Name() + '" department?');
+        modal.btnText('Delete Department');
+        modal.setCallback(self.removeDepartment);
+        modal.show();
+    };
 
-        if (confirm('Are you sure about delete this Department?')) {
-            $.ajax({
-                url: '/api/departments/' + model.Id,
-                type: 'DELETE',
-                success: function (data) {
-                    self.departments.remove(dpt);
-                }
-            });
-        }
+    self.removeDepartment = function () {
+        var model = ko.toJS(self.dpt);
+
+        $.ajax({
+            url: '/api/departments/' + model.Id,
+            type: 'DELETE',
+            success: function (data) {
+                self.departments.remove(self.dpt);
+                modal.hide();
+            }
+        });
     };
 
     self.saveDepartment = function (dpt) {
@@ -68,11 +76,23 @@ var DepartmentViewModel = function (departments) {
             url: '/api/departments',
             type: verb,
             contentType: 'application/json; charset=utf-8',
-            data: model,
+            data: JSON.stringify(model),
             success: function (data) {
                 self.selectedItem().Id(data.Id);
                 self.selectedItem().RowVersion(data.RowVersion);
                 self.selectedItem(null);
+            },
+            error: function (a, b, c) {
+                var errorJSON = JSON.parse(a.responseText);
+
+                var html = '';
+                $.each(errorJSON.ModelState, function () {
+                    html += '<p>' + this[0] + '</p>';
+                });
+
+                modal.content(html);
+                modal.hideBtn();
+                modal.show();
             }
         });
     };
@@ -101,18 +121,27 @@ var DepartmentViewModel = function (departments) {
         self.selectedCategory(cat);
     };
 
-    self.removeCategory = function (dpt, cat) {
-        var model = ko.toJS(cat);
+    self.confirmDeleteCategory = function (dpt, cat) {
+        self.dpt = dpt;
+        self.cat = cat;
+        modal.content('Are you sure to delete the "' + cat.Name() + '" category?');
+        modal.btnText('Delete Category');
+        modal.setCallback(self.removeCategory);
+        modal.show();
+    };
 
-        if (confirm('Are you sure about delete this Category?')) {
-            $.ajax({
-                url: '/api/categories/' + model.Id,
-                type: 'DELETE',
-                success: function (data) {
-                    dpt.Categories.remove(cat);
-                }
-            });
-        }
+    self.removeCategory = function () {
+        var model = ko.toJS(self.cat);
+
+        $.ajax({
+            url: '/api/categories/' + model.Id,
+            type: 'DELETE',
+            success: function (data) {
+                self.dpt.Categories.remove(self.cat);
+                self.selectedCategory(null);
+                modal.hide();
+            }
+        });
     };
 
     self.saveCategory = function (cat) {
@@ -124,12 +153,24 @@ var DepartmentViewModel = function (departments) {
         $.ajax({
             url: '/api/categories',
             type: verb,
-            contentTYpe: 'application/json; charset=utf-8',
-            data: model,
+            contentType: 'application/json; charset=utf-8',
+            data: JSON.stringify(model),
             success: function (data) {
                 self.selectedCategory().Id(data.Id);
                 self.selectedCategory().RowVersion(data.RowVersion);
                 self.selectedCategory(null);
+            },
+            error: function (a, b, c) {
+                var errorJSON = JSON.parse(a.responseText);
+
+                var html = '';
+                $.each(errorJSON.ModelState, function () {
+                    html += '<p>' + this[0] + '</p>';
+                });
+
+                modal.content(html);
+                modal.hideBtn();
+                modal.show();
             }
         });
     };

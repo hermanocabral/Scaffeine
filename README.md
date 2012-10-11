@@ -44,4 +44,5 @@ Usage
 
 Contact Us
 ------
-WE are glad to help with implementation.  We are still very new project, so we have a growing, active community.  Don't be afraid to contact us at rod@scaffr.com.
+WE are glad to help with implementation.  We are still very new project, so we have a growing, active community.  
+Don't be afraid to contact us at rod@scaffr.com.  Also post any questions to http://stackoverflow.com/questions/tagged/scaffr

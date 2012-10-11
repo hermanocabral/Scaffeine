@@ -1,23 +1,13 @@
 div.editable {
-	position: relative;
-	h3{
-		padding: 0;
-		margin: 0;
-	}	
-}
+	h4, span{
+		&:hover {
+			cursor: pointer;		
+		}
+	}
 
-div.categoryEditable {
-	position: relative;
-	&:hover {
-		div.categoryControls {display: inline; position: absolute; left: 0;}
+	table>tbody td {
+		&:hover {
+			cursor: pointer;
+		}
 	}
 }
-
-.typeahead.dropdown-menu {
-	z-index: 1051;
-}
-
-#viewArea{
-
-}
-

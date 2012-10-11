@@ -77,6 +77,7 @@
     <None Include="content\Models\ContactUsModel.cs.pp" />
     <None Include="content\Sitemaps\Public.sitemap" />
     <None Include="content\Views\Shared\_Alert.cshtml.pp" />
+    <None Include="content\Views\Shared\_Modal.cshtml.pp" />
     <None Include="content\Views\Shared\_UserWidget.cshtml.pp" />
     <None Include="content\Views\Shared\_UserActions.cshtml.pp" />
     <None Include="content\Views\Shared\DisplayTemplates\Alert.cshtml.pp" />
@@ -109,7 +110,6 @@
     <None Include="tools\uninstall.ps1" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="content\Scripts\Global\" />
     <Folder Include="content\Views\Dashboard\" />
     <Folder Include="content\Views\Diagnostic\" />
     <Folder Include="lib\net35\" />
@@ -123,6 +123,8 @@
     <Content Include="content\Content\images\rod.PNG" />
     <Content Include="content\Content\images\scaffr.png" />
     <Content Include="content\favicon.ico" />
+    <Content Include="content\Scripts\Custom\empty.js" />
+    <Content Include="content\Scripts\Global\global.modal.js" />
     <Content Include="lib\net40\MvcSiteMapProvider.dll" />
     <Content Include="lib\net40\MvcSiteMapProvider.XML" />
   </ItemGroup>

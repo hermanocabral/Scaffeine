@@ -4,11 +4,13 @@ namespace <#= Model.Namespace #>.Core.Model
 {
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
+	using System.ComponentModel.DataAnnotations;
 
     public partial class Category : DomainObject
     {
+		[Required]
 		public string Name { get; set; }
-
+		[Required]
         public string Description { get; set; }
 
         private ICollection<Category> _categories;
