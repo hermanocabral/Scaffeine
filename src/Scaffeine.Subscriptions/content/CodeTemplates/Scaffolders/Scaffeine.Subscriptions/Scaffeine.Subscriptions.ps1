@@ -12,11 +12,26 @@ param(
 		"AccountRequest", `
 		"AccountResponse", `
 		"SubscriptionsManager", `
-		"SubscriptionsProvider", `
-		"SubscriptionsProviderCollection", `
-		"SubscriptionsSection")
+		"SubscriptionsProvider")
 
 foreach ($tml in $templates){
-	$outputPath = $tml
-	add-template $subscriptionProjectName $outputPath $tml -Force:$Force $TemplateFolders
+	$outputPath = "Common\Subscriptions\$tml"
+	add-template $coreProjectName $outputPath $tml -Force:$Force $TemplateFolders
+}
+
+ $templates = 
+ 	@("SubscriptionsElement", `
+		"SubscriptionsProviderCollection")
+
+foreach ($tml in $templates){
+	$outputPath = "Configuration\Subscriptions\$tml"
+	add-template $coreProjectName $outputPath $tml -Force:$Force $TemplateFolders
+}
+
+ $templates = 
+ 	@("CoreSection.Subscriptions")
+
+foreach ($tml in $templates){
+	$outputPath = "Configuration\$tml"
+	add-template $coreProjectName $outputPath $tml -Force:$Force $TemplateFolders
 }

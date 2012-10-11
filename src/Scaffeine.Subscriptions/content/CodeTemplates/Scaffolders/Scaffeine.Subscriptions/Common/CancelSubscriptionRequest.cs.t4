@@ -1,6 +1,6 @@
 <#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
 <#@ Output Extension="cs" #>
-namespace <#= Model.Namespace #>.Subscriptions
+namespace <#= Model.Namespace #>.Core.Common.Subscriptions
 {
     public partial class CancelSubscriptionRequest
     {        

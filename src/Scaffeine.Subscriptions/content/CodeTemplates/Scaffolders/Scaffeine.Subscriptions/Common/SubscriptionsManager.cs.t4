@@ -1,9 +1,11 @@
 ﻿<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
 <#@ Output Extension="cs" #>
-namespace <#= Model.Namespace #>.Subscriptions
+namespace <#= Model.Namespace #>.Core.Common.Subscriptions
 {
     using System.Configuration.Provider;
     using System.Web.Configuration;
+	using Configuration;
+    using Configuration.Subscriptions;
 
     public partial class SubscriptionsManager
     {
@@ -62,7 +64,7 @@ namespace <#= Model.Namespace #>.Subscriptions
                 {
                     if (_provider == null)
                     {
-                        var section = (SubscriptionsSection)WebConfigurationManager.GetSection("<#= Model.Namespace #>/<#= Model.Namespace #>.Subscriptions");
+                        var section = CoreSection.GetConfig().Subscriptions;
 
                         _providers = new SubscriptionsProviderCollection();
                         ProvidersHelper.InstantiateProviders(section.Providers, _providers, typeof(SubscriptionsProvider));

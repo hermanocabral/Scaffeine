@@ -50,15 +50,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Subscriptions\CancelSubscriptionRequest.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Subscriptions\CancelSubscriptionResponse.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Subscriptions\AccountRequest.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Subscriptions\AccountResponse.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Subscriptions\Common\CancelSubscriptionRequest.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Subscriptions\Common\CancelSubscriptionResponse.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Subscriptions\Common\AccountRequest.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Subscriptions\Common\AccountResponse.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Subscriptions\Configuration\SubscriptionsElement.cs.t4" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Subscriptions\Scaffeine.Subscriptions.ps1" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Subscriptions\SubscriptionsProvider.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Subscriptions\SubscriptionsProviderCollection.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Subscriptions\SubscriptionsManager.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Subscriptions\SubscriptionsSection.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Subscriptions\Common\SubscriptionsProvider.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Subscriptions\Configuration\SubscriptionsProviderCollection.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Subscriptions\Common\SubscriptionsManager.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Subscriptions\Configuration\CoreSection.Subscriptions.cs.t4" />
     <None Include="content\App.config.transform">
       <SubType>Designer</SubType>
     </None>

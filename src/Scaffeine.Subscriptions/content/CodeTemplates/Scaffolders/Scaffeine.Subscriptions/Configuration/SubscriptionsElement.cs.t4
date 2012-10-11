@@ -1,10 +1,10 @@
 ﻿<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
 <#@ Output Extension="cs" #>
-namespace <#= Model.Namespace #>.Subscriptions
+namespace <#= Model.Namespace #>.Core.Configuration.Subscriptions
 {
     using System.Configuration;
 
-    public partial class SubscriptionsSection : ConfigurationSection
+    public partial class SubscriptionsElement : ConfigurationElement
     {
         [ConfigurationProperty("providers")]
         public ProviderSettingsCollection Providers
