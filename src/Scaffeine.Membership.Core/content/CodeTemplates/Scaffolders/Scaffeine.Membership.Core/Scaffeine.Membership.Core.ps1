@@ -12,5 +12,37 @@ Add-Domain "Model\Role" "Role" -Force:$Force $TemplateFolders
 Add-Domain "Model\UserRole" "UserRole" -Force:$Force $TemplateFolders
 Add-Domain "Model\UserEmail" "UserEmail" -Force:$Force $TemplateFolders
 
-Add-Template $coreProjectName "Common\Membership\Events\UserCreated" "UserCreated" -Force:$Force $TemplateFolders
+ $templates = 
+ 	@(	"UserCreated", `
+		"UserLockedOut", `
+		"UserLoggedIn", `
+		"UserLoggedOut")
 
+foreach ($tml in $templates){
+	$outputPath = "Common\Membership\Events\$tml"
+	Add-Template $coreProjectName $outputPath $tml -Force:$Force $TemplateFolders
+}
+
+ $templates = 
+ 	@(	"MembershipManager" )
+
+foreach ($tml in $templates){
+	$outputPath = "Common\Membership\$tml"
+	Add-Template $coreProjectName $outputPath $tml -Force:$Force $TemplateFolders
+}
+
+ $templates = 
+ 	@(	"MembershipElement" )
+
+foreach ($tml in $templates){
+	$outputPath = "Configuration\Membership\$tml"
+	Add-Template $coreProjectName $outputPath $tml -Force:$Force $TemplateFolders
+}
+
+ $templates = 
+ 	@(	"CoreSection.Membership" )
+
+foreach ($tml in $templates){
+	$outputPath = "Configuration\$tml"
+	Add-Template $coreProjectName $outputPath $tml -Force:$Force $TemplateFolders
+}

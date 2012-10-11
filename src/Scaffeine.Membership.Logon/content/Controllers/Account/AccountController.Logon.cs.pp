@@ -37,8 +37,6 @@
                     case AuthenticationStatus.ResetPassword:
 
                         _authenticationService.SetAuthCookie(model.UserName, model.RememberMe);
-                        
-                        this._userService.SaveOrUpdate(user);
 
                         TempData["Error"] = "Password Change Required";
                         
