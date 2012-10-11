@@ -7,7 +7,11 @@ namespace <#= Model.Namespace #>.Core.Model
 
     public partial class Order : DomainObject
     {
-        private ICollection<OrderLineItem> _orderItems;
+		private ICollection<OrderLineItem> _orderItems;
+
+        public virtual Customer Customer { get; set; }
+
+        public virtual SessionInformation OrderSession { get; set; }
 
         public virtual ICollection<OrderLineItem> OrderItems
         {
