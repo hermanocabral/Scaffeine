@@ -38,12 +38,13 @@ Currently Scaffeine has the following dependencies
 Usage
 ------
 1. Download the latest code and run package.bat found on the root directory
-2. Download the latest code from ScaffR and do the same (https://www.github.com/wcpro/scaffr)
+2. Download the latest code from [ScaffR](https://www.github.com/wcpro/scaffr) and do the same.
 3. Add a nuget source to c:\development\localnuget
 4. Create an empty MVC 4 application
-5. From nuget console window, type install-package Scaffeine
+5. From nuget console window, type <pre>install-package Scaffeine</pre>
 
-Contact Us
+Get Involved
 ------
-WE are glad to help with implementation.  We are still very new project, so we have a growing, active community.  
-Don't be afraid to contact us at rod@scaffr.com.  Also post any questions to http://stackoverflow.com/questions/tagged/scaffr
+1. Join our [Trello Board](https://trello.com/board/scaffr/507754f1d6bcfa3f54062cbd)
+2. Join our [HipChat Channel](https://www.hipchat.com/g2pYaEoF0) 
+3. Post Questions to [StackOverflow](http://stackoverflow.com/questions/tagged/scaffr)
