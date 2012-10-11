@@ -51,7 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />
-    <None Include="content\Content\custom\categories.less" />
+    <None Include="content\Content\custom\department.less" />
     <None Include="content\Controllers\Department\DepartmentController.cs.pp" />
     <None Include="content\Sitemaps\Modules.sitemap.transform">
       <SubType>Designer</SubType>
