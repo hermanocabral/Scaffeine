@@ -47,6 +47,12 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Core\Events\UserCreated.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Core\Common\MembershipManager.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Core\Configuration\CoreSection.Membership.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Core\Configuration\Membership\MembershipElement.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Core\Events\UserLockedOut.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Core\Events\UserLoggedIn.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Core\Events\UserLoggedOut.cs.t4" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -61,9 +67,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="NuGet.exe" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="System" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

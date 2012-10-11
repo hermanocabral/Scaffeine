@@ -46,16 +46,22 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <None Include="content\Controllers\Users\UsersController.Details.cs.pp" />
+    <None Include="content\Controllers\Users\UsersController.Manage.cs.pp" />
+    <None Include="content\Models\Users\UserViewModel.cs.pp" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />
     <None Include="content\Controllers\Account\AccountController.Profile.cs.pp" />
-    <None Include="content\Controllers\Users\UserController.cs.pp" />
+    <None Include="content\Controllers\Users\UsersController.cs.pp" />
     <None Include="content\Models\ProfileModel.cs.pp" />
+    <None Include="content\Sitemaps\Modules.sitemap.transform" />
     <None Include="content\Views\Account\Emails.cshtml.pp" />
     <None Include="content\Views\Account\Notifications.cshtml.pp" />
     <None Include="content\Views\Account\Profile.cshtml.pp" />
+    <None Include="content\Views\Users\Details.cshtml.pp" />
+    <None Include="content\Views\Users\Index.cshtml.pp" />
     <None Include="Package.nuspec" />
     <None Include="tools\init.ps1" />
     <None Include="tools\install.ps1" />

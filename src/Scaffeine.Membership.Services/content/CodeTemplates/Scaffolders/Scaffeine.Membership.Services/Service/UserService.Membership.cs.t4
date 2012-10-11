@@ -21,6 +21,8 @@ namespace <#= Model.Namespace #>.Service
 
             if (user.Password == password)
             {
+                user.LastLoginDate = DateTime.UtcNow;
+                SaveOrUpdate(user);
                 return AuthenticationStatus.Authenticated;
             }
             
@@ -28,9 +30,12 @@ namespace <#= Model.Namespace #>.Service
             {
                 user.ResetPassword = true;
                 user.Password = user.TemporaryPassword;
+                SaveOrUpdate(user);
                 return AuthenticationStatus.ResetPassword;
             }
 
+            user.LastPasswordFailureDate = DateTime.UtcNow;
+            SaveOrUpdate(user);
             return AuthenticationStatus.InvalidPassword;
         }
 
@@ -45,7 +50,7 @@ namespace <#= Model.Namespace #>.Service
             {
                 user.ResetPassword = false;
                 user.Password = newPassword;
-
+                user.LastPasswordChangedDate = DateTime.UtcNow;
                 SaveOrUpdate(user);
             }
             catch (Exception)
