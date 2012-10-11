@@ -46,11 +46,16 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Subscriptions\Scaffeine.Membership.Subscriptions.ps1" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Subscriptions\SubscriptionStatus.cs.t4" />
+    <None Include="content\Filters\UserContextFilters\UpdateSubscriptionFilter.cs.pp" />
+    <None Include="content\Controllers\Subscriptions\SubscriptionController.cs.pp" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Subscriptions\User.Subscription.cs.t4" />
+    <None Include="content\Views\Subscription\Create.cshtml.pp" />
     <None Include="Package.nuspec" />
     <None Include="tools\init.ps1" />
     <None Include="tools\install.ps1" />

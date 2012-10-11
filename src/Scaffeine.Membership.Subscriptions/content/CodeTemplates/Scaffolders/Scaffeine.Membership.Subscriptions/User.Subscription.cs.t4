@@ -4,6 +4,8 @@ namespace <#= Model.Namespace #>.Core.Model
 {
     public partial class User
     {        
-        
+        public string SubscriptionId { get; set; }
+        public string SubscriptionProvider { get; set; }
+        public SubscriptionStatus? SubscriptionStatus { get; set; }
     }
 }

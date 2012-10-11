@@ -17,6 +17,9 @@
     <tags></tags>
     <dependencies>
       <dependency id="Scaffeine.Subscriptions"/>
+      <dependency id="ScaffR.Users.Core"/>
+      <dependency id="Scaffeine.Membership.Shell"/>
+      <dependency id="Scaffeine.Models.Common"/>
     </dependencies>
   </metadata>
   <files>
