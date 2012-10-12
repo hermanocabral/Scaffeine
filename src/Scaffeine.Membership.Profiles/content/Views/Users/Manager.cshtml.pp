@@ -3,8 +3,10 @@
     Layout = "~/Views/Shared/_Folder.cshtml";
 }
 @model $rootnamespace$.Core.Interfaces.Paging.IPage<$rootnamespace$.Core.Model.User>
-<h2>Index</h2>
 
+<div class="page-header">
+<h1>Manage Users</h1>
+</div>
     
     
 <table class="table table-striped">

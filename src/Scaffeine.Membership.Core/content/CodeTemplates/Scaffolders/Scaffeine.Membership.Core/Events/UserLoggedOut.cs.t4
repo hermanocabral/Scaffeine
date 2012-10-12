@@ -1,14 +1,16 @@
 ﻿<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
 <#@ Output Extension="cs" #>
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace <#= Model.Namespace #>.Core.Common.Membership.Events
 {
-    class UserLoggedOut
+    using Model;
+
+    public class UserLoggedOut
     {
+        public readonly User User;
+
+        public UserLoggedOut(User user)
+        {
+            User = user;
+        }
     }
 }

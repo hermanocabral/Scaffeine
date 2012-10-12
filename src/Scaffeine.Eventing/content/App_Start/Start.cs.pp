@@ -3,8 +3,7 @@
 namespace $rootnamespace$.App_Start {
 	using Core.Infrastructure.Eventing;
     public static class MvcToolsStart {
-        public static void PreStart() {
-            
+        public static void PreStart() {            
         }
     }
 }

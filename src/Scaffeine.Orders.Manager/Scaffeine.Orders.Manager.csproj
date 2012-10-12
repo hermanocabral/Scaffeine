@@ -46,19 +46,19 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <None Include="content\Controllers\Orders\OrdersController.cs.pp" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />
+    <None Include="content\Views\Orders\Index.cshtml.pp" />
     <None Include="Package.nuspec" />
     <None Include="tools\init.ps1" />
     <None Include="tools\install.ps1" />
     <None Include="tools\uninstall.ps1" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="content\Controllers\Orders\" />
     <Folder Include="content\Sitemaps\" />
-    <Folder Include="content\Views\Orders\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="NuGet.exe" />

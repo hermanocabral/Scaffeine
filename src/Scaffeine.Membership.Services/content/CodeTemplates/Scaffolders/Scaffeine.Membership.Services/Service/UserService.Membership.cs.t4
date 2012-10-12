@@ -18,9 +18,19 @@ namespace <#= Model.Namespace #>.Service
             {
                 return AuthenticationStatus.InvalidUsername;
             }
-
+                        
             if (user.Password == password)
             {
+                if (user.IsLockedOut)
+                {
+                    return AuthenticationStatus.UserLockedOut;
+                }
+
+                if (!user.IsApproved)
+                {
+                    return AuthenticationStatus.AccountNotActive;
+                }
+
                 user.LastLoginDate = DateTime.UtcNow;
                 SaveOrUpdate(user);
                 return AuthenticationStatus.Authenticated;
@@ -68,13 +78,14 @@ namespace <#= Model.Namespace #>.Service
                 return CreateUserStatus.DuplicateUserName;
             }
 
-            User existingUser = Find(u => u.Email == user.Email).FirstOrDefault();
-
-            if (existingUser != null)
+            if (Find(u => u.Email == user.Email).Any())
             {
                 return CreateUserStatus.DuplicateEmail;
             }
 
+            user.IsApproved = true;
+            user.IsLockedOut = false;
+            
             SaveOrUpdate(user);
 
             return CreateUserStatus.Success;

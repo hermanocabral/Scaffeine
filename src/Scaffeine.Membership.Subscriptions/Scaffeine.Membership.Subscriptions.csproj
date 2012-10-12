@@ -50,6 +50,7 @@
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Subscriptions\SubscriptionStatus.cs.t4" />
     <None Include="content\Filters\UserContextFilters\UpdateSubscriptionFilter.cs.pp" />
     <None Include="content\Controllers\Subscriptions\SubscriptionController.cs.pp" />
+    <None Include="content\Controllers\Users\UsersController.Subscriptions.cs.pp" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -61,7 +61,7 @@
     <None Include="content\Views\Account\Notifications.cshtml.pp" />
     <None Include="content\Views\Account\Profile.cshtml.pp" />
     <None Include="content\Views\Users\Details.cshtml.pp" />
-    <None Include="content\Views\Users\Index.cshtml.pp" />
+    <None Include="content\Views\Users\Manager.cshtml.pp" />
     <None Include="Package.nuspec" />
     <None Include="tools\init.ps1" />
     <None Include="tools\install.ps1" />

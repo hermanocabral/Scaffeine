@@ -50,7 +50,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />
-    <None Include="content\Controllers\Account\AccountController.Dashboard.cs.pp" />
     <None Include="content\Controllers\DashboardController.cs.pp" />
     <None Include="content\Sitemaps\Modules.sitemap">
       <SubType>Designer</SubType>
