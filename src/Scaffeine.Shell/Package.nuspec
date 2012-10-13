@@ -27,7 +27,7 @@
       
       <dependency id="Scaffeine.Mail.Gmail"/>
       <dependency id="Scaffeine.Configuration"/>
-      <dependency id="Scaffeine.Eventing"/>
+      <dependency id="ScaffR.Infrastructure"/>
       <dependency id="Scaffeine.Models.Common"/>
       
     </dependencies>

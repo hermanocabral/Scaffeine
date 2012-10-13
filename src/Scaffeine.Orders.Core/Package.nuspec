@@ -18,7 +18,7 @@
     <dependencies>
       <dependency id="Scaffeine.Customers.Core" />
       <dependency id="Scaffeine.Products.Core" />
-      <dependency id="Scaffeine.Pipeline" />
+      <dependency id="ScaffR.Infrastructure.Pipeline" />
     </dependencies>
   </metadata>
   <files>

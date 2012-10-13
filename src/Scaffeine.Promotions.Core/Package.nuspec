@@ -16,7 +16,7 @@
     <copyright>Copyright Scaffeine 2012</copyright>
     <tags></tags>
     <dependencies>
-      <dependency id="Scaffeine.Pipeline" />      
+      <dependency id="ScaffR.Infrastructure.Pipeline" />      
     </dependencies>
   </metadata>
   <files>    

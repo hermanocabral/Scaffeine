@@ -17,7 +17,7 @@
     <tags></tags>
     <dependencies>      
       <dependency id="Scaffeine.Membership.Services" />
-      <dependency id="Scaffeine.Pipeline" />
+      <dependency id="ScaffR.Infrastructure.Pipeline" />
       <dependency id="Scaffeine.Shell"/>
       <dependency id="ScaffR.MvcMailer"/>
       <dependency id="ScaffR.Automapper"/>
