@@ -16,8 +16,8 @@
     <copyright>ScaffR, 2012</copyright>
     <tags></tags>
     <dependencies>
-      <dependency id="Scaffeine.Membership.Profiles"  />
-      <dependency id="Scaffeine.Membership.Photo"  />
+      <dependency id="Scaffeine.Membership.Shell"/>
+      <dependency id="Scaffeine.Membership.Photo"/>
     </dependencies>
   </metadata>
   <files>

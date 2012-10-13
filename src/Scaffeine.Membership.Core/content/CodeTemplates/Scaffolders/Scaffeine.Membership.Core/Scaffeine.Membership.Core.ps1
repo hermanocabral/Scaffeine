@@ -16,7 +16,8 @@ Add-Domain "Model\UserEmail" "UserEmail" -Force:$Force $TemplateFolders
  	@(	"UserCreated", `
 		"UserLockedOut", `
 		"UserLoggedIn", `
-		"UserLoggedOut")
+		"UserLoggedOut", `
+		"UserActivity")
 
 foreach ($tml in $templates){
 	$outputPath = "Common\Membership\Events\$tml"

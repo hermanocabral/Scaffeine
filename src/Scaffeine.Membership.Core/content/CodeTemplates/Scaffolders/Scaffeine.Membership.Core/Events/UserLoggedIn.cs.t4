@@ -1,16 +1,13 @@
-﻿<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
+<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
 <#@ Output Extension="cs" #>
 namespace <#= Model.Namespace #>.Core.Common.Membership.Events
 {
     using Model;
 
-    public class UserLoggedIn
+    public class UserLoggedIn : UserActivity
     {
-        public readonly User User;
-
-        public UserLoggedIn(User user)
-        {
-            User = user;
+        public UserLoggedIn(User user) : base(user, "User Logged In")
+        {           
         }
     }
 }

@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>Scaffeine.Membership.Suite</id>
-    <version>1.1.4</version>
+    <id>Scaffeine.ActivityLog</id>
+    <version>1.1.3</version>
     <authors>Rod Johnson</authors>
     <owners>ScaffR</owners>
-    <projectUrl>http://www.github.com/wcpro/scaffr</projectUrl>
+    <projectUrl>http://scaffr.codeplex.com</projectUrl>
     <iconUrl>http://www.scaffr.com/favicon.ico</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
@@ -16,9 +16,7 @@
     <copyright>ScaffR, 2012</copyright>
     <tags></tags>
     <dependencies>
-      <dependency id="ScaffR.Security"/>      
-      <dependency id="Scaffeine.Membership.Welcome"/>
-      <dependency id="Scaffeine.Membership.Photo"/>
+      <dependency id="Scaffeine.Membership.Shell"/>
     </dependencies>
   </metadata>
   <files>

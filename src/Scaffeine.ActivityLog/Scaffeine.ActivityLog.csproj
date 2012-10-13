@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{7EB3B481-4387-4644-B323-4F3B4499F9B4}</ProjectGuid>
+    <ProjectGuid>{605AB1E3-778D-4EE4-AF48-875786D0369D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Scaffeine.Membership.Core</RootNamespace>
-    <AssemblyName>Scaffeine.Membership.Core</AssemblyName>
+    <RootNamespace>Scaffeine.ActivityLog</RootNamespace>
+    <AssemblyName>Scaffeine.ActivityLog</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
@@ -46,25 +46,28 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Core\Common\MembershipManager.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Core\Configuration\CoreSection.Membership.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Core\Configuration\Membership\MembershipElement.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Core\Events\UserActivity.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Core\Events\UserCreated.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Core\Events\UserLockedOut.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Core\Events\UserLoggedIn.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Core\Events\UserLoggedOut.cs.t4" />
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.ActivityLog\UserActivities.cs.t4" />
+    <None Include="content\Handlers\LastActivityHandler.cs.pp" />
+    <None Include="content\Controllers\Users\UsersController.Activities.cs.pp" />
+    <None Include="content\Models\Users\UserActivitiesViewModel.cs.pp" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Core\Role.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Core\Scaffeine.Membership.Core.ps1" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Core\User.Membership.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Core\UserEmail.cs.t4" />
-    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Core\UserRole.cs.t4" />
-    <None Include="Package.nuspec" />
+    <None Include="content\Sitemaps\Modules.sitemap.transform" />
+    <None Include="content\Views\Users\Activities.cshtml.pp" />
+    <None Include="content\Web.config.transform">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Package.nuspec">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="tools\init.ps1" />
     <None Include="tools\install.ps1" />
+    <None Include="tools\uninstall.ps1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="lib\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="NuGet.exe" />

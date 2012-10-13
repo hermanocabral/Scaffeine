@@ -46,16 +46,49 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Shell\Scaffeine.Membership.ChangePassword.ps1" />
+    <None Include="content\Controllers\Account\AccountController.ChangePassword.cs.pp" />
+    <None Include="content\Controllers\Account\AccountController.ForgotPassword.cs.pp" />
+    <None Include="content\Controllers\Account\AccountController.Logon.cs.pp" />
+    <None Include="content\Controllers\Account\AccountController.Profile.cs.pp" />
+    <None Include="content\Controllers\Account\AccountController.Register.cs.pp" />
+    <None Include="content\Controllers\Account\AccountController.Settings.cs.pp" />
     <None Include="content\Controllers\Home\HomeController.Start.cs.pp" />
+    <None Include="content\Controllers\Users\UsersController.cs.pp" />
+    <None Include="content\Controllers\Users\UsersController.Details.cs.pp" />
+    <None Include="content\Controllers\Users\UsersController.Manage.cs.pp" />
     <None Include="content\Filters\UserContextFilter.cs.pp" />
+    <None Include="content\Filters\UserContextFilters\ChangePasswordRequired.cs.pp" />
     <None Include="content\Filters\UserContextFilters\SetProfileValues.cs.pp" />
     <None Include="content\Extensions\ActionDescriptorExtensions.cs.pp" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="content\Mailers\Mailer.ForgotPassword.cs.pp" />
+    <None Include="content\Models\ChangePasswordModel.cs.pp" />
+    <None Include="content\Models\ForgotPasswordModel.cs.pp" />
+    <None Include="content\Models\ForgotPasswordResetModel.cs.pp" />
+    <None Include="content\Models\LogOnModel.cs.pp" />
+    <None Include="content\Models\ProfileModel.cs.pp" />
+    <None Include="content\Models\SettingsModel.cs.pp" />
+    <None Include="content\Models\Users\UserViewModel.cs.pp" />
+    <None Include="content\Views\Account\ChangePassword.cshtml.pp" />
+    <None Include="content\Views\Account\Emails.cshtml.pp" />
+    <None Include="content\Views\Account\ForgotPassword.cshtml.pp" />
+    <None Include="content\Views\Account\Logon.cshtml.pp" />
+    <None Include="content\Views\Account\Notifications.cshtml.pp" />
+    <None Include="content\Views\Account\Profile.cshtml.pp" />
+    <None Include="content\Views\Account\Register.cshtml.pp" />
+    <None Include="content\Views\Account\Settings.cshtml.pp" />
+    <None Include="content\Views\Mailer\ForgotPassword.cshtml.pp" />
+    <None Include="content\Views\Users\Details.cshtml.pp" />
+    <None Include="content\Views\Users\Manager.cshtml.pp" />
+    <None Include="content\Views\Users\_AdminUserLayout.cshtml.pp" />
+    <None Include="Views\Account\Register.cshtml.pp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="BuildPublishPackage.cmd" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Membership.Shell\Scaffeine.Membership.Shell.ps1" />
     <None Include="content\Controllers\Account\AccountController.cs.pp" />
+    <None Include="content\Models\RegisterModel.cs.pp" />
     <None Include="content\Sitemaps\Account.sitemap" />
     <None Include="content\Sitemaps\Modules.sitemap.transform" />
     <None Include="content\Web.config.transform">
