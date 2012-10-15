@@ -58,15 +58,6 @@
   <ItemGroup>
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Shell\Scaffeine.Shell.ps1" />
     <None Include="content\CodeTemplates\Scaffolders\Scaffeine.Shell\Layout.cs.t4" />
-    <None Include="content\Extensions\BreadcrumbHelper.cs.pp" />
-    <None Include="content\Extensions\BreadcrumbHelperModel.cs.pp" />
-    <None Include="content\Extensions\NavHelper.cs.pp" />
-    <None Include="content\Extensions\NavHelperModel.cs.pp" />
-    <None Include="content\Extensions\PillsHelper.cs.pp" />
-    <None Include="content\Extensions\PillsHelperModel.cs.pp" />
-    <None Include="content\Extensions\TabsHelper.cs.pp" />
-    <None Include="content\Extensions\TabsHelperModel.cs.pp" />
-    <None Include="content\Extensions\AlertExtensions.cs.pp" />
     <None Include="content\Models\EmailModel.cs.pp" />
   </ItemGroup>
   <ItemGroup>
